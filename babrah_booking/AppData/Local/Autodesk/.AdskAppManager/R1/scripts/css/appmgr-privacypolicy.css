@@ -1,0 +1,161 @@
+html,body {
+	border: 0;
+	font-family: arial,sans-serif,helvetica;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 860px;
+}
+.header {
+	margin: 0;
+	min-width: 860px;
+}
+.header img {
+	display: block;
+}
+.middle {
+	height: 300px;
+	min-width: 860px;
+	width: 860px;
+}
+.content {
+	color: #666;
+	font-size: 11px;
+	padding: 50px 125px 0;
+}
+.content h4{
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0;
+}
+.content .stmt {
+	padding-top: 22px;
+}
+.content .check {
+	padding: 22px 0 0 22px;
+}
+.content a, .content a:hover, .content a:visited{
+	color: rgb(107, 177, 255);
+	text-decoration: underline;
+	outline: 0;
+}
+.content input[type="checkbox"] {
+	display: none;
+}
+.content input[type="checkbox"] + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 0;
+	vertical-align: top;
+}
+.content input[type="checkbox"] + label:hover {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -374px;
+}
+.content input[type="checkbox"]:checked + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -100px;
+}
+.content input[type="checkbox"]:checked + label:hover {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -100px;
+}
+.content input[type="checkbox"]:disabled + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -287px;
+}
+.content input[type="checkbox"]:checked:disabled + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -200px;
+}
+.content label {
+	display: block;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.content label.disabled-text {
+	color: #777;
+}
+.content label.software-check {
+	margin-top: 20px;
+}
+.footer {
+	background: rgb(244, 245, 239);
+	border-top: 1px solid rgb(221, 221, 221);
+	height: 50px;
+	margin: 0;
+	min-width: 860px;
+	width: 860px;
+}
+.footer .btns {
+	float: right;
+	padding: 11px 20px 0 5px;
+	position: relative;
+}
+.footer .btns a{
+	cursor: default;
+	float: left;
+	outline: 0;
+	text-decoration: none;
+}
+.footer .btns .left {
+    float: left;
+    width: 6px;
+    height: 28px;
+   
+}
+.footer .btns .right {
+    float: left;
+    width: 6px;
+    height: 28px;
+}
+
+.footer .btns .center {
+    color: rgb(51, 51, 51);
+    float: left;
+    font-size: 12px;
+    height: 28px;
+    padding: 6px 10px 0;
+}
+.agree-btn .left {
+	 background: url("../images/lt_focusUp_left.png") left center no-repeat;
+}
+.agree-btn .right {
+	background: url("../images/lt_focusUp_right.png") left center no-repeat;
+}
+.agree-btn .center {
+	background: url("../images/lt_focusUp_middle.png") repeat-x;
+}
+.agree-btn:hover .left {
+	 background: url("../images/lt_focusRoll_left.png") left center no-repeat;
+}
+.agree-btn:hover .right {
+	background: url("../images/lt_focusRoll_right.png") left center no-repeat;
+}
+.agree-btn:hover .center {
+	background: url("../images/lt_focusRoll_middle.png") repeat-x;
+}
+.agree-btn[class~=disabled] .left, .agree-btn[class~=disabled]:hover .left {
+	 background: url("../images/lt_disabled_left.png") left center no-repeat;
+}
+.agree-btn[class~=disabled] .right, .agree-btn[class~=disabled]:hover .right {
+	background: url("../images/lt_disabled_right.png") left center no-repeat;
+}
+.agree-btn[class~=disabled] .center, .agree-btn[class~=disabled]:hover .center {
+	background: url("../images/lt_disabled_middle.png") repeat-x;
+	color: #999;
+}
+.cancel-btn {
+	margin-left: 10px;
+}
+.cancel-btn .left {
+	 background: url("../images/lt_idle_left.png") left center no-repeat;
+}
+.cancel-btn .right {
+	background: url("../images/lt_idle_right.png") left center no-repeat;
+}
+.cancel-btn .center {
+	background: url("../images/lt_idle_middle.png") repeat-x;
+}
+.cancel-btn:hover .left {
+	 background: url("../images/lt_roll_left.png") left center no-repeat;
+}
+.cancel-btn:hover .right {
+	background: url("../images/lt_roll_right.png") left center no-repeat;
+}
+.cancel-btn:hover .center {
+	background: url("../images/lt_roll_middle.png") repeat-x;
+}

@@ -1,0 +1,131 @@
+.transparent-overlay {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+.arrow-down-black {
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #000;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.arrow-down-gray {
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #808080;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.arrow-right-black {
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #000;
+	border-top: 5px solid transparent;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.arrow-right-gray {
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #808080;
+	border-top: 5px solid transparent;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.btn-white, .btn-blue, .btn-gray {
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	display: block;
+	font-size: 12px;
+	height: 20px;
+	outline: 0;
+	padding: 6px 12px 0;
+	text-align: center;
+	text-decoration: none;
+}
+.btn-white {
+	background: #FFF;
+	border: 1px solid #CCC;
+    color: #0696D7;
+    font-weight: normal;
+}
+.btn-blue {
+	background: #0696D7;
+	border: 1px solid #0696D7;
+    color: #FFF;
+    font-weight: bold;
+}
+.btn-gray {
+	background: #FFF;
+	border: 1px solid #CCC;
+    color: #666;
+    font-weight: normal;
+}
+.btn-white:hover, .btn-blue:hover, .btn-gray:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-blue:hover {
+	background: -moz-linear-gradient(top, #3BABDF 0%, #0696D7 100%);
+	background: -webkit-linear-gradient(top, #3BABDF 0%, #0696D7 100%);
+	background: -o-linear-gradient(top, #3BABDF 0%, #0696D7 100%);
+	background: -ms-linear-gradient(top, #3BABDF 0%, #0696D7 100%);
+	background: linear-gradient(top, #3BABDF 0%, #0696D7 100%);
+}
+.btn-white[class~=disabled], .btn-gray[class~=disabled], .btn-blue[class~=disabled] {
+	background: #FFF;
+	border: 1px solid #CCC;
+    color: #CCC;
+    font-weight: normal;
+}
+.btn-white[class~=disabled]:hover, .btn-gray[class~=disabled]:hover, .btn-blue[class~=disabled]:hover {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    cursor: default;
+    text-decoration: none;
+}
+.btn-blank {
+	border-bottom: 1px dashed #333;
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn-blank:hover {
+	text-decoration: none;
+}
+.hide {
+	display: none;
+}
+.in-visible {
+	visibility: hidden;
+}
+.clr-both {
+	clear: both;
+}
+.striked {
+	color: maroon;
+	text-decoration:line-through;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+img {
+	user-drag: none; 
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+}

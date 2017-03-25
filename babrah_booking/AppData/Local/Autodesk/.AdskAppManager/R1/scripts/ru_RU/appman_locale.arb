@@ -1,0 +1,1004 @@
+arb.register("arb_editor:ru_RU", {
+  "@@locale": "ru_RU",
+
+  "settings_link": "Параметры",
+  "@settings_link": {
+    "description": "Application Manager main window settings link text"
+  },
+  "help_link": "Справка",
+  "@help_link": {
+    "description": "Application Manager main window help link text"
+  },
+  "welcome_link": "ДОБРО ПОЖАЛОВАТЬ",
+  "@welcome_link": {
+    "description": "Welcome tab top navigation text"
+  },
+  "software_link": "ПРОГРАММЫ",
+  "@software_link": {
+    "description": "Software tab top navigation text"
+  },
+  "updates_link": "ОБНОВЛЕНИЯ",
+  "@updates_link": {
+    "description": "Updates tab top navigation text"
+  },
+  "apps_link": "ПРИЛОЖЕНИЯ",
+  "@apps_link": {
+    "description": "Apps tab top navigation text"
+  },
+  "search_text@placeholder": "Поиск...",
+  "@search_text": {
+    "description": "Placeholder text for Search text box in the Main Appman UI"
+  },
+  "sort_by_label": "Сортировать по:",
+  "@sort_by_label": {
+    "description": "Label for the Sort by drop down"
+  },
+  "sort_date_optn": "Дата",
+  "@sort_date_optn": {
+    "description": "One of the option in Sort by drop down - Date"
+  },
+  "sort_sev_optn": "Уровень",
+  "@sort_sev_optn": {
+    "description": "One of the option in Sort by drop down - Severity"
+  },
+  "view_label": "Вид:",
+  "@view_label": {
+    "description": "Label for the different View selectors (List, Group, Thumbnail, Hierarchy are the possible views)"
+  },
+  "get_started_label": "Начало работы.",
+  "@get_started_label": {
+    "description": "Label for Getting started header in the Welcome tab"
+  },
+  "upd_sw_link": "Обновить программы",
+  "@upd_sw_link": {
+    "description": "Update Software button text under getting started section"
+  },
+  "about_appman": "О программе Application Manager",
+  "@about_appman": {
+    "description": "Label for About Application Manager header in the Welcome tab"
+  },
+  "about_appman_cont": "Это настольное приложение позволяет получать своевременные уведомления о новых пакетах обновления, исправлениях и прочих важных файлах, доступных для пользователей приложений и программных комплексов Autodesk. Пользователь может выбрать время применения обновления, при этом приложение Application Manager автоматически загружает нужные файлы из облака и устанавливает их на компьютер.",
+  "@about_appman_cont": {
+    "description": "About application manager content"
+  },
+  "trls_label": "Учебные пособия",
+  "@trls_label": {
+    "description": "Tutorial header in welcome tab"
+  },
+  "trl1_label": "Учебное пособие 1",
+  "@trl1_label": {
+    "description": "Tutorial1 sub header text in welcome tab"
+  },
+   "no_trl": "Нет учебных пособий.",
+  "@no_trl": {
+    "description": "To show the text under Tutorials section when there is no tutorials"
+  },
+  "trl_cont": "Справка по подставному тексту.",
+  "@trl_cont": {
+    "description": "Tutorial1 content"
+  },
+  "status_err_title": "Ошибка приложения",
+  "@status_err_title": {
+    "description": "Status bar error title"
+  },
+  "abt_label": "Примерно",
+  "@abt_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  "rem_label": "осталось",
+  "@rem_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  
+  "install_label": "Установить",
+  "@install_label": {
+    "description": "The Install button name"
+  },
+  "pause_label": "Приостановить",
+  "@pause_label": {
+    "description": "The Pause button name"
+  },
+  "resume_label": "Возобновить",
+  "@resume_label": {
+    "description": "The Resume button name"
+  },
+  "cancel_label": "Отмена",
+  "@cancel_label": {
+    "description": "The Cancel button name"
+  },
+  "ignore_label": "Пропустить",
+  "@ignore_label": {
+    "description": "The Ignore button name"
+  },
+  "add_label": "Добавить",
+  "@ignore_label": {
+    "description": "Add button (per-item) label in deployment mode"
+  },
+  "remove_label": "Удалить",
+  "@ignore_label": {
+    "description": "Remove button (per-item) label in deployment mode"
+  },
+  "install_sel_label": "Установить выбранное",
+  "@install_sel_label": {
+    "description": "The Install Selected button name, used for multi-download selection"
+  },
+  "pause_sel_label": "Приостановить выбранное",
+  "@pause_sel_label": {
+    "description": "The Pause Selected button name"
+  },
+  "resume_sel_label": "Возобновить выбранное",
+  "@resume_sel_label": {
+    "description": "The Resume Selected button name"
+  },
+  "cancel_sel_label": "Отменить выбранное",
+  "@cancel_sel_label": {
+    "description": "The Cancel Selected button name"
+  },
+  "ignore_sel_label": "Пропустить выбранное",
+  "@ignore_sel_label": {
+    "description": "The Ignore Selected button name"
+  },
+  "add_sel_label": "Добавить выбранные",
+  "@add_sel_label": {
+    "description": "Add Selected button label in the status area. Used in deployment mode"
+  },
+  "remove_sel_label": "Удалить выбранные",
+  "@remove_sel_label": {
+    "description": "Remove Selected button label in the status area. Used in deployment mode"
+  },
+  "close_label": "Закрыть",
+  "@close_label": {
+    "description": "The Close button name"
+  },
+  "yes_label": "Да",
+  "@yes_label": {
+    "description": "The Yes button name"
+  },
+  "no_label": "Нет",
+  "@no_label": {
+    "description": "The No button name"
+  },
+  "ok_label": "ОК",
+  "@ok_label": {
+    "description": "The OK button name"
+  },
+  "retry_label": "Повторить",
+  "@retry_label": {
+    "description": "The Retry button name. All the above refers to Appman main window HTML strings"
+  },
+
+  "recommended_upd": "Рекомендуется",
+  "@recommended_upd": {
+    "description": "Recommended panel label"
+  },
+  "date_new_upd": "Новые обновления",
+  "@date_new_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_rec_upd": "Последние обновления",
+  "@date_rec_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lw_upd": "На прошлой неделе",
+  "@date_lw_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lm_upd": "В прошлом месяце",
+  "@date_lm_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_old_upd": "Раньше",
+  "@date_old_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  
+  "sev_high": "Высокий",
+  "@sev_high": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_med": "Средний",
+  "@sev_med": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_low": "Низкий",
+  "@sev_low": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "other_label": "Другие",
+  "@other_label": {
+    "description": "To show the category as Other if the severity is unknown"
+  },
+ 
+  "sr_rel": "Выпущено",
+  "@sr_rel": {
+    "description": "Label for the date of update Released"
+  },
+  "sr_status": "Статус",
+  "@sr_status": {
+    "description": "Label for the Status of an update"
+  },
+  "sr_pub": "Разработчик",
+  "@sr_pub": {
+    "description": "Label for the Publisher of an update"
+  },
+  "sr_uid": "Идентификатор обновления",
+  "@sr_uid": {
+    "description": "Label for the Update ID"
+  },
+  "sr_sev": "Уровень",
+  "@sr_sev": {
+    "description": "Label for the Severity of an update"
+  },
+  "sr_size": "Размер",
+  "@sr_size": {
+    "description": "Label to show the Size of an update"
+  },
+  
+  "ap_pending_download": "Ожидание загрузки",
+  "@ap_pending_download": {
+    "description": "The text should be shown when an update is pending for download"
+  },
+  "ap_downloading": "Загрузка",
+  "@ap_downloading": {
+    "description": "The text should be shown when an update is downloading"
+  },
+  "ap_download_paused": "Загрузка приостановлена",
+  "@ap_download_paused": {
+    "description": "The text should be shown when an update is paused during download"
+  },
+  "ap_pending_install": "Ожидание установки",
+  "@ap_pending_install": {
+    "description": "The text should be shown when an update is pending for the installation"
+  },
+  "ap_installing": "Установка",
+  "@ap_installing": {
+    "description": "The text should be shown when an update is installing"
+  },
+  "ap_install_paused": "Установка приостановлена",
+  "@ap_install_paused": {
+    "description": "The text should be shown when an update is paused during installation"
+  },
+  
+  "al_details": "Сведения",
+  "@al_details": {
+    "description": "The Details link header text to show the description of an update"
+  },
+  "al_rel_updates": "Связанные обновления",
+  "@al_rel_updates": {
+    "description": "The Related Updates link header text"
+  },
+  "al_rel_docs": "Связанные документы и пакеты",
+  "@al_rel_docs": {
+    "description": "The Related Docs and Packages link header text"
+  },
+  "al_rel_notes": "Примечание к выпуску",
+  "@al_rel_notes": {
+    "description": "The Release Note header text"
+  },
+  "also_applies_to": "Также применяется для",
+  "@also_applies_to": {
+    "description": "Also applies to text to show under Related Updates section"
+  },
+  "also_includes": "Также включает в себя",
+  "@also_includes": {
+    "description": "Also Includes text to show under Related Updates section"
+  },
+  "go_to_full_details": "Перейти к сведениям о полном обновлении",
+  "@go_to_full_details": {
+    "description": "Go to Full Update Details to show under Related Updates section"
+  },
+  "more_text": "Подробнее",
+  "@more_text": {
+    "description": "To show More link under Also Includes section"
+  },
+  "as_not_installed": "Не установлено",
+  "@as_not_installed": {
+    "description": "Status text of an non installed update"
+  },
+  "as_installed": "Установлено",
+  "@as_installed": {
+    "description": "Status text of an installed update"
+  },
+  "as_not_included": "Не включено",
+  "@as_not_included": {
+    "description": "Status text of an non included update in deployment mode"
+  },
+  "as_included": "Включено",
+  "@as_included": {
+    "description": "Status text of an included update in deployment mode"
+  },
+  "as_ignored": "Пропущено",
+  "@as_ignored": {
+    "description": "Status text of an ignored update"
+  },
+  "as_not_applicable": "Не применимо",
+  "@as_not_applicable": {
+    "description": "Status text of an Non Applicable update"
+  },
+  
+  "unknown_label": "Нет данных",
+  "@unknown_label": {
+    "description": "The dynamic text to be shown when the file size of an update is not available in SDS"
+  },
+  "paused_label": "Приостановлено",
+  "@paused_label": {
+    "description": "The text should be shown when an individual update is paused"
+  },
+  "backup_label": "Копирование в папку общего доступа",
+  "@paused_label": {
+    "description": "The text should be shown when sharing one update to local cache shared location"
+  },
+  "new_label": "НОВОЕ!",
+  "@new_label": {
+    "description": "The NEW label for unvisited updates"
+  },
+  "retired_label": "УСТАРЕВШЕЕ",
+  "@retired_label": {
+    "description": "The RETIRED label for the Retired/Revoked updates"
+  },
+  "net_unavail_label": "Сетевое подключение недоступно.",
+  "@net_unavail_label": {
+    "description": "An error text to show the connection unavailable"
+  },
+  
+  "sw_label": "программа",
+  "@sw_label": {
+    "description": "The text to be appended when an user selects a software. Eg: 1 Software selected"
+  },
+  "prod_label": "продукт",
+  "@prod_label": {
+    "description": "The text to be appended when an user selects an update. Eg: 1 Product selected"
+  },
+  "sws_label": "программ(ы)",
+  "@sws_label": {
+    "description": "The text to be appended when an user selects more than one software. Eg: 2 Softwares selected"
+  },
+  "prods_label": "продукта(ов)",
+  "@prods_label": {
+    "description": "The text to be appended when an user selects more than one update. Eg: 2 Products selected"
+  },
+  "apps_label": "приложения(ий)",
+  "@apps_label": {
+    "description": "The text to be appended when an user selects apps. Eg: 2 Apps selected"
+  },
+  "cancel_all_label": "Отменить все",
+  "@cancel_all_label": {
+    "description": "The header text of Cancel All confirmation popup when the user try to cancel more than one update"
+  },
+  "cancel_conf_label": "Отменить установку?",
+  "@cancel_conf_label": {
+    "description": "The content of cancel confirmation popup, single update selection"
+  },
+  "cancel_all_conf_label": "Отменить все установки?",
+  "@cancel_all_conf_label": {
+    "description": "The content of cancel confirmation popup, multiple update selection scenario. All the above refers to Appman main window JSON strings"
+  },
+
+  "default_footer_text": "Выбрать для установки: {0}",
+  "@default_footer_text": {
+    "description": "The default footer text to be shown when the user navigates to Updates/ Software/ Apps tab"
+  },
+  
+  "empty_tab_text": "Программы Autodesk не нуждаются в обновлении.",
+  "@empty_tab_text": {
+    "description": "The empty footer text to be shown when there is no Updates/ Software/ Apps"
+  },
+  
+  "server_not_reachable_err": "Невозможно получить обновления, т. к. сервер недоступен. Повторите попытку позже или проверьте настройки.",
+  "@server_not_reachable_err": {
+    "description": "The update tab text to be shown when the server is not reachable"
+  },
+  "conn_lost_status_err": "Сетевое подключение разорвано. Проверьте параметры сети. Приложение Application Manager продолжит попытки подключиться к сети и прекратит их только после нажатия кнопки \"Отмена\".",
+  "@conn_lost_status_err": {
+    "description": "Status bar error to be shown when there is no network"
+  },
+  
+  "retired_err_title": "Эта версия Application Manager устарела",
+  "@retired_err_title": {
+    "description": "Retired modal dialog error title"
+  },
+  "retired_err1": "Невозможно больше получить доступ к серверам Autodesk с помощью этой версии Autodesk Application Manager.",
+  "@retired_err1": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err2": "Обновите Application Manager.",
+  "@retired_err2": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err3": "Свяжитесь с администратором для получения дополнительной информации об обновлении Application Manager.",
+  "@retired_err3": {
+    "description": "Retired modal dialog error content"
+  },
+   "retired_soon_err_title": "Эта версия Application Manager скоро станет устаревшей.",
+  "@retired_soon_err_title": {
+    "description": "Retiring soon general error title"
+  },
+  "retired_soon_err_cont": "Обновите Autodesk Application Manager перед тем, как доступ будет закрыт.",
+  "@retired_soon_err_cont": {
+    "description": "Retiring soon general error content"
+  },
+  
+  "dynamic_footer_text": "Выбрано: {0}",
+  "@dynamic_footer_text": {
+    "description": "The footer text will be changed based on the number of product selection. Eg: 5 Products Selected"
+  },
+
+  "mins_label": "мин.",
+  "@mins_label": {
+    "description": "The minutes text to be shown in the over all time remaining. Eg: 1 hour 20 minutes remaining"
+  },
+  "hours_label": "ч",
+  "@hours_label": {
+    "description": "The hours text to be shown in the over all time remaining. Eg: 2 hours 20 minutes remaining"
+  },
+  "days_label": "дн.",
+  "@days_label": {
+    "description": "The days text to be shown in the over all time remaining. Eg: 2 days 20 minutes remaining"
+  }, 
+  "weeks_label": "нед.",
+  "@weeks_label": {
+    "description": "The weeks text to be shown in the over all time remaining. Eg: 2 weeks 20 minutes remaining"
+  }, 
+  "months_label": "мес.",
+  "@months_label": {
+    "description": "The months text to be shown in the over all time remaining. Eg: 2 months 20 minutes remaining"
+  }, 
+  "years_label": "года/лет",
+  "@years_label": {
+    "description": "The years text to be shown in the over all time remaining. Eg: 2 years 20 minutes remaining"
+  },
+  
+  "sec_label": "с",
+  "@sec_label": {
+    "description": "The sec text to be shown in the over all time remaining. Eg: 1 sec remaining, 10 sec remaining"
+  },
+  "min_label": "мин.",
+  "@min_label": {
+    "description": "The minute text to be shown in the over all time remaining. Eg: 2 years 1 minute remaining"
+  },
+  "hour_label": "ч",
+  "@hour_label": {
+    "description": "The hour text to be shown in the over all time remaining. Eg: 2 years 1 hour remaining"
+  },
+  "day_label": "дн.",
+  "@day_label": {
+    "description": "The day text to be shown in the over all time remaining. Eg: 1 day 20 minutes remaining"
+  }, 
+  "week_label": "нед.",
+  "@week_label": {
+    "description": "The week text to be shown in the over all time remaining. Eg: 1 week 20 minutes remaining"
+  }, 
+  "month_label": "мес.",
+  "@month_label": {
+    "description": "The month text to be shown in the over all time remaining. Eg: 1 month 20 minutes remaining"
+  }, 
+  "year_label": "год",
+  "@year_label": {
+    "description": "The year text to be shown in the over all time remaining. Eg: 1 year 20 minutes remaining"
+  },
+  
+  "active_label": "Текущие",
+  "@active_label": {
+    "description": "The label to show the number of active downloads in the Mini alert window"
+  },
+  "delay_label": "Задержка:",
+  "@delay_label": {
+    "description": "Label of the Delay drop down in the mini-progress and self-update alert window"
+  },
+  
+  "privacy_label": "Заявление о конфиденциальности Autodesk",
+  "@privacy_label": {
+    "description": "Privacy header as per Legal team"
+  },
+  "privacy_stmt_label": "Заявление о конфиденциальности Autodesk",
+  "@privacy_stmt_label": {
+    "description": "Privacy policy header"
+  },
+  "pp_rights_label1": "Компания Autodesk осознает собственные обязательства и права пользователя в отношении конфиденциальности и личных данных. Нажимая кнопку \"Принимаю\" ниже, вы подтверждаете прочтение",
+  "@pp_rights_label1": {
+    "description": "Privacy policy content"
+  },
+  "pp_rights_label2": "и осознаете, что связанная с вами личная информация будет использоваться в соответствии с Заявлением о конфиденциальности.",
+  "@pp_rights_label2": {
+    "description": "Privacy policy content"
+  },
+  "personal_info_label2": "(что может включать передачу данных за рубеж в страны, в которых компания Autodesk осуществляет свою деятельность).",
+  "@personal_info_label2": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "periodic_check_label": "Я принимаю условия, согласно которым программами Autodesk будут производиться регулярные проверки на наличие обновлений и отправка соответствующих уведомлений.",
+  "@periodic_check_label": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "pp_desc": "Возможно, администратор лицензий вашей компании применил к этому продукту модель лицензирования, согласно которой программой будет регулярно производиться автоматическая отправка пользовательских и системных учетных данных, а также данных об использовании продуктов. Эти данные требуются для проверки прав лицензий, а также оценки использования продуктов в рамках всей компании. По всем вопросам обращайтесь к системному администратору.",
+  "@pp_desc": {
+    "description": "Privacy policy content"
+  },
+  "agree_label": "Принимаю",
+  "@agree_label": {
+    "description": "Label of I Agree button in the Privacy policy window. All the above strings refer to Privacy policy window"
+  },
+  
+  "today_at": "Сегодня в",
+  "@today_at": {
+    "description": "To show the Todays time. Eg: Today at 4:55 PM"
+  },
+  "su_note_title": "Уведомление — критическое обновление",
+  "@su_note_title": {
+    "description": "Self update window message header"
+  },
+  "su_msg": "Необходимо обновить программу Autodesk Application Manager.",
+  "@su_msg": {
+    "description": "Self update window message"
+  },
+  "view_details": "Просмотр сведений",
+  "@view_details": {
+    "description": "View Details link text in self update window"
+  },
+  "update_label": "Обновление",
+  "@update_label": {
+    "description": "Update link text in self update window"
+  },
+  "sr_title": "Уведомление",
+  "@sr_title": {
+    "description": "Self update success window header"
+  },
+  "to_label": "до",
+  "@to_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "version_label": "версии",
+  "@version_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "open_manager": "Открыть Application Manager",
+  "@open_manager": {
+    "description": "Open Manager link text - self update window"
+  },
+  "all_paused": "Все приостановлены",
+  "@all_paused": {
+    "description": "To show the All Paused text in Mini progress window when all updates are paused"
+  },
+  "sr_updated_label": "обновлено",
+  "@sr_updated_label": {
+    "description": "A label to show the successful updation. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "insfailed_err": "не установлено.",
+  "@insfailed_err": {
+    "description": "The text to be shown when the self update install failed"
+  },
+  "dwldfailed_err": "не загружено.",
+  "@dwldfailed_err": {
+    "description": "he text to be shown when the self update download failed"
+  },
+  "host_not_found_err": "Узел не найден.",
+  "@host_not_found_err": {
+    "description": "Host not found error string"
+  },
+  "net_timeout_err": "Время ожидания для установления соединения истекло",
+  "@net_timeout_err": {
+    "description": "Connection timed out error string. All the above strings are related to Self update window"
+  },
+  
+  "ua_title": "Уведомление — важное обновление",
+  "@ua_title": {
+    "description": "Updates available window message header"
+  },
+  "ua_msg": "Доступны новые обновления для установленных продуктов Autodesk.",
+  "@ua_msg": {
+    "description": "Updates available window message. All the above strings are related to Updates Available alert window"
+  },
+  
+  "settings_title": "Параметры Application Manager",
+  "@settings_title": {
+    "description": "Settings window header"
+  },
+  "import_settings": "Импорт",
+  "@import_settings": {
+    "description": "The Import link text"
+  },
+  "export_settings": "Экспорт",
+  "@export_settings": {
+    "description": "The Export link text"
+  },
+  "general_link": "ОБЩИЕ",
+  "@general_link": {
+    "description": "The General tab navigation text"
+  },
+  "files_link": "ФАЙЛЫ",
+  "@files_link": {
+    "description": "The Files tab navigation text"
+  },
+  "alerts_link": "ПРЕДУПРЕЖДЕНИЯ",
+  "@alerts_link": {
+    "description": "The Alerts tab navigation text"
+  },
+  "network_link": "СЕТЬ",
+  "@network_link": {
+    "description": "The Network tab navigation text"
+  },
+  "about_link": "О ПРОГРАММЕ",
+  "@about_link": {
+    "description": "The About tab navigation text"
+  },
+  "startup_label": "Запуск",
+  "@startup_label": {
+    "description": "Startup section header - General tab"
+  },
+  "auto_relaunch_label": "Автоматически запускать при включении компьютера",
+  "@auto_relaunch_label": {
+    "description": "Auto relaunch drop down label"
+  },
+  "self_update_label": "Разрешить Application Manager выполнять обновления",
+  "@self_update_label": {
+    "description": "Self update Application Manager check box."
+  },
+  "welcome_opened_label": "Показывать страницу приветствия при открытии",
+  "@welcome_opened_label": {
+    "description": "Show welcome page checkbox label"
+  },
+  "updates_label": "Обновления",
+  "@updates_label": {
+    "description": "Updates section header - General tab"
+  },
+  "check_interval_label": "Проверка на наличие обновлений раз в:",
+  "@check_interval_label": {
+    "description": "The label for check for updates dropdown"
+  },
+  "remote_update_label": "Включить службу удаленных обновлений",
+  "@remote_update_label": {
+    "description": "The label for enable remote update service checkbox"
+  },
+  "link_handling_label": "Обработка ссылок",
+  "@link_handling_label": {
+    "description": "Link Handling section header - General tab"
+  },
+  "opened_from_link_label": "Разрешить запуск программы Application Manager с помощью гиперссылок",
+  "@opened_from_link_label": {
+    "description": "The label for allow application manager opened from hyperlinks checkbox"
+  },
+  "local_files_label": "Локальные файлы",
+  "@local_files_label": {
+    "description": "Local Files section header - Files tab"
+  },
+  "location_label": "Расположение",
+  "@location_label": {
+    "description": "Location label"
+  },
+  "shared_files_label": "Общедоступные файлы",
+  "@shared_files_label": {
+    "description": "Shared Files label"
+  },
+  "shared_storage_label": "Использовать общедоступное хранилище для загруженного содержимого",
+  "@shared_storage_label": {
+    "description": "Checkbox label"
+  },
+  "limit_shared_space_label": "Ограничение используемого общедоступного пространства:",
+  "@limit_shared_space_label": {
+    "description": "Checkbox label"
+  },
+  "tray_icon_label": "Значок на панели задач",
+  "@tray_icon_label": {
+    "description": "Tray Icon section header - Files tab"
+  },
+  "system_tray_label": "Показывать значок на панели задач",
+  "@system_tray_label": {
+    "description": "Checkbox label"
+  },
+  "batch_severity_label": "Показывать только значки с уровнем:",
+  "@batch_severity_label": {
+    "description": "Checkbox label"
+  },
+  "alert_windows": "Окна предупреждений",
+  "@alert_windows": {
+    "description": "Alert Windows section header - Alerts tab"
+  },
+  "desktop_alert_label": "Показывать окна предупреждений",
+  "@desktop_alert_label": {
+    "description": "Show desktop alert label"
+  },
+  "hide_window_label": "Скрывать окно через:",
+  "@hide_window_label": {
+    "description": "Hide window dropdown label"
+  },
+  "alert_severity_label": "Показывать только предупреждения с уровнем:",
+  "@alert_severity_label": {
+    "description": "Checkbox label"
+  },
+  "connections_label": "Соединения",
+  "@connections_label": {
+    "description": "Connections section header - Alerts tab"
+  },
+  "limit_downloads_label": "Ограничение количества одновременных загрузок:",
+  "@limit_downloads_label": {
+    "description": "Limit download drop down label"
+  },
+  "download_bandwidth_label": "Ограничение полосы пропускания для загрузки:",
+  "@download_bandwidth_label": {
+    "description": "Limit download bandwidth drop down label"
+  },
+  "proxy_label": "Прокси-сервер",
+  "@proxy_label": {
+    "description": "Proxy section header - Network tab"
+  },
+  "proxy_type_label": "Тип прокси-сервера:",
+  "@proxy_type_label": {
+    "description": "Proxy type drop down label"
+  },
+  "no_proxy_label": "Без прокси-сервера",
+  "@no_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "auto_detect_label": "Автообнаружение",
+  "@auto_detect_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "system_proxy_label": "Прокси, настр. системой",
+  "@system_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "manual_proxy_label": "Прокси, настр. вручную",
+  "@manual_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "host_name_label": "Имя или адрес узла:",
+  "@host_name_label": {
+    "description": "Host name label"
+  },
+  "username_label": "Имя пользователя:",
+  "@username_label": {
+    "description": "Username label"
+  },
+  "secure_socket_label": "Использовать протокол SSL",
+  "@secure_socket_label": {
+    "description": "Checkbox label"
+  },
+  "port_number_label": "Номер порта:",
+  "@port_number_label": {
+    "description": "Port number label"
+  },
+  "password_label": "Пароль:",
+  "@password_label": {
+    "description": "Password label"
+  },
+  "ck_upd_4hr": "4 часа",
+  "@ck_upd_4hr": {
+    "description": "Check for updates every 4 Hours label"
+  },
+  "ck_upd_8hr": "8 часов",
+  "@ck_upd_8hr": {
+    "description": "Check for updates every 8 Hours label"
+  },
+  "ck_upd_24hr": "24 часа",
+  "@ck_upd_24hr": {
+    "description": "Check for updates every 24 Hours label"
+  },
+  "ck_upd_week": "Неделя",
+  "@ck_upd_week": {
+    "description": "Check for updates every Week label"
+  },
+  "hide_win_10secs_label": "10 с",
+  "@hide_win_10secs_label": {
+    "description": "Hide Alert window after 10 seconds label"
+  },
+  "hide_win_30secs_label": "30 с",
+  "@hide_win_30secs_label": {
+    "description": "Hide Alert window after 30 seconds label"
+  },
+  "hide_win_60secs_label": "60 с",
+  "@hide_win_60secs_label": {
+    "description": "Hide Alert window after 60 seconds label"
+  },
+  "general_label": "Общие",
+  "@general_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when General tab selected"
+  },
+  "file_label": "файл",
+  "@file_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when File tab selected"
+  },
+  "files_label": "файлы",
+  "@files_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Files tab selected"
+  },
+  "alert_label": "предупреждение",
+  "@alert_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alert tab selected"
+  },
+  "alerts_label": "предупреждения",
+  "@alerts_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alerts tab selected"
+  },
+  "network_label": "сеть",
+  "@network_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Network tab selected"
+  },
+  "adjust_settings_label": "Настройка параметров: {0}",
+  "@adjust_settings_label": {
+    "description": "A place holder string to be replaced with General/ Files/ Alerts/ Network"
+  },
+  "atuo_relaunch_help": "Установите этот флажок для получения уведомлений программы Autodesk Application Manager о наличии обновлений в процессе работы компьютера. Если флажок установлен, программа Application Manager выполняется в фоновом режиме и отображается на панели задач (в правом нижнем углу экрана).",
+  "@atuo_relaunch_help": {
+    "description": "Help tool tip content for Auto relaunch checkbox"
+  },
+  "atuo_relaunch_title": "Общие — автоматический запуск",
+  "@atuo_relaunch_title": {
+    "description": "Help tool tip title for Auto relaunch checkbox"
+  },
+  "self_update_help": "При отключении этого параметра вы будете получать уведомления о том, что для Application Manager доступны обновления. Некоторые из них должны быть установлены обязательно. Нужно будет разрешить обновление, чтобы применить его на данном компьютере.",
+  "@self_update_help": {
+    "description": "Help tool tip content for self update checkbox"
+  },
+  "self_update_title": "Application Manager — самостоятельное обновление",
+  "@self_update_title": {
+    "description": "Help tool tip title for self update checkbox"
+  },
+  "update_check_interval_help": "Программой Autodesk Application Manager автоматически выполняется проверка на наличие обновлений для установленных программ Autodesk. Задать интервал между проверками можно здесь.",
+  "@update_check_interval_help": {
+    "description": "Help tool tip content for update check interval drop down"
+  },
+  "update_check_interval_title": "Общие — интервал между проверками на наличие обновлений",
+  "@update_check_interval_title": {
+    "description": "Help tool tip title for update check interval drop down"
+  },
+  "file_location_help": "Программа Application Manager сохраняет программные комплексы в указанном расположении локальной файловой системы.<br/><br/>Эти файлы должны оставаться доступными для последующего использования во время обслуживания и восстановления программ.",
+  "@file_location_help": {
+    "description": "Help tool tip content for Local file download location"
+  },
+  "file_location_title": "Файлы — расположение",
+  "@file_location_title": {
+    "description": "Help tool tip title for Local file download location"
+  },
+  "use_shared_storage_help": "Если этот параметр включен, то приложение Application Manager сначала попытается получить программные комплексы из папки \"Общедоступные файлы\". Если поиск не даст результатов, файлы будут загружены с серверов Autodesk.",
+  "@use_shared_storage_help": {
+    "description": "Help tool tip content for Use Shared Files check box"
+  },
+  "use_shared_storage_title": "Использовать общедоступные файлы",
+  "@use_shared_storage_title": {
+    "description": "Help tool tip title for Use Shared Files check box"
+  },
+  "shared_file_location_help": "Если этот параметр включен, то приложение Application Manager сначала попытается получить программные комплексы из указанного расположения. Если поиск не даст результатов, файлы будут загружены с серверов Autodesk. Задание сетевой папки ограничит загрузку с серверов Autodesk в Интернете и позволит открыть общий доступ к первому загруженному пакету для других пользователей.",
+  "@shared_file_location_help": {
+    "description": "Help tool tip content for Shared file location"
+  },
+  "shared_file_location_title": "Общедоступные файлы — расположение",
+  "@shared_file_location_title": {
+    "description": "Help tool tip title for Shared file location"
+  },
+  "enable_alert_window_help": "В программе Autodesk Application Manager для оповещения о наличии обновлений программ и других связанных событиях используются окна предупреждений. Отключить эти оповещения можно здесь.",
+  "@enable_alert_window_help": {
+    "description": "Help tool tip content for enable alert window check box"
+  },
+  "enable_alert_window_title": "Предупреждения — показывать предупреждение",
+  "@enable_alert_window_title": {
+    "description": "Help tool tip title for enable alert window check box"
+  },
+  "alert_window_fading_time_help": "Окно предупреждения автоматически скрывается через определенный промежуток времени. Если его щелкнуть, окно останется видимым.",
+  "@alert_window_fading_time_help": {
+    "description": "Help tool tip content for enable alert window fading time drop down"
+  },
+  "alert_window_fading_time_title": "Предупреждение — скрытие предупреждения",
+  "@alert_window_fading_time_title": {
+    "description": "Help tool tip title for enable alert window fading time drop down"
+  },
+  "proxy_type_help": "Определение используемого сетью протокола прокси-сервера.",
+  "@proxy_type_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_type_title": "Сеть — тип прокси",
+  "@proxy_type_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_hostname_help": "Имя узла или IP-адрес сетевого прокси-сервера.",
+  "@proxy_hostname_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_hostname_title": "Сеть — имя узла",
+  "@proxy_hostname_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_portnumber_help": "Номер порта сетевого прокси-сервера.",
+  "@proxy_portnumber_help": {
+    "description": "Help tool tip content for proxy port number text box"
+  },
+  "proxy_portnumber_title": "Сеть — порт",
+  "@proxy_portnumber_title": {
+    "description": "Help tool tip title for proxy port number text box"
+  },
+  "proxy_username_help": "Имя пользователя, используемое для получения доступа к сетевому прокси-серверу.",
+  "@proxy_username_help": {
+    "description": "Help tool tip content for username text box"
+  },
+  "proxy_username_title": "Сеть — имя пользователя",
+  "@proxy_username_title": {
+    "description": "Help tool tip title for username text box"
+  },
+  "proxy_password_help": "Пароль, используемый для получения доступа к сетевому прокси-серверу.",
+  "@proxy_password_help": {
+    "description": "Help tool tip content for password text box"
+  },
+  "proxy_password_title": "Сеть — пароль",
+  "@proxy_password_title": {
+    "description": "Help tool tip title for password text box"
+  },
+  "release_notes_label": "Примечания к выпуску",
+  "@release_notes_label": {
+    "description": "Release Notes label to show under Settings window About tab"
+  },
+  "host_name_error_title": "Недопустимое имя узла",
+  "@host_name_error_title": {
+    "description": "Error message title for invalid host name"
+  },
+  "host_name_error_content": "Имя узла или IP-адрес не могут быть назначены сетевому прокси-серверу.<br/>Введите допустимое имя узла или IP-адрес для прокси-сервера.<br/>Свяжитесь с сетевым администратором для получения дополнительной информации о допустимых значениях.",
+  "@host_name_erro_content": {
+    "description": "Error message content for invalid host name"
+  },
+  "port_number_error_title": "Недопустимый номер порта",
+  "@port_number_error_title": {
+    "description": "Error message title for invalid port number"
+  },
+  "port_number_error_content": "Не удалось подключиться к указанному номеру порта сетевого прокси-сервера.<br/>Введите допустимый номер порта для прокси-сервера.<br/>Свяжитесь с сетевым администратором для получения дополнительной информации о допустимых значениях.",
+  "@port_number_error_content": {
+    "description": "Error message content for invalid port number"
+  },
+  "username_pwd_error_title": "Недопустимое имя пользователя или пароль",
+  "@username_pwd_error_title": {
+    "description": "Error message title for invalid Username or Password"
+  },
+  "username_pwd_error_content": "Для подключения к сети требуется аутентификация прокси.<br/>Введите имя пользователя и пароль.<br/>Свяжитесь с сетевым администратором для получения дополнительной информации о допустимых значениях.",
+  "@username_pwd_error_content": {
+    "description": "Error message content for invalid Username or Password"
+  },
+  "invalid_file_location_error_title": "Недопустимое расположение файла",
+  "@invalid_file_location_error_title": {
+    "description": "Error message title for invalid file location"
+  },
+  "invalid_file_location_error_content": "Указано недопустимое расположение.<br/>Укажите допустимое расположение для хранилища файлов.",
+  "@invalid_file_location_error_content": {
+    "description": "Error message content for invalid file location"
+  },
+  "invalid_shared_file_location_error_title": "Недопустимое расположение общедоступных файлов",
+  "@invalid_shared_file_location_error_title": {
+    "description": "Error message title for invalid shared file location"
+  },
+  "invalid_shared_file_location_error_content": "Указано недопустимое расположение.<br/>Укажите допустимое расположение для хранилища общедоступных файлов.",
+  "@invalid_shared_file_location_error_content": {
+    "description": "Error message content for invalid shared file location"
+  },
+  "proxy_connection_error_title": "Ошибка подключения к прокси-серверу",
+  "@proxy_connection_error_title": {
+    "description": "error message title when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_host_content": "Не удалось подключиться к указанному сетевому прокси-серверу. Для продолжения настройте параметры прокси-сервера.",
+  "@settings_error_invalid_host_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_port_content": "Не удалось подключиться к указанному номеру порта сетевого прокси-сервера. Для продолжения введите допустимый номер порта.",
+  "@settings_error_invalid_port_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_title": "Ошибка аутентификации прокси",
+  "@settings_error_invalid_proxy_cred_title": {
+    "description": "error message title when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_content": "Для подключения к сети требуется аутентификация прокси. Для продолжения введите имя пользователя и пароль.",
+  "@settings_error_invalid_proxy_cred_content": {
+    "description": "error message content when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_cannot_access_file_content": "Не удалось найти расположение файла. Проверьте указанное расположение.",
+  "@settings_error_cannot_access_file_content": {
+    "description": "error message content when cannot access the file location"
+  },
+  "settings_error_cannot_access_shared_file_content": "Не удалось найти расположение файла. Проверьте подключение к сети или измените расположение.",
+  "@settings_error_cannot_access_shared_file_content": {
+    "description": "error message content when cannot access the shared file location"
+  },
+  "diskspace_low_error_title": "Недостаточно места на диске",
+  "@diskspace_low_error_title": {
+    "description": "error message title when cannot disk space is low"
+  },
+  "settings_error_diskspace_low_content": "В текущей папке загрузки нет свободного места. Выберите новое расположение для загрузки перед установкой.",
+  "@settings_error_diskspace_low_content": {
+    "description": "error message content when disk space is low"
+  }
+});

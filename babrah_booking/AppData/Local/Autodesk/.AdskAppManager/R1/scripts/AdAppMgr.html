@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="appmgr-main">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/lib/bootstrap-custom.css">
+		<link type="text/css" rel="stylesheet" href="css/lib/bootstrap-select.css">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-common.css">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-plugins.css">
+		<link type="text/css" rel="stylesheet" href="css/appmgr-main.css">
+		<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+        <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-custom.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-select.min.js"></script>
+	</head>
+	<body id="appmgrMainCtrl" ng-controller="appmgrMainCtrl">
+		<div class="transparent-overlay" ng-show="showCancelConfirm"></div>
+		<div class="app-loading hide"></div>
+		<div class="top-wrapper">
+			<div class="header">
+				<div class="left">
+					<img src="images/autodesk_logo_large.png" class="adsk-logo-large">
+					<span class="title">Application Manager</span>
+				</div>
+				<div class="right">
+					<ul class="links">
+						<li><a class="settings" href="" ng-click="openSettings()" arb:id="settings_link"></a></li>
+						<li><a class="help" href="" ng-click="cs.openHelp()" arb:id="help_link"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="nav_wrapper">
+				<ul class="main_nav">
+					<li><a href="" ng-class="getNavClass('welcome')" ng-click="switchTab('welcome')" arb:id="welcome_link"></a></li>
+					<li><a href="" ng-class="getNavClass('updates')" ng-click="switchTab('updates')" arb:id="updates_link"></a></li>
+				</ul>
+				<div class="sort-sec" ng-hide="selectedTab == 'welcome'">
+					<span arb:id="sort_by_label"></span> 
+					 <select class="custom-select" data-width="105px" ng-model="sortBy" ng-change="loadAssets('updates')">
+					 	<option ng-repeat="opt in ms.sortOptions" value="{{opt.value}}">{{opt.label}}</option>
+					 </select>
+				</div>
+			</div>
+			<div class="clr-both"></div>
+		</div>
+		<div class="middle">
+			<div class="scrollable">
+				<div id="tab_welcome" class="welcome tab-content" ng:show="selectedTab == 'welcome'">
+					<ng-include src="'templates/welcome.html'" onload="localize()"></ng-include>
+				</div>
+				<div id="tab_updates" class="tab-content" ng:show="selectedTab == 'updates'">
+					<ng-include src="'templates/updates.html'"></ng-include>
+				</div>
+			</div>
+		</div>
+		<div class="footer" ng-class="{'err': showStatusError}" ng-show="showFooter || showStatusError">
+			<div class="se-outer" ng-show="showStatusError">
+				<div class="se-close" ng-click="showStatusError = false"></div>
+				<div class="se-inner">
+					<div class="se-title" arb:id="status_err_title"></div>
+					<div class="se-content">{{statusErrorText}}</div>
+				</div>
+			</div>
+			<div class="info" ng-show="!showStatusError">{{getFooterText()}}</div>
+			<div class="btns" ng-hide="selectedTab == 'welcome'">
+				<a id="mm_btn" class="btn-white" href="" ng-class="{'disabled': disableMultiAction}" ng-click="disableMultiAction || onClickMultiMenu($event, currentAction)">{{getMultiMenuBtnName()}}</a>
+				<a id="mm_icon" class="btn-white mm-icon" href="" ng-class="{'open': showMultiMenu, 'close': !showMultiMenu, 'disabled': disableMultiAction}" multi-action-arrow>
+					<span id="mm_arrow" class="mm-icon"></span>
+				</a>
+				<div id="mm_menu" ng-show="showMultiMenu">
+					<a href="" ng-repeat="key in cs.noSort(ms.multiMenuBtns)" ng-init="val = ms.multiMenuBtns[key]" ng-hide="val.hidden"
+					ng-class="{'disabled': val.disabled}" ng-click="onClickMultiMenu($event, key, val.disabled)">{{val.label}}</a>
+				</div>
+				<a id="close_btn" class="btn-gray" href="" ng-click="closeAppWindow()" arb:id="close_label"></a>
+			</div>
+			<div class="clr-both"></div>
+		</div>
+		
+		<!-- Cancel confirmation section -->
+		<div class="cc-wrapper" ng-show="showCancelConfirm">
+			<div class="cc-header">
+				<span>{{cancelTitle}}</span>
+				<div class="cc-close" ng-click="cancelNo()"></div>
+			</div>
+			<div class="cc-inner">
+				<span>{{cancelContent}}</span>
+				<div class="cc-btns">
+					<a class="btn-gray cancel-yes" href="" ng-click="cancelYes()" arb:id="yes_label" ></a>
+					<a class="btn-blue cancel-no" href="" ng-click="cancelNo()" arb:id="no_label"></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/lib/arbcore.js"></script>
+		<script type="text/javascript" src="js/lib/Globalize.js"></script>
+		<script type="text/javascript" src="js/common/appmgr-utils.js"></script>
+		<script type="text/javascript">
+			loadCulture();
+		</script>
+		<script type="text/javascript">
+			arbResourceSelector();
+		</script>
+		<script type="text/javascript" src="js/controllers/appmgrMainCtrl.js"></script>
+		<script type="text/javascript" src="js/directives/appmgrMainDirective.js"></script>
+		<script type="text/javascript" src="js/filters/appmgrMainFilter.js"></script>
+		<script type="text/javascript" src="js/services/appmgrCommonService.js"></script>
+		<script type="text/javascript" src="js/services/appmgrMainService.js"></script>
+		<script type="text/javascript" src="js/common/appmgr-plugins.js"></script>
+		<script type="text/html" id="also_includes_template">
+			<div class="also-includes">
+				<% _.each(assets, function(asset, i) { %>  
+					<div class="product fl tool-tip" data-key="<%= asset.id %>">
+						<% if (asset.thumbUrl && asset.thumbUrl !='') { %>
+							<img class="prod-img tool-tip" src="<%= asset.thumbUrl %>">
+						<% } else { %>
+							<img class="prod-img tool-tip" src="images/active_appicon.png">
+						<% } %>
+						<div class="prod-name tool-tip"><%= asset.displayName %></div>
+					</div>
+					<% if (includeClearBoth && (i + 1) % 4 == 0) { %>
+						<div class="clr-both"></div>
+					<% } %>
+				<% }); %>
+			</div>		
+		</script>
+		<script type="text/html" id="asset_info_tool_tip">
+			<div class="asset-info-tool-tip">
+				<span class="name"><%= name %></span>
+				<span class="short-desc"><%= shortDesc %></span>
+				<span class="severity"><%= severity %></span>
+			</div>
+			<% if (isListed) { %>
+    			<div class="product-link">
+					<a href="#" data-key="<%= id %>" class="view-full-detail"><%= viewFullDetail %></a>
+				</div>
+			<% } %>
+		</script>
+	</body>
+</html>

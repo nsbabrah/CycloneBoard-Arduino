@@ -1,0 +1,63 @@
+9/3/2015 11:59:09 AM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/3/2015 11:59:14 AM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/3/2015 11:59:14 AM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/3/2015 11:59:15 AM: Polling:2 threads started
+9/3/2015 11:59:15 AM: SubStatus: Polling...
+9/3/2015 11:59:15 AM: Polling: All threads finished
+9/3/2015 12:44:59 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/3/2015 12:45:02 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/3/2015 12:45:02 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/3/2015 12:45:03 PM: Polling:2 threads started
+9/3/2015 12:45:03 PM: SubStatus: Polling...
+9/3/2015 12:45:03 PM: Polling: All threads finished
+9/3/2015 1:04:36 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/3/2015 1:04:37 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/3/2015 1:04:37 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/3/2015 1:04:37 PM: Polling:2 threads started
+9/3/2015 1:04:37 PM: SubStatus: Polling...
+9/3/2015 1:04:37 PM: Polling: All threads finished
+9/3/2015 1:23:03 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/3/2015 1:23:04 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/3/2015 1:23:04 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/3/2015 1:23:04 PM: Polling:2 threads started
+9/3/2015 1:23:04 PM: SubStatus: Polling...
+9/3/2015 1:23:05 PM: Polling: All threads finished
+9/4/2015 10:27:02 AM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/4/2015 10:27:03 AM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/4/2015 10:27:03 AM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/4/2015 10:27:03 AM: Polling:2 threads started
+9/4/2015 10:27:03 AM: SubStatus: Polling...
+9/4/2015 10:27:03 AM: Polling: All threads finished
+9/5/2015 9:37:16 AM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/5/2015 9:37:18 AM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/5/2015 9:37:18 AM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/5/2015 9:37:18 AM: Polling:2 threads started
+9/5/2015 9:37:18 AM: SubStatus: Polling...
+9/5/2015 9:37:18 AM: Polling: All threads finished
+8/31/2016 4:10:16 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+8/31/2016 4:10:22 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+8/31/2016 4:10:22 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+8/31/2016 4:10:22 PM: Polling:2 threads started
+8/31/2016 4:10:22 PM: SubStatus: Polling...
+8/31/2016 4:10:23 PM: Polling: All threads finished
+8/31/2016 4:16:23 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+8/31/2016 4:16:24 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+8/31/2016 4:16:24 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+8/31/2016 4:16:24 PM: Polling:2 threads started
+8/31/2016 4:16:24 PM: SubStatus: Polling...
+8/31/2016 4:16:25 PM: Polling: All threads finished
+9/1/2016 1:07:59 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\AutoCAD 2014\R19.1\enu\Support\infocenter.xml
+9/1/2016 1:08:04 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+9/1/2016 1:08:04 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+9/1/2016 1:08:04 PM: Polling:2 threads started
+9/1/2016 1:08:04 PM: SubStatus: Polling...
+9/1/2016 1:08:06 PM: Polling: All threads finished

@@ -1,0 +1,26 @@
+0324-15:33:55.405[F]: START UPDT
+0324-15:33:55.405[I]: Optimus: not installed
+0324-15:33:55.405[I]: NVIDIA Update: installed
+0324-15:33:55.405[I]: GeforceExperience: not installed
+0324-15:33:55.505[I]: Installation thread started.
+0324-15:34:55.502[I]: PolicyTrigger called.
+0324-15:34:55.502[I]: Going to collect SHIM.
+0324-15:35:12.382[E]: GetSUGAR: WinHttpSendRequest failed: Error #12007
+0324-15:35:12.382[E]: DoWork: server connection failed: Server connection error in src\SUGARClient.cpp:1929
+0324-15:35:12.382[E]: Exception in DoWork: Server connection error in src\SUGARClient.cpp:1929
+0324-15:35:55.517[I]: PolicyTrigger called.
+0324-15:36:09.949[E]: GetSUGAR: WinHttpSendRequest failed: Error #12007
+0324-15:36:09.949[E]: DoWork: server connection failed: Server connection error in src\SUGARClient.cpp:1929
+0324-15:36:09.949[E]: Exception in DoWork: Server connection error in src\SUGARClient.cpp:1929
+0324-15:37:55.547[I]: PolicyTrigger called.
+0324-15:37:57.244[I]: ParseSugar: software updates parsed
+0324-15:37:57.244[I]: Package installation thread has stopped.
+0324-15:37:57.294[I]: doInstallUninstall: going to install package '000063ef' (DRS update)
+0324-15:37:58.551[I]: Command '"C:\Users\nsbabrah\AppData\Local\NVIDIA\NvBackend\Packages\000063ef\DRS update.18761999.exe" /S /p "C:\Users\nsbabrah\AppData\Local\NVIDIA\NvBackend"' finished with code 1
+0324-15:37:58.551[E]: Installation of package '000063ef' failed
+0324-15:37:58.551[I]: Installation thread started.
+0324-15:37:58.551[E]: ParseSugar: packages parsed but packages installation failed!
+0324-15:37:58.551[I]: doInstallUninstall: going to install package '000063ef' (DRS update)
+0324-15:37:58.551[I]: Exiting DoWork.
+0324-15:37:58.917[I]: Command '"C:\Users\nsbabrah\AppData\Local\NVIDIA\NvBackend\Packages\000063ef\DRS update.18761999.exe" /S /p "C:\Users\nsbabrah\AppData\Local\NVIDIA\NvBackend"' finished with code 1
+0324-15:37:58.917[E]: Installation of package '000063ef' failed

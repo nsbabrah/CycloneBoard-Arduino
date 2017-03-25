@@ -1,0 +1,10 @@
+8/31/2016 4:10:48 PM: Configuration Read from: C:\Users\win7adm\AppData\Local\Autodesk\Autodesk AutoCAD Map 3D 2017\R21.0\enu\Support\infocenter.xml
+8/31/2016 4:11:17 PM: ICommunicationCenterConnector.SubAwareServiceUrl does not contain valid URL.
+ Attempting to load from registry
+8/31/2016 4:11:17 PM: SubStatus: No or Bad URL defined in registry - Using default: http://cadservices.autodesk.com/subscriptionservice/subservice
+8/31/2016 4:11:17 PM: Polling:2 threads started
+8/31/2016 4:11:17 PM: SubStatus: Polling...
+8/31/2016 4:11:18 PM: Polling: All threads finished
+8/31/2016 4:11:18 PM: System.Runtime.InteropServices.COMException (0x80004005): Error HRESULT E_FAIL has been returned from a call to a COM component.
+   at Autodesk.Private.InfoCenterLib.ICommCntrManager.GetChannelsAndContents(Boolean bWithContents, Boolean bSignedUpChannelsOnly)
+   at Autodesk.Private.InfoCenter.CommunicationCenter.GetChannels(ConfigurationUnitCollection& channelCollection)

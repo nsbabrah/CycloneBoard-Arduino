@@ -1,0 +1,148 @@
+[2017-03-24 15:39:18:0567] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 15:39:18:0567] Command Line: 
+[2017-03-24 15:39:18:0627] Decryption failed.
+[2017-03-24 15:39:18:0627] Last check for updates decryption failed
+[2017-03-24 15:39:26:0762] Newer version ARM update is not available
+[2017-03-24 15:39:26:0767] ProductCode: {AC76BA86-7AD7-1033-7B44-AC0F074E4100}
+[2017-03-24 15:39:26:0767] ProductName: Adobe Acrobat Reader DC
+[2017-03-24 15:39:26:0767] ProductVersion: 15.023.20070
+[2017-03-24 15:39:26:0767] ProductUACPatching: enabled
+[2017-03-24 15:39:26:0895] Using registered preference AUTO_ALL
+[2017-03-24 15:39:26:0897] Decryption failed.
+[2017-03-24 15:39:26:0897] Last check for updates decryption failed
+[2017-03-24 15:39:28:0584] MDOV
+[2017-03-24 15:39:28:0584]    Error Code: 1615
+[2017-03-24 15:39:28:0585] No files in Session, setting NO_UPDATES mode
+[2017-03-24 15:39:28:0590] ProductCode: {AC76BA86-1033-FFFF-7760-0C0F074E4100}
+[2017-03-24 15:39:28:0590] ProductName: Adobe Acrobat DC
+[2017-03-24 15:39:28:0590] ProductVersion: 15.020.20042
+[2017-03-24 15:39:28:0590] ProductUACPatching: enabled
+[2017-03-24 15:39:28:0590] Using registered preference AUTO_ALL
+[2017-03-24 15:39:28:0591] Decryption failed.
+[2017-03-24 15:39:28:0591] Last check for updates decryption failed
+[2017-03-24 15:39:29:0578] MDOV
+[2017-03-24 15:39:29:0578]    Error Code: 1615
+[2017-03-24 15:39:29:0578] New file object: AcrobatDCUpd1502320070.msp
+[2017-03-24 15:42:55:0953] Decryption failed.
+[2017-03-24 15:42:55:0953] value is registered but not valid: tTimeWaitedFilesInUse_Acrobat
+[2017-03-24 15:42:55:0993] WriteSharedMemory(): succeeded. mapping obj name: Global\{E8F34725-3471-4506-B28B-47145817B1AE}_-790823677thsnYaViMRAeBoda
+[2017-03-24 15:42:56:0931] ARM returns ERROR_SUCCESS
+[2017-03-24 15:42:56:0931] Adobe ARM 1.824.21.1354 logging finished.
+
+
+
+[2017-03-24 15:42:57:0525] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 15:42:57:0525] Command Line: /CloseApplications /FOLDER:"Distiller;AdobeCollabSynchronizerNotification;AcrobatTrayIcon"
+[2017-03-24 15:42:57:0527] ARM returns ERROR_SUCCESS
+[2017-03-24 15:42:57:0527] Adobe ARM 1.824.21.1354 logging finished.
+
+
+
+[2017-03-24 15:45:37:0219] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 15:45:37:0219] Command Line: 
+[2017-03-24 15:45:37:0220] ProductCode: {AC76BA86-7AD7-1033-7B44-AC0F074E4100}
+[2017-03-24 15:45:37:0220] ProductName: Adobe Acrobat Reader DC
+[2017-03-24 15:45:37:0220] ProductVersion: 15.023.20070
+[2017-03-24 15:45:37:0220] ProductUACPatching: enabled
+[2017-03-24 15:45:37:0245] Another instance of ARM is already running.
+[2017-03-24 15:45:37:0245] ** Setting Error Condition: 
+[2017-03-24 15:45:37:0245]    Error Code: 120100
+[2017-03-24 15:45:37:0245] Failed to get Value for StringID: IDS_ERROR_RUNNING_DESCRIPTION
+[2017-03-24 15:45:39:0245] ARM returns ERROR_SUCCESS
+[2017-03-24 15:45:39:0245] Adobe ARM 1.824.21.1354 logging finished.
+
+
+
+[2017-03-24 15:48:20:0363] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 15:48:20:0363] Command Line: /ProcessResult /PRODUCT:Acrobat /LANG:ENU /AllowedLogsessionVersionList:7.2.1.3614;7.3.1.100;7.3.1.136;7.3.1.140
+[2017-03-24 15:48:22:0415] ProductCode: {AC76BA86-1033-FFFF-7760-0C0F074E4100}
+[2017-03-24 15:48:22:0415] ProductName: Adobe Acrobat DC
+[2017-03-24 15:48:22:0415] ProductVersion: 15.023.20070
+[2017-03-24 15:48:22:0415] ProductUACPatching: enabled
+[2017-03-24 15:48:22:0653] ARM returns ERROR_SUCCESS
+[2017-03-24 15:48:22:0653] Adobe ARM 1.824.21.1354 logging finished.
+
+
+
+[2017-03-24 17:00:00:0171] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 17:00:00:0171] Command Line: 
+[2017-03-24 17:00:00:0196] Too soon to check for arm update
+[2017-03-24 17:00:00:0197] ProductCode: {AC76BA86-7AD7-1033-7B44-AC0F074E4100}
+[2017-03-24 17:00:00:0197] ProductName: Adobe Acrobat Reader DC
+[2017-03-24 17:00:00:0197] ProductVersion: 15.023.20070
+[2017-03-24 17:00:00:0197] ProductUACPatching: enabled
+[2017-03-24 17:00:00:0216] Using registered preference AUTO_ALL
+[2017-03-24 17:00:00:0216] Last check for updates not expired
+[2017-03-24 17:00:00:0216]    Error Code: 120300
+[2017-03-24 17:00:00:0217] ProductCode: {AC76BA86-1033-FFFF-7760-0C0F074E4100}
+[2017-03-24 17:00:00:0217] ProductName: Adobe Acrobat DC
+[2017-03-24 17:00:00:0217] ProductVersion: 15.023.20070
+[2017-03-24 17:00:00:0217] ProductUACPatching: enabled
+[2017-03-24 17:00:00:0217] Using registered preference AUTO_ALL
+[2017-03-24 17:00:00:0217] Last check for updates not expired
+[2017-03-24 17:00:00:0217]    Error Code: 120300
+[2017-03-24 17:00:00:0217] Using registered preference AUTO_ALL
+[2017-03-24 17:00:00:0218] Decryption failed.
+[2017-03-24 17:00:00:0218] Last check for updates decryption failed
+[2017-03-24 17:00:08:0453] MDOV
+[2017-03-24 17:00:08:0453]    Error Code: 1615
+[2017-03-24 17:00:08:0454] No files in Session, setting NO_UPDATES mode
+[2017-03-24 17:00:08:0457] Using registered preference AUTO_ALL
+[2017-03-24 17:00:08:0458] Decryption failed.
+[2017-03-24 17:00:08:0458] Last check for updates decryption failed
+[2017-03-24 17:00:10:0293] MDOV
+[2017-03-24 17:00:10:0293]    Error Code: 1615
+[2017-03-24 17:00:10:0294] New file object: ServicesUpdater.exe
+[2017-03-24 17:00:10:0294] MDOV
+[2017-03-24 17:00:10:0294]    Error Code: 1615
+[2017-03-24 17:00:32:0142] Newer version ARM update is not available
+[2017-03-24 17:00:32:0173] WriteSharedMemory(): succeeded. mapping obj name: Global\{E8F34725-3471-4506-B28B-47145817B1AE}_-790823677thsnYaViMRAeBoda
+[2017-03-24 17:00:32:0804] ARM returns ERROR_SUCCESS
+[2017-03-24 17:00:32:0804] Adobe ARM 1.824.21.1354 logging finished.
+
+
+
+[2017-03-24 17:00:32:0829] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 17:00:32:0829] Command Line: /ArmElevate /MODE:3 /PRODUCT:{291AA914-A987-4CE9-BD63-AC0A92D435E5} /VERSION:15.0 /LANG:ENU /Svc /USER:nsbabrah /SESSIONID:1
+[2017-03-24 17:00:32:0883] Using CommandLine preference AUTO_ALL
+[2017-03-24 17:00:32:0913] MDOV
+[2017-03-24 17:00:32:0913]    Error Code: 1615
+[2017-03-24 17:00:32:0913] New file object: ServicesUpdater.exe
+[2017-03-24 17:00:32:0913] MDOV
+[2017-03-24 17:00:32:0913]    Error Code: 1615
+[2017-03-24 17:00:32:0931] InstallProductExe...
+[2017-03-24 17:00:32:0931]    file - C:\ProgramData\Adobe\ARM\{291AA914-A987-4CE9-BD63-AC0A92D435E5}\ServicesUpdater.exe
+[2017-03-24 17:00:32:0931]    args - 
+[2017-03-24 17:00:33:0041] Installation returned ERROR_SUCCESS
+[2017-03-24 17:00:33:0101] *** Product after installation ***
+[2017-03-24 17:00:33:0119] DuplicateTokenEx success: explorer.exe
+[2017-03-24 17:00:33:0625] ARM returns ERROR_SUCCESS
+[2017-03-24 17:00:33:0625] Adobe ARM 1.824.21.1354 logging finished.
+
+
+
+[2017-03-24 19:59:17:0151] Adobe ARM 1.824.21.1354 logging started.
+[2017-03-24 19:59:17:0151] Command Line: 
+[2017-03-24 19:59:17:0190] Too soon to check for arm update
+[2017-03-24 19:59:17:0192] ProductCode: {AC76BA86-7AD7-1033-7B44-AC0F074E4100}
+[2017-03-24 19:59:17:0192] ProductName: Adobe Acrobat Reader DC
+[2017-03-24 19:59:17:0192] ProductVersion: 15.023.20070
+[2017-03-24 19:59:17:0192] ProductUACPatching: enabled
+[2017-03-24 19:59:17:0229] Using registered preference AUTO_ALL
+[2017-03-24 19:59:17:0229] Last check for updates not expired
+[2017-03-24 19:59:17:0229]    Error Code: 120300
+[2017-03-24 19:59:17:0229] ProductCode: {AC76BA86-1033-FFFF-7760-0C0F074E4100}
+[2017-03-24 19:59:17:0229] ProductName: Adobe Acrobat DC
+[2017-03-24 19:59:17:0229] ProductVersion: 15.023.20070
+[2017-03-24 19:59:17:0229] ProductUACPatching: enabled
+[2017-03-24 19:59:17:0229] Using registered preference AUTO_ALL
+[2017-03-24 19:59:17:0230] Last check for updates not expired
+[2017-03-24 19:59:17:0230]    Error Code: 120300
+[2017-03-24 19:59:17:0230] Using registered preference AUTO_ALL
+[2017-03-24 19:59:17:0230] Last check for updates not expired
+[2017-03-24 19:59:17:0230]    Error Code: 120300
+[2017-03-24 19:59:17:0230] Using registered preference AUTO_ALL
+[2017-03-24 19:59:17:0231] Last check for updates not expired
+[2017-03-24 19:59:17:0231]    Error Code: 120300
+[2017-03-24 19:59:17:0432] ARM returns ERROR_SUCCESS
+[2017-03-24 19:59:17:0432] Adobe ARM 1.824.21.1354 logging finished.

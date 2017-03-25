@@ -1,0 +1,5 @@
+﻿This directory contains application data for the MicroStation product installed at the following location:
+
+        C:\Program Files (x86)\Bentley\MicroStation V8i (SELECTseries)\MicroStation
+
+This directory should only be removed after uninstalling the above product.

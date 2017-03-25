@@ -1,0 +1,17 @@
+<ROOT___NODE Type="1">
+ <LastRoundtrip Type="2">1428870</LastRoundtrip>
+ <LastUpdateCheckTime Type="4">2017-03-24T19:37:58Z</LastUpdateCheckTime>
+ <SoftwareUpdates Type="1">
+  <Update-0 Type="1">
+   <UpdateType Type="2">0</UpdateType>
+   <Name Type="4">GeForce 342.01 Driver</Name>
+   <Version Type="4">342.01</Version>
+   <ReleaseDateTime Type="4">12/14/2016</ReleaseDateTime>
+   <DetailsURL Type="4">http://www.geforce.com/drivers/results/112594/nvidiaupdate</DetailsURL>
+   <DownloadURL Type="4">http://international-gfe.download.nvidia.com/Windows/342.01/342.01-desktop-win8-win7-winvista-64bit-international-g.exe</DownloadURL>
+   <ReleaseHighlightsURL Type="4">http://www.geforce.com/nvidia_web_services/controller.gfeclientcontent.php/com.nvidia.services.GFEClientContent.getStyledReleaseHighlightsHtml/{&quot;DID&quot;:112594}</ReleaseHighlightsURL>
+   <isBeta Type="2">0</isBeta>
+   <isMandatory Type="2">0</isMandatory>
+  </Update-0>
+ </SoftwareUpdates>
+</ROOT___NODE>

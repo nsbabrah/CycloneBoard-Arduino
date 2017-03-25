@@ -1,0 +1,57 @@
+[0324/161758.082:INFO:scoped_logging.cc(59)] Starting logs for version: 17.97.3
+[0324/161758.115:INFO:crashpad_crash_reporter.cc(90)] Crash handler launched and ready.
+[0324/161758.115:INFO:chrome_reporter_main.cc(116)] --session-id=+h1eo++uKDOi499w4N5+ejQErILGTvkrhwOuC3mc
+[0324/161758.116:INFO:crashpad_crash_client.cc(252)] Found 0 completed crash reports
+[0324/161758.116:INFO:crashpad_crash_client.cc(273)] Found 0 pending crash reports
+[0324/161758.116:INFO:chrome_reporter_main.cc(126)] Crash reporting initialized.
+[0324/161758.116:INFO:crashpad_crash_client.cc(294)] Disable crash reporting
+[0324/161758.120:INFO:worker_thread_pool.cc(229)] Thread pool using '16' threads.
+[0324/161758.231:INFO:scanner.cc(213)] Found disk footprint: CSIDL_PROGRAM_FILES\relevantknowledge
+[0324/161758.448:INFO:scanner.cc(762)] Report only UwS detected: Observed/RelevantKnowledge
+[0324/161759.378:WARNING:scoped_timed_task_logger.cc(17)] MatchBrowseFoxAInstallationFolder took '1' seconds.
+[0324/161759.378:WARNING:scoped_timed_task_logger.cc(17)] MatchObservedBrowseFoxAInstallationFolder took '1' seconds.
+[0324/161759.380:WARNING:scoped_timed_task_logger.cc(17)] Expanding disk footprints for: 'Observed/MySearchWeb' took '1' seconds.
+[0324/161759.394:WARNING:scoped_timed_task_logger.cc(17)] MatchDownchecker took '1' seconds.
+[0324/161759.394:WARNING:scoped_timed_task_logger.cc(17)] MatchBrowseFoxBInstallationFolder took '1' seconds.
+[0324/161759.425:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Removed/BrowseFox/A' took '1' seconds.
+[0324/161759.525:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/BrowseFox/A' took '1' seconds.
+[0324/161759.691:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/BrowseFox/A' took '1' seconds.
+[0324/161759.578:WARNING:scoped_timed_task_logger.cc(17)] MatchShopperZInstallationFolder took '1' seconds.
+[0324/161759.590:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/Downchecker.A' took '1' seconds.
+[0324/161759.736:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/Downchecker.A' took '1' seconds.
+[0324/161759.690:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Removed/BrowseFox/B' took '1' seconds.
+[0324/161759.558:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/MySearchWeb' took '1' seconds.
+[0324/161759.707:WARNING:scoped_timed_task_logger.cc(17)] MatchSmartBarBInstallationFolder took '1' seconds.
+[0324/161759.707:WARNING:scoped_timed_task_logger.cc(17)] MatchSmartBarDInstallationFolder took '1' seconds.
+[0324/161759.707:WARNING:scoped_timed_task_logger.cc(17)] MatchPotentialUnknownCouponMarvelVariants took '1' seconds.
+[0324/161759.709:WARNING:scoped_timed_task_logger.cc(17)] MatchCrossRiderNovaFolders took '1' seconds.
+[0324/161759.727:WARNING:scoped_timed_task_logger.cc(17)] MatchSmartBarUouReinstallerFolder took '1' seconds.
+[0324/161759.733:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/Shopperz' took '1' seconds.
+[0324/161759.690:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Removed/BrowseFox/A' took '1' seconds.
+[0324/161759.774:WARNING:scoped_timed_task_logger.cc(17)] MatchGhokswa took '1' seconds.
+[0324/161759.794:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Removed/BrowseFox/B' took '1' seconds.
+[0324/161759.820:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/SmartBar/B' took '1' seconds.
+[0324/161759.854:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/SmartBar/D' took '1' seconds.
+[0324/161759.861:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/Coupon Marvel' took '1' seconds.
+[0324/161759.880:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Removed/CrossRider/A' took '1' seconds.
+[0324/161759.892:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/SmartBar/Uou' took '1' seconds.
+[0324/161759.923:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/Shopperz' took '1' seconds.
+[0324/161759.925:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/Trotux' took '1' seconds.
+[0324/161759.975:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Observed/Ghokswa' took '1' seconds.
+[0324/161800.012:WARNING:scoped_timed_task_logger.cc(17)] MatchMultiplugInstallationByDecryptingFiles took '1' seconds.
+[0324/161800.025:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/SmartBar/B' took '1' seconds.
+[0324/161800.025:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/SmartBar/D' took '1' seconds.
+[0324/161800.026:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/Coupon Marvel' took '1' seconds.
+[0324/161800.027:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Removed/CrossRider/A' took '1' seconds.
+[0324/161800.047:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/SmartBar/Uou' took '1' seconds.
+[0324/161800.049:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/Trotux' took '1' seconds.
+[0324/161800.064:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Observed/Ghokswa' took '1' seconds.
+[0324/161800.894:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Removed/Multiplug' took '2' seconds.
+[0324/161800.909:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Removed/Multiplug' took '2' seconds.
+[0324/161802.767:WARNING:scoped_timed_task_logger.cc(17)] MatchWajamInternetEnhancerFolders took '4' seconds.
+[0324/161802.767:WARNING:scoped_timed_task_logger.cc(17)] MatchWajamWebEnhancerFolders took '4' seconds.
+[0324/161802.780:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Removed/Wajam Internet Enhancer' took '4' seconds.
+[0324/161802.781:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Removed/Wajam Internet Enhancer' took '4' seconds.
+[0324/161802.782:WARNING:scoped_timed_task_logger.cc(17)] Running custom matcher 0 for UwS 'Removed/Wajam Web Enhancer' took '4' seconds.
+[0324/161802.821:WARNING:scoped_timed_task_logger.cc(17)] Scanning of: 'Removed/Wajam Web Enhancer' took '4' seconds.
+[0324/161802.821:INFO:chrome_reporter_main.cc(61)] Exiting with code: 32

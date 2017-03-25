@@ -1,0 +1,1004 @@
+arb.register("arb_editor:hu_HU", {
+  "@@locale": "hu",
+
+  "settings_link": "Beállítások",
+  "@settings_link": {
+    "description": "Application Manager main window settings link text"
+  },
+  "help_link": "Súgó",
+  "@help_link": {
+    "description": "Application Manager main window help link text"
+  },
+  "welcome_link": "ÜDVÖZÖLJÜK",
+  "@welcome_link": {
+    "description": "Welcome tab top navigation text"
+  },
+  "software_link": "SZOFTVER",
+  "@software_link": {
+    "description": "Software tab top navigation text"
+  },
+  "updates_link": "FRISSÍTÉSEK",
+  "@updates_link": {
+    "description": "Updates tab top navigation text"
+  },
+  "apps_link": "ALKALMAZÁSOK",
+  "@apps_link": {
+    "description": "Apps tab top navigation text"
+  },
+  "search_text@placeholder": "Keresés...",
+  "@search_text": {
+    "description": "Placeholder text for Search text box in the Main Appman UI"
+  },
+  "sort_by_label": "Rendezés:",
+  "@sort_by_label": {
+    "description": "Label for the Sort by drop down"
+  },
+  "sort_date_optn": "Dátum",
+  "@sort_date_optn": {
+    "description": "One of the option in Sort by drop down - Date"
+  },
+  "sort_sev_optn": "Súlyosság",
+  "@sort_sev_optn": {
+    "description": "One of the option in Sort by drop down - Severity"
+  },
+  "view_label": "Megtekintés:",
+  "@view_label": {
+    "description": "Label for the different View selectors (List, Group, Thumbnail, Hierarchy are the possible views)"
+  },
+  "get_started_label": "Kezdeti lépések",
+  "@get_started_label": {
+    "description": "Label for Getting started header in the Welcome tab"
+  },
+  "upd_sw_link": "Szoftverfrissítés",
+  "@upd_sw_link": {
+    "description": "Update Software button text under getting started section"
+  },
+  "about_appman": "Az Application Manager névjegye",
+  "@about_appman": {
+    "description": "Label for About Application Manager header in the Welcome tab"
+  },
+  "about_appman_cont": "Egy olyan asztali eszköz, amely segít az összes Autodesk alkalmazás és csomag naprakészen tartásában. Rendszeresen értesíti az új szervizcsomagokról, gyorsjavításokról és egyéb fontos fájlokról, amint azok elérhetővé válnak. Ha egy frissítés alkalmazása mellett dönt, az Application Manager zökkenőmentesen letölti a felhőből a fájlokat, és telepíti azokat a számítógépére.",
+  "@about_appman_cont": {
+    "description": "About application manager content"
+  },
+  "trls_label": "Oktatóanyagok",
+  "@trls_label": {
+    "description": "Tutorial header in welcome tab"
+  },
+  "trl1_label": "1. oktatóanyag",
+  "@trl1_label": {
+    "description": "Tutorial1 sub header text in welcome tab"
+  },
+   "no_trl": "Nem érhetők el oktatóanyagok.",
+  "@no_trl": {
+    "description": "To show the text under Tutorials section when there is no tutorials"
+  },
+  "trl_cont": "Ismertető: Lorem ipsum dolor sit amet.",
+  "@trl_cont": {
+    "description": "Tutorial1 content"
+  },
+  "status_err_title": "Alkalmazáshiba",
+  "@status_err_title": {
+    "description": "Status bar error title"
+  },
+  "abt_label": "Névjegy",
+  "@abt_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  "rem_label": "maradt",
+  "@rem_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  
+  "install_label": "Telepítés",
+  "@install_label": {
+    "description": "The Install button name"
+  },
+  "pause_label": "Szüneteltetés",
+  "@pause_label": {
+    "description": "The Pause button name"
+  },
+  "resume_label": "Folytatás",
+  "@resume_label": {
+    "description": "The Resume button name"
+  },
+  "cancel_label": "Mégse",
+  "@cancel_label": {
+    "description": "The Cancel button name"
+  },
+  "ignore_label": "Kihagyás",
+  "@ignore_label": {
+    "description": "The Ignore button name"
+  },
+  "add_label": "Hozzáadás",
+  "@ignore_label": {
+    "description": "Add button (per-item) label in deployment mode"
+  },
+  "remove_label": "Eltávolítás",
+  "@ignore_label": {
+    "description": "Remove button (per-item) label in deployment mode"
+  },
+  "install_sel_label": "Kijelöltek telepítése",
+  "@install_sel_label": {
+    "description": "The Install Selected button name, used for multi-download selection"
+  },
+  "pause_sel_label": "Kijelöltek szüneteltetése",
+  "@pause_sel_label": {
+    "description": "The Pause Selected button name"
+  },
+  "resume_sel_label": "Kijelöltek folytatása",
+  "@resume_sel_label": {
+    "description": "The Resume Selected button name"
+  },
+  "cancel_sel_label": "Kijelöltek megszakítása",
+  "@cancel_sel_label": {
+    "description": "The Cancel Selected button name"
+  },
+  "ignore_sel_label": "Kijelöltek kihagyása",
+  "@ignore_sel_label": {
+    "description": "The Ignore Selected button name"
+  },
+  "add_sel_label": "Kijelöltek hozzáadása",
+  "@add_sel_label": {
+    "description": "Add Selected button label in the status area. Used in deployment mode"
+  },
+  "remove_sel_label": "Kijelöltek eltávolítása",
+  "@remove_sel_label": {
+    "description": "Remove Selected button label in the status area. Used in deployment mode"
+  },
+  "close_label": "Bezárás",
+  "@close_label": {
+    "description": "The Close button name"
+  },
+  "yes_label": "Igen",
+  "@yes_label": {
+    "description": "The Yes button name"
+  },
+  "no_label": "Nem",
+  "@no_label": {
+    "description": "The No button name"
+  },
+  "ok_label": "OK",
+  "@ok_label": {
+    "description": "The OK button name"
+  },
+  "retry_label": "Ismét",
+  "@retry_label": {
+    "description": "The Retry button name. All the above refers to Appman main window HTML strings"
+  },
+
+  "recommended_upd": "Ajánlott",
+  "@recommended_upd": {
+    "description": "Recommended panel label"
+  },
+  "date_new_upd": "Új frissítések",
+  "@date_new_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_rec_upd": "Legutóbbi frissítések",
+  "@date_rec_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lw_upd": "Múlt héten",
+  "@date_lw_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lm_upd": "Múlt hónapban",
+  "@date_lm_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_old_upd": "Régebben",
+  "@date_old_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  
+  "sev_high": "Magas",
+  "@sev_high": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_med": "Közepes",
+  "@sev_med": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_low": "Alacsony",
+  "@sev_low": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "other_label": "Egyéb",
+  "@other_label": {
+    "description": "To show the category as Other if the severity is unknown"
+  },
+ 
+  "sr_rel": "Kiadott",
+  "@sr_rel": {
+    "description": "Label for the date of update Released"
+  },
+  "sr_status": "Állapot",
+  "@sr_status": {
+    "description": "Label for the Status of an update"
+  },
+  "sr_pub": "Kiadó",
+  "@sr_pub": {
+    "description": "Label for the Publisher of an update"
+  },
+  "sr_uid": "Frissítésazonosító",
+  "@sr_uid": {
+    "description": "Label for the Update ID"
+  },
+  "sr_sev": "Súlyosság",
+  "@sr_sev": {
+    "description": "Label for the Severity of an update"
+  },
+  "sr_size": "Méret",
+  "@sr_size": {
+    "description": "Label to show the Size of an update"
+  },
+  
+  "ap_pending_download": "Függőben lévő letöltés",
+  "@ap_pending_download": {
+    "description": "The text should be shown when an update is pending for download"
+  },
+  "ap_downloading": "Letöltés",
+  "@ap_downloading": {
+    "description": "The text should be shown when an update is downloading"
+  },
+  "ap_download_paused": "Szüneteltetett letöltés",
+  "@ap_download_paused": {
+    "description": "The text should be shown when an update is paused during download"
+  },
+  "ap_pending_install": "Függőben lévő telepítés",
+  "@ap_pending_install": {
+    "description": "The text should be shown when an update is pending for the installation"
+  },
+  "ap_installing": "Telepítés",
+  "@ap_installing": {
+    "description": "The text should be shown when an update is installing"
+  },
+  "ap_install_paused": "Szüneteltetett telepítés",
+  "@ap_install_paused": {
+    "description": "The text should be shown when an update is paused during installation"
+  },
+  
+  "al_details": "Részletek",
+  "@al_details": {
+    "description": "The Details link header text to show the description of an update"
+  },
+  "al_rel_updates": "Kapcsolódó frissítések",
+  "@al_rel_updates": {
+    "description": "The Related Updates link header text"
+  },
+  "al_rel_docs": "Kapcsolódó dokumentumok és csomagok",
+  "@al_rel_docs": {
+    "description": "The Related Docs and Packages link header text"
+  },
+  "al_rel_notes": "Kiadási megjegyzések",
+  "@al_rel_notes": {
+    "description": "The Release Note header text"
+  },
+  "also_applies_to": "A következőre is érvényes",
+  "@also_applies_to": {
+    "description": "Also applies to text to show under Related Updates section"
+  },
+  "also_includes": "A következőt is tartalmazza",
+  "@also_includes": {
+    "description": "Also Includes text to show under Related Updates section"
+  },
+  "go_to_full_details": "A frissítés összes adatának megtekintése",
+  "@go_to_full_details": {
+    "description": "Go to Full Update Details to show under Related Updates section"
+  },
+  "more_text": "Több",
+  "@more_text": {
+    "description": "To show More link under Also Includes section"
+  },
+  "as_not_installed": "Nincs telepítve",
+  "@as_not_installed": {
+    "description": "Status text of an non installed update"
+  },
+  "as_installed": "Telepítve",
+  "@as_installed": {
+    "description": "Status text of an installed update"
+  },
+  "as_not_included": "Nem tartalmazza",
+  "@as_not_included": {
+    "description": "Status text of an non included update in deployment mode"
+  },
+  "as_included": "Tartalmazza",
+  "@as_included": {
+    "description": "Status text of an included update in deployment mode"
+  },
+  "as_ignored": "Figyelmen kívül hagyva",
+  "@as_ignored": {
+    "description": "Status text of an ignored update"
+  },
+  "as_not_applicable": "Nem alkalmazható",
+  "@as_not_applicable": {
+    "description": "Status text of an Non Applicable update"
+  },
+  
+  "unknown_label": "Ismeretlen",
+  "@unknown_label": {
+    "description": "The dynamic text to be shown when the file size of an update is not available in SDS"
+  },
+  "paused_label": "Szüneteltetve",
+  "@paused_label": {
+    "description": "The text should be shown when an individual update is paused"
+  },
+  "backup_label": "Másolás megosztott helyre",
+  "@paused_label": {
+    "description": "The text should be shown when sharing one update to local cache shared location"
+  },
+  "new_label": "ÚJ!",
+  "@new_label": {
+    "description": "The NEW label for unvisited updates"
+  },
+  "retired_label": "KIVEZETETT",
+  "@retired_label": {
+    "description": "The RETIRED label for the Retired/Revoked updates"
+  },
+  "net_unavail_label": "A hálózati kapcsolat nem érhető el.",
+  "@net_unavail_label": {
+    "description": "An error text to show the connection unavailable"
+  },
+  
+  "sw_label": "Szoftver",
+  "@sw_label": {
+    "description": "The text to be appended when an user selects a software. Eg: 1 Software selected"
+  },
+  "prod_label": "Termék",
+  "@prod_label": {
+    "description": "The text to be appended when an user selects an update. Eg: 1 Product selected"
+  },
+  "sws_label": "Szoftverek",
+  "@sws_label": {
+    "description": "The text to be appended when an user selects more than one software. Eg: 2 Softwares selected"
+  },
+  "prods_label": "Termékek",
+  "@prods_label": {
+    "description": "The text to be appended when an user selects more than one update. Eg: 2 Products selected"
+  },
+  "apps_label": "Alkalmazások",
+  "@apps_label": {
+    "description": "The text to be appended when an user selects apps. Eg: 2 Apps selected"
+  },
+  "cancel_all_label": "Összes megszakítása",
+  "@cancel_all_label": {
+    "description": "The header text of Cancel All confirmation popup when the user try to cancel more than one update"
+  },
+  "cancel_conf_label": "Biztosan megszakítja a telepítést?",
+  "@cancel_conf_label": {
+    "description": "The content of cancel confirmation popup, single update selection"
+  },
+  "cancel_all_conf_label": "Biztosan megszakítja az összes telepítést?",
+  "@cancel_all_conf_label": {
+    "description": "The content of cancel confirmation popup, multiple update selection scenario. All the above refers to Appman main window JSON strings"
+  },
+
+  "default_footer_text": "{0} kiválasztása telepítésre",
+  "@default_footer_text": {
+    "description": "The default footer text to be shown when the user navigates to Updates/ Software/ Apps tab"
+  },
+  
+  "empty_tab_text": "Az Ön Autodesk-szoftvere teljesen naprakész - nincs szükség további frissítésre.",
+  "@empty_tab_text": {
+    "description": "The empty footer text to be shown when there is no Updates/ Software/ Apps"
+  },
+  
+  "server_not_reachable_err": "Nem kérhetők le a frissítések, mert a kiszolgáló nem érhető el. Próbálja meg később, vagy ellenőrizze a beállításait.",
+  "@server_not_reachable_err": {
+    "description": "The update tab text to be shown when the server is not reachable"
+  },
+  "conn_lost_status_err": "A hálózati kapcsolat megszakadt - ellenőrizze hálózati beállításait. Az Application Manager a művelet megszakításáig próbál csatlakozni a hálózathoz.",
+  "@conn_lost_status_err": {
+    "description": "Status bar error to be shown when there is no network"
+  },
+  
+  "retired_err_title": "Az Application Manager ezen verziója ki van vezetve",
+  "@retired_err_title": {
+    "description": "Retired modal dialog error title"
+  },
+  "retired_err1": "Az Autodesk Application Manager ezen verziójával már nem tud hozzáférni az Autodesk kiszolgálókhoz.",
+  "@retired_err1": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err2": "Frissítsen az Application Manager egy újabb verziójára.",
+  "@retired_err2": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err3": "Az Application Manager frissítésével kapcsolatos további információkért lépjen kapcsolatba a rendszergazdával.",
+  "@retired_err3": {
+    "description": "Retired modal dialog error content"
+  },
+   "retired_soon_err_title": "Az Application Manager ezen verzióját hamarosan kivezetik.",
+  "@retired_soon_err_title": {
+    "description": "Retiring soon general error title"
+  },
+  "retired_soon_err_cont": "Frissítsen az Application Manager egy újabb verziójára, mielőtt megszűnik a hozzáférése.",
+  "@retired_soon_err_cont": {
+    "description": "Retiring soon general error content"
+  },
+  
+  "dynamic_footer_text": "{0} kiválasztva",
+  "@dynamic_footer_text": {
+    "description": "The footer text will be changed based on the number of product selection. Eg: 5 Products Selected"
+  },
+
+  "mins_label": "perc",
+  "@mins_label": {
+    "description": "The minutes text to be shown in the over all time remaining. Eg: 1 hour 20 minutes remaining"
+  },
+  "hours_label": "óra",
+  "@hours_label": {
+    "description": "The hours text to be shown in the over all time remaining. Eg: 2 hours 20 minutes remaining"
+  },
+  "days_label": "nap",
+  "@days_label": {
+    "description": "The days text to be shown in the over all time remaining. Eg: 2 days 20 minutes remaining"
+  }, 
+  "weeks_label": "hét",
+  "@weeks_label": {
+    "description": "The weeks text to be shown in the over all time remaining. Eg: 2 weeks 20 minutes remaining"
+  }, 
+  "months_label": "hónap",
+  "@months_label": {
+    "description": "The months text to be shown in the over all time remaining. Eg: 2 months 20 minutes remaining"
+  }, 
+  "years_label": "év",
+  "@years_label": {
+    "description": "The years text to be shown in the over all time remaining. Eg: 2 years 20 minutes remaining"
+  },
+  
+  "sec_label": "mp",
+  "@sec_label": {
+    "description": "The sec text to be shown in the over all time remaining. Eg: 1 sec remaining, 10 sec remaining"
+  },
+  "min_label": "perc",
+  "@min_label": {
+    "description": "The minute text to be shown in the over all time remaining. Eg: 2 years 1 minute remaining"
+  },
+  "hour_label": "óra",
+  "@hour_label": {
+    "description": "The hour text to be shown in the over all time remaining. Eg: 2 years 1 hour remaining"
+  },
+  "day_label": "nap",
+  "@day_label": {
+    "description": "The day text to be shown in the over all time remaining. Eg: 1 day 20 minutes remaining"
+  }, 
+  "week_label": "hét",
+  "@week_label": {
+    "description": "The week text to be shown in the over all time remaining. Eg: 1 week 20 minutes remaining"
+  }, 
+  "month_label": "hónap",
+  "@month_label": {
+    "description": "The month text to be shown in the over all time remaining. Eg: 1 month 20 minutes remaining"
+  }, 
+  "year_label": "év",
+  "@year_label": {
+    "description": "The year text to be shown in the over all time remaining. Eg: 1 year 20 minutes remaining"
+  },
+  
+  "active_label": "Aktív",
+  "@active_label": {
+    "description": "The label to show the number of active downloads in the Mini alert window"
+  },
+  "delay_label": "Késleltetés:",
+  "@delay_label": {
+    "description": "Label of the Delay drop down in the mini-progress and self-update alert window"
+  },
+  
+  "privacy_label": "Az Autodesk adatvédelmi nyilatkozata",
+  "@privacy_label": {
+    "description": "Privacy header as per Legal team"
+  },
+  "privacy_stmt_label": "Az Autodesk adatvédelmi nyilatkozata",
+  "@privacy_stmt_label": {
+    "description": "Privacy policy header"
+  },
+  "pp_rights_label1": "Az Autodesk elismeri az Ön adatvédelemre és személyes adataira vonatkozó jogait és saját kötelezettségeit. A lenti „Elfogadom” gombra kattintva elismeri, hogy módjában állt elolvasni",
+  "@pp_rights_label1": {
+    "description": "Privacy policy content"
+  },
+  "pp_rights_label2": "dokumentumot és tudomásul veszi, hogy az Önhöz társított személyes adatokat az Adatvédelmi nyilatkozatban leírt módon felhasználják.",
+  "@pp_rights_label2": {
+    "description": "Privacy policy content"
+  },
+  "personal_info_label2": "(amelybe beletartozhat az adataim továbbítása olyan egyéb országokba, ahol az Autodesk tevékenységet folytat).",
+  "@personal_info_label2": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "periodic_check_label": "Hozzájárulok, hogy az Autodesk-szoftver rendszeresen keressen frissítéseket és értesítést küldjön róluk.",
+  "@periodic_check_label": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "pp_desc": "Előfordulhat, hogy a vállalat licencrendszergazdája olyan licencmodell használatára állította be ezt a terméket, amelyhez az szükséges, hogy alkalmanként automatikusan elküldje a felhasználó és a rendszer bejelentkezési adatait, illetve a termékhasználat mérőszámait, hogy ellenőrizze a licencengedélyeket és értékelje a vállalaton belüli teljes használatot. A kérdéseivel keresse meg a rendszergazdát.",
+  "@pp_desc": {
+    "description": "Privacy policy content"
+  },
+  "agree_label": "Elfogadom",
+  "@agree_label": {
+    "description": "Label of I Agree button in the Privacy policy window. All the above strings refer to Privacy policy window"
+  },
+  
+  "today_at": "Ma, ekkor:",
+  "@today_at": {
+    "description": "To show the Todays time. Eg: Today at 4:55 PM"
+  },
+  "su_note_title": "Értesítés – kritikus",
+  "@su_note_title": {
+    "description": "Self update window message header"
+  },
+  "su_msg": "Az Autodesk Application Manager frissítése szükséges.",
+  "@su_msg": {
+    "description": "Self update window message"
+  },
+  "view_details": "Részletek megtekintése",
+  "@view_details": {
+    "description": "View Details link text in self update window"
+  },
+  "update_label": "Frissítés",
+  "@update_label": {
+    "description": "Update link text in self update window"
+  },
+  "sr_title": "Értesítés",
+  "@sr_title": {
+    "description": "Self update success window header"
+  },
+  "to_label": "-",
+  "@to_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "version_label": "Verzió",
+  "@version_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "open_manager": "Kezelő megnyitása",
+  "@open_manager": {
+    "description": "Open Manager link text - self update window"
+  },
+  "all_paused": "Összes szüneteltetve",
+  "@all_paused": {
+    "description": "To show the All Paused text in Mini progress window when all updates are paused"
+  },
+  "sr_updated_label": "sikeresen frissítve",
+  "@sr_updated_label": {
+    "description": "A label to show the successful updation. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "insfailed_err": "a telepítés meghiúsult.",
+  "@insfailed_err": {
+    "description": "The text to be shown when the self update install failed"
+  },
+  "dwldfailed_err": "a letöltés nem sikerült",
+  "@dwldfailed_err": {
+    "description": "he text to be shown when the self update download failed"
+  },
+  "host_not_found_err": "Az állomás nem található.",
+  "@host_not_found_err": {
+    "description": "Host not found error string"
+  },
+  "net_timeout_err": "A kapcsolat során időtúllépés történt.",
+  "@net_timeout_err": {
+    "description": "Connection timed out error string. All the above strings are related to Self update window"
+  },
+  
+  "ua_title": "Értesítés – fontos",
+  "@ua_title": {
+    "description": "Updates available window message header"
+  },
+  "ua_msg": "Új frissítések érhetők el az Autodesk-termékeihez.",
+  "@ua_msg": {
+    "description": "Updates available window message. All the above strings are related to Updates Available alert window"
+  },
+  
+  "settings_title": "Az Application Manager beállításai",
+  "@settings_title": {
+    "description": "Settings window header"
+  },
+  "import_settings": "Importálás",
+  "@import_settings": {
+    "description": "The Import link text"
+  },
+  "export_settings": "Exportálás",
+  "@export_settings": {
+    "description": "The Export link text"
+  },
+  "general_link": "ÁLTALÁNOS",
+  "@general_link": {
+    "description": "The General tab navigation text"
+  },
+  "files_link": "FÁJLOK",
+  "@files_link": {
+    "description": "The Files tab navigation text"
+  },
+  "alerts_link": "FIGYELMEZTETÉSEK",
+  "@alerts_link": {
+    "description": "The Alerts tab navigation text"
+  },
+  "network_link": "HÁLÓZAT",
+  "@network_link": {
+    "description": "The Network tab navigation text"
+  },
+  "about_link": "NÉVJEGY",
+  "@about_link": {
+    "description": "The About tab navigation text"
+  },
+  "startup_label": "Indítás",
+  "@startup_label": {
+    "description": "Startup section header - General tab"
+  },
+  "auto_relaunch_label": "Automatikus indítás a számítógépre való bejelentkezéskor",
+  "@auto_relaunch_label": {
+    "description": "Auto relaunch drop down label"
+  },
+  "self_update_label": "Engedélyezze az Application Manager számára a frissítések letöltését",
+  "@self_update_label": {
+    "description": "Self update Application Manager check box."
+  },
+  "welcome_opened_label": "Üdvözlő oldal megjelenítése megnyitáskor",
+  "@welcome_opened_label": {
+    "description": "Show welcome page checkbox label"
+  },
+  "updates_label": "Frissítések",
+  "@updates_label": {
+    "description": "Updates section header - General tab"
+  },
+  "check_interval_label": "Frissítések keresési gyakorisága:",
+  "@check_interval_label": {
+    "description": "The label for check for updates dropdown"
+  },
+  "remote_update_label": "Távoli frissítési szolgáltatás engedélyezése",
+  "@remote_update_label": {
+    "description": "The label for enable remote update service checkbox"
+  },
+  "link_handling_label": "Hivatkozáskezelés",
+  "@link_handling_label": {
+    "description": "Link Handling section header - General tab"
+  },
+  "opened_from_link_label": "Application Manager megnyitásának engedélyezése hiperhivatkozásokról",
+  "@opened_from_link_label": {
+    "description": "The label for allow application manager opened from hyperlinks checkbox"
+  },
+  "local_files_label": "Helyi fájlok",
+  "@local_files_label": {
+    "description": "Local Files section header - Files tab"
+  },
+  "location_label": "Hely",
+  "@location_label": {
+    "description": "Location label"
+  },
+  "shared_files_label": "Megosztott fájlok",
+  "@shared_files_label": {
+    "description": "Shared Files label"
+  },
+  "shared_storage_label": "Megosztott tárhely használata tartalomletöltésekhez",
+  "@shared_storage_label": {
+    "description": "Checkbox label"
+  },
+  "limit_shared_space_label": "Felhasznált megosztott terület korlátozása:",
+  "@limit_shared_space_label": {
+    "description": "Checkbox label"
+  },
+  "tray_icon_label": "Tálcaikon",
+  "@tray_icon_label": {
+    "description": "Tray Icon section header - Files tab"
+  },
+  "system_tray_label": "Rendszertálcán található ikon megjelenítése",
+  "@system_tray_label": {
+    "description": "Checkbox label"
+  },
+  "batch_severity_label": "Csak a következő súlyosságú figyelmeztető jeleket mutassa:",
+  "@batch_severity_label": {
+    "description": "Checkbox label"
+  },
+  "alert_windows": "Riasztási ablakok",
+  "@alert_windows": {
+    "description": "Alert Windows section header - Alerts tab"
+  },
+  "desktop_alert_label": "Asztali riasztási ablakok megjelenítése",
+  "@desktop_alert_label": {
+    "description": "Show desktop alert label"
+  },
+  "hide_window_label": "Ablak elrejtése ezután:",
+  "@hide_window_label": {
+    "description": "Hide window dropdown label"
+  },
+  "alert_severity_label": "Csak a következő súlyosságú riasztásokat mutassa:",
+  "@alert_severity_label": {
+    "description": "Checkbox label"
+  },
+  "connections_label": "Ismerősök",
+  "@connections_label": {
+    "description": "Connections section header - Alerts tab"
+  },
+  "limit_downloads_label": "Párhuzamos letöltések korlátozása:",
+  "@limit_downloads_label": {
+    "description": "Limit download drop down label"
+  },
+  "download_bandwidth_label": "Letöltési sávszélesség korlátozása:",
+  "@download_bandwidth_label": {
+    "description": "Limit download bandwidth drop down label"
+  },
+  "proxy_label": "Proxy",
+  "@proxy_label": {
+    "description": "Proxy section header - Network tab"
+  },
+  "proxy_type_label": "Proxy típusa:",
+  "@proxy_type_label": {
+    "description": "Proxy type drop down label"
+  },
+  "no_proxy_label": "Nincs proxy",
+  "@no_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "auto_detect_label": "Automatikus észlelés",
+  "@auto_detect_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "system_proxy_label": "Rendszerproxy",
+  "@system_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "manual_proxy_label": "Manuális proxy",
+  "@manual_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "host_name_label": "Állomás neve vagy címe:",
+  "@host_name_label": {
+    "description": "Host name label"
+  },
+  "username_label": "Felhasználónév:",
+  "@username_label": {
+    "description": "Username label"
+  },
+  "secure_socket_label": "SSL használata",
+  "@secure_socket_label": {
+    "description": "Checkbox label"
+  },
+  "port_number_label": "Portszám:",
+  "@port_number_label": {
+    "description": "Port number label"
+  },
+  "password_label": "Jelszó:",
+  "@password_label": {
+    "description": "Password label"
+  },
+  "ck_upd_4hr": "4 óra",
+  "@ck_upd_4hr": {
+    "description": "Check for updates every 4 Hours label"
+  },
+  "ck_upd_8hr": "8 óra",
+  "@ck_upd_8hr": {
+    "description": "Check for updates every 8 Hours label"
+  },
+  "ck_upd_24hr": "24 óra",
+  "@ck_upd_24hr": {
+    "description": "Check for updates every 24 Hours label"
+  },
+  "ck_upd_week": "Hét",
+  "@ck_upd_week": {
+    "description": "Check for updates every Week label"
+  },
+  "hide_win_10secs_label": "10 másodperc",
+  "@hide_win_10secs_label": {
+    "description": "Hide Alert window after 10 seconds label"
+  },
+  "hide_win_30secs_label": "30 másodperc",
+  "@hide_win_30secs_label": {
+    "description": "Hide Alert window after 30 seconds label"
+  },
+  "hide_win_60secs_label": "60 másodperc",
+  "@hide_win_60secs_label": {
+    "description": "Hide Alert window after 60 seconds label"
+  },
+  "general_label": "Általános",
+  "@general_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when General tab selected"
+  },
+  "file_label": "Fájl",
+  "@file_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when File tab selected"
+  },
+  "files_label": "Fájlok",
+  "@files_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Files tab selected"
+  },
+  "alert_label": "Figyelmeztetés",
+  "@alert_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alert tab selected"
+  },
+  "alerts_label": "Figyelmeztetések",
+  "@alerts_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alerts tab selected"
+  },
+  "network_label": "Hálózat",
+  "@network_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Network tab selected"
+  },
+  "adjust_settings_label": "{0} beállításainak megadása",
+  "@adjust_settings_label": {
+    "description": "A place holder string to be replaced with General/ Files/ Alerts/ Network"
+  },
+  "atuo_relaunch_help": "Válassza ezt a lehetőséget, ha azt szeretné, hogy az Autodesk Application Manager értesítse a frissítésekről, amikor a számítógép működik. Ha a lehetőség be van jelölve, az Application Manager a háttérben fut a tálcán (a képernyő jobb alsó részén).",
+  "@atuo_relaunch_help": {
+    "description": "Help tool tip content for Auto relaunch checkbox"
+  },
+  "atuo_relaunch_title": "Általános – Automatikus indítás",
+  "@atuo_relaunch_title": {
+    "description": "Help tool tip title for Auto relaunch checkbox"
+  },
+  "self_update_help": "A jelölőnégyzet törlésével alkalmankénti értesítéseket fog kapni arról, ha frissítés érhető el az Application Managerhez, amelyeket bizonyos esetekben kötelező telepíteni. El kell fogadnia a frissítést ahhoz, hogy alkalmazhassa a számítógépre.",
+  "@self_update_help": {
+    "description": "Help tool tip content for self update checkbox"
+  },
+  "self_update_title": "Application Manager – Önálló frissítés",
+  "@self_update_title": {
+    "description": "Help tool tip title for self update checkbox"
+  },
+  "update_check_interval_help": "Az Autodesk Application Manager automatikusan ellenőrzi, hogy vannak-e elérhető frissítések a telepített Autodesk-szoftverekhez. Állítsa be itt az ellenőrzések közti időközt.",
+  "@update_check_interval_help": {
+    "description": "Help tool tip content for update check interval drop down"
+  },
+  "update_check_interval_title": "Általános – Frissítési időköz",
+  "@update_check_interval_title": {
+    "description": "Help tool tip title for update check interval drop down"
+  },
+  "file_location_help": "Az Application Manager a szoftvercsomagokat a helyi fájlrendszerben a megadott helyen tárolja.<br/><br/>A fájloknak elérhetőnek kell maradniuk a későbbi használat céljából a szoftverkarbantartási és -javítási műveletek során.",
+  "@file_location_help": {
+    "description": "Help tool tip content for Local file download location"
+  },
+  "file_location_title": "Fájlok – Hely",
+  "@file_location_title": {
+    "description": "Help tool tip title for Local file download location"
+  },
+  "use_shared_storage_help": "Amikor engedélyezett, az Application Manager először a Megosztott fájlok helyről kísérli meg beszerezni a szoftvercsomagokat, és csak akkor tölti le az Autodesk-kiszolgálókról, ha nem találja azokat.",
+  "@use_shared_storage_help": {
+    "description": "Help tool tip content for Use Shared Files check box"
+  },
+  "use_shared_storage_title": "Megosztott fájlok használata",
+  "@use_shared_storage_title": {
+    "description": "Help tool tip title for Use Shared Files check box"
+  },
+  "shared_file_location_help": "Amikor engedélyezett, az Application Manager először a megadott helyről kísérli meg beszerezni a szoftvercsomagokat, és csak akkor tölti le az Autodesk-kiszolgálókról, ha nem találja azokat. Ha itt hálózati mappát ad meg, korlátozhatja az interneten az Autodesk-kiszolgálókról végzett letöltéseket, így a csomag első letöltését sok munkahely felhasználhatja.",
+  "@shared_file_location_help": {
+    "description": "Help tool tip content for Shared file location"
+  },
+  "shared_file_location_title": "Megosztott fájlok – Hely",
+  "@shared_file_location_title": {
+    "description": "Help tool tip title for Shared file location"
+  },
+  "enable_alert_window_help": "Az Autodesk Application Manager asztali riasztási ablakok segítségével tájékoztatja az új szoftverfrissítésekről ás más kapcsolódó értesítésekről. A riasztásokat itt tilthatja le.",
+  "@enable_alert_window_help": {
+    "description": "Help tool tip content for enable alert window check box"
+  },
+  "enable_alert_window_title": "Riasztások – Riasztás megjelenítése",
+  "@enable_alert_window_title": {
+    "description": "Help tool tip title for enable alert window check box"
+  },
+  "alert_window_fading_time_help": "Az asztali riasztási ablak automatikus elrejtése a megadott időtartam elteltével. Amennyiben rákattint a riasztási ablakra, ez megszakítja a visszaszámlálást, és a riasztás látható marad.",
+  "@alert_window_fading_time_help": {
+    "description": "Help tool tip content for enable alert window fading time drop down"
+  },
+  "alert_window_fading_time_title": "Riasztás – Elrejtési idő",
+  "@alert_window_fading_time_title": {
+    "description": "Help tool tip title for enable alert window fading time drop down"
+  },
+  "proxy_type_help": "A hálózat által használt proxyprotokollt határozza meg.",
+  "@proxy_type_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_type_title": "Hálózat – Proxy típusa",
+  "@proxy_type_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_hostname_help": "A hálózati proxy állomásneve vagy IP-címe.",
+  "@proxy_hostname_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_hostname_title": "Hálózat – Állomásnév",
+  "@proxy_hostname_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_portnumber_help": "A hálózati proxy portszáma.",
+  "@proxy_portnumber_help": {
+    "description": "Help tool tip content for proxy port number text box"
+  },
+  "proxy_portnumber_title": "Hálózat – Port",
+  "@proxy_portnumber_title": {
+    "description": "Help tool tip title for proxy port number text box"
+  },
+  "proxy_username_help": "A hálózati proxy eléréséhez használt felhasználónév.",
+  "@proxy_username_help": {
+    "description": "Help tool tip content for username text box"
+  },
+  "proxy_username_title": "Hálózat – Felhasználónév",
+  "@proxy_username_title": {
+    "description": "Help tool tip title for username text box"
+  },
+  "proxy_password_help": "A hálózati proxy felhasználónevéhez tartozó jelszó.",
+  "@proxy_password_help": {
+    "description": "Help tool tip content for password text box"
+  },
+  "proxy_password_title": "Hálózat – Jelszó",
+  "@proxy_password_title": {
+    "description": "Help tool tip title for password text box"
+  },
+  "release_notes_label": "Kiadási megjegyzések",
+  "@release_notes_label": {
+    "description": "Release Notes label to show under Settings window About tab"
+  },
+  "host_name_error_title": "Érvénytelen állomásnév",
+  "@host_name_error_title": {
+    "description": "Error message title for invalid host name"
+  },
+  "host_name_error_content": "Az állomásnév vagy az IP-cím a feloldás után nem hálózati proxykiszolgálóra mutat.<br/>Írjon be egy érvényes állomásnevet vagy IP-címet a proxykiszolgálóhoz.<br/>Lépjen kapcsolatba a hálózati rendszergazdával a megfelelő értékekkel kapcsolatos további információért.",
+  "@host_name_erro_content": {
+    "description": "Error message content for invalid host name"
+  },
+  "port_number_error_title": "Érvénytelen portszám",
+  "@port_number_error_title": {
+    "description": "Error message title for invalid port number"
+  },
+  "port_number_error_content": "Nem lehet csatlakozni a megadott hálózati proxyhoz a megadott portszámon.<br/>Írjon be érvényes portszámot a proxykiszolgálóhoz.<br/>Lépjen kapcsolatba a hálózati rendszergazdával a megfelelő értékekkel kapcsolatos további információért.",
+  "@port_number_error_content": {
+    "description": "Error message content for invalid port number"
+  },
+  "username_pwd_error_title": "Érvénytelen felhasználónév vagy jelszó",
+  "@username_pwd_error_title": {
+    "description": "Error message title for invalid Username or Password"
+  },
+  "username_pwd_error_content": "A hálózati kapcsolathoz proxyhitelesítésre van szükség.<br/>Írja be a felhasználónevét és a jelszavát.<br/>Lépjen kapcsolatba a hálózati rendszergazdával a megfelelő értékekkel kapcsolatos további információért.",
+  "@username_pwd_error_content": {
+    "description": "Error message content for invalid Username or Password"
+  },
+  "invalid_file_location_error_title": "Érvénytelen fájlhely",
+  "@invalid_file_location_error_title": {
+    "description": "Error message title for invalid file location"
+  },
+  "invalid_file_location_error_content": "A megadott fájlhely érvénytelen.<br/>Írjon be érvényes fájlhelyet a fájltárhelyhez.",
+  "@invalid_file_location_error_content": {
+    "description": "Error message content for invalid file location"
+  },
+  "invalid_shared_file_location_error_title": "A megosztott fájlok helye érvénytelen",
+  "@invalid_shared_file_location_error_title": {
+    "description": "Error message title for invalid shared file location"
+  },
+  "invalid_shared_file_location_error_content": "A megadott fájlhely érvénytelen.<br/>Írjon be érvényes fájlhelyet a megosztott fájlok tárhelyéhez.",
+  "@invalid_shared_file_location_error_content": {
+    "description": "Error message content for invalid shared file location"
+  },
+  "proxy_connection_error_title": "Proxykapcsolat-hiba",
+  "@proxy_connection_error_title": {
+    "description": "error message title when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_host_content": "Nem lehet csatlakozni a megadott hálózati proxykiszolgálóhoz. A folytatáshoz adja meg a proxybeállításokat.",
+  "@settings_error_invalid_host_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_port_content": "Nem lehet csatlakozni a megadott hálózati proxyhoz a megadott portszámon. A folytatáshoz adja meg a helyes portszámot.",
+  "@settings_error_invalid_port_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_title": "Proxyhitelesítési hiba",
+  "@settings_error_invalid_proxy_cred_title": {
+    "description": "error message title when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_content": "A hálózati kapcsolathoz proxyhitelesítésre van szükség. A folytatáshoz írja be a felhasználónevét és a jelszavát.",
+  "@settings_error_invalid_proxy_cred_content": {
+    "description": "error message content when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_cannot_access_file_content": "Nem lehet hozzáférni a fájlok helyéhez. Ellenőrizze a megadott helyet.",
+  "@settings_error_cannot_access_file_content": {
+    "description": "error message content when cannot access the file location"
+  },
+  "settings_error_cannot_access_shared_file_content": "Nem lehet hozzáférni a fájlok helyéhez. Ellenőrizze a hálózat elérhetőségét vagy módosítsa a megadott helyet.",
+  "@settings_error_cannot_access_shared_file_content": {
+    "description": "error message content when cannot access the shared file location"
+  },
+  "diskspace_low_error_title": "Nincs elég hely a lemezen",
+  "@diskspace_low_error_title": {
+    "description": "error message title when cannot disk space is low"
+  },
+  "settings_error_diskspace_low_content": "A jelenlegi letöltési helyen elfogyott a hely. A telepítés megkísérlése előtt válasszon új letöltési helyet.",
+  "@settings_error_diskspace_low_content": {
+    "description": "error message content when disk space is low"
+  }
+});

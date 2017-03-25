@@ -1,0 +1,1004 @@
+arb.register("arb_editor:it_IT", {
+  "@@locale": "it_IT",
+
+  "settings_link": "Impostazioni",
+  "@settings_link": {
+    "description": "Application Manager main window settings link text"
+  },
+  "help_link": "Guida",
+  "@help_link": {
+    "description": "Application Manager main window help link text"
+  },
+  "welcome_link": "BENVENUTI",
+  "@welcome_link": {
+    "description": "Welcome tab top navigation text"
+  },
+  "software_link": "SOFTWARE",
+  "@software_link": {
+    "description": "Software tab top navigation text"
+  },
+  "updates_link": "AGGIORNAMENTI",
+  "@updates_link": {
+    "description": "Updates tab top navigation text"
+  },
+  "apps_link": "APP",
+  "@apps_link": {
+    "description": "Apps tab top navigation text"
+  },
+  "search_text@placeholder": "Cerca...",
+  "@search_text": {
+    "description": "Placeholder text for Search text box in the Main Appman UI"
+  },
+  "sort_by_label": "Ordina per:",
+  "@sort_by_label": {
+    "description": "Label for the Sort by drop down"
+  },
+  "sort_date_optn": "Data",
+  "@sort_date_optn": {
+    "description": "One of the option in Sort by drop down - Date"
+  },
+  "sort_sev_optn": "Rilevanza",
+  "@sort_sev_optn": {
+    "description": "One of the option in Sort by drop down - Severity"
+  },
+  "view_label": "Visualizzazione:",
+  "@view_label": {
+    "description": "Label for the different View selectors (List, Group, Thumbnail, Hierarchy are the possible views)"
+  },
+  "get_started_label": "Attività iniziali",
+  "@get_started_label": {
+    "description": "Label for Getting started header in the Welcome tab"
+  },
+  "upd_sw_link": "Aggiorna software",
+  "@upd_sw_link": {
+    "description": "Update Software button text under getting started section"
+  },
+  "about_appman": "Informazioni su Application Manager",
+  "@about_appman": {
+    "description": "Label for About Application Manager header in the Welcome tab"
+  },
+  "about_appman_cont": "Questo strumento desktop consente agli utenti di essere costantemente informati sugli ultimi aggiornamenti disponibili per tutte le applicazioni e suite Autodesk installate. A tal fine, vengono inviati messaggi relativi alla disponibilità di service pack, hotfix e altri file importanti non appena questi risultano disponibili. Quando si decide di applicare un aggiornamento, i file vengono automaticamente scaricati dal cloud e installati nel computer.",
+  "@about_appman_cont": {
+    "description": "About application manager content"
+  },
+  "trls_label": "Esercitazioni",
+  "@trls_label": {
+    "description": "Tutorial header in welcome tab"
+  },
+  "trl1_label": "Esercitazione 1",
+  "@trl1_label": {
+    "description": "Tutorial1 sub header text in welcome tab"
+  },
+   "no_trl": "Nessuna esercitazione disponibile.",
+  "@no_trl": {
+    "description": "To show the text under Tutorials section when there is no tutorials"
+  },
+  "trl_cont": "Procedura: Lorem ipsum dolor sit amet.",
+  "@trl_cont": {
+    "description": "Tutorial1 content"
+  },
+  "status_err_title": "Errore dell'applicazione",
+  "@status_err_title": {
+    "description": "Status bar error title"
+  },
+  "abt_label": "Circa",
+  "@abt_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  "rem_label": "rimanente/i",
+  "@rem_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  
+  "install_label": "Installa",
+  "@install_label": {
+    "description": "The Install button name"
+  },
+  "pause_label": "Sospendi",
+  "@pause_label": {
+    "description": "The Pause button name"
+  },
+  "resume_label": "Riprendi",
+  "@resume_label": {
+    "description": "The Resume button name"
+  },
+  "cancel_label": "Annulla",
+  "@cancel_label": {
+    "description": "The Cancel button name"
+  },
+  "ignore_label": "Ignora",
+  "@ignore_label": {
+    "description": "The Ignore button name"
+  },
+  "add_label": "Aggiungi",
+  "@ignore_label": {
+    "description": "Add button (per-item) label in deployment mode"
+  },
+  "remove_label": "Rimuovi",
+  "@ignore_label": {
+    "description": "Remove button (per-item) label in deployment mode"
+  },
+  "install_sel_label": "Installa elementi selezionati",
+  "@install_sel_label": {
+    "description": "The Install Selected button name, used for multi-download selection"
+  },
+  "pause_sel_label": "Sospendi elementi selezionati",
+  "@pause_sel_label": {
+    "description": "The Pause Selected button name"
+  },
+  "resume_sel_label": "Riprendi elementi selezionati",
+  "@resume_sel_label": {
+    "description": "The Resume Selected button name"
+  },
+  "cancel_sel_label": "Annulla elementi selezionati",
+  "@cancel_sel_label": {
+    "description": "The Cancel Selected button name"
+  },
+  "ignore_sel_label": "Ignora elementi selezionati",
+  "@ignore_sel_label": {
+    "description": "The Ignore Selected button name"
+  },
+  "add_sel_label": "Aggiungi elementi selezionati",
+  "@add_sel_label": {
+    "description": "Add Selected button label in the status area. Used in deployment mode"
+  },
+  "remove_sel_label": "Rimuovi elementi selezionati",
+  "@remove_sel_label": {
+    "description": "Remove Selected button label in the status area. Used in deployment mode"
+  },
+  "close_label": "Chiudi",
+  "@close_label": {
+    "description": "The Close button name"
+  },
+  "yes_label": "Sì",
+  "@yes_label": {
+    "description": "The Yes button name"
+  },
+  "no_label": "No",
+  "@no_label": {
+    "description": "The No button name"
+  },
+  "ok_label": "OK",
+  "@ok_label": {
+    "description": "The OK button name"
+  },
+  "retry_label": "Riprova",
+  "@retry_label": {
+    "description": "The Retry button name. All the above refers to Appman main window HTML strings"
+  },
+
+  "recommended_upd": "Consigliato",
+  "@recommended_upd": {
+    "description": "Recommended panel label"
+  },
+  "date_new_upd": "Nuovi aggiornamenti",
+  "@date_new_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_rec_upd": "Aggiornamenti recenti",
+  "@date_rec_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lw_upd": "Settimana scorsa",
+  "@date_lw_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lm_upd": "Mese scorso",
+  "@date_lm_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_old_upd": "Precedente",
+  "@date_old_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  
+  "sev_high": "Alto",
+  "@sev_high": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_med": "Medio",
+  "@sev_med": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_low": "Basso",
+  "@sev_low": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "other_label": "Altro",
+  "@other_label": {
+    "description": "To show the category as Other if the severity is unknown"
+  },
+ 
+  "sr_rel": "Data rilascio",
+  "@sr_rel": {
+    "description": "Label for the date of update Released"
+  },
+  "sr_status": "Stato",
+  "@sr_status": {
+    "description": "Label for the Status of an update"
+  },
+  "sr_pub": "Proprietario",
+  "@sr_pub": {
+    "description": "Label for the Publisher of an update"
+  },
+  "sr_uid": "ID aggiornamento",
+  "@sr_uid": {
+    "description": "Label for the Update ID"
+  },
+  "sr_sev": "Rilevanza",
+  "@sr_sev": {
+    "description": "Label for the Severity of an update"
+  },
+  "sr_size": "Dimensione",
+  "@sr_size": {
+    "description": "Label to show the Size of an update"
+  },
+  
+  "ap_pending_download": "Download in sospeso",
+  "@ap_pending_download": {
+    "description": "The text should be shown when an update is pending for download"
+  },
+  "ap_downloading": "Download in corso",
+  "@ap_downloading": {
+    "description": "The text should be shown when an update is downloading"
+  },
+  "ap_download_paused": "Download in pausa",
+  "@ap_download_paused": {
+    "description": "The text should be shown when an update is paused during download"
+  },
+  "ap_pending_install": "Installazione in sospeso",
+  "@ap_pending_install": {
+    "description": "The text should be shown when an update is pending for the installation"
+  },
+  "ap_installing": "Installazione",
+  "@ap_installing": {
+    "description": "The text should be shown when an update is installing"
+  },
+  "ap_install_paused": "Installazione in pausa",
+  "@ap_install_paused": {
+    "description": "The text should be shown when an update is paused during installation"
+  },
+  
+  "al_details": "Dettagli",
+  "@al_details": {
+    "description": "The Details link header text to show the description of an update"
+  },
+  "al_rel_updates": "Aggiornamenti correlati",
+  "@al_rel_updates": {
+    "description": "The Related Updates link header text"
+  },
+  "al_rel_docs": "Documentazione e pacchetti correlati",
+  "@al_rel_docs": {
+    "description": "The Related Docs and Packages link header text"
+  },
+  "al_rel_notes": "Note di rilascio",
+  "@al_rel_notes": {
+    "description": "The Release Note header text"
+  },
+  "also_applies_to": "Si applica anche a",
+  "@also_applies_to": {
+    "description": "Also applies to text to show under Related Updates section"
+  },
+  "also_includes": "Include anche",
+  "@also_includes": {
+    "description": "Also Includes text to show under Related Updates section"
+  },
+  "go_to_full_details": "Vai ai dettagli completi relativi agli aggiornamenti",
+  "@go_to_full_details": {
+    "description": "Go to Full Update Details to show under Related Updates section"
+  },
+  "more_text": "Altro",
+  "@more_text": {
+    "description": "To show More link under Also Includes section"
+  },
+  "as_not_installed": "Non installato",
+  "@as_not_installed": {
+    "description": "Status text of an non installed update"
+  },
+  "as_installed": "Installato",
+  "@as_installed": {
+    "description": "Status text of an installed update"
+  },
+  "as_not_included": "Non incluso",
+  "@as_not_included": {
+    "description": "Status text of an non included update in deployment mode"
+  },
+  "as_included": "Incluso",
+  "@as_included": {
+    "description": "Status text of an included update in deployment mode"
+  },
+  "as_ignored": "Ignorato",
+  "@as_ignored": {
+    "description": "Status text of an ignored update"
+  },
+  "as_not_applicable": "Non applicabile",
+  "@as_not_applicable": {
+    "description": "Status text of an Non Applicable update"
+  },
+  
+  "unknown_label": "Sconosciuto",
+  "@unknown_label": {
+    "description": "The dynamic text to be shown when the file size of an update is not available in SDS"
+  },
+  "paused_label": "In pausa",
+  "@paused_label": {
+    "description": "The text should be shown when an individual update is paused"
+  },
+  "backup_label": "Copia nel percorso condiviso",
+  "@paused_label": {
+    "description": "The text should be shown when sharing one update to local cache shared location"
+  },
+  "new_label": "NUOVO",
+  "@new_label": {
+    "description": "The NEW label for unvisited updates"
+  },
+  "retired_label": "RITIRATO",
+  "@retired_label": {
+    "description": "The RETIRED label for the Retired/Revoked updates"
+  },
+  "net_unavail_label": "Connessione di rete non disponibile.",
+  "@net_unavail_label": {
+    "description": "An error text to show the connection unavailable"
+  },
+  
+  "sw_label": "Software",
+  "@sw_label": {
+    "description": "The text to be appended when an user selects a software. Eg: 1 Software selected"
+  },
+  "prod_label": "Prodotto",
+  "@prod_label": {
+    "description": "The text to be appended when an user selects an update. Eg: 1 Product selected"
+  },
+  "sws_label": "Software",
+  "@sws_label": {
+    "description": "The text to be appended when an user selects more than one software. Eg: 2 Softwares selected"
+  },
+  "prods_label": "Prodotti",
+  "@prods_label": {
+    "description": "The text to be appended when an user selects more than one update. Eg: 2 Products selected"
+  },
+  "apps_label": "App",
+  "@apps_label": {
+    "description": "The text to be appended when an user selects apps. Eg: 2 Apps selected"
+  },
+  "cancel_all_label": "Annulla tutto",
+  "@cancel_all_label": {
+    "description": "The header text of Cancel All confirmation popup when the user try to cancel more than one update"
+  },
+  "cancel_conf_label": "Annullare l'installazione?",
+  "@cancel_conf_label": {
+    "description": "The content of cancel confirmation popup, single update selection"
+  },
+  "cancel_all_conf_label": "Annullare tutte le installazioni?",
+  "@cancel_all_conf_label": {
+    "description": "The content of cancel confirmation popup, multiple update selection scenario. All the above refers to Appman main window JSON strings"
+  },
+
+  "default_footer_text": "Seleziona {0} da installare",
+  "@default_footer_text": {
+    "description": "The default footer text to be shown when the user navigates to Updates/ Software/ Apps tab"
+  },
+  
+  "empty_tab_text": "Il software Autodesk è completamente aggiornato. Non è necessario eseguire aggiornamenti.",
+  "@empty_tab_text": {
+    "description": "The empty footer text to be shown when there is no Updates/ Software/ Apps"
+  },
+  
+  "server_not_reachable_err": "Impossibile ottenere gli aggiornamenti perché il server non è raggiungibile. Riprovare in un secondo momento o verificare le impostazioni.",
+  "@server_not_reachable_err": {
+    "description": "The update tab text to be shown when the server is not reachable"
+  },
+  "conn_lost_status_err": "La connessione di rete si è interrotta. Verificare le impostazioni di rete. Verranno eseguiti altri tentativi di connessione finché non si sceglie di annullare l'operazione.",
+  "@conn_lost_status_err": {
+    "description": "Status bar error to be shown when there is no network"
+  },
+  
+  "retired_err_title": "Questa versione di Application Manager è stata ritirata.",
+  "@retired_err_title": {
+    "description": "Retired modal dialog error title"
+  },
+  "retired_err1": "Non è più possibile accedere ai server Autodesk con questa versione di Autodesk Application Manager.",
+  "@retired_err1": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err2": "Eseguire l'aggiornamento ad una versione successiva di Application Manager.",
+  "@retired_err2": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err3": "Per ulteriori informazioni sull'aggiornamento di Application Manager, contattare l'amministratore.",
+  "@retired_err3": {
+    "description": "Retired modal dialog error content"
+  },
+   "retired_soon_err_title": "Questa versione di Application Manager verrà ritirata a breve.",
+  "@retired_soon_err_title": {
+    "description": "Retiring soon general error title"
+  },
+  "retired_soon_err_cont": "Per evitare di perdere le autorizzazioni di accesso, eseguire l'aggiornamento ad una versione successiva di Autodesk Application Manager.",
+  "@retired_soon_err_cont": {
+    "description": "Retiring soon general error content"
+  },
+  
+  "dynamic_footer_text": "{0} selezionato/i",
+  "@dynamic_footer_text": {
+    "description": "The footer text will be changed based on the number of product selection. Eg: 5 Products Selected"
+  },
+
+  "mins_label": "minuti",
+  "@mins_label": {
+    "description": "The minutes text to be shown in the over all time remaining. Eg: 1 hour 20 minutes remaining"
+  },
+  "hours_label": "ore",
+  "@hours_label": {
+    "description": "The hours text to be shown in the over all time remaining. Eg: 2 hours 20 minutes remaining"
+  },
+  "days_label": "giorni",
+  "@days_label": {
+    "description": "The days text to be shown in the over all time remaining. Eg: 2 days 20 minutes remaining"
+  }, 
+  "weeks_label": "settimane",
+  "@weeks_label": {
+    "description": "The weeks text to be shown in the over all time remaining. Eg: 2 weeks 20 minutes remaining"
+  }, 
+  "months_label": "mesi",
+  "@months_label": {
+    "description": "The months text to be shown in the over all time remaining. Eg: 2 months 20 minutes remaining"
+  }, 
+  "years_label": "anni",
+  "@years_label": {
+    "description": "The years text to be shown in the over all time remaining. Eg: 2 years 20 minutes remaining"
+  },
+  
+  "sec_label": "sec",
+  "@sec_label": {
+    "description": "The sec text to be shown in the over all time remaining. Eg: 1 sec remaining, 10 sec remaining"
+  },
+  "min_label": "minuto",
+  "@min_label": {
+    "description": "The minute text to be shown in the over all time remaining. Eg: 2 years 1 minute remaining"
+  },
+  "hour_label": "ora",
+  "@hour_label": {
+    "description": "The hour text to be shown in the over all time remaining. Eg: 2 years 1 hour remaining"
+  },
+  "day_label": "giorno",
+  "@day_label": {
+    "description": "The day text to be shown in the over all time remaining. Eg: 1 day 20 minutes remaining"
+  }, 
+  "week_label": "settimana",
+  "@week_label": {
+    "description": "The week text to be shown in the over all time remaining. Eg: 1 week 20 minutes remaining"
+  }, 
+  "month_label": "mese",
+  "@month_label": {
+    "description": "The month text to be shown in the over all time remaining. Eg: 1 month 20 minutes remaining"
+  }, 
+  "year_label": "anno",
+  "@year_label": {
+    "description": "The year text to be shown in the over all time remaining. Eg: 1 year 20 minutes remaining"
+  },
+  
+  "active_label": "Attivo/i",
+  "@active_label": {
+    "description": "The label to show the number of active downloads in the Mini alert window"
+  },
+  "delay_label": "Attesa:",
+  "@delay_label": {
+    "description": "Label of the Delay drop down in the mini-progress and self-update alert window"
+  },
+  
+  "privacy_label": "Informativa sulla privacy di Autodesk",
+  "@privacy_label": {
+    "description": "Privacy header as per Legal team"
+  },
+  "privacy_stmt_label": "Informativa sulla privacy di Autodesk",
+  "@privacy_stmt_label": {
+    "description": "Privacy policy header"
+  },
+  "pp_rights_label1": "Autodesk rispetta i diritti e gli obblighi degli utenti in relazione alla privacy e alle informazioni personali. Facendo clic su \"Accetto\" nell'area sottostante, si conferma di aver letto",
+  "@pp_rights_label1": {
+    "description": "Privacy policy content"
+  },
+  "pp_rights_label2": "e che le informazioni personali associate verranno utilizzato come descritto nell'Informativa sulla privacy.",
+  "@pp_rights_label2": {
+    "description": "Privacy policy content"
+  },
+  "personal_info_label2": "Tale utilizzo può includere il trasferimento delle mie informazioni negli altri paesi in cui opera Autodesk.",
+  "@personal_info_label2": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "periodic_check_label": "Acconsento alla verifica periodica automatica della disponibilità di aggiornamenti e all'invio di eventuali notifiche correlate.",
+  "@periodic_check_label": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "pp_desc": "Al fine di verificare le autorizzazioni delle licenze e valutarne l'utilizzo aziendale, questo prodotto potrebbe essere stato configurato con un modello di gestione delle licenze che richiede occasionalmente invii automatici dei dati relativi alle credenziali dell'utente e del sistema in uso, oltre alle metriche di utilizzo. Per ulteriori informazioni, contattare l'amministratore di sistema.",
+  "@pp_desc": {
+    "description": "Privacy policy content"
+  },
+  "agree_label": "Accetto",
+  "@agree_label": {
+    "description": "Label of I Agree button in the Privacy policy window. All the above strings refer to Privacy policy window"
+  },
+  
+  "today_at": "Oggi alle ore",
+  "@today_at": {
+    "description": "To show the Todays time. Eg: Today at 4:55 PM"
+  },
+  "su_note_title": "Notifica - Critica",
+  "@su_note_title": {
+    "description": "Self update window message header"
+  },
+  "su_msg": "È necessario eseguire l'aggiornamento di Autodesk Application Manager.",
+  "@su_msg": {
+    "description": "Self update window message"
+  },
+  "view_details": "Visualizza dettagli",
+  "@view_details": {
+    "description": "View Details link text in self update window"
+  },
+  "update_label": "Aggiorna",
+  "@update_label": {
+    "description": "Update link text in self update window"
+  },
+  "sr_title": "Notifica",
+  "@sr_title": {
+    "description": "Self update success window header"
+  },
+  "to_label": "a",
+  "@to_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "version_label": "Versione",
+  "@version_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "open_manager": "Apri Application Manager",
+  "@open_manager": {
+    "description": "Open Manager link text - self update window"
+  },
+  "all_paused": "Tutti in sospeso",
+  "@all_paused": {
+    "description": "To show the All Paused text in Mini progress window when all updates are paused"
+  },
+  "sr_updated_label": "aggiornamento riuscito",
+  "@sr_updated_label": {
+    "description": "A label to show the successful updation. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "insfailed_err": "installazione non riuscita.",
+  "@insfailed_err": {
+    "description": "The text to be shown when the self update install failed"
+  },
+  "dwldfailed_err": "download non riuscito",
+  "@dwldfailed_err": {
+    "description": "he text to be shown when the self update download failed"
+  },
+  "host_not_found_err": "Host non trovato.",
+  "@host_not_found_err": {
+    "description": "Host not found error string"
+  },
+  "net_timeout_err": "Timeout della connessione.",
+  "@net_timeout_err": {
+    "description": "Connection timed out error string. All the above strings are related to Self update window"
+  },
+  
+  "ua_title": "Notifica - Importante",
+  "@ua_title": {
+    "description": "Updates available window message header"
+  },
+  "ua_msg": "Sono disponibili nuovi aggiornamenti per i prodotti Autodesk in uso.",
+  "@ua_msg": {
+    "description": "Updates available window message. All the above strings are related to Updates Available alert window"
+  },
+  
+  "settings_title": "Impostazioni di Application Manager",
+  "@settings_title": {
+    "description": "Settings window header"
+  },
+  "import_settings": "Importa",
+  "@import_settings": {
+    "description": "The Import link text"
+  },
+  "export_settings": "Esporta",
+  "@export_settings": {
+    "description": "The Export link text"
+  },
+  "general_link": "GENERALE",
+  "@general_link": {
+    "description": "The General tab navigation text"
+  },
+  "files_link": "FILE",
+  "@files_link": {
+    "description": "The Files tab navigation text"
+  },
+  "alerts_link": "AVVISI",
+  "@alerts_link": {
+    "description": "The Alerts tab navigation text"
+  },
+  "network_link": "RETE",
+  "@network_link": {
+    "description": "The Network tab navigation text"
+  },
+  "about_link": "INFO",
+  "@about_link": {
+    "description": "The About tab navigation text"
+  },
+  "startup_label": "Avvio",
+  "@startup_label": {
+    "description": "Startup section header - General tab"
+  },
+  "auto_relaunch_label": "Avvia automaticamente all'accesso",
+  "@auto_relaunch_label": {
+    "description": "Auto relaunch drop down label"
+  },
+  "self_update_label": "Consenti l'aggiornamento di Application Manager",
+  "@self_update_label": {
+    "description": "Self update Application Manager check box."
+  },
+  "welcome_opened_label": "Visualizza la pagina di benvenuto all'apertura",
+  "@welcome_opened_label": {
+    "description": "Show welcome page checkbox label"
+  },
+  "updates_label": "Aggiornamenti",
+  "@updates_label": {
+    "description": "Updates section header - General tab"
+  },
+  "check_interval_label": "Verifica la disponibilità di aggiornamenti ogni:",
+  "@check_interval_label": {
+    "description": "The label for check for updates dropdown"
+  },
+  "remote_update_label": "Attiva il servizio di aggiornamento remoto",
+  "@remote_update_label": {
+    "description": "The label for enable remote update service checkbox"
+  },
+  "link_handling_label": "Gestione collegamenti",
+  "@link_handling_label": {
+    "description": "Link Handling section header - General tab"
+  },
+  "opened_from_link_label": "Consenti l'apertura di Application Manager da collegamenti ipertestuali",
+  "@opened_from_link_label": {
+    "description": "The label for allow application manager opened from hyperlinks checkbox"
+  },
+  "local_files_label": "File locali",
+  "@local_files_label": {
+    "description": "Local Files section header - Files tab"
+  },
+  "location_label": "Percorso",
+  "@location_label": {
+    "description": "Location label"
+  },
+  "shared_files_label": "File condivisi",
+  "@shared_files_label": {
+    "description": "Shared Files label"
+  },
+  "shared_storage_label": "Utilizza lo spazio di archiviazione condiviso per i download di contenuti",
+  "@shared_storage_label": {
+    "description": "Checkbox label"
+  },
+  "limit_shared_space_label": "Limita lo spazio condiviso utilizzato:",
+  "@limit_shared_space_label": {
+    "description": "Checkbox label"
+  },
+  "tray_icon_label": "Icona nell'area di notifica della barra delle applicazioni",
+  "@tray_icon_label": {
+    "description": "Tray Icon section header - Files tab"
+  },
+  "system_tray_label": "Visualizza l'icona nell'area di notifica della barra delle applicazioni",
+  "@system_tray_label": {
+    "description": "Checkbox label"
+  },
+  "batch_severity_label": "Visualizza solo contrassegni con rilevanza:",
+  "@batch_severity_label": {
+    "description": "Checkbox label"
+  },
+  "alert_windows": "Finestre avvisi",
+  "@alert_windows": {
+    "description": "Alert Windows section header - Alerts tab"
+  },
+  "desktop_alert_label": "Visualizza finestre di avviso sul desktop",
+  "@desktop_alert_label": {
+    "description": "Show desktop alert label"
+  },
+  "hide_window_label": "Nascondi finestra dopo:",
+  "@hide_window_label": {
+    "description": "Hide window dropdown label"
+  },
+  "alert_severity_label": "Visualizza solo avvisi con rilevanza:",
+  "@alert_severity_label": {
+    "description": "Checkbox label"
+  },
+  "connections_label": "Connessioni",
+  "@connections_label": {
+    "description": "Connections section header - Alerts tab"
+  },
+  "limit_downloads_label": "Limita download simultanei:",
+  "@limit_downloads_label": {
+    "description": "Limit download drop down label"
+  },
+  "download_bandwidth_label": "Limita larghezza di banda di download:",
+  "@download_bandwidth_label": {
+    "description": "Limit download bandwidth drop down label"
+  },
+  "proxy_label": "Proxy",
+  "@proxy_label": {
+    "description": "Proxy section header - Network tab"
+  },
+  "proxy_type_label": "Tipo di proxy:",
+  "@proxy_type_label": {
+    "description": "Proxy type drop down label"
+  },
+  "no_proxy_label": "Nessun proxy",
+  "@no_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "auto_detect_label": "Individuazione automatica",
+  "@auto_detect_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "system_proxy_label": "Proxy di sistema",
+  "@system_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "manual_proxy_label": "Proxy manuale",
+  "@manual_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "host_name_label": "Nome o indirizzo host:",
+  "@host_name_label": {
+    "description": "Host name label"
+  },
+  "username_label": "Nome utente:",
+  "@username_label": {
+    "description": "Username label"
+  },
+  "secure_socket_label": "Utilizza SSL (Secure Socket Layer)",
+  "@secure_socket_label": {
+    "description": "Checkbox label"
+  },
+  "port_number_label": "Numero porta:",
+  "@port_number_label": {
+    "description": "Port number label"
+  },
+  "password_label": "Password:",
+  "@password_label": {
+    "description": "Password label"
+  },
+  "ck_upd_4hr": "4 ore",
+  "@ck_upd_4hr": {
+    "description": "Check for updates every 4 Hours label"
+  },
+  "ck_upd_8hr": "8 ore",
+  "@ck_upd_8hr": {
+    "description": "Check for updates every 8 Hours label"
+  },
+  "ck_upd_24hr": "24 ore",
+  "@ck_upd_24hr": {
+    "description": "Check for updates every 24 Hours label"
+  },
+  "ck_upd_week": "Settimana",
+  "@ck_upd_week": {
+    "description": "Check for updates every Week label"
+  },
+  "hide_win_10secs_label": "10 secondi",
+  "@hide_win_10secs_label": {
+    "description": "Hide Alert window after 10 seconds label"
+  },
+  "hide_win_30secs_label": "30 secondi",
+  "@hide_win_30secs_label": {
+    "description": "Hide Alert window after 30 seconds label"
+  },
+  "hide_win_60secs_label": "60 secondi",
+  "@hide_win_60secs_label": {
+    "description": "Hide Alert window after 60 seconds label"
+  },
+  "general_label": "Generale",
+  "@general_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when General tab selected"
+  },
+  "file_label": "File",
+  "@file_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when File tab selected"
+  },
+  "files_label": "File",
+  "@files_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Files tab selected"
+  },
+  "alert_label": "Avviso",
+  "@alert_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alert tab selected"
+  },
+  "alerts_label": "Avvisi",
+  "@alerts_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alerts tab selected"
+  },
+  "network_label": "Rete",
+  "@network_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Network tab selected"
+  },
+  "adjust_settings_label": "Regola impostazioni {0}",
+  "@adjust_settings_label": {
+    "description": "A place holder string to be replaced with General/ Files/ Alerts/ Network"
+  },
+  "atuo_relaunch_help": "Selezionare questa opzione se si desidera che Autodesk Application Manager invii una notifica in caso di disponibilità di aggiornamenti quando il computer è acceso. Se l'opzione è selezionata, Application Manager verrà eseguito in background sulla barra delle applicazioni (in basso a destra nello schermo).",
+  "@atuo_relaunch_help": {
+    "description": "Help tool tip content for Auto relaunch checkbox"
+  },
+  "atuo_relaunch_title": "Generale - Avvio automatico",
+  "@atuo_relaunch_title": {
+    "description": "Help tool tip title for Auto relaunch checkbox"
+  },
+  "self_update_help": "La deselezione di questa casella determinerà la ricezione di notifiche sulla disponibilità e sulla necessità di aggiornamenti per Application Manager. È necessario accettare l'aggiornamento in modo che possa essere applicato al computer.",
+  "@self_update_help": {
+    "description": "Help tool tip content for self update checkbox"
+  },
+  "self_update_title": "Application Manager - Aggiornamento automatico",
+  "@self_update_title": {
+    "description": "Help tool tip title for self update checkbox"
+  },
+  "update_check_interval_help": "Autodesk Application Manager verifica automaticamente la disponibilità di aggiornamenti per i prodotti software Autodesk installati. Specificare l'intervallo di tempo tra le verifiche.",
+  "@update_check_interval_help": {
+    "description": "Help tool tip content for update check interval drop down"
+  },
+  "update_check_interval_title": "Generale - Intervallo di aggiornamento",
+  "@update_check_interval_title": {
+    "description": "Help tool tip title for update check interval drop down"
+  },
+  "file_location_help": "Application Manager memorizza i pacchetti software nella posizione specificata del file system locale.<br/><br/>I file rimarranno disponibili per l'utilizzo durante la manutenzione e la riparazione del software.",
+  "@file_location_help": {
+    "description": "Help tool tip content for Local file download location"
+  },
+  "file_location_title": "File - Posizione",
+  "@file_location_title": {
+    "description": "Help tool tip title for Local file download location"
+  },
+  "use_shared_storage_help": "Quando l'opzione è abilitata, Application Manager tenta prima di ottenere i pacchetti software dal percorso dei file condivisi e, se tale percorso non è disponibile, esegue il download dai server Autodesk.",
+  "@use_shared_storage_help": {
+    "description": "Help tool tip content for Use Shared Files check box"
+  },
+  "use_shared_storage_title": "Usa file condivisi",
+  "@use_shared_storage_title": {
+    "description": "Help tool tip title for Use Shared Files check box"
+  },
+  "shared_file_location_help": "Quando l'opzione è abilitata, Application Manager tenta prima di ottenere i pacchetti software dal percorso specificato e, se tale percorso non è disponibile, esegue il download dai server Autodesk. Se si specifica una cartella di rete, è possibile limitare il numero di download dai server Autodesk su Internet, consentendo la condivisione del primo download di un pacchetto da parte di numerosi computer.",
+  "@shared_file_location_help": {
+    "description": "Help tool tip content for Shared file location"
+  },
+  "shared_file_location_title": "File condivisi - Percorso",
+  "@shared_file_location_title": {
+    "description": "Help tool tip title for Shared file location"
+  },
+  "enable_alert_window_help": "Autodesk Application Manager utilizza le finestre di avviso per il desktop per inviare notifiche relative alla disponibilità di nuovi aggiornamenti software e altre informazioni correlate. È possibile disattivare l'invio delle notifiche mediante questa impostazione.",
+  "@enable_alert_window_help": {
+    "description": "Help tool tip content for enable alert window check box"
+  },
+  "enable_alert_window_title": "Avvisi - Visualizza avvisi",
+  "@enable_alert_window_title": {
+    "description": "Help tool tip title for enable alert window check box"
+  },
+  "alert_window_fading_time_help": "La finestra di avviso sul desktop viene nascosta automaticamente dopo l'intervallo di tempo specificato. Se si fa clic sulla finestra di avviso, il conto alla rovescia viene interrotto e l'avviso rimane visibile.",
+  "@alert_window_fading_time_help": {
+    "description": "Help tool tip content for enable alert window fading time drop down"
+  },
+  "alert_window_fading_time_title": "Avvisi - Tempo disattivazione finestra",
+  "@alert_window_fading_time_title": {
+    "description": "Help tool tip title for enable alert window fading time drop down"
+  },
+  "proxy_type_help": "Protocollo proxy utilizzato nella rete.",
+  "@proxy_type_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_type_title": "Rete - Tipo di proxy",
+  "@proxy_type_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_hostname_help": "Nome host o indirizzo IP del proxy di rete.",
+  "@proxy_hostname_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_hostname_title": "Rete - Nome host",
+  "@proxy_hostname_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_portnumber_help": "Numero della porta del proxy di rete.",
+  "@proxy_portnumber_help": {
+    "description": "Help tool tip content for proxy port number text box"
+  },
+  "proxy_portnumber_title": "Rete - Porta",
+  "@proxy_portnumber_title": {
+    "description": "Help tool tip title for proxy port number text box"
+  },
+  "proxy_username_help": "Nome utente utilizzato per accedere al proxy di rete.",
+  "@proxy_username_help": {
+    "description": "Help tool tip content for username text box"
+  },
+  "proxy_username_title": "Rete - Nome utente",
+  "@proxy_username_title": {
+    "description": "Help tool tip title for username text box"
+  },
+  "proxy_password_help": "Password associata al nome utente del proxy di rete.",
+  "@proxy_password_help": {
+    "description": "Help tool tip content for password text box"
+  },
+  "proxy_password_title": "Rete - Password",
+  "@proxy_password_title": {
+    "description": "Help tool tip title for password text box"
+  },
+  "release_notes_label": "Note di rilascio",
+  "@release_notes_label": {
+    "description": "Release Notes label to show under Settings window About tab"
+  },
+  "host_name_error_title": "Nome host non valido",
+  "@host_name_error_title": {
+    "description": "Error message title for invalid host name"
+  },
+  "host_name_error_content": "Il nome host o l'indirizzo IP non si risolve in un server proxy di rete.<br/>Immettere un nome host o un indirizzo IP valido per il server proxy.<br/>Per ulteriori informazioni sui valori corretti, contattare l'amministratore di rete.",
+  "@host_name_erro_content": {
+    "description": "Error message content for invalid host name"
+  },
+  "port_number_error_title": "Numero porta non valido",
+  "@port_number_error_title": {
+    "description": "Error message title for invalid port number"
+  },
+  "port_number_error_content": "Impossibile stabilire la connessione al numero di porta specificato del proxy di rete.<br/>Immettere un numero di porta valido per il server proxy.<br/>Per ulteriori informazioni sui valori corretti, contattare l'amministratore di rete.",
+  "@port_number_error_content": {
+    "description": "Error message content for invalid port number"
+  },
+  "username_pwd_error_title": "Password o nome utente non valido",
+  "@username_pwd_error_title": {
+    "description": "Error message title for invalid Username or Password"
+  },
+  "username_pwd_error_content": "Per la connessione di rete è richiesta l'autenticazione proxy.<br/>Immettere il nome utente e la password.<br/>Per ulteriori informazioni sui valori corretti, contattare l'amministratore di rete.",
+  "@username_pwd_error_content": {
+    "description": "Error message content for invalid Username or Password"
+  },
+  "invalid_file_location_error_title": "Percorso file non valido",
+  "@invalid_file_location_error_title": {
+    "description": "Error message title for invalid file location"
+  },
+  "invalid_file_location_error_content": "Il percorso dei file specificato non è valido.<br/>Immettere un percorso valido per l'archiviazione dei file.",
+  "@invalid_file_location_error_content": {
+    "description": "Error message content for invalid file location"
+  },
+  "invalid_shared_file_location_error_title": "Percorso file condivisi non valido",
+  "@invalid_shared_file_location_error_title": {
+    "description": "Error message title for invalid shared file location"
+  },
+  "invalid_shared_file_location_error_content": "Il percorso dei file specificato non è valido.<br/>Immettere un percorso valido per l'archiviazione dei file condivisi.",
+  "@invalid_shared_file_location_error_content": {
+    "description": "Error message content for invalid shared file location"
+  },
+  "proxy_connection_error_title": "Errore di connessione proxy",
+  "@proxy_connection_error_title": {
+    "description": "error message title when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_host_content": "Impossibile stabilire la connessione al server proxy di rete specificato. Configurare le impostazioni proxy per continuare.",
+  "@settings_error_invalid_host_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_port_content": "Impossibile stabilire la connessione al numero di porta specificato del proxy di rete. Immettere il numero di porta corretto per continuare.",
+  "@settings_error_invalid_port_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_title": "Errore di autenticazione proxy",
+  "@settings_error_invalid_proxy_cred_title": {
+    "description": "error message title when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_content": "Per la connessione di rete è richiesta l'autenticazione proxy. Immettere il nome utente e la password per continuare.",
+  "@settings_error_invalid_proxy_cred_content": {
+    "description": "error message content when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_cannot_access_file_content": "Impossibile accedere al percorso dei file. Verificare il percorso specificato.",
+  "@settings_error_cannot_access_file_content": {
+    "description": "error message content when cannot access the file location"
+  },
+  "settings_error_cannot_access_shared_file_content": "Impossibile accedere al percorso dei file. Verificare la disponibilità di rete o modificare il percorso specificato.",
+  "@settings_error_cannot_access_shared_file_content": {
+    "description": "error message content when cannot access the shared file location"
+  },
+  "diskspace_low_error_title": "Spazio su disco insufficiente",
+  "@diskspace_low_error_title": {
+    "description": "error message title when cannot disk space is low"
+  },
+  "settings_error_diskspace_low_content": "Spazio insufficiente nel percorso di download corrente. Scegliere un nuovo percorso di download prima di eseguire l'installazione.",
+  "@settings_error_diskspace_low_content": {
+    "description": "error message content when disk space is low"
+  }
+});

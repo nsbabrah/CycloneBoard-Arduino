@@ -1,0 +1,48 @@
+2017/03/24-19:54:15.082 8728 Reusing MANIFEST C:\Users\nsbabrah\AppData\Local\Google\Chrome\User Data\Default\Session Storage/MANIFEST-000001
+2017/03/24-19:54:15.082 8728 Recovering log #4
+2017/03/24-19:54:15.083 8728 Reusing old log C:\Users\nsbabrah\AppData\Local\Google\Chrome\User Data\Default\Session Storage/000004.log 
+2017/03/24-19:56:13.429 10836 Level-0 table #8: started
+2017/03/24-19:56:13.487 10836 Level-0 table #8: 82119 bytes OK
+2017/03/24-19:56:13.507 10836 Delete type=0 #4
+2017/03/24-20:41:45.170 10836 Level-0 table #10: started
+2017/03/24-20:41:45.253 10836 Level-0 table #10: 187704 bytes OK
+2017/03/24-20:41:45.305 10836 Delete type=0 #7
+2017/03/24-20:44:45.376 10836 Level-0 table #12: started
+2017/03/24-20:44:45.457 10836 Level-0 table #12: 183331 bytes OK
+2017/03/24-20:44:45.485 10836 Delete type=0 #9
+2017/03/24-20:57:19.394 10836 Level-0 table #14: started
+2017/03/24-20:57:19.468 10836 Level-0 table #14: 73819 bytes OK
+2017/03/24-20:57:19.504 10836 Delete type=0 #11
+2017/03/24-21:00:24.437 10836 Level-0 table #16: started
+2017/03/24-21:00:24.494 10836 Level-0 table #16: 16676 bytes OK
+2017/03/24-21:00:24.518 10836 Delete type=0 #13
+2017/03/24-21:00:24.519 10836 Compacting 4@0 + 1@1 files
+2017/03/24-21:00:24.607 10836 Generated table #17@0: 256 keys, 503287 bytes
+2017/03/24-21:00:24.607 10836 Compacted 4@0 + 1@1 files => 503287 bytes
+2017/03/24-21:00:24.634 10836 compacted to: files[ 0 1 1 0 0 0 0 ]
+2017/03/24-21:00:24.634 10836 Delete type=2 #8
+2017/03/24-21:00:24.636 10836 Delete type=2 #10
+2017/03/24-21:00:24.637 10836 Delete type=2 #12
+2017/03/24-21:00:24.639 10836 Delete type=2 #14
+2017/03/24-21:00:24.640 10836 Delete type=2 #16
+2017/03/24-21:05:11.898 10836 Level-0 table #19: started
+2017/03/24-21:05:11.951 10836 Level-0 table #19: 101765 bytes OK
+2017/03/24-21:05:11.965 10836 Delete type=0 #15
+2017/03/24-21:05:23.413 10836 Level-0 table #21: started
+2017/03/24-21:05:23.489 10836 Level-0 table #21: 91310 bytes OK
+2017/03/24-21:05:23.570 10836 Delete type=0 #18
+2017/03/24-21:37:12.606 10836 Level-0 table #23: started
+2017/03/24-21:37:12.713 10836 Level-0 table #23: 194472 bytes OK
+2017/03/24-21:37:12.788 10836 Delete type=0 #20
+2017/03/24-22:16:53.798 10836 Level-0 table #25: started
+2017/03/24-22:16:53.883 10836 Level-0 table #25: 161228 bytes OK
+2017/03/24-22:16:53.917 10836 Delete type=0 #22
+2017/03/24-22:16:53.919 10836 Compacting 4@0 + 1@1 files
+2017/03/24-22:16:54.140 10836 Generated table #26@0: 542 keys, 1048120 bytes
+2017/03/24-22:16:54.140 10836 Compacted 4@0 + 1@1 files => 1048120 bytes
+2017/03/24-22:16:54.175 10836 compacted to: files[ 0 1 1 0 0 0 0 ]
+2017/03/24-22:16:54.176 10836 Delete type=2 #17
+2017/03/24-22:16:54.177 10836 Delete type=2 #19
+2017/03/24-22:16:54.178 10836 Delete type=2 #21
+2017/03/24-22:16:54.180 10836 Delete type=2 #23
+2017/03/24-22:16:54.181 10836 Delete type=2 #25

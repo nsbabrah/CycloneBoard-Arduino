@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="appmgr-updates-available">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-common.css">
+		<link type="text/css" rel="stylesheet" href="css/updates-available.css">
+		<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/arbcore.js"></script>
+		<script type="text/javascript" src="js/lib/Globalize.js"></script>
+	</head>
+	<body ng-controller="appmgrUpdatesAvailableCtrl">
+		<div class="header">
+			<div class="left">
+				<img src="images/autodesk_logo.png" class="adsk-logo">
+				<span class="title">Application Manager</span>
+			</div>
+		</div>
+		<div class="middle">
+			<div class="notification">
+				<div class="title" arb:id="ua_title"></div>
+				<div class="time">{{cs.todayAt}} {{cs.getTime()}}</div>
+				<div class="clr-both"></div>
+			</div>
+			<div class="message" arb:id="ua_msg"></div>
+			<div class="footer">
+				<div class="links">
+					<a id="view_details" href="" ng-click="cs.showMainWindow()" arb:id="view_details"></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/common/appmgr-utils.js"></script>
+		<script type="text/javascript">
+			loadCulture();
+		</script>
+		<script type="text/javascript">
+			arbResourceSelector();
+		</script>
+		<script type="text/javascript" src="js/controllers/appmgrUpdatesAvailableCtrl.js"></script>
+		<script type="text/javascript" src="js/services/appmgrCommonService.js"></script>
+	</body>
+</html>

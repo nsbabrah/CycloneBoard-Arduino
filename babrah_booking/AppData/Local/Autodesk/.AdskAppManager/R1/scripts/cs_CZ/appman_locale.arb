@@ -1,0 +1,1004 @@
+arb.register("arb_editor:cs_CZ", {
+  "@@locale": "cs",
+
+  "settings_link": "Nastavení",
+  "@settings_link": {
+    "description": "Application Manager main window settings link text"
+  },
+  "help_link": "Nápověda",
+  "@help_link": {
+    "description": "Application Manager main window help link text"
+  },
+  "welcome_link": "VÍTEJTE",
+  "@welcome_link": {
+    "description": "Welcome tab top navigation text"
+  },
+  "software_link": "SOFTWARE",
+  "@software_link": {
+    "description": "Software tab top navigation text"
+  },
+  "updates_link": "AKTUALIZACE",
+  "@updates_link": {
+    "description": "Updates tab top navigation text"
+  },
+  "apps_link": "APLIKACE",
+  "@apps_link": {
+    "description": "Apps tab top navigation text"
+  },
+  "search_text@placeholder": "Vyhledat...",
+  "@search_text": {
+    "description": "Placeholder text for Search text box in the Main Appman UI"
+  },
+  "sort_by_label": "Seřadit podle:",
+  "@sort_by_label": {
+    "description": "Label for the Sort by drop down"
+  },
+  "sort_date_optn": "Datum",
+  "@sort_date_optn": {
+    "description": "One of the option in Sort by drop down - Date"
+  },
+  "sort_sev_optn": "Závažnost",
+  "@sort_sev_optn": {
+    "description": "One of the option in Sort by drop down - Severity"
+  },
+  "view_label": "Pohled:",
+  "@view_label": {
+    "description": "Label for the different View selectors (List, Group, Thumbnail, Hierarchy are the possible views)"
+  },
+  "get_started_label": "Začínáme.",
+  "@get_started_label": {
+    "description": "Label for Getting started header in the Welcome tab"
+  },
+  "upd_sw_link": "Aktualizovat software",
+  "@upd_sw_link": {
+    "description": "Update Software button text under getting started section"
+  },
+  "about_appman": "O aplikaci Application Manager",
+  "@about_appman": {
+    "description": "Label for About Application Manager header in the Welcome tab"
+  },
+  "about_appman_cont": "Nástroj pro stolní počítače, který včas prostřednictvím zpráv upozorňuje na dostupnost nových aktualizací Service Pack, oprav Hot Fix a dalších důležitých souborů, a pomáhá vám tak udržovat všechny vaše nainstalované aplikace a sady společnosti Autodesk v aktuálním stavu. Když se rozhodnete některou aktualizaci nainstalovat, aplikace Application Manager automaticky stáhne soubory z cloudu a nainstaluje je ve vašem počítači.",
+  "@about_appman_cont": {
+    "description": "About application manager content"
+  },
+  "trls_label": "Výukové programy",
+  "@trls_label": {
+    "description": "Tutorial header in welcome tab"
+  },
+  "trl1_label": "Výukový program 1",
+  "@trl1_label": {
+    "description": "Tutorial1 sub header text in welcome tab"
+  },
+   "no_trl": "Žádné výukové programy nejsou k dispozici.",
+  "@no_trl": {
+    "description": "To show the text under Tutorials section when there is no tutorials"
+  },
+  "trl_cont": "Postup pro Lorem ipsum dolor sit amet.",
+  "@trl_cont": {
+    "description": "Tutorial1 content"
+  },
+  "status_err_title": "Chyba aplikace",
+  "@status_err_title": {
+    "description": "Status bar error title"
+  },
+  "abt_label": "Přibližně",
+  "@abt_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  "rem_label": "zbývá",
+  "@rem_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  
+  "install_label": "Instalovat",
+  "@install_label": {
+    "description": "The Install button name"
+  },
+  "pause_label": "Pozastavit",
+  "@pause_label": {
+    "description": "The Pause button name"
+  },
+  "resume_label": "Pokračovat",
+  "@resume_label": {
+    "description": "The Resume button name"
+  },
+  "cancel_label": "Storno",
+  "@cancel_label": {
+    "description": "The Cancel button name"
+  },
+  "ignore_label": "Ignorovat",
+  "@ignore_label": {
+    "description": "The Ignore button name"
+  },
+  "add_label": "Přidat",
+  "@ignore_label": {
+    "description": "Add button (per-item) label in deployment mode"
+  },
+  "remove_label": "Odebrat",
+  "@ignore_label": {
+    "description": "Remove button (per-item) label in deployment mode"
+  },
+  "install_sel_label": "Nainstalovat vybrané",
+  "@install_sel_label": {
+    "description": "The Install Selected button name, used for multi-download selection"
+  },
+  "pause_sel_label": "Pozastavit vybrané",
+  "@pause_sel_label": {
+    "description": "The Pause Selected button name"
+  },
+  "resume_sel_label": "Pokračovat s vybranými",
+  "@resume_sel_label": {
+    "description": "The Resume Selected button name"
+  },
+  "cancel_sel_label": "Zrušit vybrané",
+  "@cancel_sel_label": {
+    "description": "The Cancel Selected button name"
+  },
+  "ignore_sel_label": "Ignorovat vybrané",
+  "@ignore_sel_label": {
+    "description": "The Ignore Selected button name"
+  },
+  "add_sel_label": "Přidat vybrané",
+  "@add_sel_label": {
+    "description": "Add Selected button label in the status area. Used in deployment mode"
+  },
+  "remove_sel_label": "Odstranit vybrané",
+  "@remove_sel_label": {
+    "description": "Remove Selected button label in the status area. Used in deployment mode"
+  },
+  "close_label": "Zavřít",
+  "@close_label": {
+    "description": "The Close button name"
+  },
+  "yes_label": "Ano",
+  "@yes_label": {
+    "description": "The Yes button name"
+  },
+  "no_label": "Ne",
+  "@no_label": {
+    "description": "The No button name"
+  },
+  "ok_label": "OK",
+  "@ok_label": {
+    "description": "The OK button name"
+  },
+  "retry_label": "Opakovat",
+  "@retry_label": {
+    "description": "The Retry button name. All the above refers to Appman main window HTML strings"
+  },
+
+  "recommended_upd": "Doporučeno",
+  "@recommended_upd": {
+    "description": "Recommended panel label"
+  },
+  "date_new_upd": "Nové aktualizace",
+  "@date_new_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_rec_upd": "Poslední aktualizace",
+  "@date_rec_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lw_upd": "Minulý týden",
+  "@date_lw_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lm_upd": "Minulý měsíc",
+  "@date_lm_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_old_upd": "Starší",
+  "@date_old_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  
+  "sev_high": "Vysoká",
+  "@sev_high": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_med": "Střední",
+  "@sev_med": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_low": "Nízká",
+  "@sev_low": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "other_label": "Další",
+  "@other_label": {
+    "description": "To show the category as Other if the severity is unknown"
+  },
+ 
+  "sr_rel": "Datum vydání",
+  "@sr_rel": {
+    "description": "Label for the date of update Released"
+  },
+  "sr_status": "Stav",
+  "@sr_status": {
+    "description": "Label for the Status of an update"
+  },
+  "sr_pub": "Vydavatel",
+  "@sr_pub": {
+    "description": "Label for the Publisher of an update"
+  },
+  "sr_uid": "ID aktualizace",
+  "@sr_uid": {
+    "description": "Label for the Update ID"
+  },
+  "sr_sev": "Závažnost",
+  "@sr_sev": {
+    "description": "Label for the Severity of an update"
+  },
+  "sr_size": "Velikost",
+  "@sr_size": {
+    "description": "Label to show the Size of an update"
+  },
+  
+  "ap_pending_download": "Čekající na stažení",
+  "@ap_pending_download": {
+    "description": "The text should be shown when an update is pending for download"
+  },
+  "ap_downloading": "Probíhá stahování",
+  "@ap_downloading": {
+    "description": "The text should be shown when an update is downloading"
+  },
+  "ap_download_paused": "Stahování pozastaveno",
+  "@ap_download_paused": {
+    "description": "The text should be shown when an update is paused during download"
+  },
+  "ap_pending_install": "Čekající na instalaci",
+  "@ap_pending_install": {
+    "description": "The text should be shown when an update is pending for the installation"
+  },
+  "ap_installing": "Probíhá instalace",
+  "@ap_installing": {
+    "description": "The text should be shown when an update is installing"
+  },
+  "ap_install_paused": "Instalace pozastavena",
+  "@ap_install_paused": {
+    "description": "The text should be shown when an update is paused during installation"
+  },
+  
+  "al_details": "Detaily",
+  "@al_details": {
+    "description": "The Details link header text to show the description of an update"
+  },
+  "al_rel_updates": "Související aktualizace",
+  "@al_rel_updates": {
+    "description": "The Related Updates link header text"
+  },
+  "al_rel_docs": "Související dokumenty a balíčky",
+  "@al_rel_docs": {
+    "description": "The Related Docs and Packages link header text"
+  },
+  "al_rel_notes": "Poznámky k verzi",
+  "@al_rel_notes": {
+    "description": "The Release Note header text"
+  },
+  "also_applies_to": "Platí také pro",
+  "@also_applies_to": {
+    "description": "Also applies to text to show under Related Updates section"
+  },
+  "also_includes": "Zahrnuje také",
+  "@also_includes": {
+    "description": "Also Includes text to show under Related Updates section"
+  },
+  "go_to_full_details": "Přejít na úplné podrobnosti o aktualizaci",
+  "@go_to_full_details": {
+    "description": "Go to Full Update Details to show under Related Updates section"
+  },
+  "more_text": "Další",
+  "@more_text": {
+    "description": "To show More link under Also Includes section"
+  },
+  "as_not_installed": "Nenainstalováno",
+  "@as_not_installed": {
+    "description": "Status text of an non installed update"
+  },
+  "as_installed": "Nainstalováno",
+  "@as_installed": {
+    "description": "Status text of an installed update"
+  },
+  "as_not_included": "Nezahrnuto",
+  "@as_not_included": {
+    "description": "Status text of an non included update in deployment mode"
+  },
+  "as_included": "Zahrnuto",
+  "@as_included": {
+    "description": "Status text of an included update in deployment mode"
+  },
+  "as_ignored": "Ignorováno",
+  "@as_ignored": {
+    "description": "Status text of an ignored update"
+  },
+  "as_not_applicable": "Není k dispozici",
+  "@as_not_applicable": {
+    "description": "Status text of an Non Applicable update"
+  },
+  
+  "unknown_label": "Neznámá",
+  "@unknown_label": {
+    "description": "The dynamic text to be shown when the file size of an update is not available in SDS"
+  },
+  "paused_label": "Pozastaveno",
+  "@paused_label": {
+    "description": "The text should be shown when an individual update is paused"
+  },
+  "backup_label": "Kopírování do sdíleného umístění",
+  "@paused_label": {
+    "description": "The text should be shown when sharing one update to local cache shared location"
+  },
+  "new_label": "NOVÉ!",
+  "@new_label": {
+    "description": "The NEW label for unvisited updates"
+  },
+  "retired_label": "VYŘAZENO",
+  "@retired_label": {
+    "description": "The RETIRED label for the Retired/Revoked updates"
+  },
+  "net_unavail_label": "Síťové připojení není dostupné.",
+  "@net_unavail_label": {
+    "description": "An error text to show the connection unavailable"
+  },
+  
+  "sw_label": "software",
+  "@sw_label": {
+    "description": "The text to be appended when an user selects a software. Eg: 1 Software selected"
+  },
+  "prod_label": "produkt",
+  "@prod_label": {
+    "description": "The text to be appended when an user selects an update. Eg: 1 Product selected"
+  },
+  "sws_label": "softwary(ů)",
+  "@sws_label": {
+    "description": "The text to be appended when an user selects more than one software. Eg: 2 Softwares selected"
+  },
+  "prods_label": "produkty(ů)",
+  "@prods_label": {
+    "description": "The text to be appended when an user selects more than one update. Eg: 2 Products selected"
+  },
+  "apps_label": "aplikace(í)",
+  "@apps_label": {
+    "description": "The text to be appended when an user selects apps. Eg: 2 Apps selected"
+  },
+  "cancel_all_label": "Zrušit vše",
+  "@cancel_all_label": {
+    "description": "The header text of Cancel All confirmation popup when the user try to cancel more than one update"
+  },
+  "cancel_conf_label": "Opravdu chcete zrušit tuto instalaci?",
+  "@cancel_conf_label": {
+    "description": "The content of cancel confirmation popup, single update selection"
+  },
+  "cancel_all_conf_label": "Opravdu chcete zrušit všechny instalace?",
+  "@cancel_all_conf_label": {
+    "description": "The content of cancel confirmation popup, multiple update selection scenario. All the above refers to Appman main window JSON strings"
+  },
+
+  "default_footer_text": "Instalaci zahájíte výběrem možnosti {0}.",
+  "@default_footer_text": {
+    "description": "The default footer text to be shown when the user navigates to Updates/ Software/ Apps tab"
+  },
+  
+  "empty_tab_text": "Používáte nejnovější verzi softwaru Autodesk – nejsou potřeba žádné aktualizace.",
+  "@empty_tab_text": {
+    "description": "The empty footer text to be shown when there is no Updates/ Software/ Apps"
+  },
+  
+  "server_not_reachable_err": "Aktualizace nelze stáhnout, protože server není dostupný. Zkuste to znovu později nebo zkontrolujte své nastavení.",
+  "@server_not_reachable_err": {
+    "description": "The update tab text to be shown when the server is not reachable"
+  },
+  "conn_lost_status_err": "Připojení k síti bylo ztraceno. Zkontrolujte nastavení sítě. Aplikace Application Manager se bude nadále pokoušet o připojení k síti, dokud tuto operaci nezrušíte.",
+  "@conn_lost_status_err": {
+    "description": "Status bar error to be shown when there is no network"
+  },
+  
+  "retired_err_title": "Tato verze aplikace Application Manager již není podporována.",
+  "@retired_err_title": {
+    "description": "Retired modal dialog error title"
+  },
+  "retired_err1": "Tuto verzi aplikace Autodesk Application Manager již nelze použít pro přístup k serverům Autodesk.",
+  "@retired_err1": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err2": "Proveďte upgrade na novější verzi aplikace Application Manager.",
+  "@retired_err2": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err3": "Požádejte svého správce, aby vám sdělil, jak postupovat při upgradu aplikace Application Manager.",
+  "@retired_err3": {
+    "description": "Retired modal dialog error content"
+  },
+   "retired_soon_err_title": "Tato verze aplikace Application Manager již brzy nebude podporována.",
+  "@retired_soon_err_title": {
+    "description": "Retiring soon general error title"
+  },
+  "retired_soon_err_cont": "Proveďte upgrade na novější verzi aplikace Application Manager, abyste mohli i nadále přistupovat k serverům a službám.",
+  "@retired_soon_err_cont": {
+    "description": "Retiring soon general error content"
+  },
+  
+  "dynamic_footer_text": "Vybráno: {0}",
+  "@dynamic_footer_text": {
+    "description": "The footer text will be changed based on the number of product selection. Eg: 5 Products Selected"
+  },
+
+  "mins_label": "min",
+  "@mins_label": {
+    "description": "The minutes text to be shown in the over all time remaining. Eg: 1 hour 20 minutes remaining"
+  },
+  "hours_label": "h",
+  "@hours_label": {
+    "description": "The hours text to be shown in the over all time remaining. Eg: 2 hours 20 minutes remaining"
+  },
+  "days_label": "dny(ů)",
+  "@days_label": {
+    "description": "The days text to be shown in the over all time remaining. Eg: 2 days 20 minutes remaining"
+  }, 
+  "weeks_label": "týdny(ů)",
+  "@weeks_label": {
+    "description": "The weeks text to be shown in the over all time remaining. Eg: 2 weeks 20 minutes remaining"
+  }, 
+  "months_label": "měsíce(ů)",
+  "@months_label": {
+    "description": "The months text to be shown in the over all time remaining. Eg: 2 months 20 minutes remaining"
+  }, 
+  "years_label": "roky(ů)",
+  "@years_label": {
+    "description": "The years text to be shown in the over all time remaining. Eg: 2 years 20 minutes remaining"
+  },
+  
+  "sec_label": "s",
+  "@sec_label": {
+    "description": "The sec text to be shown in the over all time remaining. Eg: 1 sec remaining, 10 sec remaining"
+  },
+  "min_label": "minuta",
+  "@min_label": {
+    "description": "The minute text to be shown in the over all time remaining. Eg: 2 years 1 minute remaining"
+  },
+  "hour_label": "hodina",
+  "@hour_label": {
+    "description": "The hour text to be shown in the over all time remaining. Eg: 2 years 1 hour remaining"
+  },
+  "day_label": "den",
+  "@day_label": {
+    "description": "The day text to be shown in the over all time remaining. Eg: 1 day 20 minutes remaining"
+  }, 
+  "week_label": "týden",
+  "@week_label": {
+    "description": "The week text to be shown in the over all time remaining. Eg: 1 week 20 minutes remaining"
+  }, 
+  "month_label": "měsíc",
+  "@month_label": {
+    "description": "The month text to be shown in the over all time remaining. Eg: 1 month 20 minutes remaining"
+  }, 
+  "year_label": "rok",
+  "@year_label": {
+    "description": "The year text to be shown in the over all time remaining. Eg: 1 year 20 minutes remaining"
+  },
+  
+  "active_label": "Aktivní",
+  "@active_label": {
+    "description": "The label to show the number of active downloads in the Mini alert window"
+  },
+  "delay_label": "Prodleva:",
+  "@delay_label": {
+    "description": "Label of the Delay drop down in the mini-progress and self-update alert window"
+  },
+  
+  "privacy_label": "Prohlášení společnosti Autodesk o ochraně osobních údajů",
+  "@privacy_label": {
+    "description": "Privacy header as per Legal team"
+  },
+  "privacy_stmt_label": "Prohlášení společnosti Autodesk o ochraně osobních údajů",
+  "@privacy_stmt_label": {
+    "description": "Privacy policy header"
+  },
+  "pp_rights_label1": "Společnost Autodesk respektuje vaše práva a naše závazky týkající se vašeho soukromí a osobních údajů. Kliknutím níže na tlačítko Souhlasím potvrzujete, že jste si přečetli",
+  "@pp_rights_label1": {
+    "description": "Privacy policy content"
+  },
+  "pp_rights_label2": "a pochopili, že vaše osobní údaje budou použity, jako je popsáno v Prohlášení o ochraně osobních údajů.",
+  "@pp_rights_label2": {
+    "description": "Privacy policy content"
+  },
+  "personal_info_label2": "(včetně převodů mých osobních informací do jiných zemí, ve kterých působí společnost Autodesk).",
+  "@personal_info_label2": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "periodic_check_label": "Souhlasím s tím, aby software společnosti Autodesk pravidelně kontroloval aktualizace a informoval mě o nich.",
+  "@periodic_check_label": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "pp_desc": "Správce licencí ve vaší společnosti možná nakonfiguroval tento produkt k použití licenčního modelu, který vyžaduje občasné automatické odeslání uživatelských a systémových oprávnění a metrik využití produktu za účelem ověření licenčních oprávnění a vyhodnocení celkového využití ve vaší společnosti. S případnými dotazy se obraťte na vašeho správce.",
+  "@pp_desc": {
+    "description": "Privacy policy content"
+  },
+  "agree_label": "Souhlasím",
+  "@agree_label": {
+    "description": "Label of I Agree button in the Privacy policy window. All the above strings refer to Privacy policy window"
+  },
+  
+  "today_at": "Dnes v",
+  "@today_at": {
+    "description": "To show the Todays time. Eg: Today at 4:55 PM"
+  },
+  "su_note_title": "Oznámení – kritické",
+  "@su_note_title": {
+    "description": "Self update window message header"
+  },
+  "su_msg": "Aplikaci Autodesk Application Manager je potřeba aktualizovat.",
+  "@su_msg": {
+    "description": "Self update window message"
+  },
+  "view_details": "Zobrazit podrobnosti",
+  "@view_details": {
+    "description": "View Details link text in self update window"
+  },
+  "update_label": "Aktualizovat",
+  "@update_label": {
+    "description": "Update link text in self update window"
+  },
+  "sr_title": "Oznámení",
+  "@sr_title": {
+    "description": "Self update success window header"
+  },
+  "to_label": "na",
+  "@to_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "version_label": "verzi",
+  "@version_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "open_manager": "Otevřít aplikaci Manager",
+  "@open_manager": {
+    "description": "Open Manager link text - self update window"
+  },
+  "all_paused": "Vše pozastaveno",
+  "@all_paused": {
+    "description": "To show the All Paused text in Mini progress window when all updates are paused"
+  },
+  "sr_updated_label": "byla úspěšně aktualizována",
+  "@sr_updated_label": {
+    "description": "A label to show the successful updation. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "insfailed_err": "se nezdařila.",
+  "@insfailed_err": {
+    "description": "The text to be shown when the self update install failed"
+  },
+  "dwldfailed_err": "se nezdařilo.",
+  "@dwldfailed_err": {
+    "description": "he text to be shown when the self update download failed"
+  },
+  "host_not_found_err": "Hostitel nebyl nalezen.",
+  "@host_not_found_err": {
+    "description": "Host not found error string"
+  },
+  "net_timeout_err": "Vypršel časový limit připojení.",
+  "@net_timeout_err": {
+    "description": "Connection timed out error string. All the above strings are related to Self update window"
+  },
+  
+  "ua_title": "Oznámení – důležité",
+  "@ua_title": {
+    "description": "Updates available window message header"
+  },
+  "ua_msg": "Jsou k dispozici nové aktualizace pro vaše produkty Autodesk.",
+  "@ua_msg": {
+    "description": "Updates available window message. All the above strings are related to Updates Available alert window"
+  },
+  
+  "settings_title": "Nastavení aplikace Application Manager",
+  "@settings_title": {
+    "description": "Settings window header"
+  },
+  "import_settings": "Importovat",
+  "@import_settings": {
+    "description": "The Import link text"
+  },
+  "export_settings": "Exportovat",
+  "@export_settings": {
+    "description": "The Export link text"
+  },
+  "general_link": "OBECNÉ",
+  "@general_link": {
+    "description": "The General tab navigation text"
+  },
+  "files_link": "SOUBORY",
+  "@files_link": {
+    "description": "The Files tab navigation text"
+  },
+  "alerts_link": "UPOZORNĚNÍ",
+  "@alerts_link": {
+    "description": "The Alerts tab navigation text"
+  },
+  "network_link": "SÍŤ",
+  "@network_link": {
+    "description": "The Network tab navigation text"
+  },
+  "about_link": "O aplikaci",
+  "@about_link": {
+    "description": "The About tab navigation text"
+  },
+  "startup_label": "Při spuštění",
+  "@startup_label": {
+    "description": "Startup section header - General tab"
+  },
+  "auto_relaunch_label": "Automaticky spustit po přihlášení k počítači",
+  "@auto_relaunch_label": {
+    "description": "Auto relaunch drop down label"
+  },
+  "self_update_label": "Povolit aktualizace aplikace Application Manager",
+  "@self_update_label": {
+    "description": "Self update Application Manager check box."
+  },
+  "welcome_opened_label": "Po otevření zobrazit úvodní stránku",
+  "@welcome_opened_label": {
+    "description": "Show welcome page checkbox label"
+  },
+  "updates_label": "Aktualizace",
+  "@updates_label": {
+    "description": "Updates section header - General tab"
+  },
+  "check_interval_label": "Kontrolovat aktualizace každých:",
+  "@check_interval_label": {
+    "description": "The label for check for updates dropdown"
+  },
+  "remote_update_label": "Povolit službu vzdálené aktualizace",
+  "@remote_update_label": {
+    "description": "The label for enable remote update service checkbox"
+  },
+  "link_handling_label": "Zpracování odkazů",
+  "@link_handling_label": {
+    "description": "Link Handling section header - General tab"
+  },
+  "opened_from_link_label": "Umožnit spuštění aplikace Application Manager z hypertextových odkazů",
+  "@opened_from_link_label": {
+    "description": "The label for allow application manager opened from hyperlinks checkbox"
+  },
+  "local_files_label": "Místní soubory",
+  "@local_files_label": {
+    "description": "Local Files section header - Files tab"
+  },
+  "location_label": "Umístění",
+  "@location_label": {
+    "description": "Location label"
+  },
+  "shared_files_label": "Sdílené soubory",
+  "@shared_files_label": {
+    "description": "Shared Files label"
+  },
+  "shared_storage_label": "Pro stažený obsah použít sdílené úložiště",
+  "@shared_storage_label": {
+    "description": "Checkbox label"
+  },
+  "limit_shared_space_label": "Omezit využité sdílené místo:",
+  "@limit_shared_space_label": {
+    "description": "Checkbox label"
+  },
+  "tray_icon_label": "Ikona hlavního panelu",
+  "@tray_icon_label": {
+    "description": "Tray Icon section header - Files tab"
+  },
+  "system_tray_label": "Zobrazit ikonu hlavního panelu systému",
+  "@system_tray_label": {
+    "description": "Checkbox label"
+  },
+  "batch_severity_label": "Zobrazit pouze odznáčky závažnosti:",
+  "@batch_severity_label": {
+    "description": "Checkbox label"
+  },
+  "alert_windows": "Okna výstrah",
+  "@alert_windows": {
+    "description": "Alert Windows section header - Alerts tab"
+  },
+  "desktop_alert_label": "Zobrazit okna výstrah na ploše",
+  "@desktop_alert_label": {
+    "description": "Show desktop alert label"
+  },
+  "hide_window_label": "Skrýt okno po:",
+  "@hide_window_label": {
+    "description": "Hide window dropdown label"
+  },
+  "alert_severity_label": "Zobrazit pouze výstrahy závažnosti:",
+  "@alert_severity_label": {
+    "description": "Checkbox label"
+  },
+  "connections_label": "Připojení",
+  "@connections_label": {
+    "description": "Connections section header - Alerts tab"
+  },
+  "limit_downloads_label": "Omezit souběžná stahování:",
+  "@limit_downloads_label": {
+    "description": "Limit download drop down label"
+  },
+  "download_bandwidth_label": "Omezit šířku pásma stahování:",
+  "@download_bandwidth_label": {
+    "description": "Limit download bandwidth drop down label"
+  },
+  "proxy_label": "Proxy server",
+  "@proxy_label": {
+    "description": "Proxy section header - Network tab"
+  },
+  "proxy_type_label": "Typ proxy serveru:",
+  "@proxy_type_label": {
+    "description": "Proxy type drop down label"
+  },
+  "no_proxy_label": "Bez proxy serveru",
+  "@no_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "auto_detect_label": "Automatický",
+  "@auto_detect_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "system_proxy_label": "Systémový proxy server",
+  "@system_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "manual_proxy_label": "Manuální proxy server",
+  "@manual_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "host_name_label": "Název nebo adresa hostitele:",
+  "@host_name_label": {
+    "description": "Host name label"
+  },
+  "username_label": "Uživatelské jméno:",
+  "@username_label": {
+    "description": "Username label"
+  },
+  "secure_socket_label": "Použít protokol SSL (Secure Socket Layer)",
+  "@secure_socket_label": {
+    "description": "Checkbox label"
+  },
+  "port_number_label": "Číslo portu:",
+  "@port_number_label": {
+    "description": "Port number label"
+  },
+  "password_label": "Heslo:",
+  "@password_label": {
+    "description": "Password label"
+  },
+  "ck_upd_4hr": "4 hodiny",
+  "@ck_upd_4hr": {
+    "description": "Check for updates every 4 Hours label"
+  },
+  "ck_upd_8hr": "8 hodin",
+  "@ck_upd_8hr": {
+    "description": "Check for updates every 8 Hours label"
+  },
+  "ck_upd_24hr": "24 hodin",
+  "@ck_upd_24hr": {
+    "description": "Check for updates every 24 Hours label"
+  },
+  "ck_upd_week": "Týden",
+  "@ck_upd_week": {
+    "description": "Check for updates every Week label"
+  },
+  "hide_win_10secs_label": "10 sekund",
+  "@hide_win_10secs_label": {
+    "description": "Hide Alert window after 10 seconds label"
+  },
+  "hide_win_30secs_label": "30 sekund",
+  "@hide_win_30secs_label": {
+    "description": "Hide Alert window after 30 seconds label"
+  },
+  "hide_win_60secs_label": "60 sekund",
+  "@hide_win_60secs_label": {
+    "description": "Hide Alert window after 60 seconds label"
+  },
+  "general_label": "Obecné",
+  "@general_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when General tab selected"
+  },
+  "file_label": "Soubor",
+  "@file_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when File tab selected"
+  },
+  "files_label": "Soubory",
+  "@files_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Files tab selected"
+  },
+  "alert_label": "Výstraha",
+  "@alert_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alert tab selected"
+  },
+  "alerts_label": "Výstrahy",
+  "@alerts_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alerts tab selected"
+  },
+  "network_label": "Síť",
+  "@network_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Network tab selected"
+  },
+  "adjust_settings_label": "Upravit nastavení pro {0}",
+  "@adjust_settings_label": {
+    "description": "A place holder string to be replaced with General/ Files/ Alerts/ Network"
+  },
+  "atuo_relaunch_help": "Tuto možnost vyberte, pokud chcete, aby vás aplikace Autodesk Application Manager upozornila na aktualizace kdykoli, když je spuštěný počítač. Pokud toto políčko zaškrtnete, bude aplikace Application Manager spuštěna v pozadí na panelu nástrojů (v pravé dolní části obrazovky).",
+  "@atuo_relaunch_help": {
+    "description": "Help tool tip content for Auto relaunch checkbox"
+  },
+  "atuo_relaunch_title": "Obecné – Spustit automaticky",
+  "@atuo_relaunch_title": {
+    "description": "Help tool tip title for Auto relaunch checkbox"
+  },
+  "self_update_help": "Pokud zrušíte zaškrtnutí tohoto políčka, příležitostně se zobrazí oznámení, že jsou k dispozici, a v některých případech i vyžadovány, aktualizace pro aplikaci Application Manager. Tyto aktualizace je nutné přijmout, aby je bylo možné použít v tomto počítači.",
+  "@self_update_help": {
+    "description": "Help tool tip content for self update checkbox"
+  },
+  "self_update_title": "Application Manager – automatická aktualizace",
+  "@self_update_title": {
+    "description": "Help tool tip title for self update checkbox"
+  },
+  "update_check_interval_help": "Aplikace Autodesk Application Manager automaticky ověří dostupnost aktualizací pro váš nainstalovaný software Autodesk. Nastavte zde interval mezi jednotlivými kontrolami.",
+  "@update_check_interval_help": {
+    "description": "Help tool tip content for update check interval drop down"
+  },
+  "update_check_interval_title": "Obecné – Interval aktualizací",
+  "@update_check_interval_title": {
+    "description": "Help tool tip title for update check interval drop down"
+  },
+  "file_location_help": "Aplikace Application Manager uloží softwarové balíčky v místním systému souborů v zadaném umístění.<br/><br/>Tyto balíčky by měly zůstat dostupné pro pozdější použití pro účely údržby a opravy softwaru.",
+  "@file_location_help": {
+    "description": "Help tool tip content for Local file download location"
+  },
+  "file_location_title": "Soubory – Umístění",
+  "@file_location_title": {
+    "description": "Help tool tip title for Local file download location"
+  },
+  "use_shared_storage_help": "Pokud je tato možnost povolena, aplikace Application Manager se nejprve pokusí získat softwarové balíčky z umístění sdílených souborů a ze serverů společnosti Autodesk je stáhne pouze v případě, že je v tomto umístění nenalezne.",
+  "@use_shared_storage_help": {
+    "description": "Help tool tip content for Use Shared Files check box"
+  },
+  "use_shared_storage_title": "Použít sdílené soubory",
+  "@use_shared_storage_title": {
+    "description": "Help tool tip title for Use Shared Files check box"
+  },
+  "shared_file_location_help": "Pokud je tato možnost povolena, aplikace Application Manager se nejprve pokusí získat softwarové balíčky ze zadaného umístění a ze serverů společnosti Autodesk je stáhne pouze v případě, že je v tomto umístění nenalezne. Pokud zde určíte síťovou složku, můžete omezit stahování ze serverů společnosti Autodesk na internetu, protože balíček bude stačit stáhnout jedenkrát a pak jej bude moci sdílet mnoho počítačů.",
+  "@shared_file_location_help": {
+    "description": "Help tool tip content for Shared file location"
+  },
+  "shared_file_location_title": "Umístění sdílených souborů",
+  "@shared_file_location_title": {
+    "description": "Help tool tip title for Shared file location"
+  },
+  "enable_alert_window_help": "Aplikace Autodesk Application Manager pomocí výstražných oken na ploše zobrazí upozornění na aktualizace softwaru a další podobná upozornění. Tyto výstrahy zde můžete deaktivovat.",
+  "@enable_alert_window_help": {
+    "description": "Help tool tip content for enable alert window check box"
+  },
+  "enable_alert_window_title": "Výstrahy – Zobrazit výstrahu",
+  "@enable_alert_window_title": {
+    "description": "Help tool tip title for enable alert window check box"
+  },
+  "alert_window_fading_time_help": "Umožňuje automaticky skrývat výstražné okno na ploše po uplynutí zadané doby. Kliknutím do výstražného okna se odpočítávání přeruší a výstraha zůstane viditelná.",
+  "@alert_window_fading_time_help": {
+    "description": "Help tool tip content for enable alert window fading time drop down"
+  },
+  "alert_window_fading_time_title": "Výstraha – Čas do skrytí",
+  "@alert_window_fading_time_title": {
+    "description": "Help tool tip title for enable alert window fading time drop down"
+  },
+  "proxy_type_help": "Určuje protokol proxy použitý ve vaší síti.",
+  "@proxy_type_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_type_title": "Síť – Typ proxy",
+  "@proxy_type_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_hostname_help": "Název hostitele nebo IP adresa vaší síťové proxy.",
+  "@proxy_hostname_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_hostname_title": "Síť – Název hostitele",
+  "@proxy_hostname_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_portnumber_help": "Číslo portu vaší síťové proxy.",
+  "@proxy_portnumber_help": {
+    "description": "Help tool tip content for proxy port number text box"
+  },
+  "proxy_portnumber_title": "Síť – Port",
+  "@proxy_portnumber_title": {
+    "description": "Help tool tip title for proxy port number text box"
+  },
+  "proxy_username_help": "Uživatelské jméno sloužící k přístupu do síťové proxy.",
+  "@proxy_username_help": {
+    "description": "Help tool tip content for username text box"
+  },
+  "proxy_username_title": "Síť – Uživatelské jméno",
+  "@proxy_username_title": {
+    "description": "Help tool tip title for username text box"
+  },
+  "proxy_password_help": "Heslo sloužící k přístupu do síťové proxy.",
+  "@proxy_password_help": {
+    "description": "Help tool tip content for password text box"
+  },
+  "proxy_password_title": "Síť – Heslo",
+  "@proxy_password_title": {
+    "description": "Help tool tip title for password text box"
+  },
+  "release_notes_label": "Poznámky k verzi",
+  "@release_notes_label": {
+    "description": "Release Notes label to show under Settings window About tab"
+  },
+  "host_name_error_title": "Neplatný název hostitele",
+  "@host_name_error_title": {
+    "description": "Error message title for invalid host name"
+  },
+  "host_name_error_content": "Název hostitele nebo IP adresu nelze přeložit na síťový proxy server.<br/>Zadejte platný název hostitele nebo IP adresu pro váš proxy server.<br/>Další informace o správných hodnotách můžete získat od vašeho správce sítě.",
+  "@host_name_erro_content": {
+    "description": "Error message content for invalid host name"
+  },
+  "port_number_error_title": "Neplatné číslo portu",
+  "@port_number_error_title": {
+    "description": "Error message title for invalid port number"
+  },
+  "port_number_error_content": "Nelze se připojit k zadanému číslu portu síťového proxy serveru.<br/>Zadejte platné číslo portu pro váš proxy server.<br/>Další informace o správných hodnotách můžete získat od vašeho správce sítě.",
+  "@port_number_error_content": {
+    "description": "Error message content for invalid port number"
+  },
+  "username_pwd_error_title": "Neplatné uživatelské jméno nebo heslo",
+  "@username_pwd_error_title": {
+    "description": "Error message title for invalid Username or Password"
+  },
+  "username_pwd_error_content": "Vaše síťové připojení vyžaduje ověření proxy serverem.<br/>Zadejte své uživatelské jméno a heslo.<br/>Další informace o správných hodnotách můžete získat od vašeho správce sítě.",
+  "@username_pwd_error_content": {
+    "description": "Error message content for invalid Username or Password"
+  },
+  "invalid_file_location_error_title": "Neplatné umístění souborů",
+  "@invalid_file_location_error_title": {
+    "description": "Error message title for invalid file location"
+  },
+  "invalid_file_location_error_content": "Zadané umístění souborů není platné.<br/>Zadejte platné umístění pro uložení souborů.",
+  "@invalid_file_location_error_content": {
+    "description": "Error message content for invalid file location"
+  },
+  "invalid_shared_file_location_error_title": "Neplatné umístění sdílených souborů",
+  "@invalid_shared_file_location_error_title": {
+    "description": "Error message title for invalid shared file location"
+  },
+  "invalid_shared_file_location_error_content": "Zadané umístění souborů není platné.<br/>Zadejte platné umístění pro uložení sdílených souborů.",
+  "@invalid_shared_file_location_error_content": {
+    "description": "Error message content for invalid shared file location"
+  },
+  "proxy_connection_error_title": "Chyba připojení k proxy serveru",
+  "@proxy_connection_error_title": {
+    "description": "error message title when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_host_content": "Nelze se připojit k zadanému síťovému proxy serveru. Pokud chcete pokračovat, nakonfigurujte nastavení proxy serveru.",
+  "@settings_error_invalid_host_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_port_content": "Nelze se připojit k zadanému číslu portu síťového proxy serveru. Pokud chcete pokračovat, zadejte správné číslo portu.",
+  "@settings_error_invalid_port_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_title": "Chyba ověření proxy serverem",
+  "@settings_error_invalid_proxy_cred_title": {
+    "description": "error message title when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_content": "Vaše síťové připojení vyžaduje ověření proxy serverem. Pokud chcete pokračovat, zadejte své uživatelské jméno a heslo.",
+  "@settings_error_invalid_proxy_cred_content": {
+    "description": "error message content when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_cannot_access_file_content": "Nelze získat přístup k umístění souborů. Zkontrolujte zadané umístění.",
+  "@settings_error_cannot_access_file_content": {
+    "description": "error message content when cannot access the file location"
+  },
+  "settings_error_cannot_access_shared_file_content": "Nelze získat přístup k umístění souborů. Zkontrolujte dostupnost sítě nebo změňte zadané umístění.",
+  "@settings_error_cannot_access_shared_file_content": {
+    "description": "error message content when cannot access the shared file location"
+  },
+  "diskspace_low_error_title": "Nedostatek místa na disku",
+  "@diskspace_low_error_title": {
+    "description": "error message title when cannot disk space is low"
+  },
+  "settings_error_diskspace_low_content": "V aktuálním umístění stahovaných souborů není dostatek místa. Před pokusem o instalaci vyberte nové umístění stahovaných souborů.",
+  "@settings_error_diskspace_low_content": {
+    "description": "error message content when disk space is low"
+  }
+});

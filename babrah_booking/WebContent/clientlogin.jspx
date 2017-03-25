@@ -1,0 +1,37 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+   xmlns:c="http://java.sun.com/jsp/jstl/core"
+   xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+   version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Babrah_hotel</title>
+</head>
+<body>
+
+<div id = "header">
+<br>Welcome</br>
+<strong><h>Hotel Conference Room Booking</h></strong>
+</div>
+
+ <form action="newclient.jspx" method="post">
+  <tr> <td> User name: <input type="text" name="fname"></input></td> </tr>
+  <tr> <td> Password: <input type="text" name="lname"></input></td> </tr>
+   <tr> <td>ID/ph <input type="checkbox" name="vehicle" value="Bike">ID/ph</input></td> </tr>
+  <tr><td>ID/email <input type="checkbox" name="vehicle" value="Bike">ID/email</input> </td></tr>
+  
+  <input type="submit"  href="http://localhost:8080/trunk/booking.jspx" value="Submit"> </input>
+
+	
+	
+	
+</form> 
+</body>
+</html>
+</jsp:root>

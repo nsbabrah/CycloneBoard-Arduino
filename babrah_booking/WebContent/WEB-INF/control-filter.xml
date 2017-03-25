@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd" >
+<properties>
+	<comment>Control Filter Mappings</comment>
+	<entry key="/newclient.jspx">com.babrah.com.NewClientCantrol.java</entry>
+	<entry key="/clinetlogin.jspx">com.babrah.com.ClientLoginCantrol.java</entry>
+	<entry key="/booking.jspx">com.babrah.com.BookCantrol.javaabrah.com.BooCantrol.javaabrah.com.BoCantrol.javaabrah.com.BCantrol.javaabrah.com.Cantrol.javaabrah.com.NCantrol.javaabrah.com.NeCantrol.javaabrah.com.NewCantrol.javaabrah.com.NewCCantrol.javaabrah.com.NewClCantrol.javaabrah.com.NewCliCantrol.javaabrah.com.NewClieCantrol.javaabrah.com.NewClienCantrol.javaabrah.com.NewClientCantrol.javary>

@@ -1,0 +1,1004 @@
+arb.register("arb_editor:ko_KR", {
+  "@@locale": "ko_KR",
+
+  "settings_link": "설정",
+  "@settings_link": {
+    "description": "Application Manager main window settings link text"
+  },
+  "help_link": "도움말",
+  "@help_link": {
+    "description": "Application Manager main window help link text"
+  },
+  "welcome_link": "환영합니다.",
+  "@welcome_link": {
+    "description": "Welcome tab top navigation text"
+  },
+  "software_link": "소프트웨어",
+  "@software_link": {
+    "description": "Software tab top navigation text"
+  },
+  "updates_link": "업데이트",
+  "@updates_link": {
+    "description": "Updates tab top navigation text"
+  },
+  "apps_link": "앱",
+  "@apps_link": {
+    "description": "Apps tab top navigation text"
+  },
+  "search_text@placeholder": "검색...",
+  "@search_text": {
+    "description": "Placeholder text for Search text box in the Main Appman UI"
+  },
+  "sort_by_label": "정렬 기준:",
+  "@sort_by_label": {
+    "description": "Label for the Sort by drop down"
+  },
+  "sort_date_optn": "날짜",
+  "@sort_date_optn": {
+    "description": "One of the option in Sort by drop down - Date"
+  },
+  "sort_sev_optn": "심각도",
+  "@sort_sev_optn": {
+    "description": "One of the option in Sort by drop down - Severity"
+  },
+  "view_label": "보기:",
+  "@view_label": {
+    "description": "Label for the different View selectors (List, Group, Thumbnail, Hierarchy are the possible views)"
+  },
+  "get_started_label": "시작하기",
+  "@get_started_label": {
+    "description": "Label for Getting started header in the Welcome tab"
+  },
+  "upd_sw_link": "소프트웨어 업데이트",
+  "@upd_sw_link": {
+    "description": "Update Software button text under getting started section"
+  },
+  "about_appman": "Application Manager 정보",
+  "@about_appman": {
+    "description": "Label for About Application Manager header in the Welcome tab"
+  },
+  "about_appman_cont": "새로운 서비스 팩, 핫픽스 및 기타 중요 파일을 사용할 수 있게 되면 시기 적절한 메시지를 제공함으로써 설치되어 있는 모든 Autodesk 응용프로그램 및 제품군용 최신 업데이트를 적용해 최신 상태를 유지할 수 있도록 하는 데스크톱 도구입니다. 업데이트를 적용하려는 경우 Application Manager에서 클라우드의 파일을 원할하게 다운로드하여 사용자의 컴퓨터에 해당 파일을 설치합니다.",
+  "@about_appman_cont": {
+    "description": "About application manager content"
+  },
+  "trls_label": "튜토리얼",
+  "@trls_label": {
+    "description": "Tutorial header in welcome tab"
+  },
+  "trl1_label": "튜토리얼 1",
+  "@trl1_label": {
+    "description": "Tutorial1 sub header text in welcome tab"
+  },
+   "no_trl": "사용할 수 있는 튜토리얼이 없습니다.",
+  "@no_trl": {
+    "description": "To show the text under Tutorials section when there is no tutorials"
+  },
+  "trl_cont": "Lorem ipsum dolor sit amet 방법을 설명합니다.",
+  "@trl_cont": {
+    "description": "Tutorial1 content"
+  },
+  "status_err_title": "응용프로그램 오류",
+  "@status_err_title": {
+    "description": "Status bar error title"
+  },
+  "abt_label": "정보",
+  "@abt_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  "rem_label": "나머지",
+  "@rem_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  
+  "install_label": "설치",
+  "@install_label": {
+    "description": "The Install button name"
+  },
+  "pause_label": "일시 중지",
+  "@pause_label": {
+    "description": "The Pause button name"
+  },
+  "resume_label": "계속",
+  "@resume_label": {
+    "description": "The Resume button name"
+  },
+  "cancel_label": "취소",
+  "@cancel_label": {
+    "description": "The Cancel button name"
+  },
+  "ignore_label": "무시",
+  "@ignore_label": {
+    "description": "The Ignore button name"
+  },
+  "add_label": "추가",
+  "@ignore_label": {
+    "description": "Add button (per-item) label in deployment mode"
+  },
+  "remove_label": "제거",
+  "@ignore_label": {
+    "description": "Remove button (per-item) label in deployment mode"
+  },
+  "install_sel_label": "선택한 항목 설치",
+  "@install_sel_label": {
+    "description": "The Install Selected button name, used for multi-download selection"
+  },
+  "pause_sel_label": "선택한 항목 일시 중지",
+  "@pause_sel_label": {
+    "description": "The Pause Selected button name"
+  },
+  "resume_sel_label": "선택한 항목 다시 시작",
+  "@resume_sel_label": {
+    "description": "The Resume Selected button name"
+  },
+  "cancel_sel_label": "선택한 항목 취소",
+  "@cancel_sel_label": {
+    "description": "The Cancel Selected button name"
+  },
+  "ignore_sel_label": "선택한 항목 무시",
+  "@ignore_sel_label": {
+    "description": "The Ignore Selected button name"
+  },
+  "add_sel_label": "선택한 항목 추가",
+  "@add_sel_label": {
+    "description": "Add Selected button label in the status area. Used in deployment mode"
+  },
+  "remove_sel_label": "선택한 항목 제거",
+  "@remove_sel_label": {
+    "description": "Remove Selected button label in the status area. Used in deployment mode"
+  },
+  "close_label": "닫기",
+  "@close_label": {
+    "description": "The Close button name"
+  },
+  "yes_label": "예",
+  "@yes_label": {
+    "description": "The Yes button name"
+  },
+  "no_label": "아니오",
+  "@no_label": {
+    "description": "The No button name"
+  },
+  "ok_label": "확인",
+  "@ok_label": {
+    "description": "The OK button name"
+  },
+  "retry_label": "재시도",
+  "@retry_label": {
+    "description": "The Retry button name. All the above refers to Appman main window HTML strings"
+  },
+
+  "recommended_upd": "권장",
+  "@recommended_upd": {
+    "description": "Recommended panel label"
+  },
+  "date_new_upd": "새 업데이트",
+  "@date_new_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_rec_upd": "최근 업데이트",
+  "@date_rec_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lw_upd": "지난주",
+  "@date_lw_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lm_upd": "지난달",
+  "@date_lm_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_old_upd": "이전",
+  "@date_old_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  
+  "sev_high": "높음",
+  "@sev_high": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_med": "중간",
+  "@sev_med": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_low": "낮음",
+  "@sev_low": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "other_label": "기타",
+  "@other_label": {
+    "description": "To show the category as Other if the severity is unknown"
+  },
+ 
+  "sr_rel": "릴리즈됨",
+  "@sr_rel": {
+    "description": "Label for the date of update Released"
+  },
+  "sr_status": "상태",
+  "@sr_status": {
+    "description": "Label for the Status of an update"
+  },
+  "sr_pub": "게시자",
+  "@sr_pub": {
+    "description": "Label for the Publisher of an update"
+  },
+  "sr_uid": "업데이트 ID",
+  "@sr_uid": {
+    "description": "Label for the Update ID"
+  },
+  "sr_sev": "심각도",
+  "@sr_sev": {
+    "description": "Label for the Severity of an update"
+  },
+  "sr_size": "크기",
+  "@sr_size": {
+    "description": "Label to show the Size of an update"
+  },
+  
+  "ap_pending_download": "다운로드 미정",
+  "@ap_pending_download": {
+    "description": "The text should be shown when an update is pending for download"
+  },
+  "ap_downloading": "다운로드 중",
+  "@ap_downloading": {
+    "description": "The text should be shown when an update is downloading"
+  },
+  "ap_download_paused": "다운로드 일시 중지됨",
+  "@ap_download_paused": {
+    "description": "The text should be shown when an update is paused during download"
+  },
+  "ap_pending_install": "설치 미정",
+  "@ap_pending_install": {
+    "description": "The text should be shown when an update is pending for the installation"
+  },
+  "ap_installing": "설치 중",
+  "@ap_installing": {
+    "description": "The text should be shown when an update is installing"
+  },
+  "ap_install_paused": "설치 일시 중지됨",
+  "@ap_install_paused": {
+    "description": "The text should be shown when an update is paused during installation"
+  },
+  
+  "al_details": "상세 정보",
+  "@al_details": {
+    "description": "The Details link header text to show the description of an update"
+  },
+  "al_rel_updates": "관련 업데이트",
+  "@al_rel_updates": {
+    "description": "The Related Updates link header text"
+  },
+  "al_rel_docs": "관련 문서 및 패키지",
+  "@al_rel_docs": {
+    "description": "The Related Docs and Packages link header text"
+  },
+  "al_rel_notes": "릴리즈 노트",
+  "@al_rel_notes": {
+    "description": "The Release Note header text"
+  },
+  "also_applies_to": "적용 항목",
+  "@also_applies_to": {
+    "description": "Also applies to text to show under Related Updates section"
+  },
+  "also_includes": "포함 항목",
+  "@also_includes": {
+    "description": "Also Includes text to show under Related Updates section"
+  },
+  "go_to_full_details": "전체 업데이트 상세 정보로 이동",
+  "@go_to_full_details": {
+    "description": "Go to Full Update Details to show under Related Updates section"
+  },
+  "more_text": "자세히",
+  "@more_text": {
+    "description": "To show More link under Also Includes section"
+  },
+  "as_not_installed": "설치되지 않음",
+  "@as_not_installed": {
+    "description": "Status text of an non installed update"
+  },
+  "as_installed": "설치됨",
+  "@as_installed": {
+    "description": "Status text of an installed update"
+  },
+  "as_not_included": "포함되지 않음",
+  "@as_not_included": {
+    "description": "Status text of an non included update in deployment mode"
+  },
+  "as_included": "포함됨",
+  "@as_included": {
+    "description": "Status text of an included update in deployment mode"
+  },
+  "as_ignored": "무시됨",
+  "@as_ignored": {
+    "description": "Status text of an ignored update"
+  },
+  "as_not_applicable": "해당 없음",
+  "@as_not_applicable": {
+    "description": "Status text of an Non Applicable update"
+  },
+  
+  "unknown_label": "알 수 없음",
+  "@unknown_label": {
+    "description": "The dynamic text to be shown when the file size of an update is not available in SDS"
+  },
+  "paused_label": "일시 중지됨",
+  "@paused_label": {
+    "description": "The text should be shown when an individual update is paused"
+  },
+  "backup_label": "공유 위치로 복사",
+  "@paused_label": {
+    "description": "The text should be shown when sharing one update to local cache shared location"
+  },
+  "new_label": "새 업데이트!",
+  "@new_label": {
+    "description": "The NEW label for unvisited updates"
+  },
+  "retired_label": "사용 중단",
+  "@retired_label": {
+    "description": "The RETIRED label for the Retired/Revoked updates"
+  },
+  "net_unavail_label": "네트워크에 연결할 수 없습니다.",
+  "@net_unavail_label": {
+    "description": "An error text to show the connection unavailable"
+  },
+  
+  "sw_label": "소프트웨어",
+  "@sw_label": {
+    "description": "The text to be appended when an user selects a software. Eg: 1 Software selected"
+  },
+  "prod_label": "제품",
+  "@prod_label": {
+    "description": "The text to be appended when an user selects an update. Eg: 1 Product selected"
+  },
+  "sws_label": "소프트웨어",
+  "@sws_label": {
+    "description": "The text to be appended when an user selects more than one software. Eg: 2 Softwares selected"
+  },
+  "prods_label": "제품",
+  "@prods_label": {
+    "description": "The text to be appended when an user selects more than one update. Eg: 2 Products selected"
+  },
+  "apps_label": "앱",
+  "@apps_label": {
+    "description": "The text to be appended when an user selects apps. Eg: 2 Apps selected"
+  },
+  "cancel_all_label": "모두 취소",
+  "@cancel_all_label": {
+    "description": "The header text of Cancel All confirmation popup when the user try to cancel more than one update"
+  },
+  "cancel_conf_label": "이 설치를 취소하시겠습니까?",
+  "@cancel_conf_label": {
+    "description": "The content of cancel confirmation popup, single update selection"
+  },
+  "cancel_all_conf_label": "모든 설치를 취소하시겠습니까?",
+  "@cancel_all_conf_label": {
+    "description": "The content of cancel confirmation popup, multiple update selection scenario. All the above refers to Appman main window JSON strings"
+  },
+
+  "default_footer_text": "설치할 {0} 선택",
+  "@default_footer_text": {
+    "description": "The default footer text to be shown when the user navigates to Updates/ Software/ Apps tab"
+  },
+  
+  "empty_tab_text": "Autodesk 소프트웨어가 모두 최신 버전입니다. 업데이트가 필요한 항목이 없습니다.",
+  "@empty_tab_text": {
+    "description": "The empty footer text to be shown when there is no Updates/ Software/ Apps"
+  },
+  
+  "server_not_reachable_err": "서버에 연결할 수 없어서 업데이트를 가져올 수 없습니다. 나중에 다시 시도하거나 설정을 확인하십시오.",
+  "@server_not_reachable_err": {
+    "description": "The update tab text to be shown when the server is not reachable"
+  },
+  "conn_lost_status_err": "네트워크 연결이 끊어졌습니다. 네트워크 설정을 확인하십시오. 사용자가 해당 작업을 취소하지 않으면 Application Manager에서 계속 연결을 시도하여 네트워크에 연결합니다.",
+  "@conn_lost_status_err": {
+    "description": "Status bar error to be shown when there is no network"
+  },
+  
+  "retired_err_title": "이 Application Manager 버전은 사용이 중단되었습니다.",
+  "@retired_err_title": {
+    "description": "Retired modal dialog error title"
+  },
+  "retired_err1": "이 Autodesk Application Manager 버전으로 더 이상 Autodesk 서버에 액세스할 수 없습니다.",
+  "@retired_err1": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err2": "Application Manager를 새 버전으로 업그레이드하십시오.",
+  "@retired_err2": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err3": "Application Manager를 업그레이드하는 방법에 대한 자세한 정보는 관리자에게 문의하십시오.",
+  "@retired_err3": {
+    "description": "Retired modal dialog error content"
+  },
+   "retired_soon_err_title": "이 Application Manager 버전은 사용이 곧 중단됩니다.",
+  "@retired_soon_err_title": {
+    "description": "Retiring soon general error title"
+  },
+  "retired_soon_err_cont": "계속 액세스하려면 Autodesk Application Manager를 새 버전으로 업그레이드하십시오.",
+  "@retired_soon_err_cont": {
+    "description": "Retiring soon general error content"
+  },
+  
+  "dynamic_footer_text": "{0}개 선택됨",
+  "@dynamic_footer_text": {
+    "description": "The footer text will be changed based on the number of product selection. Eg: 5 Products Selected"
+  },
+
+  "mins_label": "분",
+  "@mins_label": {
+    "description": "The minutes text to be shown in the over all time remaining. Eg: 1 hour 20 minutes remaining"
+  },
+  "hours_label": "시간",
+  "@hours_label": {
+    "description": "The hours text to be shown in the over all time remaining. Eg: 2 hours 20 minutes remaining"
+  },
+  "days_label": "일",
+  "@days_label": {
+    "description": "The days text to be shown in the over all time remaining. Eg: 2 days 20 minutes remaining"
+  }, 
+  "weeks_label": "주",
+  "@weeks_label": {
+    "description": "The weeks text to be shown in the over all time remaining. Eg: 2 weeks 20 minutes remaining"
+  }, 
+  "months_label": "개월",
+  "@months_label": {
+    "description": "The months text to be shown in the over all time remaining. Eg: 2 months 20 minutes remaining"
+  }, 
+  "years_label": "년",
+  "@years_label": {
+    "description": "The years text to be shown in the over all time remaining. Eg: 2 years 20 minutes remaining"
+  },
+  
+  "sec_label": "초",
+  "@sec_label": {
+    "description": "The sec text to be shown in the over all time remaining. Eg: 1 sec remaining, 10 sec remaining"
+  },
+  "min_label": "분",
+  "@min_label": {
+    "description": "The minute text to be shown in the over all time remaining. Eg: 2 years 1 minute remaining"
+  },
+  "hour_label": "시간",
+  "@hour_label": {
+    "description": "The hour text to be shown in the over all time remaining. Eg: 2 years 1 hour remaining"
+  },
+  "day_label": "일",
+  "@day_label": {
+    "description": "The day text to be shown in the over all time remaining. Eg: 1 day 20 minutes remaining"
+  }, 
+  "week_label": "주",
+  "@week_label": {
+    "description": "The week text to be shown in the over all time remaining. Eg: 1 week 20 minutes remaining"
+  }, 
+  "month_label": "월",
+  "@month_label": {
+    "description": "The month text to be shown in the over all time remaining. Eg: 1 month 20 minutes remaining"
+  }, 
+  "year_label": "년",
+  "@year_label": {
+    "description": "The year text to be shown in the over all time remaining. Eg: 1 year 20 minutes remaining"
+  },
+  
+  "active_label": "활성",
+  "@active_label": {
+    "description": "The label to show the number of active downloads in the Mini alert window"
+  },
+  "delay_label": "지연:",
+  "@delay_label": {
+    "description": "Label of the Delay drop down in the mini-progress and self-update alert window"
+  },
+  
+  "privacy_label": "Autodesk 개인 정보 보호 정책",
+  "@privacy_label": {
+    "description": "Privacy header as per Legal team"
+  },
+  "privacy_stmt_label": "Autodesk 개인 정보 보호 정책",
+  "@privacy_stmt_label": {
+    "description": "Privacy policy header"
+  },
+  "pp_rights_label1": "Autodesk는 귀하의 개인 정보 보호 및 개인 정보와 관련하여 귀하의 권리를 존중하며 Autodesk의 의무를 준수합니다. 아래의 \"동의함\"을 클릭하면 귀하는 다음을 읽었으며",
+  "@pp_rights_label1": {
+    "description": "Privacy policy content"
+  },
+  "pp_rights_label2": "개인 정보 보호 정책에 설명된 대로 귀하와 관련된 개인 정보가 사용될 것임을 이해한 것으로 간주됩니다.",
+  "@pp_rights_label2": {
+    "description": "Privacy policy content"
+  },
+  "personal_info_label2": "사용(Autodesk에서 운영하는 국가 간 개인 정보 전송 포함)하는 것을 이해했으며 동의합니다.",
+  "@personal_info_label2": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "periodic_check_label": "Autodesk 소프트웨어에서 업데이트를 정기적으로 확인하여 알림을 제공하는 데 동의합니다.",
+  "@periodic_check_label": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "pp_desc": "회사의 라이센스 관리자가 라이센스 권한을 확인하고 회사 사용 합계를 평가하기 위해 제품 사용 메트릭과 사용자 및 시스템 자격 증명을 비정기적으로 자동 전송해야 하는 라이센스 모델을 사용하도록 이 제품을 구성했을 수도 있습니다. 궁금한 점은 관리자에게 문의하십시오.",
+  "@pp_desc": {
+    "description": "Privacy policy content"
+  },
+  "agree_label": "동의함",
+  "@agree_label": {
+    "description": "Label of I Agree button in the Privacy policy window. All the above strings refer to Privacy policy window"
+  },
+  
+  "today_at": "현재 시간:",
+  "@today_at": {
+    "description": "To show the Todays time. Eg: Today at 4:55 PM"
+  },
+  "su_note_title": "알림 - 필수",
+  "@su_note_title": {
+    "description": "Self update window message header"
+  },
+  "su_msg": "Autodesk Application Manager를 업데이트해야 합니다.",
+  "@su_msg": {
+    "description": "Self update window message"
+  },
+  "view_details": "상세 정보 보기",
+  "@view_details": {
+    "description": "View Details link text in self update window"
+  },
+  "update_label": "업데이트",
+  "@update_label": {
+    "description": "Update link text in self update window"
+  },
+  "sr_title": "알림",
+  "@sr_title": {
+    "description": "Self update success window header"
+  },
+  "to_label": "대상:",
+  "@to_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "version_label": "버전",
+  "@version_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "open_manager": "관리자 열기",
+  "@open_manager": {
+    "description": "Open Manager link text - self update window"
+  },
+  "all_paused": "모두 일시 중지됨",
+  "@all_paused": {
+    "description": "To show the All Paused text in Mini progress window when all updates are paused"
+  },
+  "sr_updated_label": "업데이트되었습니다.",
+  "@sr_updated_label": {
+    "description": "A label to show the successful updation. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "insfailed_err": "설치에 실패했습니다.",
+  "@insfailed_err": {
+    "description": "The text to be shown when the self update install failed"
+  },
+  "dwldfailed_err": "다운로드 실패",
+  "@dwldfailed_err": {
+    "description": "he text to be shown when the self update download failed"
+  },
+  "host_not_found_err": "호스트를 찾을 수 없습니다",
+  "@host_not_found_err": {
+    "description": "Host not found error string"
+  },
+  "net_timeout_err": "연결 시간이 초과되었습니다",
+  "@net_timeout_err": {
+    "description": "Connection timed out error string. All the above strings are related to Self update window"
+  },
+  
+  "ua_title": "알림 - 중요",
+  "@ua_title": {
+    "description": "Updates available window message header"
+  },
+  "ua_msg": "Autodesk 제품에 대한 새 업데이트가 있습니다.",
+  "@ua_msg": {
+    "description": "Updates available window message. All the above strings are related to Updates Available alert window"
+  },
+  
+  "settings_title": "Application Manager 설정",
+  "@settings_title": {
+    "description": "Settings window header"
+  },
+  "import_settings": "가져오기",
+  "@import_settings": {
+    "description": "The Import link text"
+  },
+  "export_settings": "내보내기",
+  "@export_settings": {
+    "description": "The Export link text"
+  },
+  "general_link": "일반",
+  "@general_link": {
+    "description": "The General tab navigation text"
+  },
+  "files_link": "파일",
+  "@files_link": {
+    "description": "The Files tab navigation text"
+  },
+  "alerts_link": "경고",
+  "@alerts_link": {
+    "description": "The Alerts tab navigation text"
+  },
+  "network_link": "네트워크",
+  "@network_link": {
+    "description": "The Network tab navigation text"
+  },
+  "about_link": "정보",
+  "@about_link": {
+    "description": "The About tab navigation text"
+  },
+  "startup_label": "시작하기",
+  "@startup_label": {
+    "description": "Startup section header - General tab"
+  },
+  "auto_relaunch_label": "컴퓨터에 로그인할 때 자동으로 시작",
+  "@auto_relaunch_label": {
+    "description": "Auto relaunch drop down label"
+  },
+  "self_update_label": "Application Manager가 항상 최신 상태로 유지되도록 허용",
+  "@self_update_label": {
+    "description": "Self update Application Manager check box."
+  },
+  "welcome_opened_label": "열 때 환영 페이지 표시",
+  "@welcome_opened_label": {
+    "description": "Show welcome page checkbox label"
+  },
+  "updates_label": "업데이트",
+  "@updates_label": {
+    "description": "Updates section header - General tab"
+  },
+  "check_interval_label": "업데이트 확인 빈도:",
+  "@check_interval_label": {
+    "description": "The label for check for updates dropdown"
+  },
+  "remote_update_label": "원격 업데이트 서비스 사용",
+  "@remote_update_label": {
+    "description": "The label for enable remote update service checkbox"
+  },
+  "link_handling_label": "링크 처리",
+  "@link_handling_label": {
+    "description": "Link Handling section header - General tab"
+  },
+  "opened_from_link_label": "하이퍼링크에서 Application Manager 열기 허용",
+  "@opened_from_link_label": {
+    "description": "The label for allow application manager opened from hyperlinks checkbox"
+  },
+  "local_files_label": "로컬 파일",
+  "@local_files_label": {
+    "description": "Local Files section header - Files tab"
+  },
+  "location_label": "위치",
+  "@location_label": {
+    "description": "Location label"
+  },
+  "shared_files_label": "공유 파일",
+  "@shared_files_label": {
+    "description": "Shared Files label"
+  },
+  "shared_storage_label": "컨텐츠 다운로드에 공유 저장소 사용",
+  "@shared_storage_label": {
+    "description": "Checkbox label"
+  },
+  "limit_shared_space_label": "사용되는 공유 공간 제한:",
+  "@limit_shared_space_label": {
+    "description": "Checkbox label"
+  },
+  "tray_icon_label": "트레이 아이콘",
+  "@tray_icon_label": {
+    "description": "Tray Icon section header - Files tab"
+  },
+  "system_tray_label": "시스템 트레이 아이콘 표시",
+  "@system_tray_label": {
+    "description": "Checkbox label"
+  },
+  "batch_severity_label": "심각도 배지만 표시:",
+  "@batch_severity_label": {
+    "description": "Checkbox label"
+  },
+  "alert_windows": "경고 창",
+  "@alert_windows": {
+    "description": "Alert Windows section header - Alerts tab"
+  },
+  "desktop_alert_label": "바탕 화면 경고 창 표시",
+  "@desktop_alert_label": {
+    "description": "Show desktop alert label"
+  },
+  "hide_window_label": "다음 시간 이후 창 숨기기:",
+  "@hide_window_label": {
+    "description": "Hide window dropdown label"
+  },
+  "alert_severity_label": "심각도 경고만 표시:",
+  "@alert_severity_label": {
+    "description": "Checkbox label"
+  },
+  "connections_label": "연결",
+  "@connections_label": {
+    "description": "Connections section header - Alerts tab"
+  },
+  "limit_downloads_label": "동시 다운로드 제한:",
+  "@limit_downloads_label": {
+    "description": "Limit download drop down label"
+  },
+  "download_bandwidth_label": "다운로드 대역폭 제한:",
+  "@download_bandwidth_label": {
+    "description": "Limit download bandwidth drop down label"
+  },
+  "proxy_label": "프록시",
+  "@proxy_label": {
+    "description": "Proxy section header - Network tab"
+  },
+  "proxy_type_label": "프록시 유형:",
+  "@proxy_type_label": {
+    "description": "Proxy type drop down label"
+  },
+  "no_proxy_label": "프록시 없음",
+  "@no_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "auto_detect_label": "자동 탐지",
+  "@auto_detect_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "system_proxy_label": "시스템 프록시",
+  "@system_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "manual_proxy_label": "수동 프록시",
+  "@manual_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "host_name_label": "호스트 이름 또는 주소:",
+  "@host_name_label": {
+    "description": "Host name label"
+  },
+  "username_label": "사용자 이름:",
+  "@username_label": {
+    "description": "Username label"
+  },
+  "secure_socket_label": "SSL(Secure Sockets Layer) 사용",
+  "@secure_socket_label": {
+    "description": "Checkbox label"
+  },
+  "port_number_label": "포트 번호:",
+  "@port_number_label": {
+    "description": "Port number label"
+  },
+  "password_label": "암호:",
+  "@password_label": {
+    "description": "Password label"
+  },
+  "ck_upd_4hr": "4시간",
+  "@ck_upd_4hr": {
+    "description": "Check for updates every 4 Hours label"
+  },
+  "ck_upd_8hr": "8시간",
+  "@ck_upd_8hr": {
+    "description": "Check for updates every 8 Hours label"
+  },
+  "ck_upd_24hr": "24시간",
+  "@ck_upd_24hr": {
+    "description": "Check for updates every 24 Hours label"
+  },
+  "ck_upd_week": "주",
+  "@ck_upd_week": {
+    "description": "Check for updates every Week label"
+  },
+  "hide_win_10secs_label": "10초",
+  "@hide_win_10secs_label": {
+    "description": "Hide Alert window after 10 seconds label"
+  },
+  "hide_win_30secs_label": "30초",
+  "@hide_win_30secs_label": {
+    "description": "Hide Alert window after 30 seconds label"
+  },
+  "hide_win_60secs_label": "60초",
+  "@hide_win_60secs_label": {
+    "description": "Hide Alert window after 60 seconds label"
+  },
+  "general_label": "일반",
+  "@general_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when General tab selected"
+  },
+  "file_label": "파일",
+  "@file_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when File tab selected"
+  },
+  "files_label": "파일",
+  "@files_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Files tab selected"
+  },
+  "alert_label": "경고",
+  "@alert_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alert tab selected"
+  },
+  "alerts_label": "경고",
+  "@alerts_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alerts tab selected"
+  },
+  "network_label": "네트워크",
+  "@network_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Network tab selected"
+  },
+  "adjust_settings_label": "{0} 설정 조정",
+  "@adjust_settings_label": {
+    "description": "A place holder string to be replaced with General/ Files/ Alerts/ Network"
+  },
+  "atuo_relaunch_help": "컴퓨터가 실행될 때마다 Autodesk Application Manager에서 사용자에게 업데이트를 알리려면 이 옵션을 선택합니다. 이 옵션을 선택하면 Application Manager는 화면 오른쪽 아래에 있는 작업 표시줄에서 백그라운드 프로그램으로 실행됩니다.",
+  "@atuo_relaunch_help": {
+    "description": "Help tool tip content for Auto relaunch checkbox"
+  },
+  "atuo_relaunch_title": "일반 - 자동으로 시작",
+  "@atuo_relaunch_title": {
+    "description": "Help tool tip title for Auto relaunch checkbox"
+  },
+  "self_update_help": "이 상자를 선택 취소하면 Application Manager에 대한 업데이트를 사용할 수 있다는 알림 및 경우에 따라 업데이트가 필요하다는 알림이 표시됩니다. 이 컴퓨터에 업데이트를 적용하려면 업데이트를 수락해야 합니다.",
+  "@self_update_help": {
+    "description": "Help tool tip content for self update checkbox"
+  },
+  "self_update_title": "Application Manager - 자체 업데이트",
+  "@self_update_title": {
+    "description": "Help tool tip title for self update checkbox"
+  },
+  "update_check_interval_help": "Autodesk Application Manager에서는 설치된 Autodesk 소프트웨어에 대한 업데이트를 자동으로 확인합니다. 여기서 확인 작업의 시간 간격을 설정합니다.",
+  "@update_check_interval_help": {
+    "description": "Help tool tip content for update check interval drop down"
+  },
+  "update_check_interval_title": "일반 - 업데이트 간격",
+  "@update_check_interval_title": {
+    "description": "Help tool tip title for update check interval drop down"
+  },
+  "file_location_help": "Application Manager에서는 소프트웨어 패키지를 로컬 파일 시스템의 지정된 위치에 저장합니다.<br/><br/>이 파일은 추후 소프트웨어 유지보수 및 복구 시 사용하기 위해 해당 위치에 보관해야 합니다.",
+  "@file_location_help": {
+    "description": "Help tool tip content for Local file download location"
+  },
+  "file_location_title": "파일 - 위치",
+  "@file_location_title": {
+    "description": "Help tool tip title for Local file download location"
+  },
+  "use_shared_storage_help": "사용 가능한 경우 Application Manager가 먼저 공유 파일 위치에서 소프트웨어 패키지를 가져오려고 시도하고, 소프트웨어 패키지를 찾을 수 없는 경우에만 Autodesk 서버에서 다운로드합니다.",
+  "@use_shared_storage_help": {
+    "description": "Help tool tip content for Use Shared Files check box"
+  },
+  "use_shared_storage_title": "공유 파일 사용",
+  "@use_shared_storage_title": {
+    "description": "Help tool tip title for Use Shared Files check box"
+  },
+  "shared_file_location_help": "사용 가능한 경우 Application Manager가 먼저 지정된 위치에서 소프트웨어 패키지를 가져오려고 시도하고, 소프트웨어 패키지를 찾을 수 없는 경우에만 Autodesk 서버에서 다운로드합니다. 여기에 네트워크 폴더를 지정하여 인터넷에서 Autodesk 서버로부터의 다운로드를 제한해 첫 번째 다운로드한 패키지를 여러 데스크탑에서 공유하도록 할 수 있습니다.",
+  "@shared_file_location_help": {
+    "description": "Help tool tip content for Shared file location"
+  },
+  "shared_file_location_title": "공유 파일 - 위치",
+  "@shared_file_location_title": {
+    "description": "Help tool tip title for Shared file location"
+  },
+  "enable_alert_window_help": "Autodesk Application Manager에서는 바탕 화면 경고 창으로 사용자에게 새 소프트웨어 업데이트 및 다른 관련 고지 사항을 알립니다. 여기서 이 경고 알림을 사용하지 않도록 설정할 수 있습니다.",
+  "@enable_alert_window_help": {
+    "description": "Help tool tip content for enable alert window check box"
+  },
+  "enable_alert_window_title": "경고 - 경고 표시",
+  "@enable_alert_window_title": {
+    "description": "Help tool tip title for enable alert window check box"
+  },
+  "alert_window_fading_time_help": "지정된 시간이 지나면 바탕 화면 경고 창을 자동으로 숨깁니다. 해당 경고 창을 클릭하면 시간 계산이 중단되고 경고가 계속 표시됩니다.",
+  "@alert_window_fading_time_help": {
+    "description": "Help tool tip content for enable alert window fading time drop down"
+  },
+  "alert_window_fading_time_title": "경고 - 숨기기 시간",
+  "@alert_window_fading_time_title": {
+    "description": "Help tool tip title for enable alert window fading time drop down"
+  },
+  "proxy_type_help": "네트워크에서 사용할 프록시 프로토콜을 결정합니다.",
+  "@proxy_type_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_type_title": "네트워크 - 프록시 유형",
+  "@proxy_type_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_hostname_help": "네트워크 프록시의 IP 주소 또는 호스트 이름입니다.",
+  "@proxy_hostname_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_hostname_title": "네트워크 - 호스트 이름",
+  "@proxy_hostname_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_portnumber_help": "네트워크 프록시의 포트 번호입니다.",
+  "@proxy_portnumber_help": {
+    "description": "Help tool tip content for proxy port number text box"
+  },
+  "proxy_portnumber_title": "네트워크 - 포트",
+  "@proxy_portnumber_title": {
+    "description": "Help tool tip title for proxy port number text box"
+  },
+  "proxy_username_help": "네트워크 프록시 액세스에 사용하는 사용자 이름입니다.",
+  "@proxy_username_help": {
+    "description": "Help tool tip content for username text box"
+  },
+  "proxy_username_title": "네트워크 - 사용자 이름",
+  "@proxy_username_title": {
+    "description": "Help tool tip title for username text box"
+  },
+  "proxy_password_help": "네트워크 프록시에서 사용자 이름에 대한 암호입니다.",
+  "@proxy_password_help": {
+    "description": "Help tool tip content for password text box"
+  },
+  "proxy_password_title": "네트워크 - 암호",
+  "@proxy_password_title": {
+    "description": "Help tool tip title for password text box"
+  },
+  "release_notes_label": "릴리즈 노트",
+  "@release_notes_label": {
+    "description": "Release Notes label to show under Settings window About tab"
+  },
+  "host_name_error_title": "잘못된 호스트 이름",
+  "@host_name_error_title": {
+    "description": "Error message title for invalid host name"
+  },
+  "host_name_error_content": "네트워크 프록시 서버에 대한 호스트 이름 또는 IP 주소가 확인되지 않습니다.<br/>프록시 서버에 대한 올바른 호스트 이름 또는 IP 주소를 입력하십시오.<br/>올바른 값에 대한 자세한 정보는 네트워크 관리자에게 문의하십시오.",
+  "@host_name_erro_content": {
+    "description": "Error message content for invalid host name"
+  },
+  "port_number_error_title": "잘못된 포트 번호",
+  "@port_number_error_title": {
+    "description": "Error message title for invalid port number"
+  },
+  "port_number_error_content": "지정된 네트워크 프록시 포트 번호에 연결할 수 없습니다.<br/>프록시 서버에 대한 올바른 포트 번호를 입력하십시오.<br/>올바른 값에 대한 자세한 정보는 네트워크 관리자에게 문의하십시오.",
+  "@port_number_error_content": {
+    "description": "Error message content for invalid port number"
+  },
+  "username_pwd_error_title": "잘못된 사용자 이름 또는 암호",
+  "@username_pwd_error_title": {
+    "description": "Error message title for invalid Username or Password"
+  },
+  "username_pwd_error_content": "네트워크에 연결하려면 프록시 인증이 필요합니다.<br/>사용자 이름 및 암호를 입력하십시오.<br/>올바른 값에 대한 자세한 정보는 네트워크 관리자에게 문의하십시오.",
+  "@username_pwd_error_content": {
+    "description": "Error message content for invalid Username or Password"
+  },
+  "invalid_file_location_error_title": "잘못된 파일 위치",
+  "@invalid_file_location_error_title": {
+    "description": "Error message title for invalid file location"
+  },
+  "invalid_file_location_error_content": "지정된 파일 위치가 잘못되었습니다.<br/>올바른 파일 저장소 파일 위치를 입력하십시오.",
+  "@invalid_file_location_error_content": {
+    "description": "Error message content for invalid file location"
+  },
+  "invalid_shared_file_location_error_title": "잘못된 공유 파일 위치",
+  "@invalid_shared_file_location_error_title": {
+    "description": "Error message title for invalid shared file location"
+  },
+  "invalid_shared_file_location_error_content": "지정된 파일 위치가 잘못되었습니다.<br/>올바른 공유 파일 저장소 파일 위치를 입력하십시오.",
+  "@invalid_shared_file_location_error_content": {
+    "description": "Error message content for invalid shared file location"
+  },
+  "proxy_connection_error_title": "프록시 연결 오류",
+  "@proxy_connection_error_title": {
+    "description": "error message title when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_host_content": "지정된 네트워크 프록시 서버에 연결할 수 없습니다. 계속하려면 프록시 설정을 구성하십시오.",
+  "@settings_error_invalid_host_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_port_content": "지정된 네트워크 프록시 포트 번호에 연결할 수 없습니다. 계속하려면 올바른 포트 번호를 입력하십시오.",
+  "@settings_error_invalid_port_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_title": "프록시 인증 오류",
+  "@settings_error_invalid_proxy_cred_title": {
+    "description": "error message title when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_content": "네트워크에 연결하려면 프록시 인증이 필요합니다. 계속하려면 사용자 이름 및 암호를 입력하십시오.",
+  "@settings_error_invalid_proxy_cred_content": {
+    "description": "error message content when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_cannot_access_file_content": "파일 위치에 액세스할 수 없습니다. 지정된 위치를 확인하십시오.",
+  "@settings_error_cannot_access_file_content": {
+    "description": "error message content when cannot access the file location"
+  },
+  "settings_error_cannot_access_shared_file_content": "파일 위치에 액세스할 수 없습니다. 네트워크가 사용 가능한지 확인하거나 지정된 위치를 변경하십시오.",
+  "@settings_error_cannot_access_shared_file_content": {
+    "description": "error message content when cannot access the shared file location"
+  },
+  "diskspace_low_error_title": "디스크 공간 부족",
+  "@diskspace_low_error_title": {
+    "description": "error message title when cannot disk space is low"
+  },
+  "settings_error_diskspace_low_content": "현재 다운로드 위치의 공간이 부족합니다. 새 다운로드 위치를 선택한 후에 설치를 시도하십시오.",
+  "@settings_error_diskspace_low_content": {
+    "description": "error message content when disk space is low"
+  }
+});

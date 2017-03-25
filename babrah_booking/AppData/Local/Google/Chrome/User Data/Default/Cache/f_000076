@@ -1,0 +1,628 @@
+<html>
+
+<head>
+<title>PRG556 Term Project - Stage 2</title>
+<link rel="stylesheet" type="text/css" href="project.css">
+</head>
+
+<body style="background-color: white; font-family: Times New Roman; Times Roman; serif;">
+<p><a href="index.html">Back to Overview</a>&nbsp;<a href="stage1.html">Stage 1</a>&nbsp;<a href="stage3.html">Stage 3</a></p>
+
+<h1>Stage 2</h1>
+<p>This stage of the project you will provide a data component which will be used by the
+<b>Control</b> components of the MVC framework to gather data required by the JavaServer Pages
+and populate that data into Java Bean data stores.  Be sure to use the MVC services to
+retrieve the HTML form parameters and to save request attribute data.  Then the JavaServer Pages will retrieve the
+information from the Java Bean data stores and display it on the web page.  <b>JSTL</b> will
+be used to permit the display of list information returned from the java bean and/or
+data access object components.  By this point we will
+not have covered the database access technology, <b>JDBC</b>, so the data component will
+use <i>stub programming</i> to fake the data.  Your <b>Control</b> should use the classes that
+implement the
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html">BookingDAO</a>
+and <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html">ClientDAO</a>
+interfaces to generate data where possible.  Note that since the methods of these classes have a
+<b>throws SQLException</b> clause, you will need to use a <b>try...catch</b> to catch the
+SQLException and then wrap it in a ServletException and throw it (as shown below).
+Use the <a class="classname" href="#BookingDAOFactory">BookingDAOFactory</a> and
+<a class="classname" href="#ClientDAOFactory">ClientDAOFactory</a> classes to generate instances
+of the data access objects.</p>
+<div id="sqlexception" class="codebox">
+<h1>Wrapping SQLException in ServletException and Throwing It</h1>
+<div class="code">
+catch(SQLException sqle)<br>
+{<br>
+&nbsp;&nbsp;&nbsp;throw new ServletException(sqle);<br>
+}
+</div>
+</div>
+
+<p><span class="important">Important: </span>Do not share your or your partner's java code with
+anyone.</p>
+
+<p>This stage is worth <b>5%</b> of the 15% project mark.  Submit both parts (Group A and
+Group B) in a single Eclipse Dynamic Web Project.  Zip the entire project folder.  Submit the
+project to the submission drop box by 11:59PM on <b>Thursday March 23, 2017</b></ins>.  Be sure to
+include your name <i>within</i> the
+JSPX files that you author (as XHTML &lt;-- comment --&gt; tags) and as java comments
+(// comment) within your java source files.</p>
+
+<p>The Java Bean data store classes have been developed for you and are available in the file
+<a href="jars/hocorbabeans.jar">hocorbabeans.jar</a>.  Place this file in the <b style="color: gray;">WEB-INF/lib</b> folder of your project.
+See the <a href="docs/api/" target="_blank">api</a>
+for a description of the classes.</p>
+
+<p>The Data Access Object interfaces have been developed for you and are available in the file
+<a href="jars/hocorbadao.jar">hocorbadao.jar</a>.  Place this file in the <b style="color: gray;">WEB-INF/lib</b> folder of your project.
+See the <a href="docs/api/" target="_blank">api</a>
+for a description of the interfaces.</p>
+
+<p>You may use any of the classes available in the
+<a href="../../prg556/docs/api/ca/on/senecac/prg556/common/package-summary.html" target="_blank">ca.on.senecac.prg556.common</a> package.
+The classes are available in the file
+<a href="../../prg556/jars/common.jar">common.jar</a>.  Place this file in the <b style="color: gray;">WEB-INF/lib</b> folder of your project.
+See the <a href="../../prg556/docs/api/" target="_blank">api</a>
+for a description of the classes.</p>
+
+
+
+
+
+
+
+<h2 class="groupheading">Group A Components</h2>
+<p>Members of this group are responsible for creating the classes
+<a class="classname" href="#ClientDAOFactory">ClientDAOFactory</a> and
+<a class="classname" href="#ClientData">ClientData</a>,
+and for stubbing the methods to provide data.
+The MVC <b>Control</b> classes for this group are also specified.  These classes will need to use
+the <a class="classname" href="#BookingDAOFactory">BookingDAOFactory</a> and
+<a class="classname" href="#ClientDAOFactory">ClientDAOFactory</a> classes to create the
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html">BookingDAO</a>
+and <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html">ClientDAO</a>
+objects as needed.  The
+classes are described below.</p>
+
+<div class="data description" id="ClientDAOFactory">
+<h3>The <span class="classname">ClientDAOFactory</span> Class</h3>
+<p>Create this class in a <b>data</b> sub-package under your project package.  For example, if your project package is <b style="color: teal;">com.mydomain.mainpackage</b>, then your
+data sub-package would be <b style="color: teal;">com.mydomain.mainpackage.data</b>.</p>
+<h4>Methods</h4>
+<dl>
+<dt><code>public static <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html">ClientDAO</a> getClientDAO()</code></dt>
+<dd>Returns a ClientDAO object.</dd>
+</dl>
+</div>
+
+<div class="data description" id="ClientData">
+<h3>The <span class="classname">ClientData</span> Class</h3>
+<p>The <span class="classname">ClientData</span> class must implement the
+<a class="interfacename" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html">ClientDAO</a>
+interface.  Create this class in a <b>data</b> sub-package under your project package.
+<span class="important">This class should not be public </span>(use package level access).</p>
+
+<h4>Methods</h4>
+<dl>
+<dt id="ClientData.cancelBooking(int)"><code>public void cancelBooking(int bookingCode) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html#cancelBooking(int)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method does nothing.</span></dd>
+
+<dt id="ClientData.createClient(String,String,String.String)"><code>public <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Client.html">Client</a> createClient(String firstName, String lastName, String password, String phoneNumber, String email) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html#createClient(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method creates a client object using the parameters
+values and returns it.  For the client id, simply use a hardcoded value.</span></dd>
+
+<dt id="ClientData.getBookings(int)"><code>public List&lt;<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Booking.html">Booking</a>&gt; getBookings(int clientId) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html#getBookings(int)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method should simply create a list of two conference room bookings.
+Simply hardcode the booking data.  The method should add both conference room bookings to a list and
+return it.  You can create Date objects for the booking start date/time as shown below.</span></dd>
+
+<dt id="ClientData.validateClientByPhoneNumber(String,String)"><code>public <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Client.html">Client</a> validateClientByPhoneNumber(String phoneNumber, String password) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html#validateClientByPhoneNumber(java.lang.String,%20java.lang.String)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method should compare the phone number and password
+againts three phone number/password values hardcoded into the method.  If the specified
+phone number/password does not match up with any of the hardcoded values, then the method should
+return <b>null</b>.  Otherwise, the method should create and return one of three client objects
+hardcoding the client id, first name, last name, and email.  Let one of the clients have no email (use <b>null</b>
+for the email).</span></dd>
+
+<dt id="ClientData.validateClientByEmail(String,String)"><code>public <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Client.html">Client</a> validateClientByEmail(String email, String password) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html#validateClientByEmail(java.lang.String,%20java.lang.String)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method should compare the email and password
+againts two email/password values hardcoded into the method.  If the specified
+email/password does not match up with any of the hardcoded values, then the method should
+return <b>null</b>.  Otherwise, the method should create and return one of two client objects
+hardcoding the first name, last name, and email.  Use the same client id, first name, last name, phone number, and email
+as the two clients with emails in the
+<a class="methodname" href="#ClientData.validateClientByPhoneNumber(String,String)">ClientData.validateClientByPhoneNumber</a> method.</span></dd>
+</dl>
+</div>
+
+<div class="createdate codebox">
+<h1>Creating a Date/Time</h1>
+<div class="code">
+Date dt;<br>
+try<br>
+{<br>
+&nbsp;&nbsp;&nbsp;// Creating Date/Time object for October 20, 2017 at 11:45 pm<br>
+&nbsp;&nbsp;&nbsp;dt = DateFormat.getDateTimeInstance().parse("October 20, 2017 11:45:00 pm");<br>
+}<br>
+catch(ParseException pe)<br>
+{<br>
+&nbsp;&nbsp;&nbsp;throw new SQLException(pe);<br>
+}
+</div>
+</div>
+
+<div class="filter description" id="RedirectFilter">
+<h3>The <span class="classname">RedirectFilter</span> Class</h3>
+<p>Use the
+<a href="../../prg556/docs/api/ca/on/senecac/prg556/common/RedirectFilter.html">ca.on.senecac.prg556.common.RedirectFilter</a>
+to redirect (client-side redirection) all context root requests to
+<a class="pagename" href="#bookings.jspx">bookings.jspx</a>.</p>
+</div>
+
+<div class="exception description" id="BadRequestException">
+<h3>The <span class="classname">BadRequestException</span> Class</h3>
+<h4>Inheritance</h4>
+<p>This class should inherit from the <b class="classname">ServletException</b> class.  Be sure to
+override all super class constructors.</p>
+</div>
+
+<div class="error description">
+<h3>The BadRequestException Page Handler</h3>
+<p>Create an error entry in the <b style="color: gray;">web.xml</b> file to redirect the exception
+<a class="classname" href="#BadRequestException">BadRequestException</a> to the error page
+<a class="pagename" href="stage1.html#badrequest.jspx">badrequest.jspx</a>.</p>
+</div>
+
+<div class="filter description" id="AuthenticatedAccessFilter">
+<h3>The <span class="classname">AuthenticatedAccessFilter</span> Class</h3>
+<p>Create a AuthenticatedAccessFilter that checks all jspx page requests to ensure that
+the client is logged in and if not, redirects to the <a class="pagename" href="#book.jspx">book.jspx</a> page.
+<span class="stage2">For stage 2, the filter simply continues along the filter chain.  But
+be sure to include url pattern for all jspx pages.</span></p>
+</div>
+
+<div class="control description" id="NewClientControl">
+<h3>The <span class="classname">NewClientControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>NewClientControl</b> class should be associated with the
+<a class="pagename" href="#newclient.jspx">newclient.jspx</a> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd>If the request method is POST and the client submitted using the create account submit button, the method should make the following checks:
+
+<ul>
+<li>Get the first name from an HTML form parameter and make sure the first name is not null or
+empty.  If the first name is valid, then it should be saved to a request attribute.
+If the first name is not valid,
+a request-scoped attribute should be set to indicate that.</li>
+<li>Get the last name from an HTML form parameter and make sure the last name is not null or
+empty.  If the last name is valid, then it should be saved to a request attribute.
+If the last name is not valid,
+a request-scoped attribute should be set to indicate that.</li>
+<li>Get the phone number from an HTML form parameter and make sure the phone number is not null or
+empty.  If the phone number is valid, then it should be saved to a request attribute.
+If the phone number is not valid,
+a request-scoped attribute should be set to indicate that.</li>
+<li>Get the email from an HTML form parameter.  If the email is not null or empty,
+then it should be saved to a request attribute.</li>
+<li>Get the password from an HTML form parameter and make sure the password
+is not null or empty.  The password should <span class="underlined">not</span> be saved to a request attribute.
+If the password is not valid,
+a request-scoped attribute should be set to indicate that.</li>
+</ul>
+For each parameter value retrieved and sent back to the page in request-scoped attributes,
+be sure to xml escape the text.  Generally, you can use
+<a class="methodname" href="../../prg556/docs/api/ca/on/senecac/prg556/common/StringHelper.html#xmlEscape(java.lang.String)">StringHelper.XmlEscape</a>,
+<b>&lt;c:out &hellip;&gt;</b>, or <b>fn:escapeXml(&hellip;)</b> to xml escape text.
+If all of the above checks are successful, then the method should check that the password and the confirm password are the same.
+If the password and confirm password do not match, the method should set a request-scoped attribute to indicate this.
+If there were no validation errors, the method should create a new client and then <u>redirect</u> to the context root.
+Otherwise the method should continue along the filter chain.
+If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</dd>
+</dl>
+</div>
+
+<div class="control description" id="LogoutControl">
+<h3>The <span class="classname">LogoutControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>LogoutControl</b> class should be associated with the fictitious
+<b class="pagename">logout.jspx</b> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd>This method should <u>redirect</u> to the context root.</dd>
+</dl>
+</div>
+
+<div class="control description" id="ClientLoginControl">
+<h3>The <span class="classname">ClientLoginControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>ClientLoginControl</b> class should be associated with the
+<a class="pagename" href="#clientlogin.jspx">clientlogin.jspx</a> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd>The method should get client id (which could be phone number or email), the radio button option indicating
+whether the client id is a phone number or email, and password
+from HTML form parameters.  If the request method is POST and the parameters are not <b>null</b> or empty
+string, the method should validate the Client by phone number if the phone number radio button was selected, or validate the
+Client by email if the email radio button was selected and, if the client id and password were valid, the method should
+<span class="underlined">redirect</span> to the context root.<br>
+<br>
+If, on the other hand, the client did not validate, then the method should set a request-scoped attribute (to be used by the
+<a class="pagename" href="#clientlogin.jspx">clientlogin.jspx</a> page) passing back the client id (be sure to xml escape the text),
+the radio button selection value, and a request attribute indicating that the login was
+unsuccessful and continue along the filter chain.  If the form method
+is not <b>POST</b>, then the method should simply continue along the filter chain.<br>
+<br>
+If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</dd>
+</dl>
+</div>
+
+<div class="control description" id="BookingsControl">
+<h3>The <span class="classname">BookingsControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>BookingsControl</b> class should be associated with the
+<a class="pagename" href="#bookings.jspx">bookings.jspx</a> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd>This method should get a list of all conference room bookings for the client id corresponding to <span class="stage2">one of the clients
+hardcoded in the <a class="methodname" href="#ClientData.validateClientByPhoneNumber(String,String)">ClientData.validateClientByPhoneNumber</a>
+method</span> and then save the list into a request attribute (to be used by the
+<a class="pagename" href="#bookings.jspx">bookings.jspx</a> page).  The method
+should then continue along the filter chain.<br>
+<br>
+If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</dd>
+</dl>
+</div>
+
+<div class="page description" id="newclient.jspx">
+<h3><span class="pagename">newclient.jspx</span> Page Changes</h3>
+<p>The <a class="pagename" href="stage1.html#newclient.jspx">newclient.jspx</a> page must
+now retrieve request-scoped attributes for the first name, last name, phone number, and email
+from the <a class="classname" href="#NewClientControl">NewClientControl</a> and display those
+values as default (initial) values in their corresponding html input elements (persisting data values).  To set a default value for a
+form text input, simply set the <b>value</b> attribute of the <b>input</b> element to be the
+desired default value.  The page must also
+retrieve request-scoped attributes indicating
+whether or not there were errors when specifying the new client information and, if so, display
+an appropirate message indicating the error (first name not valid, last name not valid,
+phone number not valid, password not valid, and/or password and confirm password do not match). Depending on the situation,
+the page may display none, one, or more than one of the above messages.</p>
+</div>
+
+<div class="page description" id="clientlogin.jspx">
+<h3><span class="pagename">clientlogin.jspx</span> Page Changes</h3>
+<p>The <a class="pagename" href="stage1.html#clientlogin.jspx">clientlogin.jspx</a> page must
+now retrieve request-scoped attributes for the client id and radio button selection value
+from the <a class="classname" href="#ClientLoginControl">ClientLoginControl</a> and display those
+values as default (initial) values in their corresponding html input elements (persisting data values).  To set a default value for a
+form text input, simply set the <b>value</b> attribute of the <b>input</b> element to be the
+desired default value.  For the radio buttons, if there is no persistent value, the phone number radio button should be selected by default.
+If the <a class="classname" href="#ClientLoginControl">ClientLoginControl</a> class has saved a
+request attribute to indicate that the login was unsuccessful, the page should display the login
+error message.</p>
+</div>
+
+<div class="page description" id="bookings.jspx">
+<h3><span class="pagename">bookings.jspx</span> Page Changes</h3>
+<p>If the client has no conference rooms booked, the
+<a class="pagename" href="stage1.html#bookings.jspx">bookings.jspx</a> page
+must display a message indicating this. Otherwise
+the page must list the room name, room capacity, start date and time, duration, and cost for each of the bookings
+sent to the page in a request-scoped attribute by <a class="classname" href="#BookingsControl">BookingsControl</a>. The booking
+start date must show both the date and time.  The booking duration should indicate the hours and minutes
+(if hours is 0, it may be omitted and if minutes is 0, it may be omitted).
+The booking cost must be formatted as a currency value with a dollar sign and 2 decimal places.  Use JSTL for the required formatting.
+Each of the cancel booking forms must now include the booking code from the
+corresponding booking object in the hidden form input.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="groupheading">Group B Components</h2>
+<p>Members of this group are responsible for creating the classes
+<a class="classname" href="#BookingDAOFactory">BookingDAOFactory</a> and
+<a class="classname" href="#BookingData">BookingData</a>,
+and for stubbing the methods to provide data.
+The MVC <b>Control</b> classes for this group are also specified.  These classes will need to use
+the <a class="classname" href="#BookingDAOFactory">BookingDAOFactory</a> and
+<a class="classname" href="#ClientDAOFactory">ClientDAOFactory</a> classes to create the
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html">BookingDAO</a>
+and <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/ClientDAO.html">ClientDAO</a>
+objects as needed.  The
+classes are described below.</p>
+
+<div class="data description" id="BookingDAOFactory">
+<h3>The <span class="classname">BookingDAOFactory</span> Class</h3>
+<p>Create this class in a <b>data</b> sub-package under your project package.  For example, if your project package is <b style="color: teal;">com.mydomain.mainpackage</b>, then your
+data sub-package would be <b style="color: teal;">com.mydomain.mainpackage.data</b>.</p>
+<h4>Methods</h4>
+<dl>
+<dt><code>public static <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html">BookingDAO</a> getBookingDAO()</code></dt>
+<dd>Returns a BookingDAO object.</dd>
+</dl>
+</div>
+
+<div class="data description" id="BookingData">
+<h3>The <span class="classname">BookingData</span> Class</h3>
+<p>The <span class="classname">BookingData</span> class must implement the
+<a class="interfacename" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html">BookingDAO</a>
+interface.  Create this class in a <b>data</b> sub-package under your project package.
+<span class="important">This class should not be public </span>(use package level access).</p>
+
+<h4>Methods</h4>
+<dl>
+<dt id="BookingData.bookConferenceRoom(int,String,Date,int)"><code>public void bookConferenceRoom(int clientId, String roomCode, Date start, int duration) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html#bookConferenceRoom(int,%20java.lang.String,%20java.util.Date,%20int)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method does nothing.</span></dd>
+
+<dt id="BookingData.findConferenceRooms(Date,int,Integer,BigDecimal)"><code>public List&lt;<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/ConferenceRoom.html">ConferenceRoom</a>&gt; findConferenceRooms(Date start, int duration, Integer minimumCapacity, BigDecimal maximumRate) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html#findConferenceRooms(java.util.Date, int, java.lang.Integer, java.math.BigDecimal)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method should create a list containing two conference room objects.
+Simply hardcode the conference room data. The method should add both conference rooms to a list and return the list.</span></dd>
+
+<dt id="BookingData.getBooking(int)"><code>public <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Booking.html">Booking</a> getBooking(int bookingCode) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html#getBooking(int)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, if the booking code matches one of the booking codes
+returned by the
+<a class="methodname" href="#ClientData.getBookings(int)">ClientData.getBookings</a> method,
+then that booking object is returned.
+For all other booking codes, the method should return <b>null</b>.</span></dd>
+
+<dt id="BookingData.isConferenceRoomAvailable(String,Date,int)"><code>public boolean isConferenceRoomAvailable(String roomCode, Date start, int duration) throws SQLException</code>
+(<a class="interfacedescription" href="docs/api/ca/senecacollege/prg556/hocorba/dao/BookingDAO.html#isConferenceRoomAvailable(java.lang.String,%20java.util.Date,%20int)">see interface description</a>)</dt>
+<dd><span class="stage2">For stage 2, this method simply returns <b>true</b>.</span></dd>
+</dl>
+</div>
+
+<div class="filter description" id="HoCoRBAMenuFilter">
+<h3>The <span class="classname">HoCoRBAMenuFilter</span> Class</h3>
+<p>Create a HoCoRBAMenuFilter that executes for all <span class="underlined">include</span> requests for
+<a class="pagename" href="#hocorbamenu.jspx">hocorbamenu.jspx</a>.  <span class="stage2">For stage 2, </span>the
+filter should get a list of conference room bookings using the client id of <span class="stage2">one of the
+clients hardcoded in the
+<a class="methodname" href="#ClientData.validateClientByPhoneNumber(String,String)">ClientData.validateClientByPhoneNumber</a> method</span>
+and save it into a request-scoped attribute to be used by the <a class="pagename" href="#hocorbamenu.jspx">hocorbamenu.jspx</a>
+page.  If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</p>
+</div>
+
+<div class="control description" id="CancelBookingConfirmationControl">
+<h3>The <span class="classname">CancelBookingConfirmationControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>CancelBookingConfirmationControl</b> class should be associated with the
+<a class="pagename" href="#cancelbookingconfirmation.jspx">cancelbookingconfirmation.jspx</a> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd>The method should get the booking code from an HTML form parameter.  If the booking code
+is <b>null</b> or not a valid number, the method should throw a
+<a class="classname" href="#BadRequestException">BadRequestException</a>.  Otherwise the
+method should get the <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Booking.html">Booking</a>
+object for the booking code.  If the booking code is not valid (i.e., does not correspond to an existing conference
+room booking), the method should throw a <a class="classname" href="#BadRequestException">BadRequestException</a>.
+
+<ol class="alpha">
+<li>If the request method is POST
+<ul>
+<li>If the client submitted using the cancel booking submit button
+from the <a class="pagename" href="#bookings.jspx">bookings.jspx</a> page,
+the method should save the booking into a request-scoped attribute
+(to be used by the
+<a class="pagename" href="#cancelbookingconfirmation.jspx">cancelbookingconfirmation.jspx</a>
+page).  The method should then continue along the filter chain.</li>
+<li>If the client submitted using the cancel booking submit button from the
+<a class="pagename" href="#cancelbookingconfirmation.jspx">cancelbookingconfirmation.jspx</a>
+page, the method should cancel the booking with the booking code
+determined earlier and then <span class="underlined">redirect</span> to
+the context root.</li>
+<li>If the client submitted using the abort submit button from the
+<a class="pagename" href="#cancelbookingconfirmation.jspx">cancelbookingconfirmation.jspx</a>
+page, the method should <span class="underlined">redirect</span> to
+the context root.</li>
+</ul></li>
+<li>If the request method is not POST, the method should <span class="underlined">redirect</span> to the
+context root.</li>
+</ol>
+If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</dd>
+</dl>
+</div>
+
+<div class="control description" id="BookControl">
+<h3>The <span class="classname">BookControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>BookControl</b> class should be associated with the
+<a class="pagename" href="#book.jspx">book.jspx</a> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd>If the request method is POST and the client submitted using the search submit button, the method should make the following checks:
+
+<ul>
+<li>Get the start date from an HTML form parameter and make sure the start date is not null and
+is a valid date.  If the start date is valid, then the date should be saved to a request attribute.
+If the start date is not valid,
+a request-scoped attribute should be set to indicate that.</li>
+<li>Get the minimum capacity from an HTML form parameter.  It is OK for this parameter to be null, but if it is specified,
+make sure the it is a valid integer.  If the minimum capacity is valid, then the value should be saved to a request attribute.
+If the minimum capacity is not valid, a request-scoped attribute should be set to indicate that.</li>
+<li>Get the maximum rate from an HTML form parameter.  It is OK for this parameter to be null, but if it is specified,
+make sure the it is a valid
+<a class="classname" href="http://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html">BigDecimal</a>.  If the maximum rate is valid, then the value should be saved to a request attribute.
+If the maximum rate is not valid, a request-scoped attribute should be set to indicate that.</li>
+<li>No validation is required for the drop down lists as a value will always be selected in the list.</li>
+<li>If there were no validation errors, the method should save the search criteria into a
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/SearchParameters.html">SearchParameters</a> object and then save that
+object into a <span class="stage2">request-scoped attribute</span> to be used by
+<a class="classname" href="#SearchResultsControl">SearchResultsControl</a> and then <i style="text-decoration: underline;">dispatch</i>
+(server-side redirect) to the <a class="pagename" href="#searchresults.jspx">searchresults.jspx</a> page.<br>
+<br>
+The start date of the <a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/SearchParameters.html">SearchParameters</a> object
+includes both the date and time.  It will, therefore, be necessary to combine the starting date and starting time into a single Date value using<br>
+<span style="color: green; font-family: 'Courier New';">Date combined = new Date(<i>startingDate</i>.getTime() + <i>start time in milliseconds</i>);</span><br>
+which will convert the starting date to milliseconds past January 1, 1970 (known as epoch), add the additional milliseconds for the starting time, and convert
+the result back to a date from the number of milliseconds past epoch.</li>
+</ul>
+<br>
+If there were validation errors or the request method is not POST or the client did not submit using the search submit button,
+the method should continue along the filter chain.<br>
+<br>
+If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</dd>
+</dl>
+</div>
+
+<div class="control description" id="SearchResultsControl">
+<h3>The <span class="classname">SearchResultsControl</span> Class</h3>
+<h4>Page Association</h4>
+<p>The <b>SearchResultsControl</b> class should be associated with the
+<a class="pagename" href="#searchresults.jspx">searchresults.jspx</a> page.</p>
+
+<h4>Methods</h4>
+<dl>
+<dt><code>String doLogic(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException</code></dt>
+<dd><ol class="alpha">
+<li>If the request method is POST
+<ul>
+<li>If the client submitted using the book conference room submit button, the method should
+get the room code from an HTML form parameter. If the booking code is <b>null</b> or empty, the method should throw a
+<a class="classname" href="#BadRequestException">BadRequestException</a>.
+Otherwise the method should check that the conference room is still available <span class="stage2">(for Stage 2,
+hardcode the start date/time and duration)</span> and, if so, book the conference room using the client id of <span class="stage2">one of the
+clients hardcoded in the
+<a class="methodname" href="#ClientData.validateClientByPhoneNumber(String,String)">ClientData.validateClientByPhoneNumber</a> method</span>
+and then <span class="underlined">redirect</span> (client-side redirection) to the context root.
+You can create a Date object for the booking start date/time as shown below.</li>
+<ul>
+<li>The check if the conference room is still available and the actual booking of the conference room
+must be done as one indivisible threaded operation (i.e., use a <b>synchronized</b> block).</li>
+</ul>
+<li>If the client submitted using the new search submit button, the method should <span class="underlined">redirect</span>
+(client-side redirection) to the <a class="pagename" href="#book.jspx">book.jspx</a> page.</li>
+</ul></li>
+<li>If the request method is not POST, or the conference room was no longer available for the desired start time and duration, or
+the client did not submit using either the book conference room or new search submit buttons, the method should get the
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/SearchParameters.html">SearchParameters</a> object
+saved into a <span class="stage2">request attribute</span> by <a class="classname" href="#BookControl">BookControl</a>, and then
+the method should get a list of all available conference rooms corresponding to the search parameters
+and then save the list into a request attribute (to be used by the
+<a class="pagename" href="#searchresults.jspx">searchresults.jspx</a> page).  The method
+should then continue along the filter chain.</li>
+</ol>
+If a <b class="classname">SQLException</b> occurs, the method should wrap the exception into a
+<b class="classname">ServletException</b> and throw it out of the method.</dd>
+</dl>
+</div>
+
+<div class="createdate codebox">
+<h1>Creating a Date/Time</h1>
+<div class="code">
+Date dt;<br>
+try<br>
+{<br>
+&nbsp;&nbsp;&nbsp;// Creating Date/Time object for October 20, 2017 at 11:45 pm<br>
+&nbsp;&nbsp;&nbsp;dt = DateFormat.getDateTimeInstance().parse("October 20, 2017 11:45:00 pm");<br>
+}<br>
+catch(ParseException pe)<br>
+{<br>
+&nbsp;&nbsp;&nbsp;throw new ServletException(pe);<br>
+}
+</div>
+</div>
+
+<div class="page description" id="hocorbamenu.jspx">
+<h3><span class="pagename">hocorbamenu.jspx</span> Page Changes</h3>
+<p>The <a class="pagename" href="stage1.html#hocorbamenu.jspx">hocorbamenu.jspx</a> page must now display the
+number of hotel conference room bookings based on the list of conference room bookings saved into a request-scoped attribute by
+<a class="classname" href="#HoCoRBAMenuFilter">HoCoRBAMenuFilter</a>.</p>
+</div>
+
+<div class="page description" id="searchresults.jspx">
+<h3><span class="pagename">searchresults.jspx</span> Page Changes</h3>
+<p>If there are no available conference rooms matching the search parameters, the
+<a class="pagename" href="stage1.html#searchresults.jspx">searchresults.jspx</a> page
+must display a message indicating this. Otherwise
+the page must list the name, capacity, and hourly rate for all available conference rooms. The hourly rate
+must be formatted as a currency value with a dollar sign and 2 decimal places.  Use JSTL to perform the formatting.
+The room code in each of the book conference room forms must now come from the
+corresponding conference room object.</p>
+
+<p>The search criteria displayed above the list of available conference rooms must now come from the
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/SearchParameters.html">SearchParameters</a> object
+saved into a <span class="stage2">request-scoped attribute</span> by <a class="classname" href="#BookControl">BookControl</a>.
+The duration should indicate the hours and minutes (if hours is 0, it may be omitted and if minutes is 0, it may be omitted),
+the starting date/time must display both the date and the time, and the maximum hourly
+rate must be formatted as a currency value with a dollar sign and 2 decimal places.  Use JSTL to perform the formatting.</p>
+
+<p><span class="stage2">For Stage 2, the book conference room forms should submit to
+<b class="pagename">searchresults.jspx</b> (i.e., the page round-trips) rather than
+<a class="pagename" href="#book.jspx">book.jspx</a>.  This will be changed back in Stage 3.</p>
+</div>
+
+<div class="page description" id="cancelbookingconfirmation.jspx">
+<h3><span class="pagename">cancelbookingconfirmation.jspx</span> Page Changes</h3>
+<p>The <a class="pagename" href="stage1.html#cancelbookingconfirmation.jspx">cancelbookingconfirmation.jspx</a> page must
+now retrieve the booking code, room name, and booking start date and time from a
+<a class="classname" href="docs/api/ca/senecacollege/prg556/hocorba/bean/Booking.html">Booking</a>
+object provided through a request attribute by
+<a class="classname" href="#CancelBookingConfirmationControl">CancelBookingConfirmationControl</a>
+and incorporate them into the cancel reservation confirmation page wherever they are required.
+The duration should indicate the hours and minutes (if hours is 0, it may be omitted and if minutes is 0, it may be omitted),
+the starting date/time must display both the date and the time.</p>
+</div>
+
+<div class="page description" id="book.jspx">
+<h3><span class="pagename">book.jspx</span> Page Changes</h3>
+The <a class="pagename" href="stage1.html#book.jspx">book.jspx</a> page must now persist the
+starting date, starting time, duration, minimum capacity, and maximum rate input values.</p>
+
+<p>The <a class="pagename" href="stage1.html#book.jspx">book.jspx</a> page must
+now retrieve the start date from a request attribute
+and incorporate it as a default value for the form text inputs.  To set a default value for a
+form text input, simply set the <b>value</b> attribute of the <b>input</b> element to be the
+desired default value.  Use JSTL to format the date value.  Ensure that the format of the start date is consistent
+with the date pattern used to input (parse) the start date.</p>
+
+<p>The <a class="pagename" href="stage1.html#book.jspx">book.jspx</a> page must
+also now retrieve the starting time and duration from request attributes (if they exists) and have that starting time
+and duration selected in their respective drop down lists when the page loads.  Use JSTL to set the
+<b>selected="selected"</b> attribute for the &lt;option&gt; representing the current starting time and duration.</p>
+
+<p>The <a class="pagename" href="stage1.html#book.jspx">book.jspx</a> page must
+now retrieve request-scoped attributes indicating
+whether or not there were errors when specifying the new booking criteria and, if so, display
+an appropirate message indicating the error (start date not valid, minimum capacity not valid,
+and/or maximum rate not valid). Depending on the situation,
+the page may display none, one, or more than one of the above messages.</p>
+</div>
+
+<p><a href="index.html">Back to Overview</a>&nbsp;<a href="stage1.html">Stage 1</a>&nbsp;<a href="stage3.html">Stage 3</a></p>
+</body>
+
+</html>

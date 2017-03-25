@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js" /><link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" /><link href="/resources/demos/style.css" rel="stylesheet" /><script src="https://code.jquery.com/jquery-1.12.4.js" /><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" /><title>Compound Interest</title><script text="javascript">
+
+$(function() {
+    $( "#datepicker" ).datepicker();
+});
+$(function() {
+    $( "#date" ).datepicker();
+});
+function showDiv() {
+	   document.getElementById('welcomeDiv').style.display = "block";
+	}
+function showDiv1() {
+	   document.getElementById('cancelbooking').style.display = "block";
+	}
+</script></head><body><form method="post" action="booking.jspx"><div class="answer_list" style="display:none;" id="welcomeDiv"> WELCOME
+ 
+ <h1>*******Welcome to Trump_tower*******</h1><p>Room Booked</p></div></form><form method="post" action="booking.jspx"><h1>Trump_tower</h1><h1> book a room </h1><tr><td>Check In <input name="fname" id="datepicker" type="text" /></td><td> Check Out<input name="lname" id="date" type="text" /></td><td> #Rooms<input name="cid" type="text" /></td><td><button heigth="2px" width="5px" href="conference_room.jspx" type="button">Conference room</button></td><td><label value="200">Minimum Room Capacity: </label></td><td><input id="minRoomCap" size="12" value="200" type="text" /></td><tr><td>Capacity</td><td>500 persons</td></tr><td><label value="$155" for="maxHourlyRate">Maximum Hourly Rate: </label></td><td><input id="maxHourlyRate" size="12" value="$155" type="text" /></td></tr><button heigth="2px" width="5px" onclick="showDiv()" type="button" name="submit" value="Show Div" id="submit">Submit</button></form><form method="post" action="cancelbookingconfirmation.jspx"><button heigth="2px" width="5px" type="button" name="submit1" id="cancel">cancel booking</button></form><form onclick="showDiv1()" method="post" action="clientlogin.jspx"><button heigth="2px" width="5px" type="button" name="button" onclick="location.href='http://localhost:8080/trunk/clientlogin.jspx'" id="back">Login</button></form></body></html>

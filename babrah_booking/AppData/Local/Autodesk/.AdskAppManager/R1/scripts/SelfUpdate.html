@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html ng-app="appmgr-self-update">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-common.css">
+		<link type="text/css" rel="stylesheet" href="css/self-update.css">
+		<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/arbcore.js"></script>
+		<script type="text/javascript" src="js/lib/Globalize.js"></script>
+	</head>
+	<body ng-controller="appmgrSelfUpdateCtrl">
+		<div class="transparent-overlay" ng-show="showCancelConfirm"></div>
+		<div class="header">
+			<div class="left">
+				<img src="images/autodesk_logo.png" class="adsk-logo">
+				<span class="title">Application Manager</span>
+			</div>
+		</div>
+		<div class="home" ng:show="currentPage == 'home'">
+			<div class="notification">
+				<div class="title" arb:id="su_note_title"></div>
+				<div class="time">{{cs.todayAt}} {{cs.getTime()}}</div>
+				<div class="clr-both"></div>
+			</div>
+			<div class="content" arb:id="su_msg"></div>
+			<div class="footer">
+				<div class="links">
+					<a class="view-details" href="" ng-click="viewDetails()" arb:id="view_details"></a>
+					<a class="btn-white fl" href="" ng-click="beginUpdate()" arb:id="update_label"></a>
+				</div>
+			</div>
+		</div>
+		<div class="clr-both"></div>
+		<div class="progress" ng:show="currentPage == 'progress'">
+			<div class="active">
+				<span>{{getActiveStatus()}}</span>
+			</div>
+			<div class="content">
+				<div class="time-remain">
+					<span id="remain_self" ng-show="showTimeRemaining"></span>
+				</div>
+				<div id="progress_self" class="progress-wrapper">
+					<div class="progress-bar" ng-show="showDownloadBar">
+						<div class="download-bar"></div>
+					</div>
+					<div class="install-bar" ng-hide="showDownloadBar">
+						<div class="install-bar-text">{{installingText}}</div>
+					</div>
+				</div>
+				<div class="progress-detail" ng-show="showDownloadBar">
+					<div id="progress_info_self"></div>
+				</div>
+			</div>
+			<div class="controls">
+				<div class="fr">
+					<div class="toggle-container">
+						<div ng-class="toggleClass()" ng-click="disableCtrls || toggleClick()"></div>
+						<div class="toggle-text" ng-class="{'disabled-text': disableCtrls}" ng-click="disableCtrls || toggleClick()">{{toggleText()}}</div>
+					</div>
+					<div class="cancel-container">
+						<div class="cancel" ng-class="{'disabled': disableCtrls}" ng-click="disableCtrls || cancel()"></div>
+						<div class="cancel-text" ng-class="{'disabled-text': disableCtrls}" ng-click="disableCtrls || cancel()" arb:id="cancel_label"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr-both"></div>
+		<div class="result" ng:show="currentPage == 'result'">
+			<div class="notification">
+				<div class="title" arb:id="sr_title"></div>
+				<div class="time">{{cs.todayAt}} {{cs.getTime()}}</div>
+				<div class="clr-both"></div>
+			</div>
+			<div class="content" ng-class="{'success':isSuccess, 'failure':!isSuccess}">
+				Application Manager <span>{{statusText}}</span>
+				<div ng-if="isSuccess">
+					<span arb:id="to_label"></span>&#160;<b><span arb:id="version_label"></span>&#160;<span id="version">{{version}}</span>.</b>
+				</div>
+				<div ng-if="!isSuccess">{{errorText}}</div>
+			</div>
+			<div class="footer">
+				<div class="links" ng-show="isSuccess">
+					<a href="" ng-click="openAppMgr()" arb:id="open_manager"></a>
+				</div>
+			</div>
+		</div>
+		<div class="cc-wrapper"  ng-show="showCancelConfirm">
+			<div class="cc-header">
+				<span arb:id="cancel_label"></span>
+				<div class="cc-close" ng-click="cancelNo()"></div>
+			</div>
+			<div class="cc-inner">
+				<span arb:id="cancel_conf_label"></span>
+				<div class="cc-btns">
+					<a class="btn-gray cancel-yes" ng-click="cancelYes()" arb:id="yes_label"></a>
+					<a class="btn-blue cancel-no" ng-click="cancelNo()"  arb:id="no_label" ></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/common/appmgr-utils.js"></script>
+		<script type="text/javascript">
+			loadCulture();
+		</script>
+		<script type="text/javascript">
+			arbResourceSelector();
+		</script>
+		<script type="text/javascript" src="js/controllers/appmgrSelfUpdateCtrl.js"></script>
+		<script type="text/javascript" src="js/services/appmgrCommonService.js"></script>
+	</body>
+</html>

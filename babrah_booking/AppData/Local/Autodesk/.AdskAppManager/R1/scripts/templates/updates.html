@@ -1,0 +1,99 @@
+<div class="panel-wrapper" ng-repeat="header in ms.panelHeaders[sortBy] | filterPanel: clientAssets">
+	<input type="checkbox" class="panel-check hide" ng-model="show" ng-init="show = $first">
+	<div class="panel-icon" ng-class="{'expand': show, 'collapse': !show}" ng-click="show = !show"></div>
+	<h1 class="panel-header" ng-class="{'recommended' : header == ms.panelHeaders[sortBy][0]}">
+		<span class="title" ng-click="show = !show">{{header}} ({{(clientAssets | filterAsset: header).length}})</span>
+	</h1>
+	<div class="panel-content" ng-class="{'recommended-assets' : header == ms.panelHeaders[sortBy][0]}" ng-show="show">
+		<table cellspacing="0" cellpadding="0" class="asset" ng-repeat-start="asset in clientAssets | filterAsset: header | orderBy: 'parsedReleaseDate': true" ng-class="ms.getAssetClass(asset.state, asset.publishState)" id="table_{{asset.id}}">
+			<tr>
+				<td class="check" ng-class="{'in-visible': asset.state == 14}" >
+					<input type="checkbox" id="{{asset.id}}" class="action" ng-click="onCheck($event, asset.id)" ng-checked="selectedAssets[asset.id]">
+					<label class="action" for="{{asset.id}}"></label>
+				</td>
+				<td class="arrow-wrapper">
+					<div class="arrow collapse-detail"></div>
+				</td>
+				<td class="appicon-wrapper" ng-style="appiconWrapperStyle">
+					<img class="appicon" fallback-src="{{ms.fallbackThumbUrl}}" ng-src="{{asset.thumbUrl != '' && asset.thumbUrl || ms.fallbackThumbUrl}}">
+					<img ng-if="asset.state == 14" src="images/apptick.png" class="appicon-tick">
+				</td>
+				<td class="desc-wrapper">
+					<div class="name">
+						{{asset.displayName}}
+						<span class="new" ng-if="asset.state == 0">
+							<span class="name"> - </span>{{ms.newText}}
+						</span>
+						<span class="retired" ng-if="(asset.publishState | lowercase) == 'retired'">
+							<span class="name"> - </span>{{ms.retiredText}}
+						</span>
+					</div>
+					<div class="short-desc">{{asset.shortDesc}}</div>
+					<div class="detail-wrapper">
+						<table cellspacing="0" cellpadding="0">
+							<tr ng-repeat="row in ms.secondaryRows[sortBy]" ng-class="{'primary-row': $first, 'secondary-row hide': !$first}">
+								<td>
+									{{row[0]}}:&#160;{{asset.addnDetails[row[0]]}}
+								</td>
+								<td>
+									{{row[1]}}:&#160;{{asset.addnDetails[row[1]]}}
+								</td>
+							</tr>
+						</table>
+					</div> 
+				</td>
+				<td class="btn-progress-td" ng-if="asset.state != 14">
+					<div class="action tool-tip upd-err" ng-if="errorArr[asset.id]" ng-style="errorStyle"></div>
+					<div class="btn-wrapper">
+						<a href="" class="action install-btn btn-white" ng-click="installSingle($event, asset.id, asset.state)">{{ installButtonLabel(asset) }}</a>
+						<a href="" class="action ignore-btn btn-white hide" ng-class="ignoreBtnState(asset.state)" ng-click="ignoreSingle($event, asset.id)">{{cs.btnArray["s"][4]}}</a>
+					</div>
+					<div class="progress-wrapper hide" id="progress_{{asset.id}}">
+						<span class="paused-text in-visible">{{cs.pausedText}}</span>
+						<div class="action toggle-icon pause in-visible" ng-click="onClickToggle($event.target, asset.id)"></div>
+						<div class="progress-bar">
+							<div class="download-bar"></div>
+						</div>
+						<!-- Temporarily commented to show infinite progress bar for installation -->
+						<!-- <div class="install-bar"></div></div> -->
+						<div class="install-bar hide">
+							<div class="install-bar-text"></div>
+						</div>
+						<div class="action cancel in-visible" ng-click="onClickCancel(asset.id)"></div>
+						<div class="clr-both"></div>
+						<div class="progress-detail-info" id="progress_info_{{asset.id}}"></div>
+						<div class="progress-detail-info hide" id="backup_info_{{asset.id}}">{{backupText}}</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="more-info-wrapper hide" ng-repeat-end>
+			<ul class="more-info-links" ng-init="selectedSubNav = 'details'">
+				<li ng-class="{'selected': selectedSubNav == 'details'}" ng-click="selectedSubNav = 'details'"><span class="arrow-open">{{ms.assetLinkText[0]}}</span></li>
+				<li ng-show="asset.dependency.length > 0" ng-class="{'selected': selectedSubNav == 'rel-updates'}" ng-click="selectedSubNav = 'rel-updates'; loadAlsoIncludes($event, asset.dependency);"><span class="arrow-open">{{ms.assetLinkText[1]}}</span></li>
+			</ul>
+			<div class="more-info-content">
+				<div ng-show="selectedSubNav == 'details'">
+					<p class="long-desc" ng-bind-html="cs.removeScripts(asset.longDesc)"></p>
+					<p ng-if="asset.relNotesUrl !=''">
+						<a href="" ng-click="cs.openURLInBrowser(asset.relNotesUrl)">{{cs.viewDetailsText}}</a>
+					</p>
+				</div>
+				<div ng-show="selectedSubNav == 'rel-updates'">
+					<div class="rel-section">
+						<h4>{{ms.alsoIncludesText}}:</h4>
+						<div class="also-includes-wrapper fl"></div>
+						<div class="more" ng-if="asset.dependency.length > 4">
+							<a href="" ng-click="moreAssets(asset.dependency)">{{ms.moreText}} ({{asset.dependency.length - 4}})...</a>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="empty-tab-text" ng-if="!checkForValidAssets(clientAssets)">
+	<span ng-if="!showStatusError">{{ms.emptyTabText}}</span>
+	<span ng-if="showStatusError">{{ms.serverNotReachableErr}}</span>
+</div>

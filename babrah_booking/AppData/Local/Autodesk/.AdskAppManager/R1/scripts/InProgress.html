@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html ng-app="appmgr-mini-progress">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-common.css">
+		<link type="text/css" rel="stylesheet" href="css/mini-progress.css">
+		<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/arbcore.js"></script>
+		<script type="text/javascript" src="js/lib/Globalize.js"></script>
+	</head>
+	<body ng-controller="appmgrMiniProgressCtrl">
+		<div class="transparent-overlay" ng-show="showCancelConfirm"></div>
+		<div class="header" ng-click="cs.showMainWindow()">
+			<div class="left">
+				<img src="images/autodesk_logo.png" class="adsk-logo">
+				<span class="title">Application Manager</span>
+			</div>
+		</div>
+		<div class="clr-both"></div>
+		<div class="middle">
+			<div class="active" ng-click="cs.showMainWindow()">
+				<span>{{activeStatus}}</span>
+			</div>
+			<div class="content" ng-click="cs.showMainWindow()">
+				<div class="time-remain">
+					<span id="remain_mini" ng-show="showTimeRemaining"></span>
+				</div>
+				<div id="progress_mini" class="progress-wrapper">
+					<div class="progress-bar">
+						<div class="download-bar">
+							<div class="install-bar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="progress-detail">
+					<div id="progress_info_mini"></div>
+				</div>
+			</div>
+			<div class="controls">
+				<div class="fr">
+					<div class="toggle-container">
+						<div ng-class="toggleClass()" ng-click="disableCtrls || toggleClick()"></div>
+						<div class="toggle-text" ng-class="{'disabled-text': disableCtrls}" ng-click="disableCtrls || toggleClick()">{{toggleText()}}</div>
+					</div>
+					<div class="cancel-container">
+						<div class="cancel" ng-class="{'disabled': disableCtrls}" ng-click="disableCtrls || cancel()"></div>
+						<div class="cancel-text" ng-class="{'disabled-text': disableCtrls}" ng-click="disableCtrls || cancel()" arb:id="cancel_label"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cc-wrapper" ng-show="showCancelConfirm">
+			<div class="cc-header">
+				<span arb:id="cancel_all_label"></span>
+				<div class="cc-close" ng-click="cancelNo()"></div>
+			</div>
+			<div class="cc-inner">
+				<span arb:id="cancel_all_conf_label"></span>
+				<div class="cc-btns">
+					<a class="btn-gray cancel-yes" href="" ng-click="cancelYes()" arb:id="yes_label"></a>
+					<a class="btn-blue cancel-no" href="" ng-click="cancelNo()" arb:id="no_label"></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/common/appmgr-utils.js"></script>
+		<script type="text/javascript">
+			loadCulture();
+		</script>
+		<script type="text/javascript">
+			arbResourceSelector();
+		</script>
+		<script type="text/javascript" src="js/controllers/appmgrMiniProgressCtrl.js"></script>
+		<script type="text/javascript" src="js/services/appmgrCommonService.js"></script>
+	</body>
+</html>

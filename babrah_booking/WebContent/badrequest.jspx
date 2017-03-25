@@ -1,0 +1,26 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+   xmlns:c="http://java.sun.com/jsp/jstl/core"
+   xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+   version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+
+</head>
+<body>
+<div id="content">
+	<h1> status 200 request</h1>
+	<p class ="error-message" > server found Null issue with application</p>
+		<button herf="'http://localhost:8080/trunk/clientlogin.jspx'" >Back to login</button>
+	
+</div>
+
+</body>
+</html>
+</jsp:root>

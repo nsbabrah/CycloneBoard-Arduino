@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--  Written by: Ryan Sabatine  061-047-148 -->
+<head>
+<link rel="stylesheet" type="text/css" href="site.css" />
+<title>Confirming Booking Cancellation</title>
+</head>
+<body class="nomenuheader">
+	<h1>Confirming Booking Cancellation</h1>
+	<form method="post" action="cancelbookingconfirmation.jspx">
+		<table>
+			<tr><th colspan="2">Conference Room Alpha</th></tr>
+			<tr><td>Capacity</td><td>500 persons</td></tr>
+			<tr><td>Date</td><td>March 10th 2017</td></tr>
+			<tr><td>Booking Start Time</td><td>12:00 PM</td></tr>
+			<tr><td>Booking End Time</td><td>3:00 PM</td></tr>
+			<tr><td>Booking Duration</td><td>3 hours</td></tr>
+			<tr><td>Cost</td><td>$499.99</td></tr>
+			<tr><td>Booking Code</td><td>1001</td></tr>
+			<tr><td><input type="hidden" value="1001" name="bookingCode" /></td></tr>
+		</table>
+		<div>
+			<h2>Are you sure you want to cancel your booking?</h2>
+			
+			<span><input type="submit" name="Cancel" value="Cancel" class="link" /></span>
+			
+			<span style="margin-left: 35px"><input type="submit" name="Confirm" value="Confirm Removal" class="link" /></span>
+		</div>
+	</form>
+
+</body>
+</html>
+</jsp:root>

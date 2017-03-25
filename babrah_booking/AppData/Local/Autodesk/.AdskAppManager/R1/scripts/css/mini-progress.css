@@ -1,0 +1,276 @@
+html,body {
+	background: #FFF;
+	border: 0;
+	font-family: arial,sans-serif,helvetica;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	width: 330px;
+}
+.header {
+	background: #F7F7EF;
+	border: 1px solid #CCC;
+	color: #666;
+	height: 38px;
+	margin: 0;
+}
+.header .left {
+	float: left;
+	padding: 7px 0 0 10px;
+}
+.header .right {
+	float: right;
+}
+.header .title {
+	border-left: 1px solid #999;
+	display: inline-block;
+	font-size: 14px;
+	height: 19px;
+	margin-left: 7px;
+	padding-left: 10px;
+}
+.header .adsk-logo {
+	height: 19px; 
+	margin-top: -4px;
+	vertical-align: middle;
+	width: 116px;
+}
+.middle .active {
+	border-bottom: 1px solid #CCC;
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+	height: 25px;
+	margin: 0 5px;
+}
+.middle .active span {
+	display: inline-block;
+	padding: 4px 0 0 5px;
+}
+.middle .content {
+	color: #666;
+	font-size: 12px;
+	height: 76px;
+}
+.middle .content .time-remain {
+	display: table-cell;
+	height: 30px;
+    padding: 0 10px;
+	text-align: center;
+	vertical-align: bottom;
+    width: 305px;
+}
+.middle .controls {
+	background: #F7F7EF;
+	border: 1px solid #CCC;
+	color: #333;
+	font-size: 12px;
+	height: 56px;
+}
+.middle .controls .toggle-container, .middle .controls .cancel-container {
+	border-left: 1px solid #CCC;
+	float: left;
+	height: 56px;
+	min-width: 50px;
+	padding: 0 11px;
+	position: relative;
+	text-align: center;
+}
+.middle .controls .pause {
+	background: url(../images/progress_pause_idle.png) no-repeat left top;
+	height: 19px;
+	margin: 8px auto 6px;
+	width: 19px;
+}
+.middle .controls .pause:hover {
+	background: url(../images/progress_pause_hover.png) no-repeat left top;
+	cursor: pointer;
+}
+.middle .controls .pause[class~=disabled] {
+	background: url(../images/progress_pause_disabled.png) no-repeat left top;
+	height: 20px;
+	margin: 7px auto 6px;
+	width: 14px;
+}
+.middle .controls .pause[class~=disabled]:hover {
+	background: url(../images/progress_pause_disabled.png) no-repeat left top;
+	cursor: default;
+}
+.middle .controls .resume {
+	background: url(../images/minialert_play_idle.png) no-repeat left top;
+	height: 18px;
+	margin: 9px auto 6px;
+	width: 15px;
+}
+.middle .controls .resume:hover {
+	background: url(../images/minialert_play_hover.png) no-repeat left top;
+	cursor: pointer;
+}
+.middle .controls .resume[class~=disabled] {
+	background: url(../images/minialert_play_disabled.png) no-repeat left top;
+	height: 18px;
+	margin: 10px auto 5px;
+	width: 13px;
+}
+.middle .controls .resume[class~=disabled]:hover {
+	background: url(../images/minialert_play_disabled.png) no-repeat left top;
+	cursor: default;
+}
+.middle .controls .cancel {
+	background: url(../images/progress_cancel_idle.png) no-repeat left top;
+	height: 19px;
+	margin: 9px auto 5px;
+	width: 19px;
+}
+.middle .controls .cancel:hover {
+	background: url(../images/progress_cancel_hover.png) no-repeat left top;
+	cursor: pointer;
+}
+.middle .controls .cancel[class~=disabled] {
+	background: url(../images/progress_cancel_disabled.png) no-repeat left top;
+	height: 21px;
+	margin: 7px auto 5px;
+	width: 21px;
+}
+.middle .controls .cancel[class~=disabled]:hover {
+	background: url(../images/progress_cancel_disabled.png) no-repeat left top;
+	cursor: default;
+}
+.middle .toggle-text, .middle .cancel-text {
+	cursor: pointer;
+}
+.middle .toggle-text[class~=disabled-text], .middle .cancel-text[class~=disabled-text] {
+	color: #C0C0C0;
+	cursor: default;
+}
+.middle .progress-wrapper {
+	padding: 4px 0 0 63px;
+	width: 204px;
+}
+.middle .progress-bar {
+	background: #BBB;
+	border: 1px solid rgba(0,0,0,0.4);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	height: 10px;
+	overflow: hidden;
+	position: relative;
+	width: 200px;
+}
+.middle .download-bar {
+	background: #003366;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	height: 10px;
+	opacity: 0.45;
+	position: absolute;
+	width: 0;
+}
+.middle .install-bar {
+	background: -moz-linear-gradient(top, #C7E8F6 0%, #0696D7 100%);
+	background: -webkit-linear-gradient(top, #C7E8F6 0%,#0696D7 100%);
+	background: -o-linear-gradient(top, #C7E8F6 0%,#0696D7 100%);
+	background: -ms-linear-gradient(top, #C7E8F6 0%,#0696D7 100%);
+	background: linear-gradient(top, #C7E8F6 0%,#0696D7 100%);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	left: 1px;
+	position: absolute;
+	width: 0;
+}
+.middle .install-bar {
+	height: 8px;
+	top: 1px;
+}
+.middle .progress-detail {
+	color: #888;
+	float: left;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 2px 0 0 63px;
+	width: 204px;
+	text-align: center;
+}
+.cc-wrapper {
+	background: #FFF;
+	border: 1px solid #82CAEB;
+	color: #333;
+	left: 22px;
+	min-height: 105px;
+	outline: 0;
+	position: absolute;
+	top: 5px;
+	width: 286px;
+	z-index: 1000;
+}
+.cc-wrapper:after, .cc-wrapper:before { 
+	content: " ";
+	height: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 100%;
+	width: 0; 
+ }
+.cc-wrapper:after { 
+	border-color: #FFF transparent transparent;
+	border-style: solid;
+	border-width: 28px 0 0 28px;
+	height: 0;
+	left: 244px;
+ }
+.cc-wrapper:before { 
+	border-color: #82CAEB transparent transparent;
+	border-style: solid; 
+	border-width: 30px 0 0 30px;
+	height: 0;
+	left: 243px;
+}
+.cc-header {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 7px 8px 10px;
+	position: relative;
+}
+.cc-header .cc-close {
+	background: url(../images/progress_close.png) no-repeat scroll left top transparent;
+	cursor: pointer;
+	height: 16px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 16px;
+}
+.cc-inner {
+	font-size: 12px;
+	padding: 0 10px;
+}
+.cc-btns {
+	bottom: 10px;
+	float: right;
+	position: absolute;
+	right: 10px;
+}
+.cc-inner .btn-blank {
+	border-bottom: 1px dashed #333;
+	color: #333;
+	cursor: pointer;
+	font-size: 12px;
+	outline: 0;
+	text-decoration: none;
+}
+.cancel-yes {
+	float: left;
+	margin-right: 10px;
+}
+.cancel-no {
+	float: left;
+}

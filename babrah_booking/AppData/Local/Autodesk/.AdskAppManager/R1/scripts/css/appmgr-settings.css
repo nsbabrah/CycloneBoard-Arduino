@@ -1,0 +1,386 @@
+html,body {
+	border: 0;
+	font-family: arial,sans-serif,helvetica;
+	height: 396px;
+	margin: 0;
+	padding: 0;
+	width: 640px;
+}
+.top-wrapper {
+	position: absolute;
+	top: 0;
+	width: 640px;
+	z-index: 1;
+}
+.header {
+	background: #ECECE9;
+	border-bottom: 1px solid #E0E0E0;
+	color: #666;
+	height: 40px;
+	margin: 0;
+	width: 640px;
+}
+.header .left {
+	float: left;
+	padding: 8px 0 0 12px;
+}
+.header .right {
+	float: right;
+}
+.header .title {
+	border-left: 1px solid #999;
+	display: inline-block;
+	font-size: 14px;
+	height: 20px;
+	margin-left: 3px;
+	padding-left: 5px;
+}
+.adsk-logo {
+	height: 19px;
+	margin-top: -4px;
+	vertical-align: middle;
+	width: 116px;
+}
+.header .links {
+	height: 30px;
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+.header .links li {
+	display: inline;
+	float: left;
+	font-size: 12px;
+	font-weight: normal;
+	list-style: none;
+}
+.header .links li a {
+	color: #666;
+	outline: 0;
+	padding: 4px 12px;
+	text-decoration: none;
+}
+.header .links a.import {
+	border-right: 1px solid #CCC;
+	padding-left: 3px;
+}
+.header .links a.export {
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #FFF;
+}
+.header .links a.help {
+	border-left: 1px solid #FFF;
+}
+#settings_nav {
+	background: -moz-linear-gradient(top, #FFF 0%, #FAFBF8 100%);
+	background: -webkit-linear-gradient(top, #FFF 0%, #FAFBF8 100%);
+	background: -o-linear-gradient(top, #FFF 0%, #FAFBF8 100%);
+	background: -ms-linear-gradient(top, #FFF 0%, #FAFBF8 100%);
+	background: linear-gradient(top, #FFF 0%, #FAFBF8 100%);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	height: 40px;
+	width: 640px;
+}
+#settings_nav ul{
+	display: block;
+	float: left;
+	height: 30px;
+	list-style: none;
+	margin: 0;
+	padding: 9px 0 0;
+}
+#settings_nav li {
+	display: inline;
+}
+#settings_nav li a {
+	border-right: 1px dotted #CCC;
+	color: #666;
+	display: block;
+	float: left;
+	font-size: 12px;
+	height: 25px;
+	outline: 0;
+	padding: 5px 0 0 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#settings_nav li a.selected {
+	background: -moz-linear-gradient(top, #FFF 0%, #F3F3F3 100%);
+	background: -webkit-linear-gradient(top, #FFF 0%, #F3F3F3 100%);
+	background: -o-linear-gradient(top, #FFF 0%, #F3F3F3 100%);
+	background: -ms-linear-gradient(top, #FFF 0%, #F3F3F3 100%);
+	background: linear-gradient(top, #FFF 0%, #F3F3F3 100%);
+	color: #333;
+	font-weight: bold;
+}
+#settings_nav li a.error-nav {
+	background: url(../images/alert_icon.png) no-repeat scroll right top transparent;
+	background-size:  16px 16px;
+	padding-right: 8px !important;
+}
+.middle {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+    box-sizing: border-box;
+	padding: 81px 0 0;
+	position: relative;
+}
+.middle .content {
+	height: 256px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+}
+.middle .tab-content {
+	border: 0;
+	color: #333;
+	margin: 0;
+	padding: 16px 0 0 12px;
+}
+.middle label {
+	display:inline-block;
+	padding-left: 22px;
+}
+.middle input[type="checkbox"] {
+	display: none;
+}
+.middle input[type="checkbox"] + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 0;
+}
+.middle input[type="checkbox"] + label:hover {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -374px;
+}
+.middle input[type="checkbox"]:checked + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -100px;
+}
+.middle input[type="checkbox"]:checked: + label:hover {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -100px;
+}
+.middle input[type="checkbox"]:disabled + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -287px;
+}
+.middle input[type="checkbox"]:checked:disabled + label {
+	background: url(../images/checkbox_sprite.png) no-repeat 0 -200px;
+}
+.middle input[type="text"], .middle input[type="password"] {
+	background: #FFF;
+	border: 1px solid #CCC;
+	color: #333;
+	font-size: 12px;
+	height: 23px;
+	outline: 0;
+	width: 174px;
+}
+.middle select {
+	background: #FFF;
+	border: 1px solid #CCC;
+	color: #333;
+	font-size: 12px;
+	height: 23px;
+	outline: 0;
+}
+.middle select:disabled, .middle input:disabled {
+	background: #F3F3F3;
+	color: #CCC;
+}
+.middle .disabled-text {
+	color: #CCC;
+}
+.middle input[class~="location"] {
+	float: left;
+	height: 24px;
+	width: 208px;
+}
+.middle input[class~="ng-invalid"], .middle input[class~="error"],
+.middle .location[class~="ng-invalid"] + .browse-btn,
+.middle .location[class~="error"] + .browse-btn {
+	border: 1px solid red;
+}
+.browse-btn {
+    border: 1px solid #CCC;
+    border-left: 0px !important;
+    color: #333;
+	cursor: pointer;
+    display: block;
+    float: left;
+	font-size: 12px;
+	font-weight: bold;
+	height: 20px;
+	outline: 0;
+	padding-top: 6px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: bottom;
+	width: 26px;
+}
+.browse-btn[class~=disabled] {
+	background: #F3F3F3;
+	color: #CCC;
+	cursor: default;
+}
+.input-med {
+	width: 100px;
+}
+.input-large {
+	width: 174px;
+}
+.tab-content .section {
+	font-size: 12px;
+	padding-bottom: 7px;
+}
+.tab-content .section h3 {
+	color: #666;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 10px 10px 10px 0;
+	overflow: hidden;
+	text-align: left;
+}
+.tab-content .section h3:before, .tab-content .section h3:after {
+    border-top: 1px dashed #CCC;
+    content: "";
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+}
+.tab-content h3:before {
+    right: 0.5em;
+    margin-left: -100%;
+}
+.tab-content h3:after {
+    left: 0.5em;
+    height: 0.3em;
+    margin-right: -100%;
+}
+.section .left {
+	float: left;
+	padding-left: 12px;
+}
+.section .right {
+	float: right;
+}
+.field-wrapper {
+	padding: 7px 0 6px;
+}
+.field-wrapper table {
+	width: 100%;
+}
+/* These left/right class width should be modified when we introduce a new field */
+/* Changing the below width will affect the layout especially in French language */
+#settings_network {
+	padding: 16px 0 0 3px;
+}
+#proxy .field-wrapper {
+	padding: 5px 0 0;
+}
+#proxy .left {
+	padding-left: 0;
+	width: 340px;
+}
+#proxy .right {
+	padding: 32px 2px 0 0;
+	width: 290px;
+}
+#proxy .input-td {
+	width: 175px;
+}
+#proxy .info-td {
+	width: 16px;
+}
+.proxy-type {
+	width: 176px;
+}
+.about {
+	padding-right: 12px !important;
+}
+.about .section h3 {
+	color: #0696D7;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 10px 10px 10px 0;
+	overflow: hidden;
+	text-align: left;
+}
+.about a {
+	border-bottom: 1px dashed #999999;
+	color: #333;
+	outline: 0;
+	text-decoration: none;
+}
+.about a:hover, .about a:active {
+	border-bottom-style: solid;
+}
+.tool-tip {
+	cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    vertical-align: top;
+    width: 18px;
+}
+.info-icon {
+    background: url(../images/info_grey.png) no-repeat 0 0;
+}
+.error-icon {
+	background: url(../images/alert_icon.png) no-repeat scroll left top transparent;
+	background-size: 18px 18px;
+}
+.footer {
+	background: #F7F7EF;
+	border-top: 1px solid #CCC;
+	bottom: 0;
+	box-shadow: 0 -2px 2px -3px #000000;
+	color: #666;
+	margin: 0;
+	min-height: 57px;
+	min-width: 640px;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.footer[class~=err] {
+	background: #0696D7;
+}
+.footer .se-outer {
+	float: left;
+    margin: 5px 0 5px 20px;
+    max-width: 65%;
+}
+.footer .se-close {
+	background: url("../images/progress_close.png") no-repeat scroll left top transparent;
+	cursor: pointer;
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+.footer .se-inner {
+	padding-left: 22px;
+}
+.footer .se-title {
+	color: #FFF;
+	font-size: 12px;
+	font-weight: bold;
+}
+.footer .se-content {
+	color: #FFF;
+	font-size: 12px;
+}
+.footer .info {
+	float: left;
+	font-size: 12px;
+	max-width: 65%;
+	padding: 24px 0 0 20px;
+}
+.footer .btns {
+	float: right;
+	padding: 15px 10px 0 5px;
+	position: relative;
+}
+.footer .btns .ok {
+	float: left;
+}
+.footer .btns .cancel {
+	float: left;
+	margin-left: 10px;
+}

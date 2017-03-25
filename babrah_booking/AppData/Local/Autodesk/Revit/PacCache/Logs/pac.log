@@ -1,0 +1,110 @@
+{"timestamp":"2016-08-31T13:10:34.6288914Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-08-31T13:10:36.162509Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-08-31T13:10:36.5585317Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-08-31T13:10:36.5605318Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-08-31T13:10:36.5615318Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-08-31T13:10:36.5625319Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-08-31T13:10:38.8826646Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-08-31T13:10:38.8836647Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-08-31T13:10:38.8846647Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-08-31T13:10:38.8856648Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-08-31T13:40:46.4327686Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-08-31T13:40:46.6427689Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-08-31T13:40:46.6527689Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-08-31T13:40:46.6627689Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-08-31T13:40:46.6627689Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-08-31T13:40:46.6627689Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-08-31T13:40:47.9788353Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-08-31T13:40:47.9798353Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-08-31T13:40:47.9808354Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-08-31T13:40:47.9818355Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-08-31T14:13:44.4241172Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-08-31T14:13:44.7805298Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-08-31T14:13:44.7925305Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-08-31T14:13:44.8595343Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-08-31T14:13:44.8615344Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-08-31T14:13:44.8625345Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-08-31T14:13:58.0432884Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-08-31T14:13:58.0452885Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-08-31T14:13:58.0452885Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-08-31T14:13:58.0472886Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-08-31T20:05:04.7335182Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-08-31T20:05:04.9335185Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-08-31T20:05:04.9535185Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-08-31T20:05:04.9535185Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-08-31T20:05:04.9535185Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-08-31T20:05:04.9535185Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-08-31T20:05:06.3575871Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-08-31T20:05:06.3585872Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-08-31T20:05:06.3595872Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-08-31T20:05:06.3605873Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-09-01T16:19:47.5364685Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-09-01T16:19:47.7880695Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-09-01T16:19:47.7980695Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-09-01T16:19:47.7980695Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-09-01T16:19:47.7980695Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-09-01T16:19:47.8080695Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-09-01T16:19:49.4401495Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-09-01T16:19:49.4411495Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-09-01T16:19:49.4421496Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-09-01T16:19:49.4431496Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-09-01T17:38:18.8074556Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-09-01T17:38:19.087456Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-09-01T17:38:19.097456Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-09-01T17:38:19.097456Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-09-01T17:38:19.097456Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-09-01T17:38:19.097456Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-09-01T17:38:20.384519Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-09-01T17:38:20.384519Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-09-01T17:38:20.3855191Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-09-01T17:38:20.3865191Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-09-01T18:04:23.6069484Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-09-01T18:04:23.7509567Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-09-01T18:04:23.7639574Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-09-01T18:04:23.7649575Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-09-01T18:04:23.7659575Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-09-01T18:04:23.7659575Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-09-01T18:04:25.2920448Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-09-01T18:04:25.2930449Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-09-01T18:04:25.2930449Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-09-01T18:04:25.2940449Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-09-01T18:36:28.0651431Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-09-01T18:36:28.3221578Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-09-01T18:36:28.3351586Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-09-01T18:36:28.3361586Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-09-01T18:36:28.3381588Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-09-01T18:36:28.3381588Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-09-01T18:36:29.9132488Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-09-01T18:36:29.9142489Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-09-01T18:36:29.9142489Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-09-01T18:36:29.915249Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2016-09-01T22:34:05.267728Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2016-09-01T22:34:07.417731Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2016-09-01T22:34:07.6177313Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2016-09-01T22:34:07.6177313Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2016-09-01T22:34:07.6277313Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2016-09-01T22:34:07.6277313Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2016-09-01T22:34:09.1918174Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2016-09-01T22:34:09.1928175Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2016-09-01T22:34:09.1938176Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2016-09-01T22:34:09.1948176Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2017-03-24T19:34:02.5218931Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2017-03-24T19:34:03.8950011Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2017-03-24T19:34:04.5347446Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2017-03-24T19:34:04.5347446Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2017-03-24T19:34:04.5347446Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2017-03-24T19:34:04.5347446Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2017-03-24T19:34:11.3222671Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2017-03-24T19:34:11.3222671Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2017-03-24T19:34:11.3222671Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2017-03-24T19:34:11.5563196Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}
+{"timestamp":"2017-03-24T23:47:17.6135884Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully initialized PAC logging."}
+{"timestamp":"2017-03-24T23:47:17.7735916Z","level":"INFO","logger":"BcgDiagnostics","message":"Successfully started activity manager."}
+{"timestamp":"2017-03-24T23:47:17.793592Z","level":"INFO","logger":"BcgDiagnostics","message":"New format PAC cache does not exist or is not populated; starting migration from old format PAC cache(s)."}
+{"timestamp":"2017-03-24T23:47:17.793592Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache migration is complete."}
+{"timestamp":"2017-03-24T23:47:17.793592Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache initialized."}
+{"timestamp":"2017-03-24T23:47:17.793592Z","level":"INFO","logger":"BcgDiagnostics","message":"Cache settings. CacheLimit: 5120, TrimPercent: 25, TrimFreqeuncy: 900, QueueDepth: 20, RevisionFetchLimit: 256, PollFrequency: 120"}
+{"timestamp":"2017-03-24T23:47:19.1407115Z","level":"INFO","logger":"BcgDiagnostics","message":"Scanning Collaboration cache."}
+{"timestamp":"2017-03-24T23:47:19.1417116Z","level":"INFO","logger":"BcgDiagnostics","message":"0 models found in Collaboration cache."}
+{"timestamp":"2017-03-24T23:47:19.1427117Z","level":"INFO","logger":"BcgDiagnostics","message":"No models in cache; nothing for PAC to do until a model is touched in Revit."}
+{"timestamp":"2017-03-24T23:47:19.1437118Z","level":"INFO","logger":"BcgDiagnostics","message":"Initialized activity listener."}

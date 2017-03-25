@@ -1,0 +1,63 @@
+{
+   "checksum": "d11ba04fe9d38f3cf79b1b0caa369d44",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "12988905450000000",
+            "id": "8",
+            "name": "Seneca Libraries",
+            "type": "url",
+            "url": "http://library.senecacollege.ca/"
+         }, {
+            "date_added": "12988905625000000",
+            "id": "10",
+            "name": "Employee WebMail",
+            "type": "url",
+            "url": "https://myseneca.ca/"
+         }, {
+            "date_added": "12996500192000000",
+            "id": "11",
+            "name": "Office 365",
+            "type": "url",
+            "url": "https://senedsoffice365fs1.seneds.senecacollege.ca/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline&wctx=wa%3Dwsignin1.0%26rpsnv%3D2%26ct%3D1355432544%26rver%3D6.1.6206.0%26wp%3DMBI_KEY%26wreply%3Dhttps:%252F%252Foutlook.com%252Fowa%252F%26id%3D260563%26CBCXT%3Dout"
+         }, {
+            "date_added": "13031683923000000",
+            "id": "12",
+            "name": "OACETT - Examination in Professional Practice",
+            "type": "url",
+            "url": "http://webclients.captus.com/oacett/"
+         }, {
+            "date_added": "12988905537000000",
+            "id": "13",
+            "meta_info": {
+               "last_visited_desktop": "13134859881283902"
+            },
+            "name": "My.Seneca",
+            "type": "url",
+            "url": "https://my.senecacollege.ca/"
+         } ],
+         "date_added": "13085854893609068",
+         "date_modified": "0",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13085854893609075",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13085854893609077",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

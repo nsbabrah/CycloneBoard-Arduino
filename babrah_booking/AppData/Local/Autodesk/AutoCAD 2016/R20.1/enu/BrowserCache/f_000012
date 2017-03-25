@@ -1,0 +1,4170 @@
+﻿var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+//                 (C) Copyright 2012 by Autodesk, Inc.
+//
+// The information contained herein is confidential, proprietary to Autodesk,
+// Inc., and considered a trade secret as defined in section 499C of the
+// penal code of the State of California.  Use of this information by anyone
+// other than authorized employees of Autodesk, Inc. is granted only under a
+// written non-disclosure agreement, expressly prescribing the scope and
+// manner of such use.
+//
+///////////////////////////////////////////////////////////////////////////////
+/**
+* @class Acad.DrawingFeedPrivate
+* This is the controller object that is used for private Drawing Feed API's
+*/
+var Acad = Autodesk.AutoCAD;
+
+var Autodesk;
+(function (Autodesk) {
+    // TODO - this code could use a little refactoring, remove hard coded numbers, etc.
+    (function (AutoCAD) {
+        (function (ImageType) {
+            ImageType[ImageType["StickyPreview"] = 0] = "StickyPreview";
+            ImageType[ImageType["Sticky"] = 1] = "Sticky";
+            ImageType[ImageType["BubbleIdle"] = 2] = "BubbleIdle";
+            ImageType[ImageType["BubbleActive"] = 3] = "BubbleActive";
+        })(AutoCAD.ImageType || (AutoCAD.ImageType = {}));
+        var ImageType = AutoCAD.ImageType;
+
+        if (typeof (Image) != "undefined") {
+            var stickyPreview = new Image();
+            stickyPreview.src = "drawing_feed_sticky_preview.png";
+
+            var sticky = new Image();
+            sticky.src = "drawing_feed_sticky.png";
+
+            var bubbleIdle = new Image();
+            bubbleIdle.src = "drawing_feed_bubble_idle.png";
+
+            var bubbleActive = new Image();
+            bubbleActive.src = "drawing_feed_bubble_active.png";
+        }
+
+        /**
+        * This is a base class for the File dialog options.
+        * @param sMessage is the prompt message.
+        *
+        */
+        var PromptFileOptions = (function () {
+            function PromptFileOptions(sMessage) {
+                this._message = sMessage;
+                this._allowUrls = true;
+                this._preferCommandLine = false;
+                this._dialogCaption = "";
+                this._allowUrls = true;
+                this._dialogName = "";
+                this._filter = "";
+                this._filterIndex = 0;
+                this._initialFileName = "";
+                this._initialDirectory = "";
+            }
+            Object.defineProperty(PromptFileOptions.prototype, "message", {
+                get: /**
+                * The prompt message as a string
+                *
+                */
+                function () {
+                    return this._message;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'string') {
+                        throw new Error('Type of message should be string.');
+                    }
+                    this._message = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "dialogCaption", {
+                get: /**
+                * The dialog caption as a string
+                *
+                */
+                function () {
+                    return this._dialogCaption;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'string') {
+                        throw new Error('Type of dialogCaption should be string.');
+                    }
+                    this._dialogCaption = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "allowUrls", {
+                get: /**
+                * Accepts boolean value, when true allows urls to be used as input
+                *
+                */
+                function () {
+                    return this._allowUrls;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'boolean') {
+                        throw new Error('Type of allowUrls should be boolean.');
+                    }
+                    this._allowUrls = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "dialogName", {
+                get: /**
+                * The dialog name as a string
+                *
+                */
+                function () {
+                    return this._dialogName;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'string') {
+                        throw new Error('Type of dialogName should be string.');
+                    }
+                    this._dialogName = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "filter", {
+                get: /**
+                * The filter string is of the form "<file type description>|<file extension>|<file type description>|<file extension>",
+                * such as "Text files (*.txt)|*.txt;*.text|All files (*.*)|*.*"
+                */
+                function () {
+                    return this._filter;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'string') {
+                        throw new Error('Type of filter should be string.');
+                    }
+                    this._filter = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "filterIndex", {
+                get: /**
+                * The index point of the filter as intger
+                *
+                */
+                function () {
+                    return this._filterIndex;
+                },
+                set: function (inp) {
+                    if (!Acad.isInteger(inp)) {
+                        throw new Error('Type of filterIndex should be integer.');
+                    }
+                    this._filterIndex = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "initialFileName", {
+                get: /**
+                * The initial file name as a string
+                *
+                */
+                function () {
+                    return this._initialFileName;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'string') {
+                        throw new Error('Type of initialFileName should be string.');
+                    }
+                    this.initialFileName = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "initialDirectory", {
+                get: /**
+                * The initial directory as a string
+                *
+                */
+                function () {
+                    return this._initialDirectory;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'string') {
+                        throw new Error('Type of initialDirectory should be string.');
+                    }
+                    this._initialDirectory = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptFileOptions.prototype, "preferCommandLine", {
+                get: /**
+                * Accepts a boolean value, when true command line is given the first preference
+                *
+                */
+                function () {
+                    return this._preferCommandLine;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'boolean') {
+                        throw new Error('Type of preferCommandLine should be boolean.');
+                    }
+                    this._preferCommandLine = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+            return PromptFileOptions;
+        })();
+        AutoCAD.PromptFileOptions = PromptFileOptions;
+
+        /**
+        * This class contains file dialog configuration options that are passed to the Editor.GetFileNameForOpen() method.
+        * @param message is the prompt message.
+        *
+        */
+        var PromptOpenFileOptions = (function (_super) {
+            __extends(PromptOpenFileOptions, _super);
+            function PromptOpenFileOptions(message) {
+                _super.call(this, message);
+                this._showReadOnly = false;
+                this._searchPath = false;
+                this._transferRemoteFiles = true;
+            }
+            Object.defineProperty(PromptOpenFileOptions.prototype, "showReadOnly", {
+                get: /**
+                * Accepts a boolean value, when true the acad dialog show open read only option in open dialog
+                *
+                */
+                function () {
+                    return this._showReadOnly;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'boolean') {
+                        throw new Error('Type of showReadOnly should be boolean.');
+                    }
+                    this._showReadOnly = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptOpenFileOptions.prototype, "searchPath", {
+                get: /**
+                * Accepts a boolean value, when true library search is allowed
+                *
+                */
+                function () {
+                    return this._searchPath;
+                },
+                set: function (inp) {
+                    if (typeof (inp) != 'boolean') {
+                        throw new Error('Type of searchPath should be boolean.');
+                    }
+                    this._searchPath = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptOpenFileOptions.prototype, "transferRemoteFiles", {
+                get: /**
+                * Accepts a boolean value, when true transfer remote file using a URL is allowed
+                *
+                */
+                function () {
+                    return this._transferRemoteFiles;
+                },
+                set: function (inp) {
+                    if (typeof (inp) != 'boolean') {
+                        throw new Error('Type of transferRemoteFiles should be boolean.');
+                    }
+                    this._transferRemoteFiles = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+            return PromptOpenFileOptions;
+        })(PromptFileOptions);
+        AutoCAD.PromptOpenFileOptions = PromptOpenFileOptions;
+
+        /**
+        * This class contains file dialog configuration options that are passed to the Editor.getFileNameForSave() method.
+        * @param message is the prompt message.
+        *
+        */
+        var PromptSaveFileOptions = (function (_super) {
+            __extends(PromptSaveFileOptions, _super);
+            function PromptSaveFileOptions(message) {
+                _super.call(this, message);
+                this._deriveInitialFilenameFromDrawingName = false;
+                this._forceOverwriteWarningForScriptsAndLisp = false;
+                this._displaySaveOptionsMenuItem = false;
+            }
+            Object.defineProperty(PromptSaveFileOptions.prototype, "deriveInitialFilenameFromDrawingName", {
+                get: /**
+                * Accesses if the derivation of the initial filename is is from the drawing name.
+                * This property only has an impact when a default file name is not provided functions that reportedly uses this property
+                * (it is difficult to discern which properties are supported by which functions).
+                * When a default file name is not provided, use this property to leave the default name blank in the dialog.
+                * Leave out the property, and a default name is generated and displayed in the dialog, based on the current drawing name.
+                *
+                */
+                function () {
+                    return this._deriveInitialFilenameFromDrawingName;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'boolean') {
+                        throw new Error('Type of deriveInitialFilenameFromDrawingName should be boolean.');
+                    }
+                    this._deriveInitialFilenameFromDrawingName = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptSaveFileOptions.prototype, "forceOverwriteWarningForScriptsAndLisp", {
+                get: /**
+                * Accesses if the overwrite warning prompt ought to be displayed,
+                * even when the command is run from LISP or a script. Otherwise,
+                * overwrite warning prompts are generally suppressed under these conditions
+                *
+                */
+                function () {
+                    return this._forceOverwriteWarningForScriptsAndLisp;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'boolean') {
+                        throw new Error('Type of forceOverwriteWarningForScriptsAndLisp should be boolean.');
+                    }
+                    this._forceOverwriteWarningForScriptsAndLisp = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+            Object.defineProperty(PromptSaveFileOptions.prototype, "displaySaveOptionsMenuItem", {
+                get: /**
+                * Assesses if the save options ought to be displayed from a menu item.
+                * This property does not ensure any options will be available, just that the menu entry will not be hidden.
+                *
+                */
+                function () {
+                    return this._displaySaveOptionsMenuItem;
+                },
+                set: function (inp) {
+                    if (typeof (inp) !== 'boolean') {
+                        throw new Error('Type of displaySaveOptionsMenuItem should be boolean.');
+                    }
+                    this._displaySaveOptionsMenuItem = inp;
+                },
+                enumerable: true,
+                configurable: true
+            });
+            return PromptSaveFileOptions;
+        })(PromptFileOptions);
+        AutoCAD.PromptSaveFileOptions = PromptSaveFileOptions;
+        ;
+
+        /**
+        * This class contains the result returned from prompts that request a file guid, such as the Editor.GetFileNameForSave() and Editor.GetFileNameForOpen() methods.
+        * @param retCode The status result of the prompt operation.
+        * @param stringResult is a guid string representing the file. For example, '{FAD74030-3B73-43B4-A2C6-D8144D240ED8}'
+        * @param readOnly Boolean indicating whether filename result prompt is read-only.
+        *
+        */
+        var PromptFileNameResult = (function (_super) {
+            __extends(PromptFileNameResult, _super);
+            function PromptFileNameResult(retCode, stringResult, readOnly) {
+                _super.call(this, retCode, stringResult);
+                this.readOnly = readOnly;
+            }
+            return PromptFileNameResult;
+        })(AutoCAD.PromptResults);
+        AutoCAD.PromptFileNameResult = PromptFileNameResult;
+        ;
+
+        (function (Editor) {
+            /**
+            * This class represents a file corresponding to a GUID returned
+            * through getFileNameForOpen() or getFileNameForSave(). Note
+            * that the GUID would be not valid across different application sessions.
+            * @param guid is of type string. For example, '{FAD74030-3B73-43B4-A2C6-D8144D240ED8}'
+            * @throws TypeError
+            *
+            */
+            var SecureFile = (function () {
+                function SecureFile(guid) {
+                    if (!guid || typeof (guid) !== 'string') {
+                        throw new TypeError('guid is mandatory and should be non-empty string');
+                    }
+
+                    this._myGuid = guid;
+                }
+                /**
+                * This method retrieves the bytes of this file as a base64 string.
+                * @return string.
+                * @throws Error
+                *
+                */
+                SecureFile.prototype.getContents = function () {
+                    return Acad.SecureFileInterop.getContents(this._myGuid);
+                };
+
+                /**
+                * This method write a given base64 string to this file.
+                * @param contents is a base64 string representing the bytes to write to this file.
+                * @throws Error
+                *
+                */
+                SecureFile.prototype.setContents = function (contents) {
+                    Acad.SecureFileInterop.setContents(this._myGuid, contents);
+                };
+
+                /**
+                * This method releases the associated GUID, which would
+                * no longer be associated with any physical file.
+                * @throws Error
+                *
+                */
+                SecureFile.prototype.release = function () {
+                    Acad.SecureFileInterop.release(this._myGuid);
+                };
+
+                /**
+                * This method retrieves the size of this file in bytes.
+                * @return number
+                * @throws Error
+                *
+                */
+                SecureFile.prototype.getFileSize = function () {
+                    return Acad.SecureFileInterop.getFileSize(this._myGuid);
+                };
+                return SecureFile;
+            })();
+            Editor.SecureFile = SecureFile;
+
+            /**
+            * This method emulates the subtleties of AutoCAD file prompting. It properly prompts on the command line when FILEDIA is zero, or if a script or an AutoLISP routine is running.
+            * @param opts is of type PromptOpenFileOptions.
+            * @return PromptFileNameResult.
+            * @throws TypeError
+            *
+            */
+            function getFileNameForOpen(options) {
+                if (!(options instanceof Acad.PromptOpenFileOptions)) {
+                    throw new TypeError("Input parameter should be PromptOpenFileOptions type.");
+                }
+                return Acad.EditorInterop.getFileNameForOpen(options);
+            }
+            Editor.getFileNameForOpen = getFileNameForOpen;
+
+            /**
+            * This method emulates the subtleties of AutoCAD file prompting. It properly prompts on the command line when FILEDIA is zero, or if a script or an AutoLISP routine is running.
+            * @param opts is of type PromptSaveFileOptions.
+            * @return PromptFileNameResult.
+            * @throws TypeError
+            *
+            */
+            function getFileNameForSave(options) {
+                if (!(options instanceof Acad.PromptSaveFileOptions)) {
+                    throw new TypeError("Input parameter should be PromptSaveFileOptions type.");
+                }
+
+                return Acad.EditorInterop.getFileNameForSave(options);
+            }
+            Editor.getFileNameForSave = getFileNameForSave;
+
+            (function (CurrentViewport) {
+                /**
+                * This method computes the 3D viewport related parameters based on the viewproperties.
+                * @param viewprop is of type Acad.ViewProperties.
+                * @return Acad.Viewport3D.
+                * @throws TypeError
+                *
+                */
+                function getViewport3D(viewprop) {
+                    if (!(viewprop instanceof Acad.ViewProperties)) {
+                        throw new TypeError("Input parameter should be Acad.ViewProperties type.");
+                    }
+                    var jsonObj = AutoCAD.CurrentViewportInterop.getViewport3D(viewprop);
+                    var position = new Acad.Point3d(jsonObj.position.x, jsonObj.position.y, jsonObj.position.z);
+                    var rotation = new Acad.Quaternion(jsonObj.rotation.x, jsonObj.rotation.y, jsonObj.rotation.z, jsonObj.rotation.w);
+                    var projection = jsonObj.projection;
+                    var aspectRatio = jsonObj.aspectRatio;
+                    var distanceToOrbit = jsonObj.distanceToOrbit;
+                    var orthographicHeight, fieldOfView;
+                    if (jsonObj.orthographicHeight) {
+                        orthographicHeight = jsonObj.orthographicHeight;
+                        fieldOfView = undefined;
+                    } else {
+                        orthographicHeight = undefined;
+                        fieldOfView = jsonObj.fieldOfView;
+                    }
+                    return new Acad.Viewport3D(position, rotation, projection, aspectRatio, distanceToOrbit, orthographicHeight, fieldOfView);
+                }
+                CurrentViewport.getViewport3D = getViewport3D;
+
+                /**
+                * This method computes the viewproperties  based on the 3D viewport related parameters.
+                * @param viewport3D is of type Acad.Viewport3D.
+                * @return Acad.ViewProperties.
+                * @throws TypeError
+                *
+                */
+                function convertViewport3D(viewport3D) {
+                    if (!(viewport3D instanceof Acad.Viewport3D)) {
+                        throw new TypeError("Input parameter should be Acad.Viewport3D type.");
+                    }
+                    var jsonObj = AutoCAD.CurrentViewportInterop.convertViewport3D(viewport3D);
+                    var position = new Acad.Point3d(jsonObj.position.x, jsonObj.position.y, jsonObj.position.z);
+                    var target = new Acad.Point3d(jsonObj.target.x, jsonObj.target.y, jsonObj.target.z);
+                    var upVector = new Acad.Vector3d(jsonObj.upVector.x, jsonObj.upVector.y, jsonObj.upVector.z);
+                    var fieldWidth = jsonObj.fieldWidth;
+                    var fieldHeight = jsonObj.fieldHeight;
+                    var projection = jsonObj.projection;
+                    return new Acad.ViewProperties(position, target, upVector, fieldWidth, fieldHeight, projection);
+                }
+                CurrentViewport.convertViewport3D = convertViewport3D;
+            })(Editor.CurrentViewport || (Editor.CurrentViewport = {}));
+            var CurrentViewport = Editor.CurrentViewport;
+
+            /**
+            * This method captures the view along with layer information.
+            * @return id - Identifier used to uniquely identify this view.
+            * @throws Error
+            *
+            */
+            function captureView() {
+                throw Error('Fail to execute function');
+                return AutoCAD.EditorInterop.captureView();
+            }
+            Editor.captureView = captureView;
+            ;
+
+            /**
+            * This method restores the captured view information based on the supplied id identifier.
+            * @param id - Identifier used to uniquely identify this view.
+            * @throws Error
+            *
+            */
+            function restoreView(id) {
+                throw Error('Fail to execute function');
+                AutoCAD.EditorInterop.restoreView(parseInt(id));
+            }
+            Editor.restoreView = restoreView;
+            ;
+        })(AutoCAD.Editor || (AutoCAD.Editor = {}));
+        var Editor = AutoCAD.Editor;
+
+        // ----------------------------------------------------- DrawingFeedPrivate ----------------------------------------------------- //
+        (function (DrawingFeedPrivate) {
+            function getTruncatedString(body) {
+                var truncatedString = body;
+
+                var MAX_SIZE = 32;
+                if (truncatedString.length > MAX_SIZE) {
+                    truncatedString = truncatedString.slice(0, MAX_SIZE - 3) + "...";
+                }
+
+                return truncatedString;
+            }
+            DrawingFeedPrivate.getTruncatedString = getTruncatedString;
+
+            // Uses HTML5 canvas to generate image.
+            function createEncodedImageCanvas(imageType, bubbleID, postedBy, message) {
+                if (imageType == Acad.ImageType.StickyPreview || imageType == Acad.ImageType.Sticky) {
+                    var canvas = document.getElementById("tmpCanvas");
+                    var context = canvas.getContext("2d");
+
+                    // Use the dwg_feed_bubble.png image as a background
+                    var image = imageType == Acad.ImageType.Sticky ? sticky : stickyPreview;
+
+                    context.drawImage(image, 0, 0);
+                    context.font = "bold 11px arial";
+                    context.fillStyle = "#000000";
+
+                    var textSize = context.measureText(bubbleID);
+                    var x = (image.width - textSize.width) / 2;
+                    context.fillText(bubbleID, x, 14);
+
+                    // Now that our image is complete, encode it into a base64 string.
+                    var imgStr = canvas.toDataURL("image/png");
+
+                    // Split off the image data part.
+                    // The string looks something like this "data:image/png;base64,iVBORw0KGgoAAAANSUhE...
+                    return imgStr.split(",")[1];
+                }
+                if (imageType == Acad.ImageType.BubbleIdle || imageType == Acad.ImageType.BubbleActive) {
+                    var xOffset = 10;
+                    var lineheight = 18;
+
+                    var canvasEx = document.getElementById("tmpCanvasEx");
+                    var contextEx = canvasEx.getContext("2d");
+
+                    // Use the dwg_feed_bubble_ex.png image as a background
+                    var imageBubble = imageType == Acad.ImageType.BubbleIdle ? bubbleIdle : bubbleActive;
+
+                    contextEx.drawImage(imageBubble, 0, 0);
+
+                    // Draw the bubbleID
+                    contextEx.font = "bold 12px arial";
+                    contextEx.fillStyle = "#C0C0C0";
+
+                    var textSizeBubble = contextEx.measureText(bubbleID);
+
+                    var posX = imageBubble.width - textSizeBubble.width - xOffset;
+
+                    var posY = lineheight;
+
+                    contextEx.fillText(bubbleID, posX, posY);
+
+                    // Draw  postedBy
+                    contextEx.font = "bold 12px arial";
+                    contextEx.fillStyle = "#000000";
+
+                    textSizeBubble = contextEx.measureText(postedBy);
+                    posX = xOffset;
+
+                    contextEx.fillText(postedBy, posX, posY);
+
+                    // Draw  message
+                    contextEx.font = "12px arial";
+                    contextEx.fillStyle = "#000000";
+
+                    posY = 2 * lineheight;
+
+                    //wrapText(contextEx, message, x, y, 240, 18);
+                    var truncatedMsg = getTruncatedString(message);
+
+                    contextEx.fillText(truncatedMsg, posX, posY);
+
+                    // Now that our image is complete, encode it into a base64 string.
+                    var imgStrEx = canvasEx.toDataURL("image/png");
+
+                    // Split off the image data part.
+                    // The string looks something like this "data:image/png;base64,iVBORw0KGgoAAAANSUhE...
+                    return imgStrEx.split(",")[1];
+                }
+            }
+            DrawingFeedPrivate.createEncodedImageCanvas = createEncodedImageCanvas;
+
+            function wrapText(context, text, x, y, maxWidth, lineHeight) {
+                var words = text.split(" ");
+                var line = "";
+                var n;
+                for (n = 0; n < words.length; n++) {
+                    var testLine = line + words[n] + " ";
+                    var metrics = context.measureText(testLine);
+                    var testWidth = metrics.width;
+                    if (testWidth > maxWidth) {
+                        context.fillText(line, x, y);
+                        line = words[n] + " ";
+                        y += lineHeight;
+                    } else {
+                        line = testLine;
+                    }
+                }
+                context.fillText(line, x, y);
+            }
+            DrawingFeedPrivate.wrapText = wrapText;
+
+            function supportsHTM5canvas() {
+                var canvas = document.createElement('canvas');
+                return !!canvas.getContext;
+            }
+            DrawingFeedPrivate.supportsHTM5canvas = supportsHTM5canvas;
+
+            function generateImage(imageType, bubbleID, postedBy, message) {
+                if (supportsHTM5canvas()) {
+                    return createEncodedImageCanvas(imageType, bubbleID, postedBy, message);
+                }
+
+                // AutoCAD never takes this code path because the AutoCAD hosting environment support html5
+                // To be implemented by users of IE 8 who don't have access to HTML 5 canvas
+                return exec(JSON.stringify({ functionName: 'Ac_Transientmanager_generateimage', invokeAsCommand: false, functionParams: { type: imageType, id: bubbleID, postedby: postedBy, message: message } }));
+            }
+            DrawingFeedPrivate.generateImage = generateImage;
+        })(AutoCAD.DrawingFeedPrivate || (AutoCAD.DrawingFeedPrivate = {}));
+        var DrawingFeedPrivate = AutoCAD.DrawingFeedPrivate;
+
+        /*
+        * Creates a Tooltip object
+        * @param message is the text that gets displayed
+        */
+        var Tooltip = (function () {
+            function Tooltip(message) {
+                this.message = message;
+            }
+            return Tooltip;
+        })();
+        AutoCAD.Tooltip = Tooltip;
+
+        /**
+        * Shows the tool tip at the given position.
+        * @param position represent device independent screen coordinates of type Acad.Point2d.
+        * @param toolTip Tooltip information of type Acad.Tooltip.
+        * @return integer Identifier for that Tooltip
+        */
+        function showTooltip(position, tooltip) {
+            if (!(position instanceof Acad.Point2d)) {
+                throw TypeError('position should be of type Acad.Point2d');
+            }
+            if (!(tooltip instanceof Tooltip)) {
+                throw TypeError('tooltip should be of type Acad.Tooltip');
+            }
+            if (!(tooltip.message)) {
+                throw Error('tooltip message cannot be empty');
+            }
+
+            var toolTipId = Acad.ApplicationInterop.showTooltip(position, tooltip);
+            return toolTipId;
+        }
+        AutoCAD.showTooltip = showTooltip;
+
+        /**
+        * Hides the tool tip .
+        * @param tooltipId identifier got when showing Tooltip of type integer.
+        */
+        function hideTooltip(tooltipId) {
+            if (typeof tooltipId === 'undefined') {
+                throw TypeError(" tooltipId is mandatory to hide tooltip");
+            }
+            if (!(typeof tooltipId == 'number')) {
+                throw TypeError(" tooltipId should be of type number");
+            }
+
+            Acad.ApplicationInterop.hideTooltip(tooltipId);
+        }
+        AutoCAD.hideTooltip = hideTooltip;
+
+        /**
+        * This class wraps the AcGeQuaternion ObjectARX class.
+        * AcGeQuaternion represents a vector in 3D space. It can be viewed as a structure consisting of 4 doubles.
+        * @param coordinates x, y, z and w correspondingly.
+        * @throws TypeError
+        *
+        */
+        var Quaternion = (function () {
+            function Quaternion(x, y, z, w) {
+                if (typeof x == 'number')
+                    this.x = x;
+else
+                    throw TypeError("x is not number");
+
+                if (typeof y == 'number')
+                    this.y = y;
+else
+                    throw TypeError("y is not number");
+
+                if (typeof z == 'number')
+                    this.z = z;
+else
+                    throw TypeError("z is not number");
+
+                if (typeof w == 'number')
+                    this.w = w;
+else
+                    throw TypeError("w is not number");
+            }
+            return Quaternion;
+        })();
+        AutoCAD.Quaternion = Quaternion;
+
+        /*
+        * Creates a container object which holds Viewport 3D related properties
+        * @param position of type Acad.Position3d
+        * @param rotation of type Acad.Quaternion
+        * @param projection of type Acad.Enum_Projection
+        * @param aspectRatio of type double
+        * @param distanceToOrbit of type double
+        * @param orthographicHeight of type double, optional when projection is perspective
+        * @param fieldOfView of type double, optional when projection is parallel
+        * @return a container object of type Acad.Viewport3D
+        *
+        */
+        var Viewport3D = (function () {
+            function Viewport3D(position, rotation, projection, aspectRatio, distanceToOrbit, orthographicHeight, fieldOfView) {
+                if (!(position instanceof Acad.Point3d)) {
+                    throw TypeError('position should be of type Acad.Point3d');
+                }
+                if (!(rotation instanceof Acad.Quaternion)) {
+                    throw TypeError('rotation should be of type Acad.Quaternion');
+                }
+                if (!(projection === Acad.Enum_Projection.Parallel || projection === Acad.Enum_Projection.Perspective)) {
+                    throw TypeError('projection should be  Acad.Enum_Projection.Parallel or Acad.Enum_Projection.Perspective ');
+                }
+                if (!Acad.isNumber(aspectRatio)) {
+                    throw TypeError('aspectRatio should be a double value');
+                }
+                if (!Acad.isNumber(distanceToOrbit)) {
+                    throw TypeError('distanceToOrbit should be a double value');
+                }
+                if (orthographicHeight) {
+                    if (!Acad.isNumber(orthographicHeight)) {
+                        throw TypeError('orthographicHeight should be a double value');
+                    }
+                    this.orthographicHeight = orthographicHeight;
+                }
+                if (fieldOfView) {
+                    if (!Acad.isNumber(fieldOfView)) {
+                        throw TypeError('fieldOfView should be a double value');
+                    }
+                    this.fieldOfView = fieldOfView;
+                }
+                this.position = position;
+                this.rotation = rotation;
+                this.projection = projection;
+                this.aspectRatio = aspectRatio;
+                this.distanceToOrbit = distanceToOrbit;
+            }
+            return Viewport3D;
+        })();
+        AutoCAD.Viewport3D = Viewport3D;
+    })(Autodesk.AutoCAD || (Autodesk.AutoCAD = {}));
+    var AutoCAD = Autodesk.AutoCAD;
+})(Autodesk || (Autodesk = {}));
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+//                 (C) Copyright 2013 by Autodesk, Inc.
+//
+// The information contained herein is confidential, proprietary to Autodesk,
+// Inc., and considered a trade secret as defined in section 499C of the
+// penal code of the State of California.  Use of this information by anyone
+// other than authorized employees of Autodesk, Inc. is granted only under a
+// written non-disclosure agreement, expressly prescribing the scope and
+// manner of such use.
+//
+///////////////////////////////////////////////////////////////////////////////
+var TransientViewMode;
+(function (TransientViewMode) {
+    TransientViewMode[TransientViewMode["None"] = 0] = "None";
+    TransientViewMode[TransientViewMode["Sticky"] = 1] = "Sticky";
+    TransientViewMode[TransientViewMode["Bubble"] = 2] = "Bubble";
+})(TransientViewMode || (TransientViewMode = {}));
+
+// Constants
+var acRectColor = "0x0066FF";
+var acXOffset = "-50";
+var acYOffset = "100";
+
+var modifierKeysMap = { 17: { 'keydown': false }, 18: { 'keydown': false } };
+
+////  acCurrentDocument - current document, string that is the value of *ONLINEFILEID
+////
+////  acDocuments - a collection of all document-specific objects where *ONLINEFILEID is the key
+////  Each item is a per-document container for following document-specific data:
+////
+////  acDocuments[acCurrentDocument].drawables - an array of transients
+////  acDocuments[acCurrentDocument].preview   - bool
+////  acDocuments[acCurrentDocument].viewMode - view mode (none, sticky or bubble)
+////  acDocuments[acCurrentDocument].layout-  object, current lauout handle and name. the handle is undefind if it is Model space
+////  acDocuments[acCurrentDocument].previousLayout - object
+////  acDocuments[acCurrentDocument].changedLayoutName - string
+////  acDocuments[acCurrentDocument].layoutSwitchingInProgress - bool
+////  acDocuments[acCurrentDocument].CVPort - string, current viewport number
+////  acDocuments[acCurrentDocument].tilemode - bool
+////  acDocuments[acCurrentDocument].initialized - bool
+////  acDocuments[acCurrentDocument].onlineFileIdType - number
+////  acDocuments[acCurrentDocument].onlineFileState - number
+////  Changes and new members added for Longbow
+////  acCurrentDocument - current document, string that is the value of *ONLINEFILEID (in addition, every document has on id if the user is signed in)
+////
+////
+////
+////
+////
+////
+////
+var acCurrentDocument = undefined;
+var acDocuments = new Object();
+var acUpdatePendingIds = new Object();
+
+var acUserId = "";
+
+// Default mode
+var acShowResolved = true;
+var acViewMode = TransientViewMode.Sticky;
+
+// Constant
+var acDefaultLayout = new Object();
+acDefaultLayout.handle = undefined;
+acDefaultLayout.name = "Model";
+
+var acGWTSelectPostCallback = false;
+var acSelectPostId = "";
+var acDocumentSwitchingInProgress = false;
+
+// Draw rectangle and blue sticky
+function drawAreaPreview(upperLeft, lowerRight, color) {
+    try  {
+        // draw rectangle first
+        var id = drawRectangleTransient(upperLeft, lowerRight, "Dashed", '30', color);
+        saveRectangleTransient(id);
+
+        //  image point
+        var imagePoint = new Array();
+        imagePoint[0] = upperLeft[0] + (lowerRight[0] - upperLeft[0]) / 2.0;
+        imagePoint[1] = upperLeft[1] + (lowerRight[1] - upperLeft[1]) / 2.0;
+        imagePoint[2] = upperLeft[2] + (lowerRight[2] - upperLeft[2]) / 2.0;
+
+        var id = drawImageTransient(Acad.ImageType.StickyPreview, '', '', '', imagePoint);
+        saveImageTransient(Acad.ImageType.StickyPreview, id);
+        acDocuments[acCurrentDocument].preview = true;
+    } catch (e) {
+        designFeedError("drawAreaPreview() failed. " + e.message);
+    }
+}
+;
+
+//Show yellow sticky note and store all information related to post
+function showPost(post, bPreview) {
+    var activity = post.activity;
+
+    var upperLeft, lowerRight;
+
+    var point;
+    if (activity.polygons[0].pointCount == 4) {
+        upperLeft = convertPoint3dIntoArray(activity.polygons[0].points[0]);
+        lowerRight = convertPoint3dIntoArray(activity.polygons[0].points[2]);
+        point = getCenter(upperLeft, lowerRight);
+    } else if (activity.polygons[0].pointCount == 2) {
+        upperLeft = convertPoint3dIntoArray(activity.polygons[0].points[0]);
+        lowerRight = convertPoint3dIntoArray(activity.polygons[0].points[1]);
+        point = getCenter(upperLeft, lowerRight);
+    } else {
+        point = convertPoint3dIntoArray(activity.polygons[0].points[0]);
+    }
+
+    var imagePoint, bubbleType;
+
+    if (acViewMode == TransientViewMode.Sticky) {
+        bubbleType = Acad.ImageType.Sticky;
+
+        if (upperLeft && lowerRight) {
+            imagePoint = getCenter(upperLeft, lowerRight);
+        } else {
+            imagePoint = point;
+        }
+    } else if (acViewMode == TransientViewMode.Bubble) {
+        bubbleType = Acad.ImageType.BubbleIdle;
+        imagePoint = point;
+    }
+
+    var index = acDocuments[acCurrentDocument].drawables.length;
+
+    if (bPreview) {
+        index = index - 1;
+        var previewSticky = acDocuments[acCurrentDocument].drawables[index].stickyPreviewId;
+
+        // Erase blue preview sticky
+        eraseTransient(previewSticky);
+
+        if (acDocuments[acCurrentDocument].drawables[index].rectangleId) {
+            // Hide rectangle, we will use same transient in future
+            var ids = new Array();
+            ids[0] = acDocuments[acCurrentDocument].drawables[index].rectangleId;
+            showTransients(ids, false);
+        }
+    } else {
+        acDocuments[acCurrentDocument].drawables[index] = new Object();
+    }
+
+    var transientId = undefined;
+
+    if (acViewMode != TransientViewMode.None) {
+        transientId = drawImageTransient(bubbleType, activity.postNumber, activity.actor.name, activity.body, imagePoint);
+    }
+
+    // Save transient object/data for future use
+    savePostInformation(index, transientId, activity, point, upperLeft, lowerRight);
+
+    if (bPreview == true)
+        acDocuments[acCurrentDocument].preview = false;
+}
+;
+
+//Add post information
+function addPost(post) {
+    try  {
+        var index = acDocuments[acCurrentDocument].drawables.length;
+        acDocuments[acCurrentDocument].drawables[index] = new Object();
+
+        var imagePoint = undefined;
+        if (post.point) {
+            imagePoint = convertPoint3dIntoArray(post.point);
+        }
+
+        var upperLeft = undefined, lowerRight = undefined;
+
+        if (post.activity.polygons && post.activity.polygons[0].pointCount == 4) {
+            upperLeft = convertPoint3dIntoArray(post.activity.polygons[0].points[0]);
+            lowerRight = convertPoint3dIntoArray(post.activity.polygons[0].points[2]);
+        }
+
+        savePostInformation(index, undefined, post.activity, imagePoint, upperLeft, lowerRight);
+    } catch (e) {
+        designFeedError("addPost() failed. " + e.message);
+    }
+}
+
+// Create all post transient (yellow sticky) at the time of open drawing
+function addAllPost(jsonString) {
+    var posts = JSON.parse(jsonString);
+    if (typeof posts === 'undefined')
+        return;
+    if (typeof posts.retValue !== 'undefined')
+        posts = posts.retValue;
+
+    try  {
+        // layout handle is not stored for "model" tab on server, so we set as acDefaultLayout (undefined) in local database
+        // this function take care of mspace/pspace and provides proper layout handle
+        var layout = getActiveLayout();
+
+        for (var index in posts) {
+            var activity = posts[index].activity;
+            var postIndex = getIndexByPostId(activity.id);
+
+            if (postIndex == -1) {
+                if ((activity.layoutIndex == layout.handle || activity.layoutName == layout.name) && posts[index].point) {
+                    showPost(posts[index], false);
+                } else {
+                    addPost(posts[index]);
+                }
+            }
+        }
+        //        acDocuments[acCurrentDocument].initialized = true;   // set true without any condition
+    } catch (e) {
+        designFeedError("addAllPost() failed. " + e.message);
+    }
+}
+;
+
+function updatePost(jsonString) {
+    var ids = new Array();
+
+    var post = JSON.parse(jsonString);
+    if (typeof post === 'undefined')
+        return;
+    if (typeof post.retValue !== 'undefined')
+        post = post.retValue;
+
+    var index = getIndexByPostId(post.activity.id);
+
+    if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], acDocuments[acCurrentDocument].layout)) {
+        if (acViewMode == TransientViewMode.Sticky) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].stickyId) && post.activity.status == 'open') {
+                createStickyTransient(index);
+            } else {
+                if ((!(acDocuments[acCurrentDocument].drawables[index].selected)) && (acDocuments[acCurrentDocument].drawables[index].stickyId)) {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+                }
+            }
+        } else if (acViewMode == TransientViewMode.Bubble) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId) && post.activity.status == 'open') {
+                createBubbleTransient(Acad.ImageType.BubbleIdle, index);
+            } else {
+                if ((!(acDocuments[acCurrentDocument].drawables[index].selected)) && (acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)) {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+                }
+            }
+        }
+    }
+
+    if (!acShowResolved && acDocuments[acCurrentDocument].drawables[index].selected) {
+        if (acDocuments[acCurrentDocument].drawables[index].rectangleId)
+            ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+
+        if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId)
+            ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleActiveId);
+
+        acDocuments[acCurrentDocument].drawables[index].selected = false;
+    }
+
+    if (ids.length) {
+        showTransients(ids, acShowResolved);
+    }
+
+    // update status of post in database
+    acDocuments[acCurrentDocument].drawables[index].status = post.activity.status;
+}
+;
+
+function deletePost(postId) {
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].postId == postId) {
+            var selected = acDocuments[acCurrentDocument].drawables[index].selected;
+
+            var ids = new Array();
+
+            if (acDocuments[acCurrentDocument].drawables[index].stickyId)
+                ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+
+            if (acDocuments[acCurrentDocument].drawables[index].bubbleId)
+                ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleId);
+
+            if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId)
+                ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleActiveId);
+
+            if (acDocuments[acCurrentDocument].drawables[index].rectangleId)
+                ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+
+            if (ids.length)
+                eraseTransients(ids);
+
+            acDocuments[acCurrentDocument].drawables.splice(index, 1);
+
+            if (selected) {
+                Acad.Editor.executeCommand("\3\3");
+            }
+
+            break;
+        }
+    }
+}
+;
+
+function drawRectangleTransient(upperLeft, lowerRight, lineType, lineWeight, color) {
+    var id;
+
+    try  {
+        var drawable = createDrawablePolyline(upperLeft, lowerRight, lineType, lineWeight, color, false);
+        var transientObject = new Acad.Transient();
+        id = transientObject.getId();
+
+        Acad.Application.activedocument.transientManager.addTransient(transientObject, drawable);
+    } catch (e) {
+        designFeedError("drawRectangleTransient() failed. " + e.message);
+    }
+
+    return id;
+}
+;
+
+function drawImageTransient(bubbleType, bubbleID, postedBy, message, imagePoint) {
+    var id;
+
+    try  {
+        var encoded_image = Acad.DrawingFeedPrivate.generateImage(bubbleType, bubbleID, postedBy, message);
+        var drawable = createDrawableImage(encoded_image, bubbleType, imagePoint, acXOffset, acYOffset);
+        var transientImage = new Acad.Transient();
+        id = transientImage.getId();
+
+        if (bubbleType != Acad.ImageType.StickyPreview) {
+            transientImage.addEventListener(transientImage.eventname.lbuttondown, mouseLButtonDownEventHandler);
+        }
+        Acad.Application.activedocument.transientManager.addTransient(transientImage, drawable);
+    } catch (e) {
+        designFeedError("drawImageTransient() failed. " + e.message);
+    }
+
+    return id;
+}
+;
+
+// Create yellow sticky transient image
+function createStickyTransient(index) {
+    var imagePoint = undefined;
+
+    if (acDocuments[acCurrentDocument].drawables[index].upperLeft && acDocuments[acCurrentDocument].drawables[index].lowerRight) {
+        imagePoint = getCenter(acDocuments[acCurrentDocument].drawables[index].upperLeft, acDocuments[acCurrentDocument].drawables[index].lowerRight);
+    } else {
+        imagePoint = acDocuments[acCurrentDocument].drawables[index].imagePoint;
+    }
+
+    if (imagePoint) {
+        var id = drawImageTransient(Acad.ImageType.Sticky, acDocuments[acCurrentDocument].drawables[index].postNumber, acDocuments[acCurrentDocument].drawables[index].postedBy, acDocuments[acCurrentDocument].drawables[index].message, imagePoint);
+
+        acDocuments[acCurrentDocument].drawables[index].stickyId = id;
+    }
+}
+;
+
+// Create bubble transient image
+function createBubbleTransient(imageType, index) {
+    if (acDocuments[acCurrentDocument].drawables[index].imagePoint == undefined)
+        return;
+
+    var id = drawImageTransient(imageType, acDocuments[acCurrentDocument].drawables[index].postNumber, acDocuments[acCurrentDocument].drawables[index].postedBy, acDocuments[acCurrentDocument].drawables[index].message, acDocuments[acCurrentDocument].drawables[index].imagePoint);
+
+    switch (imageType) {
+        case Acad.ImageType.BubbleIdle:
+            acDocuments[acCurrentDocument].drawables[index].bubbleIdleId = id;
+            break;
+        case Acad.ImageType.BubbleActive:
+            acDocuments[acCurrentDocument].drawables[index].bubbleActiveId = id;
+            break;
+    }
+}
+;
+
+function selectPost(index) {
+    // Hide current post as per view mode
+    var ids = [];
+
+    if (acViewMode == TransientViewMode.Sticky) {
+        if (acDocuments[acCurrentDocument].drawables[index].stickyId)
+            ids[0] = acDocuments[acCurrentDocument].drawables[index].stickyId;
+    } else if (acViewMode == TransientViewMode.Bubble) {
+        if (acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)
+            ids[0] = acDocuments[acCurrentDocument].drawables[index].bubbleIdleId;
+    }
+
+    if (ids.length) {
+        showTransients(ids, false);
+    }
+
+    // Show rectangle and active bubble
+    var rectangleId = acDocuments[acCurrentDocument].drawables[index].rectangleId;
+    var bubbleActiveId = acDocuments[acCurrentDocument].drawables[index].bubbleActiveId;
+
+    var transientIds = [];
+
+    if (!bubbleActiveId) {
+        createBubbleTransient(Acad.ImageType.BubbleActive, index);
+    } else {
+        transientIds.push(bubbleActiveId);
+    }
+
+    if (!rectangleId) {
+        if (acDocuments[acCurrentDocument].drawables[index].upperLeft && acDocuments[acCurrentDocument].drawables[index].lowerRight) {
+            rectangleId = drawRectangleTransient(acDocuments[acCurrentDocument].drawables[index].upperLeft, acDocuments[acCurrentDocument].drawables[index].lowerRight, "Dashed", '30', acRectColor);
+
+            acDocuments[acCurrentDocument].drawables[index].rectangleId = rectangleId;
+        }
+    } else {
+        transientIds.push(rectangleId);
+    }
+
+    if (transientIds.length)
+        showTransients(transientIds, true);
+
+    acDocuments[acCurrentDocument].drawables[index].selected = true;
+}
+;
+
+function deselectPost(index) {
+    var ids = [];
+
+    if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId) {
+        ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleActiveId);
+    }
+
+    if (acDocuments[acCurrentDocument].drawables[index].rectangleId) {
+        ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+    }
+
+    if (ids.length)
+        showTransients(ids, false);
+
+    // Show transient as per view mode
+    var transientIds = [];
+
+    if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], acDocuments[acCurrentDocument].layout)) {
+        if (acViewMode == TransientViewMode.Sticky) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].stickyId)) {
+                createStickyTransient(index);
+            } else {
+                transientIds.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+            }
+        } else if (acViewMode == TransientViewMode.Bubble) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)) {
+                createBubbleTransient(Acad.ImageType.BubbleIdle, index);
+            } else {
+                transientIds.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+            }
+        }
+    }
+
+    if (transientIds.length)
+        showTransients(transientIds, true);
+
+    acDocuments[acCurrentDocument].drawables[index].selected = false;
+}
+;
+
+// Save rectangle transient object
+function saveRectangleTransient(transientId) {
+    var length = acDocuments[acCurrentDocument].drawables.length;
+    acDocuments[acCurrentDocument].drawables[length] = new Object();
+    acDocuments[acCurrentDocument].drawables[length].rectangleId = transientId;
+}
+;
+
+// Save image transient object
+function saveImageTransient(imageType, transientId) {
+    var length = acDocuments[acCurrentDocument].drawables.length;
+    switch (imageType) {
+        case Acad.ImageType.StickyPreview:
+            acDocuments[acCurrentDocument].drawables[length - 1].stickyPreviewId = transientId;
+            break;
+        case Acad.ImageType.BubbleIdle:
+            acDocuments[acCurrentDocument].drawables[length - 1].bubbleIdleId = transientId;
+            acViewMode = TransientViewMode.Bubble;
+            break;
+        case Acad.ImageType.BubbleActive:
+            acDocuments[acCurrentDocument].drawables[length - 1].bubbleActiveId = transientId;
+            acViewMode = TransientViewMode.Bubble;
+            break;
+        default:
+            break;
+    }
+}
+;
+
+function savePostInformation(index, transientId, activity, imagePoint, upperLeft, lowerRight) {
+    acDocuments[acCurrentDocument].drawables[index].status = activity.status;
+
+    if (acViewMode == TransientViewMode.Sticky) {
+        acDocuments[acCurrentDocument].drawables[index].stickyId = transientId;
+    } else if (acViewMode == TransientViewMode.Bubble) {
+        acDocuments[acCurrentDocument].drawables[index].bubbleIdleId = transientId;
+    }
+
+    // Store layout handle
+    acDocuments[acCurrentDocument].drawables[index].layoutHandle = activity.layoutIndex;
+    acDocuments[acCurrentDocument].drawables[index].layoutName = activity.layoutName;
+
+    acDocuments[acCurrentDocument].drawables[index].postId = activity.id;
+    acDocuments[acCurrentDocument].drawables[index].postNumber = activity.postNumber;
+    acDocuments[acCurrentDocument].drawables[index].postedBy = activity.actor.name;
+    acDocuments[acCurrentDocument].drawables[index].message = activity.body;
+    acDocuments[acCurrentDocument].drawables[index].imagePoint = imagePoint;
+    acDocuments[acCurrentDocument].drawables[index].upperLeft = upperLeft;
+    acDocuments[acCurrentDocument].drawables[index].lowerRight = lowerRight;
+}
+;
+
+// Show transients objects
+function showTransients(ids, bShow) {
+    try  {
+        return Acad.Application.activedocument.transientManager.showTransients(ids, bShow);
+    } catch (e) {
+        designFeedError("showTransients() failed. " + e.message);
+    }
+}
+;
+
+// Erase selected transient object
+function eraseTransient(id) {
+    try  {
+        return Acad.Application.activedocument.transientManager.eraseTransient(id);
+    } catch (e) {
+        designFeedError("eraseTransient() failed. " + e.message);
+    }
+}
+;
+
+// Erase transients by ids
+function eraseTransients(ids) {
+    try  {
+        return Acad.Application.activedocument.transientManager.eraseTransients(ids);
+    } catch (e) {
+        designFeedError("eraseTransients() failed. " + e.message);
+    }
+}
+;
+
+function clearPreview() {
+    var index;
+
+    try  {
+        if (acDocuments[acCurrentDocument].drawables) {
+            index = acDocuments[acCurrentDocument].drawables.length - 1;
+
+            if (index < 0) {
+                return;
+            }
+
+            var ids = new Array();
+
+            if (acDocuments[acCurrentDocument].drawables[index].stickyPreviewId)
+                ids.push(acDocuments[acCurrentDocument].drawables[index].stickyPreviewId);
+
+            if (acDocuments[acCurrentDocument].drawables[index].rectangleId)
+                ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+
+            if (ids.length) {
+                eraseTransients(ids).then(function (args) {
+                    acDocuments[acCurrentDocument].drawables.splice(index, 1);
+                    acDocuments[acCurrentDocument].preview = false;
+                }, function (args) {
+                    designFeedError("onError() in clearPreview(). " + args);
+                });
+            }
+        }
+    } catch (e) {
+        designFeedError("clearPreview() failed. " + e.message);
+    }
+}
+;
+
+function showResolved() {
+    acShowResolved = true;
+
+    var ids = new Array();
+    ;
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], acDocuments[acCurrentDocument].layout) && acDocuments[acCurrentDocument].drawables[index].status == 'closed') {
+            if (acViewMode == TransientViewMode.Sticky) {
+                if (!(acDocuments[acCurrentDocument].drawables[index].stickyId)) {
+                    createStickyTransient(index);
+                } else {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+                }
+            } else if (acViewMode == TransientViewMode.Bubble) {
+                if (!(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)) {
+                    createBubbleTransient(Acad.ImageType.BubbleIdle, index);
+                } else {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+                }
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, true);
+}
+;
+
+// Hide resolved post
+function hideResolved() {
+    acShowResolved = false;
+
+    var ids = new Array();
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], acDocuments[acCurrentDocument].layout) && acDocuments[acCurrentDocument].drawables[index].status == 'closed') {
+            if (acDocuments[acCurrentDocument].drawables[index].selected) {
+                if (acDocuments[acCurrentDocument].drawables[index].rectangleId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+
+                if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleActiveId);
+
+                acDocuments[acCurrentDocument].drawables[index].selected = false;
+            } else {
+                if (acViewMode == TransientViewMode.Sticky) {
+                    if (acDocuments[acCurrentDocument].drawables[index].stickyId)
+                        ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+                } else if (acViewMode == TransientViewMode.Bubble) {
+                    if (acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)
+                        ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+                }
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, false);
+}
+;
+
+// Show yellow stickies
+function showStickies(layout) {
+    if (layout == null)
+        return;
+
+    var ids = [];
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], layout)) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].selected) && (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open')) {
+                if (!(acDocuments[acCurrentDocument].drawables[index].stickyId)) {
+                    createStickyTransient(index);
+                } else {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+                }
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, true);
+}
+;
+
+// remove all our transients from AutoCAD
+function eraseAllTransients() {
+    if (!acCurrentDocument || !acDocuments[acCurrentDocument])
+        return;
+
+    // Hide Transient for current view mode
+    var layout = getActiveLayout();
+
+    switch (acDocuments[acCurrentDocument].viewMode) {
+        case TransientViewMode.Sticky:
+            hideStickies(layout);
+            break;
+        case TransientViewMode.Bubble:
+            hideBubbles(layout);
+            break;
+        default:
+            break;
+    }
+
+    if (acDocuments[acCurrentDocument].preview == true)
+        clearPreview();
+}
+
+// Hide yellow stickies
+function hideStickies(layout) {
+    if (layout == null)
+        return;
+
+    var ids = [];
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], layout)) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].selected) && (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open')) {
+                if (acDocuments[acCurrentDocument].drawables[index].stickyId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, false);
+}
+;
+
+function showBubbles(layout) {
+    if (layout == null)
+        return;
+
+    var ids = [];
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], layout)) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].selected) && (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open')) {
+                if (!(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)) {
+                    createBubbleTransient(Acad.ImageType.BubbleIdle, index);
+                } else {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+                }
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, true);
+}
+;
+
+function hideBubbles(layout) {
+    if (layout == null)
+        return;
+
+    var ids = [];
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], layout)) {
+            if (!(acDocuments[acCurrentDocument].drawables[index].selected) && (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open')) {
+                if (acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, false);
+}
+;
+
+// Show layout transient, a different logic compare to showStickies/showBubbles
+function showLayoutTransients(layout) {
+    if (layout == null)
+        return;
+
+    var ids = [];
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], layout)) {
+            if (acViewMode == TransientViewMode.Sticky) {
+                if (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open') {
+                    if (!(acDocuments[acCurrentDocument].drawables[index].stickyId)) {
+                        createStickyTransient(index);
+                    } else {
+                        ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+                    }
+                }
+            } else if (acViewMode == TransientViewMode.Bubble) {
+                if (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open') {
+                    if (!(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)) {
+                        createBubbleTransient(Acad.ImageType.BubbleIdle, index);
+                    } else {
+                        ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+                    }
+                }
+            }
+        }
+    }
+
+    if (ids.length) {
+        showTransients(ids, true).then(function (args) {
+            if (acGWTSelectPostCallback) {
+                handleLayoutChanged();
+                acGWTSelectPostCallback = false;
+            }
+        }, function (args) {
+            // omitted intentionally
+        });
+    } else {
+        if (acGWTSelectPostCallback) {
+            handleLayoutChanged();
+            acGWTSelectPostCallback = false;
+        }
+    }
+}
+;
+
+// Hide transient in layouts,
+function hideLayoutTransients(layout) {
+    var ids = [];
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (isPostInLayout(acDocuments[acCurrentDocument].drawables[index], layout)) {
+            if (acShowResolved || acDocuments[acCurrentDocument].drawables[index].status == 'open') {
+                if (acDocuments[acCurrentDocument].drawables[index].stickyId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+
+                if (acDocuments[acCurrentDocument].drawables[index].bubbleIdleId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleIdleId);
+
+                if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId)
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleActiveId);
+
+                if (acDocuments[acCurrentDocument].drawables[index].rectangleId && !(acDocuments[acCurrentDocument].drawables[index].stickyPreviewId)) {
+                    ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+                }
+            }
+        }
+    }
+
+    if (ids.length)
+        showTransients(ids, false);
+}
+;
+
+function manageLayoutSwitch() {
+    hideLayoutTransients(acDocuments[acCurrentDocument].previousLayout);
+
+    if (isTilemode() || isInPSpace()) {
+        showLayoutTransients(acDocuments[acCurrentDocument].layout);
+    } else if (isInMSpace()) {
+        showLayoutTransients(acDefaultLayout);
+    }
+}
+;
+
+function manageViewportSwitch() {
+    if (isInPSpace()) {
+        showLayoutTransients(acDocuments[acCurrentDocument].layout);
+    } else if (isInMSpace()) {
+        showLayoutTransients(acDefaultLayout);
+    }
+}
+;
+
+function manageDocumentSwitchCmdCallback(args) {
+    try  {
+        if (!acCurrentDocument || !acDocuments[acCurrentDocument])
+            return JSON.stringify({ retCode: Acad.ErrorStatus.eJsFail });
+        ;
+
+        if (acDocuments[acCurrentDocument].onlineFileState == 1) {
+            showSyncingPage();
+            return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+            ;
+        }
+
+        // Check if the current document id is being swapped. This is an
+        // additional check, the above check in most cases should suffice.
+        Object.keys(acUpdatePendingIds).forEach(function (key) {
+            if (acUpdatePendingIds[key]) {
+                if (acUpdatePendingIds[key].sourceId === acCurrentDocument) {
+                    showSyncingPage();
+                    return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+                    ;
+                }
+            }
+        });
+
+        if (acUpdatePendingIds[acCurrentDocument]) {
+            showSyncingPage();
+            return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+            ;
+        }
+
+        if (acDocuments[acCurrentDocument] && checkDesignFeedState()) {
+            manageDocumentSwitch();
+        }
+        return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+    } catch (e) {
+        designFeedError("manageDocumentSwitchCmdCallback() failed. " + e.message);
+    }
+}
+
+//Note: This fucntion should call when ducument switch realized
+function manageDocumentSwitch() {
+    try  {
+        // Call GWT callback fucntion to update design feed palette
+        handleDrawingSwitch();
+
+        if (acDocuments[acCurrentDocument] && acDocuments[acCurrentDocument].viewMode != acViewMode) {
+            changeViewMode(acViewMode);
+        }
+
+        if (acDocuments[acCurrentDocument] && acDocuments[acCurrentDocument].preview == true) {
+            clearPreview();
+        }
+    } catch (e) {
+        designFeedError("manageDocumentSwitch() failed. " + e.message);
+    }
+}
+;
+
+function getSystemVariable(name) {
+    var sysvar;
+
+    try  {
+        sysvar = Acad.SystemVariableCollection.getSystemVariable(name);
+    } catch (e) {
+        designFeedError("getSystemVariable() failed. " + e.message);
+    }
+
+    return sysvar;
+}
+;
+
+// returns layout handle considering mspace/pspace case
+function getActiveLayout() {
+    var layout = undefined;
+    if (isInMSpace()) {
+        layout = acDefaultLayout;
+    } else {
+        layout = acDocuments[acCurrentDocument].layout;
+    }
+    return layout;
+}
+;
+
+// Update layout in acCurrentDocument and return layout name
+function updateLayout(sysvarvalue) {
+    if (!acDocuments[acCurrentDocument])
+        return;
+
+    var layoutName = sysvarvalue.split("*");
+
+    if (!acDocuments[acCurrentDocument].previousLayout)
+        acDocuments[acCurrentDocument].previousLayout = new Object();
+
+    if (acDocuments[acCurrentDocument].layout) {
+        acDocuments[acCurrentDocument].previousLayout.handle = acDocuments[acCurrentDocument].layout.handle;
+        acDocuments[acCurrentDocument].previousLayout.name = acDocuments[acCurrentDocument].layout.name;
+    } else {
+        acDocuments[acCurrentDocument].previousLayout.handle = acDefaultLayout.handle;
+        acDocuments[acCurrentDocument].previousLayout.name = acDefaultLayout.name;
+    }
+
+    if (!acDocuments[acCurrentDocument].layout)
+        acDocuments[acCurrentDocument].layout = new Object();
+
+    acDocuments[acCurrentDocument].layout.name = layoutName[0];
+
+    if (layoutName[0] == "Model") {
+        acDocuments[acCurrentDocument].layout.handle = acDefaultLayout.handle;
+        acDocuments[acCurrentDocument].tilemode = true;
+    } else {
+        acDocuments[acCurrentDocument].layout.handle = layoutName[1];
+        acDocuments[acCurrentDocument].tilemode = false;
+    }
+
+    return layoutName[0];
+}
+;
+
+// Update cvport value in database and return the same
+function updateCVport(sysvarvalue) {
+    if (!acDocuments[acCurrentDocument])
+        return;
+
+    acDocuments[acCurrentDocument].CVPort = sysvarvalue;
+    return acDocuments[acCurrentDocument].CVPort;
+}
+
+// Current Viewport Change event
+function currentViewportChangeEvent(eventName, sysvars) {
+    if (sysvars.length != 1 && sysvars[0].name != "CVPORT") {
+        return;
+    }
+    if (!(acDocuments[acCurrentDocument]))
+        return;
+
+    try  {
+        updateCVport(sysvars[0].newvalue);
+
+        if (acDocuments[acCurrentDocument].drawables && !(acDocuments[acCurrentDocument].layoutSwitchingInProgress)) {
+            manageViewportSwitch();
+        }
+    } catch (e) {
+        designFeedError("currentViewportChangeEvent() failed. " + e.message);
+    }
+}
+;
+
+function regsiterCurrentViewportChangeNotification() {
+    try  {
+        Acad.SystemVariableCollection.addEventListener("CVPORT", currentViewportChangeEvent);
+    } catch (e) {
+        designFeedError("regsiterCurrentViewportChangeNotification() failed. " + e.message);
+    }
+}
+;
+
+// Online user status Change event
+function onlineUserStatusChangeEvent(eventName, sysvars) {
+    if (sysvars.length != 1 && sysvars[0].name != "ONLINEUSERID") {
+        return;
+    }
+
+    try  {
+        var prevId = acCurrentDocument;
+        acUserId = sysvars[0].newvalue;
+        if (acUserId == "" && acDocuments[prevId])
+            deleteAllTransients();
+
+        // manage state transition
+        var docstate = getCurrentDocumentStates();
+        var newId = docstate.onlineFileID;
+
+        if (newId != prevId && acDocuments[prevId]) {
+            // swap id
+            acCurrentDocument = newId;
+            var docObj = acDocuments[prevId];
+            acDocuments[newId] = docObj;
+            delete acDocuments[prevId];
+        }
+
+        // Call GWT callback function
+        handleOnlineUserStatusChanged(eventName, sysvars[0].name);
+    } catch (e) {
+        designFeedError("onlineUserStatusChangeEvent() failed. " + e.message);
+    }
+}
+;
+
+function registerOnlineUserStatusNotification() {
+    try  {
+        Acad.SystemVariableCollection.addEventListener("ONLINEUSERID", onlineUserStatusChangeEvent);
+    } catch (e) {
+        designFeedError("registerOnlineUserStatusNotification() failed. " + e.message);
+    }
+}
+;
+
+function parentIdUpdated(sourcefileId, destfileId) {
+    var refreshpalette;
+    if (acUpdatePendingIds[acCurrentDocument]) {
+        refreshpalette = true;
+    }
+
+    if (acUpdatePendingIds[destfileId]) {
+        delete acUpdatePendingIds[destfileId];
+    }
+
+    if (refreshpalette) {
+        manageDocumentSwitch();
+    }
+}
+
+// ONLINEFILEID modified event - *ONLINEFILEID sysvar changed event.
+function onlineFileIdModifiedEvent(eventName, sysvars) {
+    if (sysvars.length != 1 && sysvars[0].name != "*ONLINEFILEID") {
+        return;
+    }
+
+    var bDocSwitching = acDocumentSwitchingInProgress;
+    acDocumentSwitchingInProgress = false;
+
+    if (!acCurrentDocument || Object.keys(acDocuments).length == 0)
+        return;
+
+    try  {
+        if (!bDocSwitching) {
+            var acadInZeroDoc = isInZeroDocState();
+            if (acDocuments[acCurrentDocument] && !acadInZeroDoc) {
+                deleteAllTransients();
+            }
+
+            if (!acadInZeroDoc) {
+                setupCurrentDocumentStates(getCurrentDocumentStates());
+                Acad.Editor.executeCommand("\3\3_DESIGNFEEDMANAGEDOCSWITCH");
+            }
+        }
+    } catch (e) {
+        designFeedError("onlineFileIdModifiedEvent() failed. " + e.message);
+    }
+}
+;
+
+function registerDocumentSwtichNotification() {
+    try  {
+        Acad.SystemVariableCollection.addEventListener("*ONLINEFILEID", onlineFileIdModifiedEvent);
+    } catch (e) {
+        designFeedError("registerDocumentSwtichNotification() failed. " + e.message);
+    }
+}
+;
+
+function registerDocumentActivationNotification() {
+    try  {
+        AcDwgFeed.AcDocument.addHandler_becameCurrent(documentBecameCurrentCallback);
+    } catch (e) {
+        designFeedError("registerDocumentActivationNotification() failed. " + e.message);
+    }
+}
+;
+
+function registerIdTransitionNotification() {
+    try  {
+        AcDwgFeed.AcDocument.addHandler_idChanged(idTransitionCallback);
+    } catch (e) {
+        designFeedError("registerIdTransitionNotification () failed. " + e.message);
+    }
+}
+
+function syncToCloudBeginCallback() {
+    if (acDocuments[acCurrentDocument]) {
+        acDocuments[acCurrentDocument].onlineFileState = 1;
+        showSyncingPage();
+        return;
+    }
+}
+
+function syncToCloudEndCallback(onlineSyncedIds) {
+    var srcId;
+    var destId;
+    var i, j;
+    var newPendingIds = new Object();
+    for (i = 0; i < onlineSyncedIds.length; i++) {
+        if (onlineSyncedIds[i].saveType == 1) {
+            srcId = onlineSyncedIds[i].sourceId;
+            destId = onlineSyncedIds[i].destId;
+            if (!acUpdatePendingIds[destId]) {
+                acUpdatePendingIds[destId] = {};
+                acUpdatePendingIds[destId].sourceId = srcId;
+            }
+
+            newPendingIds[destId] = {};
+            newPendingIds[destId].sourceId = srcId;
+            updateParentId(srcId, destId);
+        }
+    }
+
+    Object.keys(newPendingIds).forEach(function (key) {
+        if (!acUpdatePendingIds[key]) {
+            acUpdatePendingIds[key] = {};
+            acUpdatePendingIds[key].sourceId = newPendingIds[key].sourceId;
+        }
+    });
+}
+
+function registerSyncToCloudNotification() {
+    try  {
+        AcDwgFeed.AcDocument.addHandler_commentSyncBegin(syncToCloudBeginCallback);
+        AcDwgFeed.AcDocument.addHandler_commentSyncEnd(syncToCloudEndCallback);
+    } catch (e) {
+        designFeedError("registerSyncToCloudNotification() failed. " + e.message);
+    }
+}
+
+function setupCurrentDocumentStates(docState) {
+    var fileId = docState.onlineFileID;
+    var hash = docState.documentHashTag;
+    var doc = '';
+    var preview = false;
+    var fileIdType = 0;
+    for (doc in acDocuments) {
+        if ((doc != fileId) && (acDocuments[doc].hashtag == hash)) {
+            for (var index in acDocuments[doc].drawables) {
+                delete acDocuments[doc].drawables[index];
+            }
+            delete acDocuments[doc].drawables;
+            delete acDocuments[doc];
+            break;
+        } else {
+            if ((acDocuments[doc].hashtag == hash) && (acDocuments[doc].preview == true)) {
+                preview = acDocuments[doc].preview;
+            }
+
+            if (acDocuments[doc].hashtag == hash) {
+                fileIdType = acDocuments[doc].onlineFileIdType;
+            }
+        }
+    }
+
+    acCurrentDocument = fileId;
+
+    if (acCurrentDocument != '.') {
+        initDocument();
+        acDocuments[acCurrentDocument].hashtag = docState.documentHashTag;
+        acDocuments[acCurrentDocument].documentPathname = docState.documentPathname;
+        acDocuments[acCurrentDocument].onlineSyncUrl = docState.onlineSyncUrl;
+        acDocuments[acCurrentDocument].onlineFileIdType = docState.onlineFileType;
+        acDocuments[acCurrentDocument].onlineFileState = docState.onlineFileState;
+        updateLayout(docState.clayout);
+        acDocuments[acCurrentDocument].CVPort = docState.cvport;
+        acDocuments[acCurrentDocument].tilemode = docState.tilemode;
+        acDocuments[acCurrentDocument].preview = preview;
+
+        if (fileIdType == 1 && acDocuments[acCurrentDocument].onlineFileIdType == 2) {
+            displayDesignFeedLocalTaskDialog();
+        }
+    }
+
+    return true;
+}
+;
+
+// On document activation, make sure that acCurrentDocument is pointing to the current document.
+function documentBecameCurrentCallback(jsonStr) {
+    if (!setupCurrentDocumentStates(jsonStr)) {
+        return false;
+    }
+    acDocumentSwitchingInProgress = true;
+    Acad.Editor.executeCommand("\3\3_DESIGNFEEDMANAGEDOCSWITCH");
+}
+;
+
+// Occurs on Id transition
+function idTransitionCallback(jsonStr) {
+    setupCurrentDocumentStates(jsonStr);
+    Acad.Editor.executeCommand("\3\3_DESIGNFEEDMANAGEDOCSWITCH");
+}
+
+function layoutSwitchEvent(eventName, sysvars) {
+    if (sysvars.length != 1 && sysvars[0].name != "CLAYOUT") {
+        return;
+    }
+    if (!(acDocuments[acCurrentDocument]))
+        return;
+
+    try  {
+        acDocuments[acCurrentDocument].layoutSwitchingInProgress = true;
+
+        var layoutName = updateLayout(sysvars[0].newvalue);
+
+        if (!acGWTSelectPostCallback) {
+            if (acDocuments[acCurrentDocument].drawables)
+                manageLayoutSwitch();
+        } else {
+            if (acDocuments[acCurrentDocument].changedLayoutName == layoutName) {
+                if (isInMSpace()) {
+                    Acad.Editor.executeCommand("\3\3_PSPACE");
+                } else {
+                    if (acDocuments[acCurrentDocument].drawables)
+                        manageLayoutSwitch();
+                }
+            }
+        }
+
+        acDocuments[acCurrentDocument].layoutSwitchingInProgress = false;
+    } catch (e) {
+        designFeedError("layoutSwitchEvent() failed. " + e.message);
+    }
+}
+;
+
+function registerLayoutSwtichNotification() {
+    try  {
+        Acad.SystemVariableCollection.addEventListener("CLAYOUT", layoutSwitchEvent);
+    } catch (e) {
+        designFeedError("registerLayoutSwtichNotification() failed. " + e.message);
+    }
+}
+;
+
+function setStyleSheet(title) {
+    var i;
+    var links = document.getElementsByTagName("link");
+    for (i = 0; i < links.length; i++) {
+        if ((links[i].rel.indexOf('stylesheet') != -1) && (links[i].title)) {
+            links[i].disabled = true;
+            if (links[i].title == title) {
+                links[i].disabled = false;
+            }
+        }
+    }
+}
+
+function themeSwitchEvent(eventName, sysvars) {
+    if (sysvars.length != 1 && sysvars[0].name != "COLORTHEME") {
+        return;
+    }
+
+    try  {
+        var theme = 'light';
+        if (sysvars[0].newvalue == 0) {
+            // Turn off switching to dark for MVS1 up-integration as we don't have full
+            // support for dark theme yet (CCS and images)
+            theme = 'dark';
+        }
+        setStyleSheet(theme);
+        if (theme === 'dark') {
+            setDarkTheme();
+        } else {
+            setLightTheme();
+        }
+        updateTheme();
+    } catch (e) {
+        designFeedError("themeSwitchEvent() failed. " + e.message);
+    }
+}
+;
+
+function registerThemeSwitchNotification() {
+    try  {
+        Acad.SystemVariableCollection.addEventListener("COLORTHEME", themeSwitchEvent);
+    } catch (e) {
+        designFeedError("registerThemeSwitchNotification() failed. " + e.message);
+    }
+}
+;
+
+function onDeselectPost(promptResult) {
+    try  {
+        var index = getIndexOfSelectedPost();
+        if (index != -1) {
+            deselectPost(index);
+
+            // Update Design Feed palette UI to clear post selection
+            handlePostDeSelected();
+        }
+    } catch (e) {
+        designFeedError("onDeselectPost() failed. " + e.message);
+    }
+}
+;
+
+function getSelectPostCommandKeywords() {
+    try  {
+        var options = new Acad.PromptKeywordOptions('');
+        var messageAndKeywords = getLocalizedMessage('DF_SpecifyPressESC');
+        var globalKeywords = 'ESC';
+        options.setMessageAndKeywords(messageAndKeywords, globalKeywords);
+        options.allowNone = false;
+        options.allowArbitraryInput = false;
+
+        Acad.Editor.getKeywords(options).then(function (promptResult) {
+            onDeselectPost(promptResult);
+        }, function (promptResult) {
+            onDeselectPost(promptResult);
+        });
+    } catch (e) {
+        designFeedError("getSelectPostCommandKeywords() failed. " + e.message);
+    }
+}
+;
+
+function createPointCommandCallback(args) {
+    try  {
+        if (acDocuments[acCurrentDocument] && checkDesignFeedState())
+            promptPoint();
+        return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+    } catch (e) {
+        designFeedError("createPointCommandCallback() failed. " + e.message);
+    }
+}
+
+function createAreaCommandCallback(args) {
+    try  {
+        if (acDocuments[acCurrentDocument] && checkDesignFeedState())
+            promptFirstPoint();
+        return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+    } catch (e) {
+        designFeedError("createAreaCommandCallback() failed. " + e.message);
+    }
+}
+
+function selectPostCommandCallback(args) {
+    try  {
+        if (acSelectPostId != "") {
+            handleZoomToPost(acSelectPostId);
+            selectActivity(acSelectPostId);
+            acSelectPostId = "";
+
+            // wait for user input
+            getSelectPostCommandKeywords();
+        }
+        return JSON.stringify({ retCode: Acad.ErrorStatus.eJsOk });
+    } catch (e) {
+        designFeedError("selectPostCommandCallback() failed. " + e.message);
+    }
+}
+;
+
+function registerACADCommand() {
+    try  {
+        // flags = ACRX_CMD_MODAL | ACRX_CMD_NOHISTORY | ACRX_CMD_REDRAW | ACRX_CMD_NOACTIONRECORDING
+        var cmdFlags = 0x00000000 | 0x00800000 | 0x00000004 | 0x04000000;
+        Acad.Editor.addCommand("ACJS_CMDS", "DESIGNFEEDSELECTPOST", "_DESIGNFEEDSELECTPOST", cmdFlags, selectPostCommandCallback);
+        Acad.Editor.addCommand("ACJS_CMDS", "DESIGNFEEDAREA", "_DESIGNFEEDAREA", cmdFlags, createAreaCommandCallback);
+        Acad.Editor.addCommand("ACJS_CMDS", "DESIGNFEEDPOINT", "_DESIGNFEEDPOINT", cmdFlags, createPointCommandCallback);
+        Acad.Editor.addCommand("ACJS_CMDS", "DESIGNFEEDMANAGEDOCSWITCH", "_DESIGNFEEDMANAGEDOCSWITCH", cmdFlags, manageDocumentSwitchCmdCallback);
+    } catch (e) {
+        designFeedError("registerACADCommand() failed. " + e.message);
+    }
+}
+;
+
+function setLayoutByName(layoutName) {
+    try  {
+        var sysvar = Acad.SystemVariableCollection.getSystemVariable("CLAYOUT");
+        acGWTSelectPostCallback = true;
+        acDocuments[acCurrentDocument].changedLayoutName = layoutName;
+        sysvar.postValue(layoutName);
+    } catch (e) {
+        designFeedError("setLayoutByName() failed. " + e.message);
+    }
+}
+;
+
+function designFeedContextMenuCallback(e) {
+    if (!e) {
+        return;
+    }
+
+    if (e.target && e.target.className == 'DFTextBox') {
+        return;
+    }
+    e.preventDefault();
+}
+
+function disabledKeyboardEventPropagation(e) {
+    if (e) {
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        } else if (window.event) {
+            window.event.cancelBubble = true;
+        }
+    }
+}
+
+function overrideKeyboardEvent(e) {
+    var suppressKeys = false;
+    if (modifierKeysMap[e.keyCode]) {
+        if (e.type == "keydown") {
+            modifierKeysMap[e.keyCode].keydown = true;
+        } else if (e.type == "keyup") {
+            modifierKeysMap[e.keyCode].keydown = false;
+        }
+    }
+
+    switch (e.keyCode) {
+        case 116:
+            suppressKeys = true;
+            break;
+        case 123:
+            suppressKeys = true;
+            var sysvar = Acad.SystemVariableCollection.getSystemVariable("useri1");
+            if (sysvar.value == 73) {
+                suppressKeys = false;
+            }
+            break;
+        case 187:
+        case 107:
+        case 189:
+        case 109:
+        case 82:
+        case 114:
+            if (modifierKeysMap[17].keydown) {
+                suppressKeys = true;
+            }
+            break;
+        case 37:
+        case 39:
+            if (modifierKeysMap[18].keydown) {
+                suppressKeys = true;
+            }
+            break;
+    }
+    if (suppressKeys) {
+        disabledKeyboardEventPropagation(e);
+        e.preventDefault();
+        return false;
+    }
+}
+
+function init() {
+    initApp();
+}
+
+// Initialize Design Feed and register sysvar notifications
+function initApp() {
+    var docStates;
+    try  {
+        docStates = getCurrentDocumentStates();
+    } catch (e) {
+    }
+
+    try  {
+        registerDocumentActivationNotification();
+        registerIdTransitionNotification();
+
+        // before anything, set up the current document since
+        // all event handlers registered below will miss the first
+        // events that are already happened for this doucment
+        var sysvar = Acad.SystemVariableCollection.getSystemVariable("ONLINEUSERID");
+        acUserId = sysvar.value;
+        if (docStates) {
+            setupCurrentDocumentStates(docStates);
+        }
+
+        var theme = 'light';
+        if (Acad.SystemVariableCollection.getSystemVariable("COLORTHEME").value == 0) {
+            // Turn off switching to dark for MVS1 up-integration as we don't have full
+            // support for dark theme yet (CCS and images)
+            theme = 'dark';
+        }
+        setStyleSheet(theme);
+        if (theme === 'dark') {
+            setDarkTheme();
+        } else {
+            setLightTheme();
+        }
+
+        // Please don't change the order, we are getting assert from channelImp.cpp at line 156
+        registerOnlineUserStatusNotification();
+        registerDocumentSwtichNotification();
+        registerLayoutSwtichNotification();
+        regsiterCurrentViewportChangeNotification();
+        regsiterDocumentToBeDestroyedNotification();
+        registerThemeSwitchNotification();
+        registerSyncToCloudNotification();
+        registerCloneCommentCallback();
+
+        // register ACAD command
+        registerACADCommand();
+
+        // DesignFeed Initialization
+        initiateDrawingFeed();
+
+        if (document.addEventListener) {
+            document.addEventListener('contextmenu', designFeedContextMenuCallback, false);
+        }
+
+        // Register keyboard handler to suppress browser shortcut keys.
+        document.onkeydown = overrideKeyboardEvent;
+        document.onkeyup = overrideKeyboardEvent;
+    } catch (e) {
+        designFeedError("initApp() failed. " + e.message);
+    }
+}
+;
+
+//Initialize document
+function initDocument() {
+    if (!acDocuments[acCurrentDocument]) {
+        acDocuments[acCurrentDocument] = {};
+    }
+
+    if (!acDocuments[acCurrentDocument].drawables) {
+        acDocuments[acCurrentDocument].drawables = new Array();
+    }
+    acDocuments[acCurrentDocument].hashtag = 0;
+    acDocuments[acCurrentDocument].documentPathname = undefined;
+    acDocuments[acCurrentDocument].onlineSyncUrl = undefined;
+    acDocuments[acCurrentDocument].onlineFileIdType = undefined;
+    acDocuments[acCurrentDocument].onlineFileState = undefined;
+    acDocuments[acCurrentDocument].preview = false;
+    delete acDocuments[acCurrentDocument].previousLayout;
+    delete acDocuments[acCurrentDocument].layout;
+    acDocuments[acCurrentDocument].changedLayoutName = undefined;
+    acDocuments[acCurrentDocument].CVPort = undefined;
+    acDocuments[acCurrentDocument].viewMode = acViewMode;
+    acDocuments[acCurrentDocument].tilemode = true;
+
+    // This is used to check that document is intialize with all sysvar values properly
+    acDocuments[acCurrentDocument].layoutSwitchingInProgress = false;
+}
+;
+
+// Register callback to get notification "document to be destroyed" event
+function regsiterDocumentToBeDestroyedNotification() {
+    try  {
+        AcDwgFeed.AcDocument.addHandler_toBeDestroyed(documentToBeDestroyedCallback);
+    } catch (e) {
+        designFeedError("regsiterDocumentToBeDestroyedNotification() failed. " + e.message);
+    }
+}
+;
+
+// Delete document specific data related to the to-be-destroyed database
+function documentToBeDestroyedCallback(currentDocument) {
+    if (typeof currentDocument === 'undefined')
+        return;
+    if (acDocuments[currentDocument]) {
+        for (var index in acDocuments[currentDocument].drawables) {
+            delete acDocuments[currentDocument].drawables[index];
+        }
+        delete acDocuments[currentDocument].drawables;
+        delete acDocuments[currentDocument];
+    }
+}
+;
+
+//Delete all transients for current document
+function deleteAllTransients() {
+    var ids = [];
+
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].stickyId)
+            ids.push(acDocuments[acCurrentDocument].drawables[index].stickyId);
+
+        if (acDocuments[acCurrentDocument].drawables[index].bubbleId)
+            ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleId);
+
+        if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId)
+            ids.push(acDocuments[acCurrentDocument].drawables[index].bubbleActiveId);
+
+        if (acDocuments[acCurrentDocument].drawables[index].rectangleId)
+            ids.push(acDocuments[acCurrentDocument].drawables[index].rectangleId);
+
+        delete acDocuments[acCurrentDocument].drawables[index];
+    }
+
+    try  {
+        if (ids.length) {
+            eraseTransients(ids).then(function (args) {
+                // do nothing;
+            }, function (args) {
+                designFeedError("onError in deleteAllTransients(). " + args);
+            });
+        }
+    } catch (e) {
+        designFeedError("deleteAllTransients() failed. " + e.message);
+    }
+}
+;
+
+// Design Feed Error
+function designFeedError(message) {
+    // Call Gwt function to handle common error message
+    showDesignFeedError(message);
+}
+;
+
+function mouseLButtonDownEventHandler(eventname, args) {
+    if (args.eventname == "lbuttondown") {
+        var id = args['transient'].getId();
+        var index = getIndexByTransientId(id);
+
+        if (index != -1) {
+            var selected = acDocuments[acCurrentDocument].drawables[index].selected;
+
+            var postId = acDocuments[acCurrentDocument].drawables[index].postId;
+            handlePostSelected(postId);
+
+            if (!selected) {
+                activitySelected(postId);
+            }
+        } else {
+            designFeedError("Transient object is not found!!");
+        }
+    }
+}
+;
+
+function getIndexByTransientId(id) {
+    var index = -1;
+
+    if (acViewMode == TransientViewMode.Sticky)
+        index = getIndexByStickyId(id);
+else if (acViewMode == TransientViewMode.Bubble)
+        index = getIndexByBubbleIdleId(id);
+
+    if (index == -1)
+        index = getIndexByBubbleAciveId(id);
+
+    return index;
+}
+;
+
+function getIndexByStickyId(stickyId) {
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].stickyId == stickyId)
+            return index;
+    }
+
+    return -1;
+}
+;
+
+function getIndexByBubbleIdleId(bubbleId) {
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].bubbleIdleId == bubbleId)
+            return index;
+    }
+
+    return -1;
+}
+;
+
+function getIndexByBubbleAciveId(bubbleActiveId) {
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].bubbleActiveId == bubbleActiveId) {
+            return index;
+        }
+    }
+
+    return -1;
+}
+;
+
+function getIndexByPostId(postId) {
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].postId == postId)
+            return index;
+    }
+
+    return -1;
+}
+;
+
+function getIndexOfSelectedPost() {
+    for (var index in acDocuments[acCurrentDocument].drawables) {
+        if (acDocuments[acCurrentDocument].drawables[index].selected == true)
+            return index;
+    }
+
+    return -1;
+}
+;
+
+// convert into point array
+function convertPoint3dIntoArray(point) {
+    var pointArray = new Array();
+    pointArray[0] = point.x;
+    pointArray[1] = point.y;
+    pointArray[2] = point.z;
+    return pointArray;
+}
+;
+
+function getCenter(upperLeft, lowerRight) {
+    var center = new Array();
+    center[0] = upperLeft[0] + (lowerRight[0] - upperLeft[0]) / 2.0;
+    center[1] = lowerRight[1] + (upperLeft[1] - lowerRight[1]) / 2.0;
+    center[2] = lowerRight[2] + (upperLeft[2] - lowerRight[2]) / 2.0;
+    return center;
+}
+;
+
+function createDrawableImage(encoded_image, bubbleType, imagePoint, xOffset, yOffset) {
+    // This method builds up an xml string that contains data to create an AcGiTransient that represents the sticky.
+    // It uses the position obtained from getTransientLocation() and the encoded image from createEncodedImage().
+    // Note:  height and width of drawable and image must match;
+    var imageWidth = 29;
+    var imageHeight = 29;
+
+    if (bubbleType == Acad.ImageType.BubbleIdle || bubbleType == Acad.ImageType.BubbleActive) {
+        imageWidth = 247;
+        imageHeight = 84;
+    }
+
+    var cur_cursor = ' ';
+
+    // imagePoint is stored in WCS
+    var xAxis = Acad.SystemVariableCollection.getSystemVariable('UCSXDIR');
+    var yAxis = Acad.SystemVariableCollection.getSystemVariable('UCSYDIR');
+
+    var uDir = '" uDir="' + xAxis.value.x + ',' + xAxis.value.y + ',' + xAxis.value.z + '" ';
+    var vDir = ' vDir="' + yAxis.value.x + ',' + yAxis.value.y + ',' + yAxis.value.z + '" ';
+
+    var drawable = '<?xml version="1.0" encoding="utf-8"?> \
+      <!-- the event handler will receive the id--> \
+      <drawable \
+        xmlns="http://www.autodesk.com/AutoCAD/drawstream.xsd"\
+        xmlns:t="http://www.autodesk.com/AutoCAD/transient.xsd"\
+        t:onmouseover ="onmouseover"' + cur_cursor + '>\
+          <graphics color="#ff0000" id="id1">\
+            <scaleTransform type="World" extents="1,1,1">\
+            <graphics>\
+              <image srcHeight="' + imageHeight.toString() + '" srcWidth="' + imageWidth.toString() + '" xOffset="' + xOffset + '" yOffset="' + yOffset + uDir + vDir + 'position="' + imagePoint.toString() + '">' + encoded_image + '</image>\
+            </graphics>\
+            </scaleTransform>\
+          </graphics>\
+      </drawable>        ';
+
+    return drawable;
+}
+;
+
+function createDrawablePolyline(pickPoint, cornerPoint, linetype, lineweight, color, filled) {
+    // This method builds up an xml string that contains data to create an AcGiTransient that represents the polyline.
+    // Set the other rectangle corners based on the picked corners.
+    var cur_cursor = ' ';
+
+    // convert pickPoint and cornerPoint to display CS to calculate other two corner points
+    var ptPickScreen = Acad.Editor.CurrentViewport.pointToScreen(new Acad.Point3d(pickPoint[0], pickPoint[1], pickPoint[2]));
+    var ptCornerScreen = Acad.Editor.CurrentViewport.pointToScreen(new Acad.Point3d(cornerPoint[0], cornerPoint[1], cornerPoint[2]));
+
+    // Set the other rectangle corners based on the picked corners, in Display CS
+    // generated pt1 (which is x=ptPickScreen.x, y=ptCornerScreen.y) from device to WCS
+    var ptWCS = Acad.Editor.CurrentViewport.pointToWorld(new Acad.Point2d(ptPickScreen.x, ptCornerScreen.y));
+
+    var pt1 = new Array();
+    pt1[0] = ptWCS.x;
+    pt1[1] = ptWCS.y;
+    pt1[2] = ptWCS.z;
+
+    // generated pt3  (which is x=ptCornerScreen.x, y=ptPickScreen.y) from device to WCS
+    ptWCS = Acad.Editor.CurrentViewport.pointToWorld(new Acad.Point2d(ptCornerScreen.x, ptPickScreen.y));
+
+    var pt3 = new Array();
+    pt3[0] = ptWCS.x;
+    pt3[1] = ptWCS.y;
+    pt3[2] = ptWCS.z;
+
+    var drawable = '<?xml version="1.0" encoding="utf-8"?> \
+      <!-- the event handler will receive the id--> \
+      <drawable \
+        xmlns="http://www.autodesk.com/AutoCAD/drawstream.xsd"\
+        xmlns:t="http://www.autodesk.com/AutoCAD/transient.xsd"\
+        t:onmouseover ="onmouseover"' + cur_cursor + '>\
+          <graphics color="' + color + '" id="id1" lineweight="' + lineweight + '" linetype="' + linetype + '" filled="' + filled + '">\
+            <polyline isClosed="true">\
+              <vertices>\
+                <vertex>' + pickPoint.toString() + '</vertex>\
+                <vertex>' + pt1.toString() + '</vertex>\
+                <vertex>' + cornerPoint.toString() + '</vertex>\
+                <vertex>' + pt3.toString() + '</vertex>\
+              </vertices>\
+            </polyline>\
+          </graphics>\
+      </drawable>        ';
+    return drawable;
+}
+;
+
+function cloneComments(info) {
+    // delegate to the DrawingFeedController
+    handleCloneComments(info.sourceId, info.destId);
+}
+;
+
+function registerCloneCommentCallback() {
+    try  {
+        AcDwgFeed.AcDocument.addHandler_cloneComments(cloneComments);
+    } catch (e) {
+        designFeedError("registerCloneCommentCallback() failed. " + e.message);
+    }
+}
+;
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+//                 (C) Copyright 2012 by Autodesk, Inc.
+//
+// The information contained herein is confidential, proprietary to Autodesk,
+// Inc., and considered a trade secret as defined in section 499C of the
+// penal code of the State of California.  Use of this information by anyone
+// other than authorized employees of Autodesk, Inc. is granted only under a
+// written non-disclosure agreement, expressly prescribing the scope and
+// manner of such use.
+//
+///////////////////////////////////////////////////////////////////////////////
+var FILE_SIZE_LIMIT = 5000000;
+
+function firePointSelected(point) {
+    handlePointSelected(point);
+}
+;
+
+function fireRectSelected(rect) {
+    handleRectSelected(rect);
+}
+;
+
+function firePostSelected(postId) {
+    handlePostSelected(postId);
+}
+;
+
+function pZoomExtents() {
+    //parent.performZoomExtents();
+}
+;
+
+function askForRect() {
+    //parent.getRect();
+}
+;
+
+function onError(promptResult) {
+    designFeedError("onError() failed. " + JSON.stringify(promptResult));
+}
+;
+
+function convertPointPromptResultToWCS(promptResult) {
+    try  {
+        var ptWCS = Acad.Editor.CurrentViewport.ucsToWorld(new Acad.Point3d(promptResult.value.x, promptResult.value.y, promptResult.value.z));
+        promptResult.value.x = ptWCS.x;
+        promptResult.value.y = ptWCS.y;
+        promptResult.value.z = ptWCS.z;
+        return JSON.stringify(promptResult);
+    } catch (e) {
+        designFeedError("convertPointPromptResultToWCS() failed. " + e.message);
+        return JSON.stringify(promptResult);
+    }
+}
+;
+
+function getCorner(promptPointResult) {
+    // Subsequent prompt string after first prompt is not coming as new line on AutoCAD command prompt
+    // So add '\n' as prefix for prompt string
+    var basePoint = new Acad.Point3d(promptPointResult.value.x, promptPointResult.value.y, promptPointResult.value.z);
+    var options = new Acad.PromptCornerOptions('\n' + getLocalizedMessage('DF_SpecifySecondPoint'), basePoint);
+    try  {
+        Acad.Editor.getCorner(options).then(function (promptResult) {
+            if (promptResult.status == Acad.PromptStatus.Cancel) {
+                handleCommandCancelled();
+                return;
+            }
+
+            var promptResultWCS = convertPointPromptResultToWCS(promptResult);
+            handleCornerSelected(promptResultWCS);
+        }, function (promptResult) {
+            onError(promptResult);
+        });
+    } catch (e) {
+        designFeedError("getCorner() failed. " + e.message);
+    }
+}
+;
+
+function getFirstPoint() {
+    try  {
+        // DESIGNFEEDAREA command entry point
+        Acad.Editor.executeCommand("\3\3_DESIGNFEEDAREA");
+    } catch (e) {
+        designFeedError("getFirstPoint() failed. " + e.message);
+
+        //fallback
+        promptFirstPoint();
+    }
+}
+;
+
+function promptFirstPoint() {
+    try  {
+        var options = new Acad.PromptPointOptions(getLocalizedMessage('DF_SpecifyArea'));
+        Acad.Editor.getPoint(options).then(function (promptResult) {
+            var promptResultWCS = convertPointPromptResultToWCS(promptResult);
+            handleFirstPointSelected(promptResultWCS);
+        }, function (promptResult) {
+            onError(promptResult);
+        });
+    } catch (e) {
+        designFeedError("promptFirstPoint() failed. " + e.message);
+    }
+}
+;
+
+function getPoint() {
+    try  {
+        // DESIGNFEEDPOINT command entry point
+        Acad.Editor.executeCommand("\3\3_DESIGNFEEDPOINT");
+    } catch (e) {
+        designFeedError("getPoint() failed. " + e.message);
+
+        // fallback
+        promptPoint();
+    }
+}
+;
+
+function promptPoint() {
+    try  {
+        var options = new Acad.PromptPointOptions(getLocalizedMessage('DF_SpecifyPosition'));
+        Acad.Editor.getPoint(options).then(function (promptResult) {
+            var promptResultWCS = convertPointPromptResultToWCS(promptResult);
+            handlePointSelected(promptResultWCS);
+        }, function (promptResult) {
+            onError(promptResult);
+        });
+    } catch (e) {
+        designFeedError("promptPoint() failed. " + e.message);
+    }
+}
+;
+
+function selectObjects() {
+    try  {
+        var options = new Acad.PromptEntityOptions(getLocalizedMessage('DF_SpecifyObject'));
+
+        // For now we are just getting one object. In the future, we can call Acad.Editor.getSelection for multiple selections
+        Acad.Editor.getEntity(options).then(function (selSetObj) {
+            if (selSetObj) {
+                var o = new Acad.OSet();
+
+                o.add(selSetObj.objectId);
+
+                Acad.Application.activedocument.getHandle(o).then(function (handles) {
+                    handleObjectsSelected(handles, JSON.stringify(selSetObj.pickedPoint));
+                }, function (args) {
+                    onError(args);
+                });
+            }
+        }, function (promptResult) {
+            onError(promptResult);
+        });
+    } catch (e) {
+        designFeedError("selectObjects() failed. " + e.message);
+    }
+}
+;
+
+// Check if the design feed palette is on
+function checkDesignFeedState() {
+    var paletteState = getSystemVariable("DESIGNFEEDSTATE");
+    if (paletteState.value)
+        return true;
+else
+        return false;
+}
+;
+
+function addActivity(jsonString) {
+    try  {
+        var post = JSON.parse(jsonString);
+        if (typeof post === 'undefined')
+            return;
+        if (typeof post.retValue !== 'undefined')
+            post = post.retValue;
+
+        _gaPost(post);
+
+        var index = getIndexByPostId(post.activity.id);
+        if (index == -1) {
+            if (post.point)
+                showPost(post, true);
+else
+                addPost(post);
+
+            // For exiting from current AutoCAD command for createPost
+            Acad.Editor.executeCommand("\3\3");
+        }
+    } catch (e) {
+        // Clear Preview here, another way user will get blue sticky on screen
+        clearPreview();
+        designFeedError("addActivity() failed. " + e.message);
+    }
+}
+;
+
+function updateActivity(jsonString) {
+    try  {
+        var post = JSON.parse(jsonString);
+        if (typeof post === 'undefined')
+            return;
+        if (typeof post.retValue !== 'undefined')
+            post = post.retValue;
+
+        _gaUpdatePost(post);
+
+        var index = getIndexByPostId(post.activity.id);
+        if (index != -1) {
+            updatePost(jsonString);
+        }
+    } catch (e) {
+        designFeedError("updateActivity() failed. " + e.message);
+    }
+}
+;
+
+function deleteActivity(postId) {
+    try  {
+        _gaDeleteComments();
+        deletePost(postId);
+    } catch (e) {
+        designFeedError("deleteActivity() failed. " + e.message);
+    }
+}
+;
+
+function addAllActivities(jsonString) {
+    try  {
+        if (acDocuments[acCurrentDocument] && acDocuments[acCurrentDocument].drawables)
+            addAllPost(jsonString);
+    } catch (e) {
+        designFeedError("addAllActivity() failed. " + e.message);
+    }
+}
+;
+
+function clearActivities() {
+    designFeedError("clearActivities() failed.");
+}
+;
+
+function selectActivity(postId) {
+    try  {
+        var index = getIndexByPostId(postId);
+        if (index != -1) {
+            selectPost(index);
+        }
+    } catch (e) {
+        designFeedError("selectActivity() failed. " + e.message);
+    }
+}
+;
+
+function activitySelected(postId) {
+    try  {
+        var index = getIndexByPostId(postId);
+
+        if (acDocuments[acCurrentDocument].drawables[index].layoutHandle != acDefaultLayout.handle && isInMSpace()) {
+            acGWTSelectPostCallback = true;
+            Acad.Editor.executeCommand("\3\3_PSPACE");
+            return;
+        }
+
+        // execute registered 3_DESIGNFEEDSELECTPOST command
+        // selectActivity is called in callback selectPostCommandCallback
+        acSelectPostId = postId;
+        Acad.Editor.executeCommand("\3\3_DESIGNFEEDSELECTPOST");
+    } catch (e) {
+        designFeedError("activitySelected() failed. " + e.message);
+    }
+}
+;
+
+function deselectActivity() {
+    try  {
+        var index = getIndexOfSelectedPost();
+        if (index != -1) {
+            // Enter ESC to cancel any existing command like DESIGNFEEDSELECTPOST
+            Acad.Editor.executeCommand("\3\3");
+        }
+    } catch (e) {
+        designFeedError("deselectActivity() failed. " + e.message);
+    }
+}
+;
+
+function changeViewMode(viewMode) {
+    // Hide Transients for current view mode
+    eraseAllTransients();
+    var layout = getActiveLayout();
+
+    if (viewMode == 0) {
+        acViewMode = TransientViewMode.None;
+    } else if (viewMode == 1) {
+        showStickies(layout);
+        acViewMode = TransientViewMode.Sticky;
+    } else {
+        showBubbles(layout);
+        acViewMode = TransientViewMode.Bubble;
+    }
+
+    // Store view mode in document for future reference
+    acDocuments[acCurrentDocument].viewMode = acViewMode;
+}
+;
+
+function changeResolvedDisplayMode(bShow) {
+    if (acViewMode == TransientViewMode.None)
+        return;
+
+    if (bShow) {
+        showResolved();
+    } else {
+        hideResolved();
+    }
+}
+;
+
+/**
+* This is the  function to create the blue sticky image
+*/
+function drawPointPreview(point) {
+    try  {
+        if (acDocuments[acCurrentDocument] && acDocuments[acCurrentDocument].drawables) {
+            if (!(acDocuments[acCurrentDocument].preview)) {
+                var imagePoint = convertPoint3dIntoArray(point);
+                var id = drawImageTransient(Acad.ImageType.StickyPreview, "", "", "", imagePoint);
+                var length = acDocuments[acCurrentDocument].drawables.length;
+                acDocuments[acCurrentDocument].drawables[length] = new Object();
+                saveImageTransient(Acad.ImageType.StickyPreview, id);
+                acDocuments[acCurrentDocument].preview = true;
+            }
+        }
+    } catch (e) {
+        designFeedError("drawPointPreview() failed. " + e.message);
+    }
+}
+;
+
+function highLightObjects(jsonString) {
+    try  {
+        var handles = JSON.parse(jsonString);
+        if (typeof handles === 'undefined')
+            return;
+        if (typeof handles.retValue !== 'undefined')
+            handles = handles.retValue;
+
+        Acad.Application.activedocument.getObjectSet(handles).then(function (ids) {
+            var o = new Acad.OSet();
+            o.add(ids);
+            Acad.Application.activedocument.highlight(o);
+        }, function () {
+            designFeedError("onGetHandleFailure().");
+        });
+    } catch (e) {
+        designFeedError("highLightObjects() failed. " + e.message);
+    }
+}
+;
+
+function unHighLightObjects(jsonString) {
+    try  {
+        var handles = JSON.parse(jsonString);
+        if (typeof handles === 'undefined')
+            return;
+        if (typeof handles.retValue !== 'undefined')
+            handles = handles.retValue;
+
+        Acad.Application.activedocument.getObjectSet(handles).then(function (ids) {
+            var o = new Acad.OSet();
+            o.add(ids);
+            Acad.Application.activedocument.unhighlight(o);
+        }, function () {
+            designFeedError("onGetHandleFailure().");
+        });
+    } catch (e) {
+        designFeedError("unHighLightObjects() failed. " + e.message);
+    }
+}
+;
+
+function scrollToY(val) {
+    $('div.DFScrollArea').animate({ scrollTop: val }, 200);
+}
+;
+
+function scrollByY(val) {
+    var distanceFromTop = $('div.DFScrollArea').scrollTop() + val;
+    scrollToY(distanceFromTop);
+}
+;
+
+function scrollTop() {
+    scrollToY(0);
+}
+;
+
+function scrollBottom() {
+    scrollToY(9e9);
+}
+;
+
+function pan(x, y) {
+    try  {
+        Acad.Editor.CurrentViewport.pan(x, y, false);
+    } catch (e) {
+        designFeedError("pan() failed. " + e.message);
+    }
+}
+;
+
+function dolly(vector, animate) {
+    var dollyVector = new Acad.Vector3d(vector.x, vector.y, vector.z);
+
+    try  {
+        Acad.Editor.CurrentViewport.dolly(dollyVector, animate);
+    } catch (e) {
+        designFeedError("dolly() failed. " + e.message);
+    }
+}
+;
+
+function openShareDialog() {
+    try  {
+        _gaShareDrawing();
+        AcDwgFeed.Interop.shareDrawing().then(handleShareDialogSuccess, handleShareDialogFail);
+    } catch (e) {
+        designFeedError("openShareDialog() failed. " + e.message);
+    }
+}
+;
+
+function handleShareDialogSuccess(value) {
+    try  {
+        enableDrawingFeed();
+        handleShareListChanged();
+    } catch (e) {
+        designFeedError("handleShareDialogSuccess() failed. " + e.message);
+    }
+}
+;
+
+function handleShareDialogFail(value) {
+    try  {
+        enableDrawingFeed();
+    } catch (e) {
+        designFeedError("handleShareDialogFail() failed. " + e.message);
+    }
+}
+;
+
+function displayDesignFeedHelp() {
+    Acad.Editor.executeCommand("\3\3");
+    Acad.Editor.executeCommand("(help \"\" \"Design Feed Palette\")");
+}
+
+function onDesignFeedLocalTaskDialog(value) {
+}
+
+function displayDesignFeedLocalTaskDialog() {
+    var strWindowTitle = getLocalizedMessage('DF_DesignFeedLocalTDTitle');
+    var nCommonButtons = Acad.TaskDialogButton.kButtonOk;
+
+    Acad.TaskDialog.showTaskDialog(strWindowTitle, '', getLocalizedMessage('DF_DesignFeedLocalTDContent'), nCommonButtons).then(onDesignFeedLocalTaskDialog, onDesignFeedLocalTaskDialog);
+}
+
+function openInvitePeopleDialog(filepath, ticket, api) {
+    try  {
+        //_gaInvitePeople();// GA Code
+        //  assemble URL string
+        var origin = window.location.protocol + "//" + window.location.host;
+        var inviteUrl = origin + "/maestro.s/InvitePeople/InvitePeople.html?path=" + encodeURIComponent(filepath) + "&ticket=" + encodeURIComponent(ticket) + "&apiURL=" + encodeURIComponent(api);
+
+        var opts = {
+            modal: true,
+            allowResize: false,
+            initSize: true,
+            width: 570,
+            height: 460
+        };
+
+        Acad.Application.showHTMLDialog(inviteUrl, opts).then(handleInvitePeopleSuccess, handleInvitePeopleFail);
+    } catch (e) {
+        designFeedError("openInvitePeopleDialog() failed. " + e.message);
+    }
+}
+;
+
+function handleInvitePeopleSuccess(value) {
+    try  {
+        // TODO
+        handleShareListChanged();
+    } catch (e) {
+        designFeedError("handleInvitePeopleSuccess() failed. " + e.message);
+    }
+}
+;
+
+function handleInvitePeopleFail(value) {
+    try  {
+        // TODO
+    } catch (e) {
+        designFeedError("handleInvitePeopleFail() failed. " + e.message);
+    }
+}
+;
+
+/**
+* This is the  generic function to create rectangle of various type
+* @param upperLeft is  upper left point3D of the rectangle
+* @param lowerRight is  lower right point of the rectangle
+* @param color is the color of line,
+*
+*/
+function drawRect(upperLeft, lowerRight, color) {
+    /* Line types valid values are LineTypeSolid, Dashed, Dotted, Dash_Dot, Short_Dash, Medium_Dash, Long_Dash etc.
+    *  Line Weight valid values are 0-200 and default is 30
+    */
+    var pickPoint = convertPoint3dIntoArray(upperLeft);
+    var cornerPoint = convertPoint3dIntoArray(lowerRight);
+    drawRectangleTransient(pickPoint, cornerPoint, "LineTypeSolid", 20, color);
+}
+;
+
+/**
+* This is the  function to create dashed rectangle and image
+*/
+function drawDashedRect(upperLeft, lowerRight, color) {
+    var pickPoint = convertPoint3dIntoArray(upperLeft);
+    var cornerPoint = convertPoint3dIntoArray(lowerRight);
+    if (acDocuments[acCurrentDocument].preview == false)
+        drawAreaPreview(pickPoint, cornerPoint, color);
+}
+;
+
+function localizationChanged(currentLang) {
+    try  {
+        handleExternalLocalizationChanged(currentLang);
+    } catch (e) {
+        designFeedError("localizationChanged() failed. " + e.message);
+    }
+}
+;
+
+function shareListChanged(value) {
+    try  {
+        handleShareListChanged(value);
+    } catch (e) {
+        designFeedError("shareListChanged() failed. " + e.message);
+    }
+}
+;
+
+function getLocalizedMessage(key) {
+    return getMessage(key);
+}
+;
+
+function executeDrawingFeedMethod(methodName, parameter) {
+    var myFunc = window[methodName];
+    myFunc(parameter);
+}
+;
+
+function clearSelectedPointLink() {
+    if (acDocuments[acCurrentDocument].preview == true)
+        clearPreview();
+}
+;
+
+function clearSelectedAreaLink() {
+    if (acDocuments[acCurrentDocument].preview == true)
+        clearPreview();
+}
+;
+
+function clearSelectedObjectLink() {
+    if (acDocuments[acCurrentDocument].preview == true)
+        clearPreview();
+}
+;
+
+function clearAllSelection() {
+    if (acDocuments[acCurrentDocument] && acDocuments[acCurrentDocument].preview == true) {
+        clearPreview();
+    }
+}
+;
+
+function cancelCurrentOperation() {
+    try  {
+        Acad.Editor.cancelCommand();
+    } catch (e) {
+        designFeedError("cancelCurrentOperation() failed. " + e.message);
+    }
+}
+;
+
+function loginA360() {
+    try  {
+        AcDwgFeed.Interop.loginA360().then(onLoginSuccess, onLoginFailure);
+    } catch (e) {
+        designFeedError("loginA360() failed. " + e.message);
+    }
+}
+;
+
+function zoomWindow(lowerLeft, upperRight) {
+    try  {
+        var pt1 = Acad.Editor.CurrentViewport.pointToScreen(new Acad.Point3d(lowerLeft.x, lowerLeft.y, 0));
+        var pt2 = Acad.Editor.CurrentViewport.pointToScreen(new Acad.Point3d(upperRight.x, upperRight.y, 0));
+        Acad.Editor.CurrentViewport.zoomWindow(pt1, pt2, false);
+    } catch (e) {
+        designFeedError("zoomWindow() failed. " + e.message);
+    }
+}
+;
+
+function getShareList() {
+    if (!acCurrentDocument || !acDocuments[acCurrentDocument])
+        return;
+
+    if (hasLocalDesignFeedId()) {
+        try  {
+            updateLocalFeedSharedList(acCurrentDocument);
+        } catch (e) {
+            designFeedError("getShareList() failed. " + e.message);
+        }
+    } else {
+        var contacts;
+        try  {
+            contacts = AcDwgFeed.Interop.getContacts();
+        } catch (e) {
+        }
+        onGetContactsSuccess(contacts);
+    }
+}
+;
+
+function getDisplayedName(contact) {
+    var email = contact.email;
+    var username = contact.username;
+    var firstname = contact.firstname;
+    var lastname = contact.lastname;
+
+    var result = firstname;
+
+    if (result && lastname) {
+        result += " " + lastname;
+    }
+
+    if (!result) {
+        result = username;
+    }
+
+    if (!result) {
+        result = email;
+    }
+
+    return result;
+}
+;
+
+function onGetContactsSuccess(contacts) {
+    var result = "";
+
+    if (contacts) {
+        for (var i = 0, len = contacts.length; i < len; i++) {
+            var email = contacts[i].email;
+            var displayedName = getDisplayedName(contacts[i]);
+
+            if ((!isEmpty(email)) && (!isEmpty(displayedName))) {
+                result += email + ';' + displayedName;
+
+                if (i < len - 1) {
+                    result += ';';
+                }
+            }
+        }
+    }
+
+    onGetContactsCallback(result);
+}
+;
+
+function isEmpty(str) {
+    return (!str || 0 === str.length);
+}
+;
+
+function onGetContactsFailure(errValue) {
+    onGetContactsCallback("");
+}
+;
+
+function saveCurrentDocToCloud() {
+    try  {
+        Acad.Editor.executeCommand("\3\3_DESIGNFEEDSAVESYNC");
+    } catch (e) {
+        designFeedError("saveCurrentDocToCloud() failed. " + e.message);
+    }
+}
+;
+
+function saveCurrentDoc() {
+    try  {
+        Acad.Editor.executeCommand("\3\3_DESIGNFEEDSAVEAS");
+    } catch (e) {
+        designFeedError("saveCurrentDoc() failed. " + e.message);
+    }
+}
+;
+
+function isCloudFileOwner() {
+    var isOwner = false;
+    try  {
+        isOwner = AcDwgFeed.Interop.isCloudFileOwner();
+        ;
+    } catch (e) {
+    }
+
+    try  {
+        onIsCloudFileOwnerSuccess(isOwner);
+    } catch (e) {
+        designFeedError("isCloudFileOwner() failed. " + e.message);
+    }
+}
+;
+
+function getViewProperties() {
+    try  {
+        return Acad.Editor.CurrentViewport.getViewProperties();
+    } catch (e) {
+        designFeedError("getViewProperties() failed. " + e.message);
+    }
+}
+;
+
+function getCurrentViewportRect() {
+    try  {
+        var properties = getViewProperties();
+
+        if (properties) {
+            var target = properties.target;
+            var width = properties.fieldWidth;
+            var height = properties.fieldHeight;
+
+            var lowerLeft = new Acad.Point2d(target.x - (width / 2), target.y - (height / 2));
+            var upperRight = new Acad.Point2d(target.x + (width / 2), target.y + (height / 2));
+            return new Acad.Rectangle2d(lowerLeft, upperRight);
+        }
+    } catch (e) {
+        designFeedError("getCurrentViewportRect() failed. " + e.message);
+    }
+
+    return null;
+}
+;
+
+function setView(position, target, vector, fieldWidth, fieldHeight, projection, animate) {
+    try  {
+        var newPosition = new Acad.Point3d(position.x, position.y, position.z);
+        var newTarget = new Acad.Point3d(target.x, target.y, target.z);
+        var upVector = new Acad.Vector3d(vector.x, vector.y, vector.z);
+
+        if (projection == 0)
+            projection = Acad.Enum_Projection.Parallel;
+else
+            projection = Acad.Enum_Projection.Perspective;
+
+        Acad.Editor.CurrentViewport.setView(newPosition, newTarget, upVector, fieldWidth, fieldHeight, projection, animate);
+    } catch (e) {
+        designFeedError("setView() failed. " + e.message);
+    }
+}
+;
+
+function captureView() {
+    try  {
+        return Acad.Editor.captureView();
+    } catch (e) {
+        return null;
+    }
+}
+
+function restoreView(viewId) {
+    try  {
+        Acad.Editor.restoreView(viewId);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+function showDeleteConfirmationTaskDialog(postMessage, commentId, parentPostId) {
+    try  {
+        Acad.TaskDialog.showDeleteConfirmationTaskDialog("Post", postMessage).then(function (dialogResult) {
+            if (dialogResult == Acad.TaskDialogResult.kRetYes) {
+                onShowDeleteConfirmationTaskDialogSuccess(true, commentId, parentPostId);
+            } else if (dialogResult == Acad.TaskDialogResult.kRetNo) {
+                onShowDeleteConfirmationTaskDialogSuccess(false, commentId, parentPostId);
+            }
+        }, function (retCode) {
+            designFeedError("showDeleteConfirmationTaskDialog() failed. ");
+        });
+    } catch (e) {
+        designFeedError("showDeleteConfirmationTaskDialog() failed. " + e.message);
+    }
+}
+;
+
+function closeDrawingFeedWindow() {
+}
+;
+
+/**
+* opens a file dialog
+*/
+function getImageByetArray() {
+    var options = new Acad.PromptOpenFileOptions('');
+
+    //The filter string is of the form "<file type description>|<file extension>|<file type description>|<file extension>",
+    var bitmapFiles = "Bitmap Files (*.bmp;*.dib)|*.bmp;*.dib";
+    var jpegFiles = "JPEG (*.jpg;*.jpeg;*.jpe;*.jfif;*.jif)|*.jpg;*.jpeg;*.jpe;*.jfif;*.jif";
+    var gif = "GIF (*.gif)|*.gif";
+    var png = "PNG (*.png)|*.png";
+    var all = "All Image Files |*.bmp;*.dib;*.jpg;*.jpeg;*.jpe;*.jfif;*.jif;*.gif;*.png";
+    options.filter = all + "|" + bitmapFiles + "|" + jpegFiles + "|" + gif + "|" + png;
+
+    try  {
+        Acad.Editor.getFileNameForOpen(options).then(onCompletePromptFileResult, onErrorPromptFileResult);
+    } catch (e) {
+        designFeedError("getImageByetArray() failed. " + e.message);
+    }
+}
+;
+
+function onCompletePromptFileResult(resObj) {
+    if (resObj.status == 5100) {
+        try  {
+            var guid = resObj.stringResult;
+            var file = new Acad.Editor.SecureFile(guid);
+            var fileSize = file.getFileSize();
+
+            _gaAddImage(fileSize);
+
+            if (fileSize > FILE_SIZE_LIMIT) {
+                var message = getLocalizedMessage('DF_UploadImageMaxSize');
+                showConfirmationTaskDialog("", message);
+
+                guid = null;
+            }
+
+            getImageByetArrayCallback(guid);
+        } catch (e) {
+            designFeedError("onCompletePromptFileResult() failed. " + e.message);
+        }
+    } else if (resObj.status == -5002) {
+        getImageByetArrayCallback(null);
+    }
+}
+;
+
+function onErrorPromptFileResult(jsonPromptResult) {
+    designFeedError('onErrorPromptFileResult() failed.');
+}
+;
+
+function getPromptFileResultContents(guid) {
+    try  {
+        var file = new Acad.Editor.SecureFile(guid);
+        return file.getContents();
+    } catch (e) {
+        designFeedError("getPromptFileResultContents() failed. " + e.message);
+    }
+
+    return null;
+}
+;
+
+function showConfirmationTaskDialog(strMainInstruction, strContentText) {
+    try  {
+        var strWindowTitle = getLocalizedMessage('DF_ACADAlert');
+        var nCommonButtons = Acad.TaskDialogButton.kButtonOk;
+        Acad.TaskDialog.showTaskDialog(strWindowTitle, strMainInstruction, strContentText, nCommonButtons).then(onShowConfirmationTaskDialogSuccess, onShowConfirmationTaskDialogFailure);
+    } catch (e) {
+        designFeedError("showConfirmationTaskDialog() failed. " + e.message);
+    }
+}
+;
+
+function getViewport3D(ViewProperties) {
+    try  {
+        return Acad.Editor.CurrentViewport.getViewport3D(ViewProperties);
+    } catch (e) {
+        designFeedError("getViewport3D() failed. " + e.message);
+    }
+}
+;
+
+// viewport is Viewport3d type
+function convertViewport3D(viewport) {
+    try  {
+        var position = new Acad.Point3d(viewport.position.x, viewport.position.y, viewport.position.z);
+        var rotation = new Acad.Quaternion(viewport.rotation.x, viewport.rotation.y, viewport.rotation.z, viewport.rotation.w);
+        var aspectRatio = parseFloat(viewport.aspectRatio);
+        var distanceToOrbit = parseFloat(viewport.distanceToOrbit);
+
+        var projection;
+
+        if (parseInt(viewport.projection) == 0)
+            projection = Acad.Enum_Projection.Parallel;
+else
+            projection = Acad.Enum_Projection.Perspective;
+
+        var orthographicHeight;
+        var fieldOfView;
+
+        if (viewport.orthographicHeight) {
+            orthographicHeight = parseFloat(viewport.orthographicHeight);
+            fieldOfView = undefined;
+        } else {
+            fieldOfView = parseFloat(viewport.fieldOfView);
+            orthographicHeight = undefined;
+        }
+
+        var viewport3d = new Acad.Viewport3D(position, rotation, projection, aspectRatio, distanceToOrbit, orthographicHeight, fieldOfView);
+        return Acad.Editor.CurrentViewport.convertViewport3D(viewport3d);
+    } catch (e) {
+        designFeedError("convertViewport3D() failed. " + e.message);
+    }
+}
+;
+
+function isTilemode() {
+    return acDocuments[acCurrentDocument].tilemode;
+}
+;
+
+function isInPSpace() {
+    var tilemode = isTilemode();
+    if (!tilemode) {
+        return acDocuments[acCurrentDocument].CVPort == 1;
+    }
+    return false;
+}
+;
+
+function isInMSpace() {
+    var tilemode = isTilemode();
+    if (!tilemode) {
+        if (!isInPSpace())
+            return true;
+    }
+    return false;
+}
+;
+
+var urlize = (function () {
+    //	From http://blog.stevenlevithan.com/archives/cross-browser-split
+    //	modified to not add itself to String.prototype.
+    /*!
+    * Cross-Browser Split 1.1.1
+    * Copyright 2007-2012 Steven Levithan <stevenlevithan.com>
+    * Available under the MIT License
+    * ECMAScript compliant, uniform cross-browser split method
+    */
+    /**
+    * Splits a string into an array of strings using a regex or string separator. Matches of the
+    * separator are not included in the result array. However, if `separator` is a regex that contains
+    * capturing groups, backreferences are spliced into the result each time `separator` is matched.
+    * Fixes browser bugs compared to the native `String.prototype.split` and can be used reliably
+    * cross-browser.
+    * @param {String} str String to split.
+    * @param {RegExp|String} separator Regex or string to use for separating the string.
+    * @param {Number} [limit] Maximum number of items to include in the result array.
+    * @returns {Array} Array of substrings.
+    * @example
+    *
+    * // Basic use
+    * split('a b c d', ' ');
+    * // -> ['a', 'b', 'c', 'd']
+    *
+    * // With limit
+    * split('a b c d', ' ', 2);
+    * // -> ['a', 'b']
+    *
+    * // Backreferences in result array
+    * split('..word1 word2..', /([a-z]+)(\d+)/i);
+    * // -> ['..', 'word', '1', ' ', 'word', '2', '..']
+    */
+    var split;
+
+    //	Avoid running twice; that would break the `nativeSplit` reference
+    split = split || (function (undef) {
+        var nativeSplit = String.prototype.split, compliantExecNpcg = /()??/.exec("")[1] === undef, self;
+
+        self = function (str, separator, limit) {
+            if (Object.prototype.toString.call(separator) !== "[object RegExp]") {
+                return nativeSplit.call(str, separator, limit);
+            }
+            var output = [], flags = (separator.ignoreCase ? "i" : "") + (separator.multiline ? "m" : "") + (separator.extended ? "x" : "") + (separator.sticky ? "y" : ""), lastLastIndex = 0, separator = new RegExp(separator.source, flags + "g"), separator2, match, lastIndex, lastLength;
+            str += "";
+            if (!compliantExecNpcg) {
+                // Doesn't need flags gy, but they don't hurt
+                separator2 = new RegExp("^" + separator.source + "$(?!\\s)", flags);
+            }
+
+            /* Values for `limit`, per the spec:
+            * If undefined: 4294967295 // Math.pow(2, 32) - 1
+            * If 0, Infinity, or NaN: 0
+            * If positive number: limit = Math.floor(limit); if (limit > 4294967295) limit -= 4294967296;
+            * If negative number: 4294967296 - Math.floor(Math.abs(limit))
+            * If other: Type-convert, then use the above rules
+            */
+            limit = limit === undef ? -1 >>> 0 : limit >>> 0;
+            while (match = separator.exec(str)) {
+                // `separator.lastIndex` is not reliable cross-browser
+                lastIndex = match.index + match[0].length;
+                if (lastIndex > lastLastIndex) {
+                    output.push(str.slice(lastLastIndex, match.index));
+
+                    if (!compliantExecNpcg && match.length > 1) {
+                        match[0].replace(separator2, function () {
+                            for (var i = 1; i < arguments.length - 2; i++) {
+                                if (arguments[i] === undef) {
+                                    match[i] = undef;
+                                }
+                            }
+                        });
+                    }
+                    if (match.length > 1 && match.index < str.length) {
+                        Array.prototype.push.apply(output, match.slice(1));
+                    }
+                    lastLength = match[0].length;
+                    lastLastIndex = lastIndex;
+                    if (output.length >= limit) {
+                        break;
+                    }
+                }
+                if (separator.lastIndex === match.index) {
+                    separator.lastIndex++;
+                }
+            }
+            if (lastLastIndex === str.length) {
+                if (lastLength || !separator.test("")) {
+                    output.push("");
+                }
+            } else {
+                output.push(str.slice(lastLastIndex));
+            }
+            return output.length > limit ? output.slice(0, limit) : output;
+        };
+
+        return self;
+    })();
+
+    function startswith(string, prefix) {
+        return string.substr(0, prefix.length) == prefix;
+    }
+
+    function endswith(string, suffix) {
+        return string.substr(string.length - suffix.length, suffix.length) == suffix;
+    }
+
+    //	http://stackoverflow.com/a/7924240/17498
+    function occurrences(string, substring) {
+        var n = 0;
+        var pos = 0;
+        while (true) {
+            pos = string.indexOf(substring, pos);
+            if (pos != -1) {
+                n++;
+                pos += substring.length;
+            } else {
+                break;
+            }
+        }
+        return n;
+    }
+
+    var unquoted_percents_re = /%(?![0-9A-Fa-f]{2})/;
+
+    //	Quotes a URL if it isn't already quoted.
+    function smart_urlquote(url) {
+        if (url.indexOf('%') == -1 || url.match(unquoted_percents_re)) {
+            return encodeURI(url);
+        } else {
+            return url;
+        }
+    }
+
+    var trailing_punctuation_django = ['.', ',', ':', ';'];
+    var trailing_punctuation_improved = ['.', ',', ':', ';', '.)'];
+    var wrapping_punctuation_django = [['(', ')'], ['<', '>'], ['&lt;', '&gt;']];
+    var wrapping_punctuation_improved = [
+        ['(', ')'],
+        ['<', '>'],
+        ['&lt;', '&gt;'],
+        ['�', '�'],
+        ['�', '�']
+    ];
+    var word_split_re_django = /(\s+)/;
+    var word_split_re_improved = /([\s<>"]+)/;
+    var simple_url_re = /^https?:\/\/\w/;
+    var simple_url_2_re = /^www\.|^(?!http)\w[^@]+\.(com|edu|gov|int|mil|net|org)$/;
+    var simple_email_re = /^\S+@\S+\.\S+$/;
+
+    function htmlescape(html) {
+        return html.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
+    function convert_arguments(args) {
+        var options;
+        if (args.length == 2 && typeof (args[1]) == 'object') {
+            options = args[1];
+        } else {
+            options = {
+                nofollow: args[1],
+                autoescape: args[2],
+                trim_url_limit: args[3],
+                target: args[4]
+            };
+        }
+        if (!('django_compatible' in options))
+            options.django_compatible = true;
+        return options;
+    }
+
+    function urlize(text, options) {
+        var test;
+        options = convert_arguments(arguments);
+        function trim_url(x, limit) {
+            if (limit === undefined)
+                limit = options.trim_url_limit;
+            if (limit && x.length > limit)
+                return x.substr(0, limit - 3) + '...';
+            return x;
+        }
+        var safe_input = false;
+        var word_split_re = options.django_compatible ? word_split_re_django : word_split_re_improved;
+        var trailing_punctuation = options.django_compatible ? trailing_punctuation_django : trailing_punctuation_improved;
+        var wrapping_punctuation = options.django_compatible ? wrapping_punctuation_django : wrapping_punctuation_improved;
+        var words = split(text, word_split_re);
+        for (var i = 0; i < words.length; i++) {
+            var word = words[i];
+            var match = undefined;
+            if (word.indexOf('.') != -1 || word.indexOf('@') != -1 || word.indexOf(':') != -1) {
+                // Deal with punctuation.
+                var lead = '';
+                var middle = word;
+                var trail = '';
+                for (var j = 0; j < trailing_punctuation.length; j++) {
+                    var punctuation = trailing_punctuation[j];
+                    if (endswith(middle, punctuation)) {
+                        middle = middle.substr(0, middle.length - punctuation.length);
+                        trail = punctuation + trail;
+                    }
+                }
+                for (var j = 0; j < wrapping_punctuation.length; j++) {
+                    var opening = wrapping_punctuation[j][0];
+                    var closing = wrapping_punctuation[j][1];
+                    if (startswith(middle, opening)) {
+                        middle = middle.substr(opening.length);
+                        lead = lead + opening;
+                    }
+
+                    if (endswith(middle, closing) && occurrences(middle, closing) == occurrences(middle, opening) + 1) {
+                        middle = middle.substr(0, middle.length - closing.length);
+                        trail = closing + trail;
+                    }
+                }
+
+                // Make URL we want to point to.
+                var url = undefined;
+                var nofollow_attr = options.nofollow ? ' rel="nofollow"' : '';
+                var target_attr = options.target ? ' target="' + options.target + '"' : '';
+
+                if (middle.match(simple_url_re))
+                    url = smart_urlquote(middle);
+else if (middle.match(simple_url_2_re))
+                    url = smart_urlquote('http://' + middle);
+else if (middle.indexOf(':') == -1 && middle.match(simple_email_re)) {
+                    // XXX: Not handling IDN.
+                    url = 'mailto:' + middle;
+                    nofollow_attr = '';
+                }
+
+                if (url) {
+                    var trimmed = trim_url(middle);
+                    if (options.autoescape) {
+                        // XXX: Assuming autoscape == false
+                        lead = htmlescape(lead);
+                        trail = htmlescape(trail);
+                        url = htmlescape(url);
+                        trimmed = htmlescape(trimmed);
+                    }
+                    middle = '<hrefStartTag>' + url + ';' + trimmed + '<hrefEndTag>';
+
+                    //					middle = '<a href="' + url + '"' + nofollow_attr + target_attr + '>' + trimmed + '</a>';
+                    words[i] = lead + middle + trail;
+                } else {
+                    if (safe_input) {
+                        // Do nothing, as we have no mark_safe.
+                    } else if (options.autoescape) {
+                        words[i] = htmlescape(word);
+                    }
+                }
+            } else if (safe_input) {
+                // Do nothing, as we have no mark_safe.
+            } else if (options.autoescape) {
+                words[i] = htmlescape(word);
+            }
+        }
+        return words.join('');
+    }
+
+    urlize.test = {};
+    urlize.test.split = split;
+    urlize.test.convert_arguments = convert_arguments;
+
+    return urlize;
+})();
+
+//This fucntion is used to write Design Feed log
+function writeDesignFeedLog(message, mode) {
+    try  {
+        switch (mode) {
+            case "FATAL":
+                Acad.Logger.logFatal(message);
+                break;
+            case "ERROR":
+                Acad.Logger.logError(message);
+                break;
+            case "INFO":
+                Acad.Logger.logInfo(message);
+                break;
+            case "DEBUG":
+                Acad.Logger.logDebug(message);
+                break;
+            case "TRACE":
+                Acad.Logger.logTrace(message);
+                break;
+        }
+    } catch (e) {
+        // omitted intentionally
+    }
+}
+;
+
+// Restore XY plane from 3d mode
+function restoreXYPlane() {
+    try  {
+        var properties = Acad.Editor.CurrentViewport.getViewProperties();
+
+        // This formula is provided by Albert
+        var newposition = new Acad.Point3d(0, 0, 0);
+        var newtarget = new Acad.Point3d(0, 0, -1);
+        var newUpvector = new Acad.Vector3d(0, 1, 0);
+
+        Acad.Editor.CurrentViewport.setView(newposition, newtarget, newUpvector, properties.fieldWidth, properties.fieldHeight, properties.projection, false);
+    } catch (e) {
+        designFeedError("restoreXYPlane() failed. " + e.message);
+    }
+}
+;
+
+function getOnlineSignedSyncUrl() {
+    try  {
+        return AcDwgFeed.Interop.getOnlineSignedSyncUrl();
+    } catch (e) {
+        return null;
+    }
+}
+;
+
+function ensureFeedId() {
+    try  {
+        var type = acDocuments[acCurrentDocument].onlineFileIdType;
+        if (type != 1) {
+            return;
+        }
+        AcDwgFeed.Interop.ensureIdEmbedding();
+    } catch (e) {
+        designFeedError("ensureFeedId() failed. " + e.message);
+    }
+}
+;
+
+function getCurrentDocumentStates() {
+    try  {
+        return AcDwgFeed.Interop.getCurrentDocumentStates();
+    } catch (e) {
+        return null;
+    }
+}
+;
+
+//Current login state cloud be logged-in or not.
+//Check if current drawing has embeeded id
+function hasA360DesignFeedId() {
+    if (acCurrentDocument == '.') {
+        return false;
+    }
+
+    // the type is an enum of the following defined as DesignFeedSeed::SeedStorage (DesignFeedSeed.h)
+    //      kNone = 0,
+    //      kTransient,      // in memory, not persisted in any form
+    //      kDwgEmbedded,    // as *DESIGNFEEDDWGID db-header var, persisted with DWG
+    //      kExternal,       // in an external manifest file
+    //      kCloud,          // generated and persisted on A360 server
+    var type = acDocuments[acCurrentDocument].onlineFileIdType;
+
+    if (type == 4) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Current login state cloud be logged-in or not.
+// Check if current drawing has embeeded id
+function hasLocalDesignFeedId() {
+    if (acCurrentDocument == '.') {
+        return false;
+    }
+
+    // the type is an enum of the following defined as DesignFeedSeed::SeedStorage (DesignFeedSeed.h)
+    //      kNone = 0,
+    //      kTransient,      // in memory, not persisted in any form
+    //      kDwgEmbedded,    // as *DESIGNFEEDDWGID db-header var, persisted with DWG
+    //      kExternal,       // in an external manifest file
+    //      kCloud,          // generated and persisted on A360 server
+    var type = acDocuments[acCurrentDocument].onlineFileIdType;
+    if (type == 2 || type == 3) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function isPostInLayout(transient, layout) {
+    if (transient == null || layout == null)
+        return false;
+
+    // considering mspace handling
+    var layout = getActiveLayout();
+    if (transient.layoutHandle == layout.handle || transient.layoutName == layout.name)
+        return true;
+else
+        return false;
+}
+
+function openShareDialogForDesignFeedId() {
+    // After saving to A360, we have to wait for AdSync to push the
+    // file up and get the new ID from the server.  We'll use a timer
+    // to check for the ID.  The timer will expire after a fixed
+    // amount of time.
+    //alert("starting timer");
+    var timer;
+    var count = 0;
+    timer = setInterval(function () {
+        if (hasA360DesignFeedId()) {
+            //alert("yay! we gots an ID!!");
+            openShareDialog();
+            clearInterval(timer);
+        } else if (count++ > 300) {
+            // give up after 5 minutes
+            clearInterval(timer);
+            //alert("boo! timeout! bummer!");
+        }
+    }, 1000);
+}
+
+function saveAndInviteShare(ticket, api) {
+    try  {
+        // saveType enum from %GINC%\mcdefs.h:
+        // enum SaveCmdType {  SAVE=0,      // SAVE command
+        //                     SAVEAS,      // SAVE command with filename prompt
+        //                     SAVEAUTO,    // Auto-timed SAVE
+        //                     QSAVE,       // QSAVE command
+        //                     SAVETOCLOUD, // SAVETOCLOUD command
+        // };
+        // Additional value: -1 = "no save needed, file is already saved locally"
+        var result = AcDwgFeed.Interop.saveFile();
+
+        if (result.saveType == 1 || result.saveType == -1) {
+            // SAVEAS / no save needed
+            var filepath = result.filename;
+            openInvitePeopleDialog(filepath, ticket, api);
+        } else if (result.saveType == 4) {
+            // SAVETOCLOUD
+            openShareDialogForDesignFeedId();
+        }
+    } catch (e) {
+        // user cancelled save dialog
+    }
+}
+;
+
+function setKeepFocus(keepFocus) {
+    try  {
+        AcDwgFeed.Interop.setKeepFocus(keepFocus);
+    } catch (e) {
+        designFeedError("setKeepFocus() failed. " + e.message);
+    }
+}
+;
+function _gaAddImage(size) {
+    postAnalyticsData('Post', 'AttachImage', 'ImageSize', size);
+}
+
+function _gaPost(post) {
+    try  {
+        if (post.activity.polygons) {
+            var pointCount = post.activity.polygons[0].pointCount;
+            if (pointCount == 4) {
+                _gaAddArea();
+            } else if (pointCount == 1) {
+                _gaAddPoint();
+            }
+        } else {
+            _gaAddComments();
+        }
+    } catch (e) {
+        // omitted intentionally
+    }
+}
+
+function _gaUpdatePost(post) {
+    try  {
+        if (post.activity.status == 'closed') {
+            _gaResolveComments();
+        } else if (post.activity.status == 'open') {
+            _gaReopenComments();
+        }
+    } catch (e) {
+        // omitted intentionally
+    }
+}
+
+function _gaAddArea() {
+    postAnalyticsData('Post', 'AttachArea');
+}
+
+function _gaAddPoint() {
+    postAnalyticsData('Post', 'AttachPoint');
+}
+
+function _gaAddComments() {
+    postAnalyticsData('Post', 'PostComments');
+}
+
+function _gaReplyComments() {
+    postAnalyticsData('Post', 'Reply');
+}
+
+function _gaResolveComments() {
+    postAnalyticsData('Post', 'Resolve');
+}
+
+function _gaReopenComments() {
+    postAnalyticsData('Post', 'Reopen');
+}
+
+function _gaDeleteComments() {
+    postAnalyticsData('Post', 'Delete');
+}
+
+function _gaShareDrawing() {
+    postAnalyticsData('Drawing', 'Share');
+}
+
+function _gaTagShare() {
+    postAnalyticsData('Tag', 'Share');
+}
+
+function postAnalyticsData(category, action, label, value) {
+    try  {
+        if (_gaq)
+            _gaq.push(['_trackEvent', category, action, label, value]);
+    } catch (e) {
+        // omitted intentionally
+    }
+}

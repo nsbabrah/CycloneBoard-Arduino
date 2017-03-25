@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<SnippetCollection Format="1.0.0"><Language Lang="CSS" Guid="{A764E898-518D-11d2-9A89-00C04F79EFC3}">
+		<SnippetDir>
+			<OnOff>On</OnOff>
+			<Installed>true</Installed>
+			<Locale>1033</Locale>
+			<DirPath>%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\</DirPath>
+			<LocalizedName>CSS</LocalizedName>
+			<CodeSnippet><Path TimeStamp="2011-12-12-17-38-48-0">%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\font-face directive.snippet</Path><LocalizedName>font face</LocalizedName><Title>font face</Title><Shortcut>@font-face</Shortcut><Description>A font embedding snippet</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType><Kind>AtDirectiveName</Kind></CodeSnippet><CodeSnippet><Path TimeStamp="2012-4-26-20-41-8-0">%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\keyframes directive.snippet</Path><LocalizedName>keyframes</LocalizedName><Title>keyframes</Title><Shortcut>@keyframes</Shortcut><AlternativeShortcut>@-moz-keyframes</AlternativeShortcut><AlternativeShortcut>@-webkit-keyframes</AlternativeShortcut><Description>A animation keyframes snippet</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType><Kind>AtDirectiveName</Kind></CodeSnippet><CodeSnippet><Path TimeStamp="2011-12-12-17-38-48-0">%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\media query directive.snippet</Path><LocalizedName>media query</LocalizedName><Title>media query</Title><Shortcut>@media</Shortcut><Description>A media query example</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType><SnippetType>SurroundsWith</SnippetType><Kind>AtDirectiveName</Kind></CodeSnippet><CodeSnippet><Path TimeStamp="2011-12-12-17-38-48-0">%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\region comment.snippet</Path><LocalizedName>region</LocalizedName><Title>region</Title><Shortcut>region</Shortcut><Description>A snippet for adding a custom region</Description><Author>Microsoft Corporation</Author><SnippetType>Expansion</SnippetType><SnippetType>SurroundsWith</SnippetType></CodeSnippet></SnippetDir>
+		<SnippetDir><ExistsOnDisk>true</ExistsOnDisk><Installed>false</Installed><DirPath>%MyDocs%\Code Snippets\Visual Web Developer\My CSS Snippets\</DirPath><LocalizedName>My CSS Snippets</LocalizedName></SnippetDir></Language>
+</SnippetCollection>

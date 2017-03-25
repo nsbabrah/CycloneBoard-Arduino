@@ -1,0 +1,77 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+   xmlns:c="http://java.sun.com/jsp/jstl/core"
+   xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+   version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+        
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></link>
+  <link rel="stylesheet" href="/resources/demos/style.css"></link>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<title>Compound Interest</title>
+<script text = "javascript">
+
+$(function() {
+    $( "#datepicker" ).datepicker();
+});
+$(function() {
+    $( "#date" ).datepicker();
+});
+function showDiv() {
+	   document.getElementById('welcomeDiv').style.display = "block";
+	}
+function showDiv1() {
+	   document.getElementById('cancelbooking').style.display = "block";
+	}
+</script>
+
+</head>
+<body>
+<form action="booking.jspx" method="post">
+ <div id="welcomeDiv"  style="display:none;" class="answer_list" > WELCOME
+ 
+ <h1>*******Welcome to Trump_tower*******</h1>
+
+ <p>Room Booked</p>
+  </div>
+
+</form>
+
+<form action="booking.jspx" method="post">
+<h1>Trump_tower</h1>
+<h1> book a room </h1>
+ <tr>
+  <td>Check In <input type="text" id = "datepicker" name="fname" /></td>
+  <td> Check Out<input type="text" id ="date" name="lname" /></td>
+     <td> #Rooms<input type="text" name="cid"  /> </td>
+  <td><button type="button"    href="conference_room.jspx"   width="5px" heigth="2px" >Conference room</button></td>
+ 
+			<td><label   value = "200">Minimum Room Capacity: </label></td>
+			<td><input type="text"  value = "200" size="12" id="minRoomCap" /></td>
+		<tr><td>Capacity</td><td>500 persons</td></tr>
+	<td>	<label for="maxHourlyRate" value ="$155">Maximum Hourly Rate: </label></td>
+			<td><input type="text"  value = "$155" size="12"  id="maxHourlyRate" /></td>
+		
+</tr>
+  <button id ="submit"  value="Show Div"  name= "submit" type="button" onclick="showDiv()" width="5px" heigth="2px">Submit</button>
+
+</form>
+
+<form action="cancelbookingconfirmation.jspx" method="post">
+ 
+<button id ="cancel"   name= "submit1" type="button"  width="5px" heigth="2px">cancel booking</button>
+</form><form action="clientlogin.jspx" method="post"  onclick="showDiv1()" >
+ 
+  <button id ="back"   onclick="location.href='http://localhost:8080/trunk/clientlogin.jspx'" name ="button"  type="button"   width="5px" heigth="2px">Login</button>
+ </form>
+</body>
+</html>
+</jsp:root>

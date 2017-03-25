@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html ng-app="appmgr-privacy">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-common.css">
+		<link type="text/css" rel="stylesheet" href="css/appmgr-privacypolicy.css">
+		<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/arbcore.js"></script>
+		<script type="text/javascript" src="js/lib/Globalize.js"></script>
+	</head>
+	<body ng-controller="appmgrPrivacyCtrl">
+		<div class="header">
+			<img src="images/product_branding.png" width="860" height="70">
+			<img src="images/hero_image.png" width="860" height="220">
+		</div>
+		<div class="middle">
+			<div class="content">
+				<h4 arb:id="privacy_label"></h4>
+				<div class="stmt">
+					<span arb:id="pp_rights_label1"></span>
+					<a href="" ng-click="openStatement()" arb:id="privacy_stmt_label"></a>&#160;
+					<span class="left" arb:id="pp_rights_label2"></span>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btns">
+				<a class="agree-btn" href="" ng-click="agree()">
+				<span class="left"></span>
+				<span class="center" arb:id="agree_label"></span>
+				<span class="right"></span>
+				</a>
+				<a class="cancel-btn" href="" ng-click="cancel()">
+				<span class="left"></span>
+				<span class="center" arb:id="cancel_label"></span>
+				<span class="right"></span>
+				</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/common/appmgr-utils.js"></script>
+		<script type="text/javascript">
+			loadCulture();
+		</script>
+		<script type="text/javascript">
+			arbResourceSelector();
+		</script>
+		<script type="text/javascript" src="js/controllers/appmgrPrivacyCtrl.js"></script>
+	</body>
+</html>

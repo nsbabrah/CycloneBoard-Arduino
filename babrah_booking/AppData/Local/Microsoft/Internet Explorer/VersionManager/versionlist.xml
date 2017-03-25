@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<blocklist version="16" ttlHigh="50" ttlLow="1251635200">
+  <blocklistentries>
+    <blocklistentry key="{dbc80044-a445-435b-bc74-9c25c1c588a9}" entrytype="2" />
+    <blocklistentry key="{e19f9331-3110-11d4-991c-005004d3b3db}" entrytype="2" />
+    <blocklistentry key="{8ad9c840-044e-11d1-b3e9-00805f499d93}" entrytype="2" />
+    <blocklistentry key="{761497bb-d6f0-462c-b6eb-d4daf1d92d43}" entrytype="2" />
+    <blocklistentry key="{5852f5ed-8bf4-11d4-a245-0080c6f74284}" entrytype="2" />
+    <blocklistentry key="{CAFEEFAC-*}" entrytype="2" />
+    <blocklistentry key="javaws.exe" entrytype="1" />
+    <blocklistentry key="jp2launcher.exe" entrytype="1" />
+    <blocklistentry key="ssvagent.exe" entrytype="1" />
+    <blocklistentry key="unpack200.exe" entrytype="1" />
+    <blocklistentry key="{dfeaf541-f3e1-4c24-acac-99c30715084a}" entrytype="2" />
+    <blocklistentry key="agcp.exe" entrytype="1" />
+    <blocklistentry key="Silverlight.Configuration.exe" entrytype="1" />
+  </blocklistentries>
+  <groupentries>
+    <groupentry groupname="Java(TM)" fwdlink="https://go.microsoft.com/fwlink/?LinkID=401352" />
+    <groupentry groupname="Java(TM) 1.4" fwdlink="http://" latestgroup="1" />
+    <groupentry groupname="Java(TM) 1.5" fwdlink="http://" latestgroup="1" />
+    <groupentry groupname="Java(TM) 1.6" fwdlink="http://" latestgroup="1" />
+    <groupentry groupname="Java(TM) 1.7" fwdlink="http://" latestgroup="1" />
+    <groupentry groupname="Java(TM) 1.8" fwdlink="http://" latestgroup="1" />
+    <groupentry groupname="Silverlight 5" fwdlink="http://" latestgroup="1" />
+    <groupentry groupname="Silverlight" fwdlink="https://go.microsoft.com/fwlink/?LinkID=513071" />
+  </groupentries>
+  <blocklistfullentries>
+    <blocklistentry key="{dbc80044-a445-435b-bc74-9c25c1c588a9}" entrytype="2">
+      <versionentries numberofelements="4">
+        <versionentry groupname="Java(TM) 1.8" filename="jp2ssv.dll" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="jp2ssv.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="jp2ssv.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="{e19f9331-3110-11d4-991c-005004d3b3db}" entrytype="2">
+      <versionentries numberofelements="7">
+        <versionentry groupname="Java(TM) 1.8" filename="jp2iexp.dll" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="jp2iexp.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="ssv.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="jp2iexp.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="ssv.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="ssv.dll" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="{8ad9c840-044e-11d1-b3e9-00805f499d93}" entrytype="2">
+      <versionentries numberofelements="9">
+        <versionentry groupname="Java(TM) 1.8" filename="jp2iexp.dll" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="jp2iexp.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="ssv.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="jp2iexp.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="ssv.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="npjpi*.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="npjpi*.dll" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.4" filename="npjpi*.dll" productversion="1.4.2.430-1.4.65535.65535" fileversion="1.4.2.430-1.4.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="{761497bb-d6f0-462c-b6eb-d4daf1d92d43}" entrytype="2">
+      <versionentries numberofelements="5">
+        <versionentry groupname="Java(TM) 1.8" filename="ssv.dll" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="ssv.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="ssv.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="ssv.dll" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="{5852f5ed-8bf4-11d4-a245-0080c6f74284}" entrytype="2">
+      <versionentries numberofelements="6">
+        <versionentry groupname="Java(TM) 1.8" filename="wsdetect.dll" productversion="11.91.0.0-65535.65535.65535.65535" fileversion="8.0.910.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="wsdetect.dll" productversion="10.101.0.0-10.65535.65535.65535" fileversion="7.0.1010.0-7.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="wsdetect.dll" productversion="1.6.0.0-1.6.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="JavaWebStart.dll" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.4" filename="JavaWebStart.dll" productversion="1.4.2.430-1.4.65535.65535" fileversion="1.4.2.430-1.4.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="{CAFEEFAC-*}" entrytype="2">
+      <versionentries numberofelements="15">
+        <versionentry groupname="Java(TM) 1.8" filename="deployJava1.dll" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.8" filename="jp2iexp.dll" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="deployJava1.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="jp2iexp.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="ssv.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="npjpi*.dll" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="deployJava1.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="deploytk.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="jp2iexp.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="ssv.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="npjpi*.dll" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="ssv.dll" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="npjpi*.dll" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.4" filename="npjpi*.dll" productversion="1.4.2.430-1.4.65535.65535" fileversion="1.4.2.430-1.4.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="javaws.exe" entrytype="1">
+      <versionentries numberofelements="4">
+        <versionentry groupname="Java(TM) 1.8" filename="javaws.exe" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="javaws.exe" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="javaws.exe" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="jp2launcher.exe" entrytype="1">
+      <versionentries numberofelements="4">
+        <versionentry groupname="Java(TM) 1.8" filename="jp2launcher.exe" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="jp2launcher.exe" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="jp2launcher.exe" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="ssvagent.exe" entrytype="1">
+      <versionentries numberofelements="5">
+        <versionentry groupname="Java(TM) 1.8" filename="ssvagent.exe" productversion="8.0.910.0-65535.65535.65535.65535" fileversion="11.91.0.0-65535.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.7" filename="ssvagent.exe" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="ssvagent.exe" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.5" filename="ssvagent.exe" productversion="5.0.990.0-5.65535.65535.65535" fileversion="5.0.990.0-5.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="unpack200.exe" entrytype="1">
+      <versionentries numberofelements="3">
+        <versionentry groupname="Java(TM) 1.7" filename="unpack200.exe" productversion="7.0.1010.0-7.65535.65535.65535" fileversion="10.101.0.0-10.65535.65535.65535" />
+        <versionentry groupname="Java(TM) 1.6" filename="unpack200.exe" productversion="6.0.1150.0-6.65535.65535.65535" fileversion="6.0.1150.0-6.65535.65535.65535" />
+        <versionentry groupname="Java(TM)" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="{dfeaf541-f3e1-4c24-acac-99c30715084a}" entrytype="2">
+      <versionentries numberofelements="2">
+        <versionentry groupname="Silverlight 5" filename="npctrl.dll" productversion="5.1.41212.0-65535.65535.65535.65535" fileversion="5.1.41212.0-65535.65535.65535.65535" />
+        <versionentry groupname="Silverlight" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="agcp.exe" entrytype="1">
+      <versionentries numberofelements="2">
+        <versionentry groupname="Silverlight 5" filename="agcp.exe" productversion="5.1.41212.0-65535.65535.65535.65535" fileversion="5.1.41212.0-65535.65535.65535.65535" />
+        <versionentry groupname="Silverlight" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+    <blocklistentry key="Silverlight.Configuration.exe" entrytype="1">
+      <versionentries numberofelements="2">
+        <versionentry groupname="Silverlight 5" filename="Silverlight.Configuration.exe" productversion="5.1.41212.0-65535.65535.65535.65535" fileversion="5.1.41212.0-65535.65535.65535.65535" />
+        <versionentry groupname="Silverlight" filename="*" productversion="*" fileversion="*" />
+      </versionentries>
+    </blocklistentry>
+  </blocklistfullentries>
+</blocklist>

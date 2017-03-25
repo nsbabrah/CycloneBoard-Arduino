@@ -1,0 +1,1004 @@
+arb.register("arb_editor:ja_JP", {
+  "@@locale": "ja",
+
+  "settings_link": "設定",
+  "@settings_link": {
+    "description": "Application Manager main window settings link text"
+  },
+  "help_link": "ヘルプ",
+  "@help_link": {
+    "description": "Application Manager main window help link text"
+  },
+  "welcome_link": "ようこそ",
+  "@welcome_link": {
+    "description": "Welcome tab top navigation text"
+  },
+  "software_link": "ソフトウェア",
+  "@software_link": {
+    "description": "Software tab top navigation text"
+  },
+  "updates_link": "更新",
+  "@updates_link": {
+    "description": "Updates tab top navigation text"
+  },
+  "apps_link": "アプリケーション",
+  "@apps_link": {
+    "description": "Apps tab top navigation text"
+  },
+  "search_text@placeholder": "検索...",
+  "@search_text": {
+    "description": "Placeholder text for Search text box in the Main Appman UI"
+  },
+  "sort_by_label": "並べ替え方法:",
+  "@sort_by_label": {
+    "description": "Label for the Sort by drop down"
+  },
+  "sort_date_optn": "日付",
+  "@sort_date_optn": {
+    "description": "One of the option in Sort by drop down - Date"
+  },
+  "sort_sev_optn": "重要度",
+  "@sort_sev_optn": {
+    "description": "One of the option in Sort by drop down - Severity"
+  },
+  "view_label": "表示方法:",
+  "@view_label": {
+    "description": "Label for the different View selectors (List, Group, Thumbnail, Hierarchy are the possible views)"
+  },
+  "get_started_label": "スタートアップ",
+  "@get_started_label": {
+    "description": "Label for Getting started header in the Welcome tab"
+  },
+  "upd_sw_link": "ソフトウェアを更新",
+  "@upd_sw_link": {
+    "description": "Update Software button text under getting started section"
+  },
+  "about_appman": "Application Manager とは",
+  "@about_appman": {
+    "description": "Label for About Application Manager header in the Welcome tab"
+  },
+  "about_appman_cont": "新しい Service Pack、修正プログラム、およびその他の重要なファイルが使用可能になったときに、その情報をタイムリーに通知することによって、インストールされているすべてのオートデスク アプリケーションおよびスイート製品を最新の状態に保持するよう支援するデスクトップ ツールです。更新を適用することにした場合、Application Manager はクラウドからファイルを絶えずダウンロードし、お使いのコンピュータにインストールします。",
+  "@about_appman_cont": {
+    "description": "About application manager content"
+  },
+  "trls_label": "チュートリアル",
+  "@trls_label": {
+    "description": "Tutorial header in welcome tab"
+  },
+  "trl1_label": "チュートリアル 1",
+  "@trl1_label": {
+    "description": "Tutorial1 sub header text in welcome tab"
+  },
+   "no_trl": "チュートリアルは利用できません。",
+  "@no_trl": {
+    "description": "To show the text under Tutorials section when there is no tutorials"
+  },
+  "trl_cont": "Lorem ipsum dolor sit amet するには。",
+  "@trl_cont": {
+    "description": "Tutorial1 content"
+  },
+  "status_err_title": "アプリケーション エラー",
+  "@status_err_title": {
+    "description": "Status bar error title"
+  },
+  "abt_label": "バージョン情報",
+  "@abt_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  "rem_label": "残り",
+  "@rem_label": {
+    "description": "The text which will be used to show the download time remaining. Eg: About 20 mins remaining"
+  },
+  
+  "install_label": "インストール",
+  "@install_label": {
+    "description": "The Install button name"
+  },
+  "pause_label": "一時停止",
+  "@pause_label": {
+    "description": "The Pause button name"
+  },
+  "resume_label": "続ける",
+  "@resume_label": {
+    "description": "The Resume button name"
+  },
+  "cancel_label": "キャンセル",
+  "@cancel_label": {
+    "description": "The Cancel button name"
+  },
+  "ignore_label": "無視",
+  "@ignore_label": {
+    "description": "The Ignore button name"
+  },
+  "add_label": "追加",
+  "@ignore_label": {
+    "description": "Add button (per-item) label in deployment mode"
+  },
+  "remove_label": "削除",
+  "@ignore_label": {
+    "description": "Remove button (per-item) label in deployment mode"
+  },
+  "install_sel_label": "選択項目をインストール",
+  "@install_sel_label": {
+    "description": "The Install Selected button name, used for multi-download selection"
+  },
+  "pause_sel_label": "選択項目を一時停止",
+  "@pause_sel_label": {
+    "description": "The Pause Selected button name"
+  },
+  "resume_sel_label": "選択項目を継続",
+  "@resume_sel_label": {
+    "description": "The Resume Selected button name"
+  },
+  "cancel_sel_label": "選択項目をキャンセル",
+  "@cancel_sel_label": {
+    "description": "The Cancel Selected button name"
+  },
+  "ignore_sel_label": "選択項目を無視",
+  "@ignore_sel_label": {
+    "description": "The Ignore Selected button name"
+  },
+  "add_sel_label": "選択項目を追加",
+  "@add_sel_label": {
+    "description": "Add Selected button label in the status area. Used in deployment mode"
+  },
+  "remove_sel_label": "選択項目を削除",
+  "@remove_sel_label": {
+    "description": "Remove Selected button label in the status area. Used in deployment mode"
+  },
+  "close_label": "閉じる",
+  "@close_label": {
+    "description": "The Close button name"
+  },
+  "yes_label": "はい",
+  "@yes_label": {
+    "description": "The Yes button name"
+  },
+  "no_label": "いいえ",
+  "@no_label": {
+    "description": "The No button name"
+  },
+  "ok_label": "OK",
+  "@ok_label": {
+    "description": "The OK button name"
+  },
+  "retry_label": "再試行",
+  "@retry_label": {
+    "description": "The Retry button name. All the above refers to Appman main window HTML strings"
+  },
+
+  "recommended_upd": "推奨",
+  "@recommended_upd": {
+    "description": "Recommended panel label"
+  },
+  "date_new_upd": "新しい更新",
+  "@date_new_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_rec_upd": "最近の更新",
+  "@date_rec_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lw_upd": "先週",
+  "@date_lw_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_lm_upd": "先月",
+  "@date_lm_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  "date_old_upd": "以前",
+  "@date_old_upd": {
+    "description": "One of the header label when the user selects Sort by value as Date"
+  },
+  
+  "sev_high": "高",
+  "@sev_high": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_med": "標準",
+  "@sev_med": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "sev_low": "低",
+  "@sev_low": {
+    "description": "One of the header label when the user selects Sort by value as Severity"
+  },
+  "other_label": "その他",
+  "@other_label": {
+    "description": "To show the category as Other if the severity is unknown"
+  },
+ 
+  "sr_rel": "リリース",
+  "@sr_rel": {
+    "description": "Label for the date of update Released"
+  },
+  "sr_status": "ステータス",
+  "@sr_status": {
+    "description": "Label for the Status of an update"
+  },
+  "sr_pub": "作成者",
+  "@sr_pub": {
+    "description": "Label for the Publisher of an update"
+  },
+  "sr_uid": "更新 ID",
+  "@sr_uid": {
+    "description": "Label for the Update ID"
+  },
+  "sr_sev": "重要度",
+  "@sr_sev": {
+    "description": "Label for the Severity of an update"
+  },
+  "sr_size": "サイズ",
+  "@sr_size": {
+    "description": "Label to show the Size of an update"
+  },
+  
+  "ap_pending_download": "ダウンロードを保留",
+  "@ap_pending_download": {
+    "description": "The text should be shown when an update is pending for download"
+  },
+  "ap_downloading": "ダウンロード中",
+  "@ap_downloading": {
+    "description": "The text should be shown when an update is downloading"
+  },
+  "ap_download_paused": "ダウンロード一時停止",
+  "@ap_download_paused": {
+    "description": "The text should be shown when an update is paused during download"
+  },
+  "ap_pending_install": "インストールを保留",
+  "@ap_pending_install": {
+    "description": "The text should be shown when an update is pending for the installation"
+  },
+  "ap_installing": "インストール中",
+  "@ap_installing": {
+    "description": "The text should be shown when an update is installing"
+  },
+  "ap_install_paused": "インストール一時停止",
+  "@ap_install_paused": {
+    "description": "The text should be shown when an update is paused during installation"
+  },
+  
+  "al_details": "詳細",
+  "@al_details": {
+    "description": "The Details link header text to show the description of an update"
+  },
+  "al_rel_updates": "関連する更新",
+  "@al_rel_updates": {
+    "description": "The Related Updates link header text"
+  },
+  "al_rel_docs": "関連ドキュメントとパッケージ",
+  "@al_rel_docs": {
+    "description": "The Related Docs and Packages link header text"
+  },
+  "al_rel_notes": "リリース ノート",
+  "@al_rel_notes": {
+    "description": "The Release Note header text"
+  },
+  "also_applies_to": "次にも適用されます:",
+  "@also_applies_to": {
+    "description": "Also applies to text to show under Related Updates section"
+  },
+  "also_includes": "次も含まれます:",
+  "@also_includes": {
+    "description": "Also Includes text to show under Related Updates section"
+  },
+  "go_to_full_details": "完全更新の詳細に移動",
+  "@go_to_full_details": {
+    "description": "Go to Full Update Details to show under Related Updates section"
+  },
+  "more_text": "詳細",
+  "@more_text": {
+    "description": "To show More link under Also Includes section"
+  },
+  "as_not_installed": "インストールされていません",
+  "@as_not_installed": {
+    "description": "Status text of an non installed update"
+  },
+  "as_installed": "インストール済み",
+  "@as_installed": {
+    "description": "Status text of an installed update"
+  },
+  "as_not_included": "含めない",
+  "@as_not_included": {
+    "description": "Status text of an non included update in deployment mode"
+  },
+  "as_included": "含める",
+  "@as_included": {
+    "description": "Status text of an included update in deployment mode"
+  },
+  "as_ignored": "無視されました",
+  "@as_ignored": {
+    "description": "Status text of an ignored update"
+  },
+  "as_not_applicable": "利用不可",
+  "@as_not_applicable": {
+    "description": "Status text of an Non Applicable update"
+  },
+  
+  "unknown_label": "不明",
+  "@unknown_label": {
+    "description": "The dynamic text to be shown when the file size of an update is not available in SDS"
+  },
+  "paused_label": "一時停止",
+  "@paused_label": {
+    "description": "The text should be shown when an individual update is paused"
+  },
+  "backup_label": "共有の場所にコピー中",
+  "@paused_label": {
+    "description": "The text should be shown when sharing one update to local cache shared location"
+  },
+  "new_label": "新規",
+  "@new_label": {
+    "description": "The NEW label for unvisited updates"
+  },
+  "retired_label": "廃止",
+  "@retired_label": {
+    "description": "The RETIRED label for the Retired/Revoked updates"
+  },
+  "net_unavail_label": "ネットワーク接続が使用できません。",
+  "@net_unavail_label": {
+    "description": "An error text to show the connection unavailable"
+  },
+  
+  "sw_label": "ソフトウェア",
+  "@sw_label": {
+    "description": "The text to be appended when an user selects a software. Eg: 1 Software selected"
+  },
+  "prod_label": "製品",
+  "@prod_label": {
+    "description": "The text to be appended when an user selects an update. Eg: 1 Product selected"
+  },
+  "sws_label": "ソフトウェア",
+  "@sws_label": {
+    "description": "The text to be appended when an user selects more than one software. Eg: 2 Softwares selected"
+  },
+  "prods_label": "製品",
+  "@prods_label": {
+    "description": "The text to be appended when an user selects more than one update. Eg: 2 Products selected"
+  },
+  "apps_label": "アプリケーション",
+  "@apps_label": {
+    "description": "The text to be appended when an user selects apps. Eg: 2 Apps selected"
+  },
+  "cancel_all_label": "すべてキャンセル",
+  "@cancel_all_label": {
+    "description": "The header text of Cancel All confirmation popup when the user try to cancel more than one update"
+  },
+  "cancel_conf_label": "このインストールをキャンセルしますか?",
+  "@cancel_conf_label": {
+    "description": "The content of cancel confirmation popup, single update selection"
+  },
+  "cancel_all_conf_label": "すべてのインストールをキャンセルしますか?",
+  "@cancel_all_conf_label": {
+    "description": "The content of cancel confirmation popup, multiple update selection scenario. All the above refers to Appman main window JSON strings"
+  },
+
+  "default_footer_text": "インストールする{0}を選択",
+  "@default_footer_text": {
+    "description": "The default footer text to be shown when the user navigates to Updates/ Software/ Apps tab"
+  },
+  
+  "empty_tab_text": "お使いの オートデスク ソフトウェアは最新版です。更新の必要はありません。",
+  "@empty_tab_text": {
+    "description": "The empty footer text to be shown when there is no Updates/ Software/ Apps"
+  },
+  
+  "server_not_reachable_err": "サーバに到達できないため、更新プログラムを取得できません。後でもう一度試してみるか、設定を再確認してください。",
+  "@server_not_reachable_err": {
+    "description": "The update tab text to be shown when the server is not reachable"
+  },
+  "conn_lost_status_err": "ネットワーク接続が失われました。ネットワーク設定を再確認してください。Application Manager はネットワークへの接続を試行し続けますが、[キャンセル]を選択すればこれを停止できます。",
+  "@conn_lost_status_err": {
+    "description": "Status bar error to be shown when there is no network"
+  },
+  
+  "retired_err_title": "このバージョンの Application Manager は廃止されました",
+  "@retired_err_title": {
+    "description": "Retired modal dialog error title"
+  },
+  "retired_err1": "このバージョンの Autodesk Application Manager では、オートデスクのサーバにはもうアクセスできません。",
+  "@retired_err1": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err2": "Application Manager を新しいバージョンに更新してください。",
+  "@retired_err2": {
+    "description": "Retired modal dialog error content"
+  },
+  "retired_err3": "Application Manager の更新方法の詳細については、管理者にお問い合わせください。",
+  "@retired_err3": {
+    "description": "Retired modal dialog error content"
+  },
+   "retired_soon_err_title": "このバージョンの Application Manager は、近日中に廃止されます。",
+  "@retired_soon_err_title": {
+    "description": "Retiring soon general error title"
+  },
+  "retired_soon_err_cont": "サーバへのアクセスが不可能になる前に、Autodesk Application Manager を新しいバージョンに更新してください。",
+  "@retired_soon_err_cont": {
+    "description": "Retiring soon general error content"
+  },
+  
+  "dynamic_footer_text": "{0} 個選択されました",
+  "@dynamic_footer_text": {
+    "description": "The footer text will be changed based on the number of product selection. Eg: 5 Products Selected"
+  },
+
+  "mins_label": "分",
+  "@mins_label": {
+    "description": "The minutes text to be shown in the over all time remaining. Eg: 1 hour 20 minutes remaining"
+  },
+  "hours_label": "時間",
+  "@hours_label": {
+    "description": "The hours text to be shown in the over all time remaining. Eg: 2 hours 20 minutes remaining"
+  },
+  "days_label": "日",
+  "@days_label": {
+    "description": "The days text to be shown in the over all time remaining. Eg: 2 days 20 minutes remaining"
+  }, 
+  "weeks_label": "週",
+  "@weeks_label": {
+    "description": "The weeks text to be shown in the over all time remaining. Eg: 2 weeks 20 minutes remaining"
+  }, 
+  "months_label": "月",
+  "@months_label": {
+    "description": "The months text to be shown in the over all time remaining. Eg: 2 months 20 minutes remaining"
+  }, 
+  "years_label": "年",
+  "@years_label": {
+    "description": "The years text to be shown in the over all time remaining. Eg: 2 years 20 minutes remaining"
+  },
+  
+  "sec_label": "秒",
+  "@sec_label": {
+    "description": "The sec text to be shown in the over all time remaining. Eg: 1 sec remaining, 10 sec remaining"
+  },
+  "min_label": "分",
+  "@min_label": {
+    "description": "The minute text to be shown in the over all time remaining. Eg: 2 years 1 minute remaining"
+  },
+  "hour_label": "時",
+  "@hour_label": {
+    "description": "The hour text to be shown in the over all time remaining. Eg: 2 years 1 hour remaining"
+  },
+  "day_label": "日",
+  "@day_label": {
+    "description": "The day text to be shown in the over all time remaining. Eg: 1 day 20 minutes remaining"
+  }, 
+  "week_label": "週",
+  "@week_label": {
+    "description": "The week text to be shown in the over all time remaining. Eg: 1 week 20 minutes remaining"
+  }, 
+  "month_label": "月",
+  "@month_label": {
+    "description": "The month text to be shown in the over all time remaining. Eg: 1 month 20 minutes remaining"
+  }, 
+  "year_label": "年",
+  "@year_label": {
+    "description": "The year text to be shown in the over all time remaining. Eg: 1 year 20 minutes remaining"
+  },
+  
+  "active_label": "アクティブ",
+  "@active_label": {
+    "description": "The label to show the number of active downloads in the Mini alert window"
+  },
+  "delay_label": "遅延:",
+  "@delay_label": {
+    "description": "Label of the Delay drop down in the mini-progress and self-update alert window"
+  },
+  
+  "privacy_label": "オートデスク プライバシー ステートメント",
+  "@privacy_label": {
+    "description": "Privacy header as per Legal team"
+  },
+  "privacy_stmt_label": "オートデスク プライバシー ステートメント",
+  "@privacy_stmt_label": {
+    "description": "Privacy policy header"
+  },
+  "pp_rights_label1": "オートデスクは、お客様のプライバシーと個人情報に関するお客様の権利を尊重し、守秘義務を順守いたします。下の[同意する]をクリックすると、",
+  "@pp_rights_label1": {
+    "description": "Privacy policy content"
+  },
+  "pp_rights_label2": "を読む機会があり、お客様の個人情報がプライバシー ステートメントに記載されているとおりに取り扱われることを理解したものとみなされます。",
+  "@pp_rights_label2": {
+    "description": "Privacy policy content"
+  },
+  "personal_info_label2": "(ステートメントに規定される国外への情報の転送も含む)。",
+  "@personal_info_label2": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "periodic_check_label": "オートデスク ソフトウェアが定期的に更新プログラムを確認し、ユーザに通知することを許可する。",
+  "@periodic_check_label": {
+    "description": "Privacy policy content checkbox label"
+  },
+  "pp_desc": "この製品は、お客様の会社のライセンス管理者により、ユーザとシステムの資格情報、製品の使用頻度などの情報が定期的に送信されるライセンス モデルが適用されている場合があります。これは、ライセンスの権限や会社全体での使用状況を確認することを目的とするものです。詳細はライセンス管理者にお問い合わせください。",
+  "@pp_desc": {
+    "description": "Privacy policy content"
+  },
+  "agree_label": "同意する",
+  "@agree_label": {
+    "description": "Label of I Agree button in the Privacy policy window. All the above strings refer to Privacy policy window"
+  },
+  
+  "today_at": "本日",
+  "@today_at": {
+    "description": "To show the Todays time. Eg: Today at 4:55 PM"
+  },
+  "su_note_title": "通知 - 最重要",
+  "@su_note_title": {
+    "description": "Self update window message header"
+  },
+  "su_msg": "Autodesk Application Manager は、更新する必要があります。",
+  "@su_msg": {
+    "description": "Self update window message"
+  },
+  "view_details": "詳細を表示",
+  "@view_details": {
+    "description": "View Details link text in self update window"
+  },
+  "update_label": "更新",
+  "@update_label": {
+    "description": "Update link text in self update window"
+  },
+  "sr_title": "通知",
+  "@sr_title": {
+    "description": "Self update success window header"
+  },
+  "to_label": "更新後:",
+  "@to_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "version_label": "バージョン",
+  "@version_label": {
+    "description": "A label to show the version udpate. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "open_manager": "Manager を開く",
+  "@open_manager": {
+    "description": "Open Manager link text - self update window"
+  },
+  "all_paused": "すべて一時停止中",
+  "@all_paused": {
+    "description": "To show the All Paused text in Mini progress window when all updates are paused"
+  },
+  "sr_updated_label": "正常に更新されました",
+  "@sr_updated_label": {
+    "description": "A label to show the successful updation. Eg. Application Manager successfully updated to Version 1.4.50"
+  },
+  "insfailed_err": "インストールは失敗しました。",
+  "@insfailed_err": {
+    "description": "The text to be shown when the self update install failed"
+  },
+  "dwldfailed_err": "ダウンロードは失敗しました",
+  "@dwldfailed_err": {
+    "description": "he text to be shown when the self update download failed"
+  },
+  "host_not_found_err": "ホストが見つかりません",
+  "@host_not_found_err": {
+    "description": "Host not found error string"
+  },
+  "net_timeout_err": "接続のタイムアウト",
+  "@net_timeout_err": {
+    "description": "Connection timed out error string. All the above strings are related to Self update window"
+  },
+  
+  "ua_title": "通知 - 重要",
+  "@ua_title": {
+    "description": "Updates available window message header"
+  },
+  "ua_msg": "お使いのオートデスク製品に新しい更新プログラムがあります。",
+  "@ua_msg": {
+    "description": "Updates available window message. All the above strings are related to Updates Available alert window"
+  },
+  
+  "settings_title": "Application Manager の設定",
+  "@settings_title": {
+    "description": "Settings window header"
+  },
+  "import_settings": "読み込む",
+  "@import_settings": {
+    "description": "The Import link text"
+  },
+  "export_settings": "書き出す",
+  "@export_settings": {
+    "description": "The Export link text"
+  },
+  "general_link": "一般",
+  "@general_link": {
+    "description": "The General tab navigation text"
+  },
+  "files_link": "ファイル",
+  "@files_link": {
+    "description": "The Files tab navigation text"
+  },
+  "alerts_link": "警告",
+  "@alerts_link": {
+    "description": "The Alerts tab navigation text"
+  },
+  "network_link": "ネットワーク",
+  "@network_link": {
+    "description": "The Network tab navigation text"
+  },
+  "about_link": "バージョン情報",
+  "@about_link": {
+    "description": "The About tab navigation text"
+  },
+  "startup_label": "スタートアップ",
+  "@startup_label": {
+    "description": "Startup section header - General tab"
+  },
+  "auto_relaunch_label": "コンピュータにログインしたときに自動的に起動する",
+  "@auto_relaunch_label": {
+    "description": "Auto relaunch drop down label"
+  },
+  "self_update_label": "Application Manager を常に最新の状態にする",
+  "@self_update_label": {
+    "description": "Self update Application Manager check box."
+  },
+  "welcome_opened_label": "開いたときに[ようこそ]ページを表示する",
+  "@welcome_opened_label": {
+    "description": "Show welcome page checkbox label"
+  },
+  "updates_label": "更新プログラム",
+  "@updates_label": {
+    "description": "Updates section header - General tab"
+  },
+  "check_interval_label": "更新プログラムの確認方法:",
+  "@check_interval_label": {
+    "description": "The label for check for updates dropdown"
+  },
+  "remote_update_label": "リモート更新サービスを有効にする",
+  "@remote_update_label": {
+    "description": "The label for enable remote update service checkbox"
+  },
+  "link_handling_label": "リンクの処理",
+  "@link_handling_label": {
+    "description": "Link Handling section header - General tab"
+  },
+  "opened_from_link_label": "Application Manager をハイパーリンクから開けるようにする",
+  "@opened_from_link_label": {
+    "description": "The label for allow application manager opened from hyperlinks checkbox"
+  },
+  "local_files_label": "ローカル ファイル",
+  "@local_files_label": {
+    "description": "Local Files section header - Files tab"
+  },
+  "location_label": "場所",
+  "@location_label": {
+    "description": "Location label"
+  },
+  "shared_files_label": "共有ファイル",
+  "@shared_files_label": {
+    "description": "Shared Files label"
+  },
+  "shared_storage_label": "コンテンツのダウンロードに共有ストレージを使用",
+  "@shared_storage_label": {
+    "description": "Checkbox label"
+  },
+  "limit_shared_space_label": "使用する共有空間を制限:",
+  "@limit_shared_space_label": {
+    "description": "Checkbox label"
+  },
+  "tray_icon_label": "トレイ アイコン",
+  "@tray_icon_label": {
+    "description": "Tray Icon section header - Files tab"
+  },
+  "system_tray_label": "システム トレイ アイコンを表示",
+  "@system_tray_label": {
+    "description": "Checkbox label"
+  },
+  "batch_severity_label": "重要なバッジのみを表示:",
+  "@batch_severity_label": {
+    "description": "Checkbox label"
+  },
+  "alert_windows": "警告ウィンドウ",
+  "@alert_windows": {
+    "description": "Alert Windows section header - Alerts tab"
+  },
+  "desktop_alert_label": "デスクトップ警告ウィンドウを表示",
+  "@desktop_alert_label": {
+    "description": "Show desktop alert label"
+  },
+  "hide_window_label": "終了後にウィンドウを非表示:",
+  "@hide_window_label": {
+    "description": "Hide window dropdown label"
+  },
+  "alert_severity_label": "重要な警告のみを表示:",
+  "@alert_severity_label": {
+    "description": "Checkbox label"
+  },
+  "connections_label": "接続",
+  "@connections_label": {
+    "description": "Connections section header - Alerts tab"
+  },
+  "limit_downloads_label": "最大同時ダウンロード:",
+  "@limit_downloads_label": {
+    "description": "Limit download drop down label"
+  },
+  "download_bandwidth_label": "最大帯域幅:",
+  "@download_bandwidth_label": {
+    "description": "Limit download bandwidth drop down label"
+  },
+  "proxy_label": "プロキシ:",
+  "@proxy_label": {
+    "description": "Proxy section header - Network tab"
+  },
+  "proxy_type_label": "プロキシ タイプ:",
+  "@proxy_type_label": {
+    "description": "Proxy type drop down label"
+  },
+  "no_proxy_label": "プロキシなし",
+  "@no_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "auto_detect_label": "自動検出",
+  "@auto_detect_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "system_proxy_label": "システム プロキシ",
+  "@system_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "manual_proxy_label": "手動プロキシ",
+  "@manual_proxy_label": {
+    "description": "One of the option in Proxy type drop down"
+  },
+  "host_name_label": "ホスト名またはアドレス:",
+  "@host_name_label": {
+    "description": "Host name label"
+  },
+  "username_label": "ユーザ名:",
+  "@username_label": {
+    "description": "Username label"
+  },
+  "secure_socket_label": "SSL (Secure Sockets Layer)を使用する",
+  "@secure_socket_label": {
+    "description": "Checkbox label"
+  },
+  "port_number_label": "ポート番号:",
+  "@port_number_label": {
+    "description": "Port number label"
+  },
+  "password_label": "パスワード:",
+  "@password_label": {
+    "description": "Password label"
+  },
+  "ck_upd_4hr": "4 時間ごと",
+  "@ck_upd_4hr": {
+    "description": "Check for updates every 4 Hours label"
+  },
+  "ck_upd_8hr": "8 時間ごと",
+  "@ck_upd_8hr": {
+    "description": "Check for updates every 8 Hours label"
+  },
+  "ck_upd_24hr": "24 時間ごと",
+  "@ck_upd_24hr": {
+    "description": "Check for updates every 24 Hours label"
+  },
+  "ck_upd_week": "毎週",
+  "@ck_upd_week": {
+    "description": "Check for updates every Week label"
+  },
+  "hide_win_10secs_label": "10 秒間",
+  "@hide_win_10secs_label": {
+    "description": "Hide Alert window after 10 seconds label"
+  },
+  "hide_win_30secs_label": "30 秒間",
+  "@hide_win_30secs_label": {
+    "description": "Hide Alert window after 30 seconds label"
+  },
+  "hide_win_60secs_label": "60 秒間",
+  "@hide_win_60secs_label": {
+    "description": "Hide Alert window after 60 seconds label"
+  },
+  "general_label": "一般",
+  "@general_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when General tab selected"
+  },
+  "file_label": "ファイル",
+  "@file_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when File tab selected"
+  },
+  "files_label": "ファイル",
+  "@files_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Files tab selected"
+  },
+  "alert_label": "警告",
+  "@alert_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alert tab selected"
+  },
+  "alerts_label": "警告",
+  "@alerts_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Alerts tab selected"
+  },
+  "network_label": "ネットワーク",
+  "@network_label": {
+    "description": "A place holder text to be replaced in Adjust {0} Settings when Network tab selected"
+  },
+  "adjust_settings_label": "{0} の設定を調整する",
+  "@adjust_settings_label": {
+    "description": "A place holder string to be replaced with General/ Files/ Alerts/ Network"
+  },
+  "atuo_relaunch_help": "コンピュータが動作している限り、Autodesk Application Manager によって常に更新プログラムが通知されるようにするには、このオプションをオンにします。オンにすると、Application Manager はタスクバー(スクリーンの右下)でバックグラウンドで実行されます。",
+  "@atuo_relaunch_help": {
+    "description": "Help tool tip content for Auto relaunch checkbox"
+  },
+  "atuo_relaunch_title": "一般 - 自動的に起動",
+  "@atuo_relaunch_title": {
+    "description": "Help tool tip title for Auto relaunch checkbox"
+  },
+  "self_update_help": "このボックスをオフにすると、時々 Application Manager の更新が利用可能になったこと、場合によっては更新が必要なことが通知されるようになります。ユーザは、更新を受け入れてコンピュータに適用する必要があります。",
+  "@self_update_help": {
+    "description": "Help tool tip content for self update checkbox"
+  },
+  "self_update_title": "Application Manager - 自己更新",
+  "@self_update_title": {
+    "description": "Help tool tip title for self update checkbox"
+  },
+  "update_check_interval_help": "Autodesk Application Manager はインストールされているオートデスク ソフトウェアの更新プログラムを自動的に確認します。その確認間隔をここで設定します。",
+  "@update_check_interval_help": {
+    "description": "Help tool tip content for update check interval drop down"
+  },
+  "update_check_interval_title": "一般 - 更新間隔",
+  "@update_check_interval_title": {
+    "description": "Help tool tip title for update check interval drop down"
+  },
+  "file_location_help": "Application Manager は、ソフトウェア パッケージをローカル ファイル システムの指定場所に格納します。<br/><br/>これらのファイルはソフトウェアの保守および修復時に必要ですので、そのまま保持してください。",
+  "@file_location_help": {
+    "description": "Help tool tip content for Local file download location"
+  },
+  "file_location_title": "ファイル - 場所",
+  "@file_location_title": {
+    "description": "Help tool tip title for Local file download location"
+  },
+  "use_shared_storage_help": "有効にすると、Application Manager はまず共有ファイルの場所からソフトウェア パッケージを取得しようとします。そして、見つからない場合に限り、オートデスクのサーバからダウンロードします。",
+  "@use_shared_storage_help": {
+    "description": "Help tool tip content for Use Shared Files check box"
+  },
+  "use_shared_storage_title": "共有ファイルを使用",
+  "@use_shared_storage_title": {
+    "description": "Help tool tip title for Use Shared Files check box"
+  },
+  "shared_file_location_help": "有効にすると、Application Manager はまず指定された場所からソフトウェア パッケージを取得しようとします。そして、見つからない場合に限り、オートデスクのサーバからダウンロードします。ここでネットワーク フォルダを指定することによって、インターネット上のオートデスクのサーバからのダウンロードを制限し、パッケージの最初のダウンロードを多くのデスクトップで共有することができます。",
+  "@shared_file_location_help": {
+    "description": "Help tool tip content for Shared file location"
+  },
+  "shared_file_location_title": "共有ファイル - 場所",
+  "@shared_file_location_title": {
+    "description": "Help tool tip title for Shared file location"
+  },
+  "enable_alert_window_help": "Autodesk Application Manager は、ソフトウェアの新しい更新プログラムや関連事項の通知にデスクトップ警告ウィンドウを使用します。この設定で、それらの警告が表示されないようにすることができます。",
+  "@enable_alert_window_help": {
+    "description": "Help tool tip content for enable alert window check box"
+  },
+  "enable_alert_window_title": "警告 - 警告を表示",
+  "@enable_alert_window_title": {
+    "description": "Help tool tip title for enable alert window check box"
+  },
+  "alert_window_fading_time_help": "デスクトップ警告ウィンドウは、指定した時間後に自動的に非表示になります。警告ウィンドウをクリックすると、非表示になるまでの時間の経過が一時的に中断し、表示されたままになります。",
+  "@alert_window_fading_time_help": {
+    "description": "Help tool tip content for enable alert window fading time drop down"
+  },
+  "alert_window_fading_time_title": "警告 - 表示時間",
+  "@alert_window_fading_time_title": {
+    "description": "Help tool tip title for enable alert window fading time drop down"
+  },
+  "proxy_type_help": "ネットワークが使用するプロキシ プロトコルを決定します。",
+  "@proxy_type_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_type_title": "ネットワーク - プロキシ タイプ",
+  "@proxy_type_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_hostname_help": "ネットワーク プロキシのホスト名または IP アドレス。",
+  "@proxy_hostname_help": {
+    "description": "Help tool tip content for proxy type drop down"
+  },
+  "proxy_hostname_title": "ネットワーク - ホスト名",
+  "@proxy_hostname_title": {
+    "description": "Help tool tip title for proxy type drop down"
+  },
+  "proxy_portnumber_help": "ネットワーク プロキシのポート番号。",
+  "@proxy_portnumber_help": {
+    "description": "Help tool tip content for proxy port number text box"
+  },
+  "proxy_portnumber_title": "ネットワーク - ポート",
+  "@proxy_portnumber_title": {
+    "description": "Help tool tip title for proxy port number text box"
+  },
+  "proxy_username_help": "ネットワーク プロキシへのアクセスに使用するユーザ名。",
+  "@proxy_username_help": {
+    "description": "Help tool tip content for username text box"
+  },
+  "proxy_username_title": "ネットワーク - ユーザ名",
+  "@proxy_username_title": {
+    "description": "Help tool tip title for username text box"
+  },
+  "proxy_password_help": "ネットワーク プロキシのユーザ名に対するパスワード。",
+  "@proxy_password_help": {
+    "description": "Help tool tip content for password text box"
+  },
+  "proxy_password_title": "ネットワーク - パスワード",
+  "@proxy_password_title": {
+    "description": "Help tool tip title for password text box"
+  },
+  "release_notes_label": "リリース ノート",
+  "@release_notes_label": {
+    "description": "Release Notes label to show under Settings window About tab"
+  },
+  "host_name_error_title": "無効なホスト名",
+  "@host_name_error_title": {
+    "description": "Error message title for invalid host name"
+  },
+  "host_name_error_content": "ホスト名または IP アドレスからネットワーク プロキシ サーバを解明できません。<br/>プロキシ サーバの有効なホスト名または IP アドレスを入力してください。<br/>正しい値の詳細については、ネットワーク管理者に問い合わせてください。",
+  "@host_name_erro_content": {
+    "description": "Error message content for invalid host name"
+  },
+  "port_number_error_title": "無効なポート番号",
+  "@port_number_error_title": {
+    "description": "Error message title for invalid port number"
+  },
+  "port_number_error_content": "指定されたネットワーク プロキシ ポート番号に接続できません。<br/>プロキシ サーバの有効なポート番号を入力してください。<br/>正しい値の詳細情報については、ネットワーク管理者に問い合わせてください。",
+  "@port_number_error_content": {
+    "description": "Error message content for invalid port number"
+  },
+  "username_pwd_error_title": "無効なユーザ名またはパスワード",
+  "@username_pwd_error_title": {
+    "description": "Error message title for invalid Username or Password"
+  },
+  "username_pwd_error_content": "ネットワーク接続にはプロキシ認証が必要です。<br/>ユーザ名とパスワードを入力してください。<br/>正しい値の詳細情報については、ネットワーク管理者にお問い合わせください。",
+  "@username_pwd_error_content": {
+    "description": "Error message content for invalid Username or Password"
+  },
+  "invalid_file_location_error_title": "無効なファイルの場所",
+  "@invalid_file_location_error_title": {
+    "description": "Error message title for invalid file location"
+  },
+  "invalid_file_location_error_content": "指定されたファイルの場所が無効です。<br/>ファイル ストレージに対する有効なファイルの場所を入力してください。",
+  "@invalid_file_location_error_content": {
+    "description": "Error message content for invalid file location"
+  },
+  "invalid_shared_file_location_error_title": "無効な共有ファイルの場所",
+  "@invalid_shared_file_location_error_title": {
+    "description": "Error message title for invalid shared file location"
+  },
+  "invalid_shared_file_location_error_content": "指定されたファイルの場所が無効です。<br/>共有ファイル ストレージに対する有効なファイルの場所を入力してください。",
+  "@invalid_shared_file_location_error_content": {
+    "description": "Error message content for invalid shared file location"
+  },
+  "proxy_connection_error_title": "プロキシ接続エラー",
+  "@proxy_connection_error_title": {
+    "description": "error message title when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_host_content": "指定されたネットワーク プロキシ サーバに接続できません。続行するには、プロキシ設定を設定してください。",
+  "@settings_error_invalid_host_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_port_content": "指定されたネットワーク プロキシ ポート番号に接続できません。続行するには、正しいポート番号を入力してください。",
+  "@settings_error_invalid_port_content": {
+    "description": "error message content when cannot connect to the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_title": "プロキシ認証エラー",
+  "@settings_error_invalid_proxy_cred_title": {
+    "description": "error message title when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_invalid_proxy_cred_content": "ネットワーク接続プロキシ認証が必要です。続行するには、ユーザ名とパスワードを入力してください。",
+  "@settings_error_invalid_proxy_cred_content": {
+    "description": "error message content when cannot authenticate with the user specified proxy"
+  },
+  "settings_error_cannot_access_file_content": "ファイルの場所にアクセスできません。指定した場所を確認してください。",
+  "@settings_error_cannot_access_file_content": {
+    "description": "error message content when cannot access the file location"
+  },
+  "settings_error_cannot_access_shared_file_content": "ファイルの場所にアクセスできません。ネットワークが使用可能かどうかを確認するか、指定した場所を変更してください。",
+  "@settings_error_cannot_access_shared_file_content": {
+    "description": "error message content when cannot access the shared file location"
+  },
+  "diskspace_low_error_title": "ディスク容量が足りません",
+  "@diskspace_low_error_title": {
+    "description": "error message title when cannot disk space is low"
+  },
+  "settings_error_diskspace_low_content": "現在のダウンロード場所の空き容量が足りません。インストールを実行する前に、新しいダウンロード場所を選択してください。",
+  "@settings_error_diskspace_low_content": {
+    "description": "error message content when disk space is low"
+  }
+});

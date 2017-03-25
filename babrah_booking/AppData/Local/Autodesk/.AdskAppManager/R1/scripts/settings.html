@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html ng-app="appmgr-settings">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-common.css">
+		<link type="text/css" rel="stylesheet" href="css/common/appmgr-plugins.css">
+		<link type="text/css" rel="stylesheet" href="css/appmgr-settings.css">
+		<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+        <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/lib/arbcore.js"></script>
+		<script type="text/javascript" src="js/lib/Globalize.js"></script>
+	</head>
+	<body ng-controller="appmgrSettingsCtrl">
+		<div class="top-wrapper">
+			<div class="header">
+				<div class="left">
+					<img src="images/autodesk_logo.png" class="adsk-logo"> 
+					<span class="title" arb:id="settings_title"></span>
+				</div>
+				<div class="right">
+					<ul class="links">
+						<li><a class="import" href="" ng-click="importSettings()" arb:id="import_settings"></a></li>
+						<li><a class="export" href="" ng-click="exportSettings()" arb:id="export_settings"></a></li>
+						<li><a class="help" href="" ng-click="cs.openHelp()" arb:id="help_link"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="settings_nav">
+				<ul>
+					<li><a href="" ng-class="getNavClass('general')" ng-click="switchTab('general')" arb:id="general_link" ng-hide="isDeploymentMode"></a></li>
+					<li><a href="" ng-class="getNavClass('files')" ng-click="switchTab('files')" arb:id="files_link" ng-hide="isDeploymentMode"></a></li>
+					<li><a href="" ng-class="getNavClass('alerts')" ng-click="switchTab('alerts')" arb:id="alerts_link" ng-hide="isDeploymentMode"></a></li>
+					<li><a href="" ng-class="getNavClass('network')" ng-click="switchTab('network')" arb:id="network_link"></a></li>
+					<li><a href="" ng-class="getNavClass('about')" ng-click="switchTab('about')" arb:id="about_link"></a></li>
+				</ul>
+			</div>
+			<div class="clr-both"></div>
+		</div>
+		<div class="middle">
+			<div class="content">
+				<div class="tab-content" ng:show="selectedTab == 'general'">
+					<div class="section">
+						<!-- <h3>Sample section header</h3> -->
+						<div class="left">
+							<div class="field-wrapper">
+								<input type="checkbox" id="AutoRun" ng-model="settings.AutoRun" ng-true-value="true" ng-false-value="false">
+								<label for="AutoRun" arb:id="auto_relaunch_label"></label>
+								<span class="tool-tip" data-key="AutoRun" ng-class="getFieldClass(false)"></span>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+					<div class="section">
+						<div class="left">
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td>
+											<span arb:id="check_interval_label"></span>
+										</td>
+										<td>
+											<select id="UpdateCheckInterval" class="input-med" ng-model="settings.UpdateCheckInterval" ng-options="opt.value as opt.name for opt in ss.settingsDropdowns.UpdateCheckInterval">
+											</select>
+										</td>
+										<td>
+											<span class="tool-tip" data-key="UpdateCheckInterval" ng-class="getFieldClass(false)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+                    <div class="section">
+						<!-- <h3>Sample section header</h3> -->
+						<div class="left">
+							<div class="field-wrapper">
+								<input type="checkbox" id="SelfUpdate" ng-model="settings.SelfUpdate" ng-true-value="true" ng-false-value="false">
+								<label for="SelfUpdate" arb:id="self_update_label"></label>
+								<span class="tool-tip" data-key="SelfUpdate" ng-class="getFieldClass(false)"></span>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+				</div>
+				<div class="tab-content" ng:show="selectedTab == 'files'">
+					<div class="section">
+						<h3 arb:id="local_files_label"></h3>
+						<div class="left">
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td>
+											<span arb:id="location_label"></span>:
+										</td>
+										<td>
+											<input type="text" class="location DownloadManager_Location" readonly required ng-model="settings.DownloadManager_Location" ng-class="getFieldClass(true, 24)" />
+											<a class="browse-btn" href="" ng-click="browse('DownloadManager_Location')">...</a>
+											<div class="clr-both"></div>
+										</td>
+										<td>
+											<span class="tool-tip" data-key="DownloadManager_Location" ng-class="getFieldClass(false, 24)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+					<div class="section">
+						<h3 arb:id="shared_files_label"></h3>
+						<div class="left">
+							<div class="field-wrapper">
+								<input type="checkbox" id="UseSharedStorage" ng-model="settings.UseSharedStorage" ng-true-value="true" ng-false-value="false">
+								<label for="UseSharedStorage" arb:id="shared_storage_label"></label>
+								<span class="tool-tip" data-key="UseSharedStorage" ng-class="getFieldClass(false)"></span>
+							</div>
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td>
+											<span arb:id="location_label"></span>:
+										</td>
+										<td>
+											<input type="text" class="location Shared_Location" readonly ng-model="settings.Shared_Location" 
+											ng-disabled="(!settings.UseSharedStorage || settings.UseSharedStorage == 'false')" ng-required="settings.UseSharedStorage == 'true'" 
+											ng-class="getFieldClass(true)" />
+											<a class="browse-btn" href="" ng-class="{'disabled': (!settings.UseSharedStorage || settings.UseSharedStorage == 'false')}" 
+											ng-click="(!settings.UseSharedStorage || settings.UseSharedStorage == 'false') || browseWithUNC('Shared_Location')">...</a>
+											<div class="clr-both"></div>
+										</td>
+										<td>
+											<span class="tool-tip" data-key="Shared_Location" ng-class="getFieldClass(false)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+				</div>
+				<div class="tab-content" ng:show="selectedTab == 'alerts'">
+					<div class="section">
+						<div class="left">
+							<div class="field-wrapper">
+								<input type="checkbox" id="EnableAppAlertWindow" ng-model="settings.EnableAppAlertWindow" ng-true-value="true" ng-false-value="false">
+								<label for="EnableAppAlertWindow" arb:id="desktop_alert_label"></label>
+								<span class="tool-tip" data-key="EnableAppAlertWindow" ng-class="getFieldClass(false)"></span>
+							</div>
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td>
+											<span arb:id="hide_window_label"></span>
+										</td>
+										<td>
+											<select id="AppAlertWindowFadingTime" class="input-med" ng-model="settings.AppAlertWindowFadingTime" ng-options="opt.value as opt.name for opt in ss.settingsDropdowns.AppAlertWindowFadingTime">
+											</select>
+										</td>
+										<td>
+											<span class="tool-tip" data-key="AppAlertWindowFadingTime" ng-class="getFieldClass(false)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+				</div>
+				<div id="settings_network" class="tab-content" ng:show="selectedTab == 'network'">
+					<div id="proxy" class="section">
+						<div class="left">
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td class="text-right">
+											<span arb:id="proxy_type_label"></span>
+										</td>
+										<td class="input-td">
+											<select id="Proxy_ProxyType" class="proxy-type" ng-model="settings.Proxy_ProxyType" 
+											ng-change="onChangeProxyType(settings.Proxy_ProxyType)" ng-options="opt.value as opt.name for opt in ss.settingsDropdowns.Proxy_ProxyType">
+											</select>
+										</td>
+										<td class="info-td">
+											<span class="tool-tip" data-key="Proxy_ProxyType" ng-class="getFieldClass(false)"></span>
+										</td>
+								</table>
+							</div>
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td class="text-right">
+											<span id="host_name_label" ng-class="{'disabled-text': settings.Proxy_ProxyType != 3}"></span>
+										</td>
+										<td class="input-td">
+											<input type="text" class="input-large proxy-host" tabindex="1" ng-model="settings.Proxy_ProxyHostname" ng-class="getFieldClass(true, 1)" 
+											ng-change="clearFieldError('proxy-host')" ng-disabled="settings.Proxy_ProxyType != 3" ng-required="settings.Proxy_ProxyType == 3" />
+										</td>
+										<td class="info-td">
+											<span class="tool-tip" data-key="Proxy_ProxyHostname" ng-class="getFieldClass(false, 1)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td class="text-right">
+											<span id="username_label" ng-class="{'disabled-text': settings.Proxy_ProxyType == 0}"></span>
+										</td>
+										<td class="input-td">
+											<input type="text" class="input-large proxy-cred" tabindex="3" ng-model="settings.Proxy_ProxyUsername" ng-class="getFieldClass(true, 4)"
+											ng-change="clearFieldError('proxy-cred')" ng-disabled="settings.Proxy_ProxyType == 0" />
+										</td>
+										<td class="info-td">
+											<span class="tool-tip" data-key="Proxy_ProxyUsername" ng-class="getFieldClass(false, 4)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="right">
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td class="text-right">
+											<span id="port_number_label" ng-class="{'disabled-text': settings.Proxy_ProxyType != 3}"></span>
+										</td>
+										<td class="input-td">
+											<input type="text" class="input-large number proxy-port" tabindex="2" maxlength="5" ng-model="settings.Proxy_ProxyPortnumber" ng-class="getFieldClass(true, 2)" 
+											ng-change="clearFieldError('proxy-port')" ng-disabled="settings.Proxy_ProxyType != 3" ng-required="settings.Proxy_ProxyType == 3" />
+										</td>
+										<td class="info-td">
+											<span class="tool-tip" data-key="Proxy_ProxyPortnumber" ng-class="getFieldClass(false, 2)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="field-wrapper">
+								<table>
+									<tr>
+										<td class="text-right">
+											<span id="password_label" ng-class="{'disabled-text': settings.Proxy_ProxyType == 0}"></span>
+										</td>
+										<td class="input-td">
+											<input type="password" class="input-large proxy-cred" tabindex="4" ng-model="settings.Proxy_ProxyPassword" ng-class="getFieldClass(true, 4)" 
+											ng-change="clearFieldError('proxy-cred')" ng-disabled="settings.Proxy_ProxyType == 0" />
+										</td>
+										<td class="info-td">
+											<span class="tool-tip" data-key="Proxy_ProxyPassword" ng-class="getFieldClass(false, 4)"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="clr-both"></div>
+					</div>
+				</div>
+				<div class="tab-content about" ng:show="selectedTab == 'about'">
+					<div class="section">
+						<h3 arb:id="about_appman"></h3>
+						<div arb:id="about_appman_cont"></div>
+					</div>
+					<div class="section">
+						<h3><span arb:id="version_label"></span>&#160;{{aboutInfo.Version}}</h3>
+						<div id="about_release_note">
+							<a href="" ng-click="cs.openReleaseNotes(aboutInfo.ReleaseNotesLink)"><span arb:id="release_notes_label"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer" ng-class="{'err': getFooterErrorFlag()}">
+			<div class="se-outer" ng-show="getFooterErrorFlag()">
+				<div class="se-close" ng-click="closeFooterError()"></div>
+				<div class="se-inner">
+					<div class="se-title">{{getFooterErrorTitle()}}</div>
+					<div class="se-content">{{getFooterErrorText()}}</div>
+				</div>
+			</div>
+			<div class="info" ng-show="!getFooterErrorFlag()" ng-style='infoStyle'>{{getFooterText()}}</div>
+			<div class="btns">
+				<a class="ok" href="" ng-class="{'btn-blue': !getFooterErrorFlag(), 'btn-gray' : getFooterErrorFlag(), 'disabled': disableOK}" ng-click="disableOK || saveSettings()" arb:id="ok_label"></a>
+				<a class="btn-gray cancel" href="" ng-click="cancelSettings()" arb:id="cancel_label"></a>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/common/appmgr-utils.js"></script>
+		<script type="text/javascript">
+			loadCulture();
+		</script>
+		<script type="text/javascript">
+			arbResourceSelector();
+		</script>
+		<script type="text/javascript" src="js/controllers/appmgrSettingsCtrl.js"></script>
+		<script type="text/javascript" src="js/services/appmgrSettingsService.js"></script>
+		<script type="text/javascript" src="js/services/appmgrCommonService.js"></script>
+		<script type="text/javascript" src="js/common/appmgr-plugins.js"></script>
+	</body>
+</html>

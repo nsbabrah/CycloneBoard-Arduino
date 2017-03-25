@@ -1,0 +1,44 @@
+Enter	"Smart Lock"	"AccuDraw Lock Smart"
+Space	"Change Mode"	"AccuDraw Mode"
+O	"Set Origin"	"AccuDraw SetOrigin"
+V	"View Rotation"	"AccuDraw Rotate View"
+T	"Top Rotation"	"AccuDraw Rotate Top"
+F	"Front Rotation"	"AccuDraw Rotate Front"	3D
+S	"Side Rotation"	"AccuDraw Rotate Side"	3D
+B	"Base Rotation"	"AccuDraw Rotate Base Toggle"
+E	"Cycle Rotation"	"AccuDraw Rotate Cycle"	3D
+X	"Lock X"	"AccuDraw Lock X"
+Y	"Lock Y"	"AccuDraw Lock Y"
+Z	"Lock Z"	"AccuDraw Lock Z"	3D
+D	"Lock Distance"	"AccuDraw Lock Distance"
+A	"Lock Angle"	"AccuDraw Lock Angle"
+LI	"Lock Index"	"AccuDraw Lock Index"
+LP	"Lock ACS Grid Plane"	"AccuDraw Lock GridPlane"	3D
+LA	"Lock ACS Plane"	"Lock ACSContext Toggle"	3D
+LS	"Lock ACS Plane Snap"	"Lock Snap Construction Toggle"	3D
+LZ	"Lock Sticky Z"	"AccuDraw Lock StickyZ"	3D
+RQ	"Rotate Quick"	"AccuDraw Rotate Quick"
+RA	"Rotate ACS"	"AccuDraw Rotate ACS"
+RC	"Rotate to Current ACS"	"AccuDraw Rotate CurrentACS"
+RE	"Rotate Element"	"AccuDraw Rotate Element"
+RV	"Rotate View"	"AccuDraw Rotate OrientView"
+RX	"Rotate about X"	"AccuDraw Rotate X"	3D
+RY	"Rotate about Y"	"AccuDraw Rotate Y"	3D
+RZ	"Rotate about Z"	"AccuDraw Rotate Z"
+?	"Show Shortcuts"	"AccuDraw Dialog Shortcuts"
+~	"Bump Tool Setting"	"AccuDraw Bump ToolSetting"
+GT	"Go to Tool Settings"	"Dialog ToolSetting"
+GK	"Go to Keyin"	"Dialog CmdBrowse"
+GS	"Go to Settings"	"AccuDraw Dialog Settings"
+GA	"Get ACS"	"AccuDraw Dialog GetACS"
+WA	"Write to ACS"	"AccuDraw Dialog SaveACS"
+P	"Point Keyin (single)"	"Point Keyin Single"
+M	"Point Keyin (multi)"	"Point Keyin Multiple"
+I	"Intersect Snap"	"Snap Intersect"
+N	"Nearest Snap"	"Snap Nearest"
+C	"Center Snap"	"Snap Center"
+K	"Snap Divisor"	"AccuDraw Dialog SnapDivisor"
+HA	"AccuDraw on Hold"	"AccuDraw Toggle"
+HS	"AccuSnap Toggle"	"AccuSnap Toggle"
+HU	"AccuSnap Suspend"	"AccuSnap Suspend"
+Q	"Quit AccuDraw"	"Accudraw Quit"

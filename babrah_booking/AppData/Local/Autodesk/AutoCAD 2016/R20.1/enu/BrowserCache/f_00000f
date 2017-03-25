@@ -1,0 +1,510 @@
+//---start of generated typescript---
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+// (C) Copyright 2012 by Autodesk, Inc.
+//
+// The information contained herein is confidential, proprietary to Autodesk,
+// Inc., and considered a trade secret as defined in section 499C of the
+// penal code of the State of California.  Use of this information by anyone
+// other than authorized employees of Autodesk, Inc. is granted only under a
+// written non-disclosure agreement, expressly prescribing the scope and
+// manner of such use.
+//
+//////////////////////////////////////////////////////////////////////////////
+// Include TS files
+var AcDwgFeed;
+(function (AcDwgFeed) {
+    var Flags;
+    (function (Flags) {
+        Flags[Flags["RequiresDocument"] = 1] = "RequiresDocument";
+    })(Flags || (Flags = {}));
+    ;
+})(AcDwgFeed || (AcDwgFeed = {}));
+//---end of generated typescript---
+//---start of generated typescript---
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+// (C) Copyright 2012 by Autodesk, Inc.
+//
+// The information contained herein is confidential, proprietary to Autodesk,
+// Inc., and considered a trade secret as defined in section 499C of the
+// penal code of the State of California.  Use of this information by anyone
+// other than authorized employees of Autodesk, Inc. is granted only under a
+// written non-disclosure agreement, expressly prescribing the scope and
+// manner of such use.
+//
+//////////////////////////////////////////////////////////////////////////////
+// Include TS files
+///<reference path="CommonTypes.ts"/>
+var AcDwgFeed;
+(function (AcDwgFeed) {
+    (function (AcDocument) {
+        var toBeDestroyed_handlers = null;
+
+        //called by native code: fires event to callback supplied by the user
+        function toBeDestroyedCallback(args) {
+            var obj = JSON.parse(args);
+
+            //unpack all event arguments
+            var onlineFileId = obj.onlineFileId;
+
+            for (var i = 0; i < toBeDestroyed_handlers.length; ++i)
+                toBeDestroyed_handlers[i](onlineFileId);
+        }
+
+        //allows user to supply a callback
+        function addHandler_toBeDestroyed(userFunction) {
+            var separator = (typeof (apiVersion) == 'function' && apiVersion() > 2) ? '.' : '_';
+            if (toBeDestroyed_handlers == null) {
+                toBeDestroyed_handlers = new Array();
+                registerCallback('AcDwgFeed_AcDocument' + separator + 'toBeDestroyed', toBeDestroyedCallback);
+            }
+            toBeDestroyed_handlers.push(userFunction);
+        }
+        AcDocument.addHandler_toBeDestroyed = addHandler_toBeDestroyed;
+
+        var becameCurrent_handlers = null;
+
+        //called by native code: fires event to callback supplied by the user
+        function becameCurrentCallback(args) {
+            var obj = JSON.parse(args);
+
+            //unpack all event arguments
+            var eventArgs = obj.eventArgs;
+
+            for (var i = 0; i < becameCurrent_handlers.length; ++i)
+                becameCurrent_handlers[i](eventArgs);
+        }
+
+        //allows user to supply a callback
+        function addHandler_becameCurrent(userFunction) {
+            var separator = (typeof (apiVersion) == 'function' && apiVersion() > 2) ? '.' : '_';
+            if (becameCurrent_handlers == null) {
+                becameCurrent_handlers = new Array();
+                registerCallback('AcDwgFeed_AcDocument' + separator + 'becameCurrent', becameCurrentCallback);
+            }
+            becameCurrent_handlers.push(userFunction);
+        }
+        AcDocument.addHandler_becameCurrent = addHandler_becameCurrent;
+
+        var idChanged_handlers = null;
+
+        //called by native code: fires event to callback supplied by the user
+        function idChangedCallback(args) {
+            var obj = JSON.parse(args);
+
+            //unpack all event arguments
+            var eventArgs = obj.eventArgs;
+
+            for (var i = 0; i < idChanged_handlers.length; ++i)
+                idChanged_handlers[i](eventArgs);
+        }
+
+        //allows user to supply a callback
+        function addHandler_idChanged(userFunction) {
+            var separator = (typeof (apiVersion) == 'function' && apiVersion() > 2) ? '.' : '_';
+            if (idChanged_handlers == null) {
+                idChanged_handlers = new Array();
+                registerCallback('AcDwgFeed_AcDocument' + separator + 'idChanged', idChangedCallback);
+            }
+            idChanged_handlers.push(userFunction);
+        }
+        AcDocument.addHandler_idChanged = addHandler_idChanged;
+
+        var commentSyncBegin_handlers = null;
+
+        //called by native code: fires event to callback supplied by the user
+        function commentSyncBeginCallback(args) {
+            var obj = JSON.parse(args);
+
+            for (var i = 0; i < commentSyncBegin_handlers.length; ++i)
+                commentSyncBegin_handlers[i]();
+        }
+
+        //allows user to supply a callback
+        function addHandler_commentSyncBegin(userFunction) {
+            var separator = (typeof (apiVersion) == 'function' && apiVersion() > 2) ? '.' : '_';
+            if (commentSyncBegin_handlers == null) {
+                commentSyncBegin_handlers = new Array();
+                registerCallback('AcDwgFeed_AcDocument' + separator + 'commentSyncBegin', commentSyncBeginCallback);
+            }
+            commentSyncBegin_handlers.push(userFunction);
+        }
+        AcDocument.addHandler_commentSyncBegin = addHandler_commentSyncBegin;
+
+        var commentSyncEnd_handlers = null;
+
+        //called by native code: fires event to callback supplied by the user
+        function commentSyncEndCallback(args) {
+            var obj = JSON.parse(args);
+
+            //unpack all event arguments
+            var syncInfo = obj.syncInfo;
+
+            for (var i = 0; i < commentSyncEnd_handlers.length; ++i)
+                commentSyncEnd_handlers[i](syncInfo);
+        }
+
+        //allows user to supply a callback
+        function addHandler_commentSyncEnd(userFunction) {
+            var separator = (typeof (apiVersion) == 'function' && apiVersion() > 2) ? '.' : '_';
+            if (commentSyncEnd_handlers == null) {
+                commentSyncEnd_handlers = new Array();
+                registerCallback('AcDwgFeed_AcDocument' + separator + 'commentSyncEnd', commentSyncEndCallback);
+            }
+            commentSyncEnd_handlers.push(userFunction);
+        }
+        AcDocument.addHandler_commentSyncEnd = addHandler_commentSyncEnd;
+
+        var cloneComments_handlers = null;
+
+        //called by native code: fires event to callback supplied by the user
+        function cloneCommentsCallback(args) {
+            var obj = JSON.parse(args);
+
+            //unpack all event arguments
+            var eventArgs = obj.eventArgs;
+
+            for (var i = 0; i < cloneComments_handlers.length; ++i)
+                cloneComments_handlers[i](eventArgs);
+        }
+
+        //allows user to supply a callback
+        function addHandler_cloneComments(userFunction) {
+            var separator = (typeof (apiVersion) == 'function' && apiVersion() > 2) ? '.' : '_';
+            if (cloneComments_handlers == null) {
+                cloneComments_handlers = new Array();
+                registerCallback('AcDwgFeed_AcDocument' + separator + 'cloneComments', cloneCommentsCallback);
+            }
+            cloneComments_handlers.push(userFunction);
+        }
+        AcDocument.addHandler_cloneComments = addHandler_cloneComments;
+    })(AcDwgFeed.AcDocument || (AcDwgFeed.AcDocument = {}));
+    var AcDocument = AcDwgFeed.AcDocument;
+})(AcDwgFeed || (AcDwgFeed = {}));
+//---end of generated typescript---
+//---start of generated typescript---
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+// (C) Copyright 2012 by Autodesk, Inc.
+//
+// The information contained herein is confidential, proprietary to Autodesk,
+// Inc., and considered a trade secret as defined in section 499C of the
+// penal code of the State of California.  Use of this information by anyone
+// other than authorized employees of Autodesk, Inc. is granted only under a
+// written non-disclosure agreement, expressly prescribing the scope and
+// manner of such use.
+//
+//////////////////////////////////////////////////////////////////////////////
+// Include TS files
+///<reference path="CommonTypes.ts"/>
+var AcDwgFeed;
+(function (AcDwgFeed) {
+    (function (Interop) {
+        function getCurrentDocumentStates() {
+            var jsonStr = exec(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.getCurrentDocumentStates', functionParams: {}
+            }));
+            var jsonObj = JSON.parse(jsonStr);
+
+            //retcode must be present
+            if (jsonObj.retCode == undefined)
+                throw TypeError("Internal error: retCode is not present.");
+            if (jsonObj.retCode != 0 /* eOk */) {
+                throw jsonObj;
+            }
+            if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                return jsonObj.retValue;
+            } else {
+                //OLD serialization logic:
+                //hoist retValue if present
+                if (jsonObj.retValue)
+                    return JSON.parse(jsonObj.retValue);
+                return jsonObj;
+            }
+        }
+        Interop.getCurrentDocumentStates = getCurrentDocumentStates;
+
+        function reloadURL() {
+            var jsonStr = exec(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.reloadURL', functionParams: {}
+            }));
+            var jsonObj = JSON.parse(jsonStr);
+
+            //retcode must be present
+            if (jsonObj.retCode == undefined)
+                throw TypeError("Internal error: retCode is not present.");
+            if (jsonObj.retCode != 0 /* eOk */) {
+                throw jsonObj;
+            }
+            if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                return jsonObj.retValue;
+            } else {
+                //OLD serialization logic:
+                //hoist retValue if present
+                if (jsonObj.retValue)
+                    return JSON.parse(jsonObj.retValue);
+                return jsonObj;
+            }
+        }
+        Interop.reloadURL = reloadURL;
+        function setKeepFocus(keepFocus) {
+            var promise = new Autodesk.JavaScript.Promise();
+            execAsync(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.setKeepFocus', functionParams: { keepFocus: keepFocus }
+            }), function (result) {
+                if (typeof (promise.success) == 'function') {
+                    var resObj = JSON.parse(result);
+                    if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                        promise.success(resObj.retValue);
+                    } else {
+                        //OLD serialization logic:
+                        if (resObj.hasOwnProperty("retValue"))
+                            promise.success(JSON.parse(resObj.retValue));
+                        else
+                            promise.success(resObj);
+                    }
+                }
+            }, function (result) {
+                if (typeof (promise.error) == 'function') {
+                    var error = JSON.parse(result);
+
+                    //retcode must be present
+                    if (error.retCode == undefined)
+                        throw TypeError("Internal error: retCode is not present.");
+
+                    //and it must be non-eOk
+                    if (error.retCode == 0 /* eOk */)
+                        throw "Internal error: retCode is eOk in error callback.";
+
+                    //errorMessage is optional
+                    if (error.retErrorString == undefined)
+                        promise.error(error.retCode);
+                    else
+                        promise.error(error.retCode, error.retErrorString);
+                }
+            });
+            return promise;
+        }
+        Interop.setKeepFocus = setKeepFocus;
+
+        function saveFile() {
+            var jsonStr = exec(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.saveFile', functionParams: {}
+            }));
+            var jsonObj = JSON.parse(jsonStr);
+
+            //retcode must be present
+            if (jsonObj.retCode == undefined)
+                throw TypeError("Internal error: retCode is not present.");
+            if (jsonObj.retCode != 0 /* eOk */) {
+                throw jsonObj;
+            }
+            if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                return jsonObj.retValue;
+            } else {
+                //OLD serialization logic:
+                //hoist retValue if present
+                if (jsonObj.retValue)
+                    return JSON.parse(jsonObj.retValue);
+                return jsonObj;
+            }
+        }
+        Interop.saveFile = saveFile;
+        function shareDrawing() {
+            var promise = new Autodesk.JavaScript.Promise();
+            execAsync(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.shareDrawing', functionParams: {}
+            }), function (result) {
+                if (typeof (promise.success) == 'function') {
+                    var resObj = JSON.parse(result);
+                    if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                        promise.success(resObj.retValue);
+                    } else {
+                        //OLD serialization logic:
+                        if (resObj.hasOwnProperty("retValue"))
+                            promise.success(JSON.parse(resObj.retValue));
+                        else
+                            promise.success(resObj);
+                    }
+                }
+            }, function (result) {
+                if (typeof (promise.error) == 'function') {
+                    var error = JSON.parse(result);
+
+                    //retcode must be present
+                    if (error.retCode == undefined)
+                        throw TypeError("Internal error: retCode is not present.");
+
+                    //and it must be non-eOk
+                    if (error.retCode == 0 /* eOk */)
+                        throw "Internal error: retCode is eOk in error callback.";
+
+                    //errorMessage is optional
+                    if (error.retErrorString == undefined)
+                        promise.error(error.retCode);
+                    else
+                        promise.error(error.retCode, error.retErrorString);
+                }
+            });
+            return promise;
+        }
+        Interop.shareDrawing = shareDrawing;
+
+        function getContacts() {
+            var jsonStr = exec(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.getContacts', functionParams: {}
+            }));
+            var jsonObj = JSON.parse(jsonStr);
+
+            //retcode must be present
+            if (jsonObj.retCode == undefined)
+                throw TypeError("Internal error: retCode is not present.");
+            if (jsonObj.retCode != 0 /* eOk */) {
+                throw jsonObj;
+            }
+            if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                return jsonObj.retValue;
+            } else {
+                //OLD serialization logic:
+                //hoist retValue if present
+                if (jsonObj.retValue)
+                    return JSON.parse(jsonObj.retValue);
+                return jsonObj;
+            }
+        }
+        Interop.getContacts = getContacts;
+
+        function isCloudFileOwner() {
+            var jsonStr = exec(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.isCloudFileOwner', functionParams: {}
+            }));
+            var jsonObj = JSON.parse(jsonStr);
+
+            //retcode must be present
+            if (jsonObj.retCode == undefined)
+                throw TypeError("Internal error: retCode is not present.");
+            if (jsonObj.retCode != 0 /* eOk */) {
+                throw jsonObj;
+            }
+            if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                return jsonObj.retValue;
+            } else {
+                //OLD serialization logic:
+                //hoist retValue if present
+                if (jsonObj.retValue)
+                    return JSON.parse(jsonObj.retValue);
+                return jsonObj;
+            }
+        }
+        Interop.isCloudFileOwner = isCloudFileOwner;
+
+        function getOnlineSignedSyncUrl() {
+            var jsonStr = exec(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.getOnlineSignedSyncUrl', functionParams: {}
+            }));
+            var jsonObj = JSON.parse(jsonStr);
+
+            //retcode must be present
+            if (jsonObj.retCode == undefined)
+                throw TypeError("Internal error: retCode is not present.");
+            if (jsonObj.retCode != 0 /* eOk */) {
+                throw jsonObj;
+            }
+            if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                return jsonObj.retValue;
+            } else {
+                //OLD serialization logic:
+                //hoist retValue if present
+                if (jsonObj.retValue)
+                    return JSON.parse(jsonObj.retValue);
+                return jsonObj;
+            }
+        }
+        Interop.getOnlineSignedSyncUrl = getOnlineSignedSyncUrl;
+        function ensureIdEmbedding() {
+            var promise = new Autodesk.JavaScript.Promise();
+            execAsync(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.ensureIdEmbedding', functionParams: {}
+            }), function (result) {
+                if (typeof (promise.success) == 'function') {
+                    var resObj = JSON.parse(result);
+                    if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                        promise.success(resObj.retValue);
+                    } else {
+                        //OLD serialization logic:
+                        if (resObj.hasOwnProperty("retValue"))
+                            promise.success(JSON.parse(resObj.retValue));
+                        else
+                            promise.success(resObj);
+                    }
+                }
+            }, function (result) {
+                if (typeof (promise.error) == 'function') {
+                    var error = JSON.parse(result);
+
+                    //retcode must be present
+                    if (error.retCode == undefined)
+                        throw TypeError("Internal error: retCode is not present.");
+
+                    //and it must be non-eOk
+                    if (error.retCode == 0 /* eOk */)
+                        throw "Internal error: retCode is eOk in error callback.";
+
+                    //errorMessage is optional
+                    if (error.retErrorString == undefined)
+                        promise.error(error.retCode);
+                    else
+                        promise.error(error.retCode, error.retErrorString);
+                }
+            });
+            return promise;
+        }
+        Interop.ensureIdEmbedding = ensureIdEmbedding;
+        function loginA360() {
+            var promise = new Autodesk.JavaScript.Promise();
+            execAsync(JSON.stringify({
+                functionName: 'AcDwgFeed_Interop.loginA360', functionParams: {}
+            }), function (result) {
+                if (typeof (promise.success) == 'function') {
+                    var resObj = JSON.parse(result);
+                    if (typeof (apiVersion) == 'function' && apiVersion() > 2) {
+                        promise.success(resObj.retValue);
+                    } else {
+                        //OLD serialization logic:
+                        if (resObj.hasOwnProperty("retValue"))
+                            promise.success(JSON.parse(resObj.retValue));
+                        else
+                            promise.success(resObj);
+                    }
+                }
+            }, function (result) {
+                if (typeof (promise.error) == 'function') {
+                    var error = JSON.parse(result);
+
+                    //retcode must be present
+                    if (error.retCode == undefined)
+                        throw TypeError("Internal error: retCode is not present.");
+
+                    //and it must be non-eOk
+                    if (error.retCode == 0 /* eOk */)
+                        throw "Internal error: retCode is eOk in error callback.";
+
+                    //errorMessage is optional
+                    if (error.retErrorString == undefined)
+                        promise.error(error.retCode);
+                    else
+                        promise.error(error.retCode, error.retErrorString);
+                }
+            });
+            return promise;
+        }
+        Interop.loginA360 = loginA360;
+    })(AcDwgFeed.Interop || (AcDwgFeed.Interop = {}));
+    var Interop = AcDwgFeed.Interop;
+})(AcDwgFeed || (AcDwgFeed = {}));
+//---end of generated typescript---
+//# sourceMappingURL=Autodesk.DrawingFeed.js.map

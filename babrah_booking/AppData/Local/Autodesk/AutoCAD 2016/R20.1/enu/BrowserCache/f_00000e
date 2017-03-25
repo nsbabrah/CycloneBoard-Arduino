@@ -1,0 +1,978 @@
+body {
+	font-family: arial, helvetica,sans-serif !important;
+	background-color:#F0F0F0 !important;
+}
+
+.gwt-Textbox {
+	font-family: 'Segoe UI', Tahoma, Arial, Helvetica, Sans-Serif;
+	background-color:#F0F0F0;
+}
+
+.gwt-Label {
+	font-family: 'Segoe UI', Tahoma, Arial, Helvetica, Sans-Serif;
+}
+
+.gwt-Button {
+	font-family: 'Segoe UI', Tahoma, Arial, Helvetica, Sans-Serif;
+}
+.label{
+	color:red;
+}
+
+.DFheader {
+	background-color: #F0F0F0;
+	display: inline-block;
+	width: 100%;
+	-moz-border-top-left-radius: 10px 10px;
+	border-top-left-radius: 10px 10px;
+        color:black
+}
+
+.HeaderLabel {
+	float:left;
+	color: #fff;
+	padding-top: 6px;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-size: 16px;
+	font-weight: bold;
+	display: none;
+}
+
+.HeaderButtons {
+	float:left;
+	margin-top: margin-top:7px;
+	height: 18px;
+	padding: 12px 0px 11px 10px;
+}
+
+#scrollbar1 { width: 520px; clear: both; margin: 20px 0 10px; }
+#scrollbar1 .viewport { width: 500px; height: 200px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #003D5D; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#scrollbar1 .disable{ display: none; }
+
+.actionsPanelButton {
+	width: 31px;
+	height: 38px;
+	float: left;
+}
+
+.gwt-ToggleButton-Pin {
+	width: 48px;
+	height: 48px;
+}
+.gwt-ToggleButton-Tag {
+	width: 48px;
+	height: 48px;
+}
+
+.postContainer {
+	background-color:#F0F0F0;
+	color:#333;
+	display:block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+
+.postContainerHighlighted {
+	outline-style:solid;
+	outline-color:#3399FF;
+	outline-width:2px;
+}
+
+.postContainer:hover {
+	outline-style:solid;
+	outline-color:#3399FF;
+	outline-width:2px;
+}
+
+.createNewPost {
+	background-color:#F0F0F0;
+	width:100%;
+	height:auto;
+	padding-bottom:5px;
+}
+
+.DFTextBoxContainer {
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+.DFTextBox  {
+	width:100%;
+	border: 1px solid #8B8B8B;
+	background-color: #FFFFFF;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif;
+	font-size:12px;
+	color:#000000;
+}
+
+.closeBtn {
+	float:left;
+	margin-right:4px;
+	margin-top:9px;
+	display: none;
+}
+
+.settingsBtn {
+	float:left;
+	padding-right: 3px;
+	margin-right: 5px;
+}
+
+.headerSep {
+	float:left;
+	margin-right:4px;
+	display: none;
+}
+
+.BlueBtn {
+	top: 3px;
+	position: relative;
+	background: #0058CC; /* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#0065CC), to(#0046CC)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #0065CC,  #0046CC); /* for firefox 3.6+ */ 
+	min-width:60px;
+	height:28px;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;
+	line-height:26px;
+	text-align:center;
+	border-radius:2px;
+	border: 1px solid #004BCC;
+	float:right;
+	display: inline;
+	margin-right:10px;
+	cursor:pointer;
+	padding-right:6px;
+	padding-left:6px;
+}
+
+.GreyBtn {
+	top: 3px;
+	position: relative;
+	background: #EFEFEF; /* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#DBDBDB)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FEFEFE,  #DBDBDB); /* for firefox 3.6+ */ 
+	min-width:65px;
+	height:28px;
+	color:#333;
+	font-size:12px;
+	font-weight:bold;
+	line-height:26px;
+	text-align:center;
+	border-radius:2px;
+	border: 1px solid #B7B7B7;
+	float:right;
+	display:inline;
+	margin-right:5px;
+	cursor:pointer;
+	padding-right:6px;
+	padding-left:6px;
+}
+
+.BlueBtn:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#2185ED), to(#2167ED)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2185ED,  #2167ED); /* for firefox 3.6+ */ 
+}
+
+.GreyBtn:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#E9E9E9)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #E9E9E9); /* for firefox 3.6+ */ 
+}
+
+.ActionButtonsWrapper {
+	height:38px;
+	margin-left: 2px;
+
+}
+.SendPostWrapper {
+	display: none;
+}
+
+.clear {
+  	clear: both;
+}
+
+body, textarea:focus, input, div:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+}
+
+html {
+	background-color: #F0F0F0;
+}
+
+.MainPostContainer {
+	font-family: 'Segoe UI', arial, helvetica,sans-serif;
+	padding:8px;
+	cursor:default;
+	background-color: #FFFFFF;
+	border:1px solid #8B8B8B;
+	color:#333;
+	display:block;
+}
+
+.MainPostContainerResolved {
+	font-family: 'Segoe UI', arial, helvetica,sans-serif;
+	padding:8px;
+	cursor:default;
+	background-color: #F8FFFC;
+	border:1px solid #B8B8B8;
+	color:#333;
+	display:block;
+}
+
+.MainPostContent {
+	font-family: 'Segoe UI', arial, helvetica,sans-serif;
+	cursor:default;
+	margin-bottom:26px;	
+	color:#333;
+	display:block;
+}
+
+
+.PostOwner {
+	font-size: 15px;
+	font-weight:bold;
+	display:inline;
+	float:left;
+	color:#000000;
+}
+
+.PostDate {
+	font-size:11px;
+	color:#A3A3A3;
+	display:inline;
+	float:right;
+	text-align:right;
+	padding-top:4px;
+}
+
+.PostText {
+	font-size:12px;
+	padding:6px 0 0 0;
+	display:block;
+	color:#000000;
+	line-height:21px;
+	margin-bottom:6px;
+	word-wrap: break-word;
+}
+
+.PostTextTag {
+	font-size:12px;
+	padding:10px 0 0 0;
+	display:block;
+	color:#999999;
+}
+
+.PostActions {
+	padding:0 0 0 0;
+}
+
+.PostNumber {
+	font-size: 12px;
+	font-weight: bold;
+	color: 
+	#CCC;
+	padding: 0 4px 0px 4px;
+	border: 2px solid 
+	#CCC;
+	text-align: center;
+	float: left;
+	display: inline;
+	line-height: 14px;
+}
+
+.PostActionButton {
+	font-size:12px;
+	float:right;
+	color: #0080FF;
+	background-color: transparent;
+	border-style: none;
+	margin: 10px 0 0 10px;
+	cursor:pointer;
+	top: -8px;
+	position: relative;
+}
+
+.PostActionButton:hover {
+	text-decoration:underline;
+}
+
+.ReplyContainer {
+	border: 1px solid #8B8B8B;
+	border-top: 0px;
+	padding:8px;
+	display:block;
+	background-color:#F0F0F0 
+}
+
+.ReplyContainerResolved {
+	
+	border: 1px solid #8B8B8B;
+	border-top: 0px;
+	padding:8px;
+	display:block;
+	background-color: #E9F2ED;
+}
+
+.ReplyList {
+	background-color:#F0F0F0;
+	cursor: default;
+	color: #333;
+	display: block;
+}
+
+
+.ReplyOwner {
+	font-size: 14px;
+	font-weight:bold;
+	display:inline;
+	float:left;
+	color:#000000;
+}
+
+.ReplyText{
+	font-size:11px;
+	padding:6px 0 0 0;
+	padding-bottom:10px\9; /* IE 8 and below */
+	display:block;
+	word-wrap: break-word;
+	margin-bottom:6px;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	color:#000000;
+}
+
+.CommentReplyWrapper {
+	cursor: default;
+	border: 1px solid #8B8B8B;
+	border-top: 0px;
+	color: #333;
+	display: block;
+}
+
+.CommentReply {
+	height:auto;
+	background-color:#F0F0F0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.hidden {
+	display:none;
+}
+
+.CommentReplyInput {
+	display: block;
+	background-color:#FFFFFF;
+	border: 1px solid #8B8B8B;
+	border-radius:1px;
+	padding:5px;
+	width:100%;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	font-size:12px;
+	color:#000000;
+	margin-top: 0;
+	margin-bottom: 0px;
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.DFScrollArea {
+	background-color: #525252m;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	zoom: 1;
+	height: 90%;
+	width: 100%;
+}
+
+.SettingsContainer {
+	background-color:#F0F0F0;
+	color:#333;
+	display:block;
+	border:1px solid #8B8B8B;
+	box-shadow: 0px 3px 6px #999;
+	min-width: 154px;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;	
+	font-size:12px;
+}
+
+.SettingsMain {
+	padding: 5px 37px 10px 10px;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	font-size:12px;
+}
+
+.SettingsFooter {
+	border-top: 1px solid #8B8B8B;
+	padding: 10px;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	font-size:12px;		
+}
+
+.SettingsPanelEdgeButton {
+	width: 38px;
+	height: 38px;
+	float: left;
+	margin: 5px 0px 5px 0px;
+}
+
+.SettingsPanelMiddleButton {
+	width: 38px;
+	height: 38px;
+	float: left;
+	margin: 5px 10px 5px 10px;
+}
+
+.SettingsResolvedLabel {
+	vertical-align: top;
+	margin-top:20px;
+}
+
+.ViewAllComments {
+	border-bottom: 1px solid #8B8B8B;
+	border-left: 1px solid #8B8B8B;
+	border-right: 1px solid #8B8B8B;
+	background: #DEDEDE; /* for non-css3 browsers */
+	padding:2px;
+	display:block;
+	text-align: center;
+	height: 17px;
+}
+
+.ViewAllCommentsResolved {
+	border-bottom: 1px solid #8B8B8B;
+	border-left: 1px solid #8B8B8B;
+	border-right: 1px solid #8B8B8B;
+	background: #D9E3DE; /* for non-css3 browsers */
+	padding:2px;
+	display:block;
+	text-align: center;
+	height: 17px;
+}
+
+.ViewAllCommentsLink {
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	font-size:12px;
+	color: #000000;
+}
+
+.ViewAllCommentsLink:hover {
+	cursor: pointer;
+}
+
+.TagContainer {
+	background-color:#F0f0f0;
+	min-height: 50px;
+	display:block;
+	padding: 10px;
+	line-height:18px;
+	border-top:1px solid #8B8B8B;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	height:auto;
+}
+
+
+
+.TagContainerHeader {
+	color:#666666;
+	padding-bottom:10px;
+	width:95%;
+}
+
+.AddPeopleToShareAndTag {
+	white-space: nowrap;	
+	
+	color:#666666;
+	width:95%;
+}
+
+.AddPeopleRow {
+	height:auto;
+	cursor:pointer;
+	
+}
+
+.AddPeopleRow:hover  {
+}
+
+.AddPeopleRowText {
+	color:#0066CC;
+	font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.InviteContainer {
+background-color:white;
+color:black;
+max-height: 660px;
+display:block;
+padding:10px;
+margin: 10px;
+font-size:12px;
+line-height:18px;
+border:1px solid #8B8B8B;
+font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+}
+
+.InvitePeopleLink a:link {color:blue; text-decoration:none;}
+.InvitePeopleLink a:visited {color:blue; text-decoration:none;}
+.InvitePeopleLink a:hover {color:blue; text-decoration:none;}
+.InvitePeopleLink a:focus {color:blue; text-decoration:none;}
+.InvitePeopleLink a:active {color:blue;text-decoration:none;}
+
+.DidYouKnowLink a:link {color:blue; text-decoration:none;}
+.DidYouKnowLink a:visited {color:blue; text-decoration:none;}
+.DidYouKnowLink a:hover {color:blue; text-decoration:none;}
+.DidYouKnowLink a:focus {color:blue; text-decoration:none;}
+.DidYouKnowLink a:active {color:blue;text-decoration:none;}
+
+.InvitePeopleImage {
+width: 31px;
+height: 38px;
+display:block;
+float:left;
+}
+
+.InvitePeopleLink {
+display:block;
+float:left;
+margin-left:1px;
+margin-top:12px;
+}
+
+.DesignFeedTypeLabel {
+display:block;
+float:left;
+margin-left:3px;
+margin-top:12px;
+margin-right:10px;
+float:right;
+color:blue; text-decoration:underline;
+}
+
+.DidYouKnowLink {
+font-size:12px;	
+margin-left:2px;
+text-align:left;
+}
+
+.WriteFirstPostText {
+padding:10px;
+	
+}
+
+.OrText
+{
+padding:10px;
+	
+}
+.InfoCaptionPanel
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	text-align:center;
+	font-size:15px;
+	padding-top:5px;
+	padding-bottom:5px;
+        color: black;        
+}
+
+.SavePanel {
+	padding-top:5px;
+	padding-bottom:5px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	text-align:center;
+}
+
+.saveButtonStyle {
+background: #f44f05; /* for non-css3 browsers */
+background: -webkit-gradient(linear, left top, left bottom, from(#f44f05), to(#f5601d)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #f44f05,  #f5601d); /* for firefox 3.6+ */ 
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+-khtml-border-radius: 20px;
+border-radius: 20px;
+height:30px;
+color:#fff;
+font-size:14px;
+font-weight:bold;
+line-height:28px;
+text-align:center;
+border: 1px solid #f44f05;
+display: inline-block;
+cursor:pointer;
+padding-left:10px;
+padding-right:10px;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+
+.selectedTagImg {
+	float:left;
+	margin-right:4px;
+	margin-top:2px;
+	min-width:20px;
+}
+
+.leftMargin {
+	margin-left:24px;
+}
+
+.TagContainerListItem {
+	height:auto;
+	width:100%;
+	cursor:pointer;
+        color:black;
+}
+
+.TagContainerListItem:hover {
+	background-color: #F0F4F9;
+}
+
+.TagContainerListItemText{
+	white-space: nowrap;	
+	cursor:pointer;
+	display:block;
+}
+
+.shareList{
+	height: auto;	
+	width: auto;
+}
+
+.WelcomeContainer {
+background-color:white;
+color:black;
+max-height: 660px;
+display:block;
+padding:10px;
+margin: 10px;
+font-size:12px;
+line-height:18px;
+border:1px solid #8B8B8B;
+font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+}
+
+.WelcomeTop {
+text-align:center;
+}
+
+.WelcomeTitle {
+padding-bottom:10px;
+text-align:center;
+}
+
+.WelcomeSep {
+background-color:#ccc;
+height:1px;
+width:100%;
+display:block;
+margin: 15px 0 15px 0;
+}
+
+.SubHeaderContainer {
+padding:4px;
+margin: 10px;
+font-size:12px;
+line-height:18px;
+text-align:center;
+font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+}
+
+.CreatePostBtn {
+background: #0058CC; /* for non-css3 browsers */
+background: -webkit-gradient(linear, left top, left bottom, from(#0065CC), to(#0046CC)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #0065CC,  #0046CC); /* for firefox 3.6+ */ 
+height:26px;
+color:#fff;
+font-size:12px;
+font-weight:bold;
+line-height:28px;
+text-align:center;
+border-radius:2px;
+border: 1px solid #004BCC;
+display: inline-block;
+cursor:pointer;
+padding-left:6px;
+padding-right:6px;
+}
+
+.IntroDesc {
+padding-left:120px;
+font-family: 'Segoe UI', arial, helvetica,sans-serif !important;
+width:140px;
+}
+
+.WelcomeListImage {
+display:block;
+float:left;
+width:100px;
+height:75px;
+border: 1px solid #96959D;
+margin-right:10px;
+margin-bottom:15px;
+}
+
+.Carousel {
+	background-color: #3B4044;
+	height: 130px;
+	width: 100%;
+}
+
+.CarouselImage {
+	margin-left:auto;
+	margin-right:auto;
+	max-height: 130px;
+}
+
+.CarouselLeftBtn {
+	float:left;
+	padding-right: 3px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 3px;
+	margin-right: 5px;
+}
+
+.CarouselRightBtn {
+	float:right;
+	padding-right: 3px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 3px;
+	margin-right: 5px;
+}
+
+.ResolvedLabel {
+font-size: 12px;
+font-weight: bold;
+color: #CCC;
+padding: 1px;
+border: 1px solid #063;
+text-align: center;
+padding: 0 2px 0px 2px;
+float: left;
+color: white;
+background-color: #090;
+line-height: 16px;
+margin-left: 5px;
+}
+
+.ImgContainer {
+	font-size:12px;
+	line-height:28px;
+	text-align:center;
+}
+
+.ImgContainerImg {
+padding: 5px;
+background: #fff;
+border: 1px solid #8B8B8B;
+margin:10px 0 0 0;
+width:96%;
+cursor:pointer;
+}
+
+.ImgGallery {
+background: #EEE;
+display: block;
+height:28px;
+border:1px solid #8B8B8B;
+margin-top:-2px;
+}
+
+.ImgContainerController {
+display:inline-block;
+float:left;
+}
+
+
+.ImgBackward {
+float:left;
+display:block;
+height:28px;
+width:15px;
+cursor:pointer;
+margin-right: 45%
+}
+
+.ImgForward {
+float:right;
+display:block;
+height:28px;
+width:15px;
+margin-right:10px;
+cursor:pointer;
+}
+
+.TaggedLabel {
+	float: left;
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+.TaggedList {
+	margin-right: 5px;
+}
+
+.BlockDrawingFeed {
+	height: 100%;
+	display: none;
+	background: #666; 
+	z-index: 3; 
+	position: absolute; 
+	width: 100%; 
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.TagCheckBox {
+	background: none;
+	float: left;
+	margin-right: 9px;
+}
+
+.HiddenCanvas  
+{
+    border: 2px solid #000; 
+    position:absolute; 
+    top:0;
+    left:0;  
+    visibility: hidden; 
+}
+
+.LoginPanel
+{
+	margin-top: 0px;
+	background-color: #F8F8F8;
+	height: 40px;
+}
+
+.LoginPanelButton
+{
+	margin-top: 10px;
+	margin-left: 8px;
+}
+
+.AcadWelcomeTop
+{
+	font-size: 14px;
+}
+
+.AttachImagePreviewr {
+
+}
+
+.AttachImageWrapper {
+   margin: 1px auto;
+   padding: 0;
+   border: 2px solid black;
+   width: 580px;
+   height: 300px;
+}
+
+.ThrobberImage {
+	position:absolute;
+}
+
+.DFContainer {
+
+}
+
+.ServiceUnavailableContainer {
+	background-color:#F0F0F0;
+	display: block;
+	margin: 8px;	
+	text-align: center;
+	padding-top: 200px
+}
+
+ServiceUnavailableContainerImage {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+ }
+	  
+.ServiceUnavailableContainerText {
+	padding-top: 51px;
+	font-family: 'Segoe UI', arial, helvetica, sans-serif;
+	font-size: 14px;
+	color: black;
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.ServiceUnavailableContainerButton {
+	margin-top: 0em;
+	font-size: 11px;
+	color: black;
+	font-face: 'Segoe UI';
+	cursor: default;
+	color: buttontext;
+	padding: 1px 6px;
+	border: 2px outset buttonface;
+	border-image: initial;
+	background-color: buttonface;
+	box-sizing: border-box;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-shadow: none;
+	text-align: -webkit-center;
+}
+
+.LoadingContainer {
+	background-color:#F0F0F0;
+	display: block;	
+	text-align: center;
+	padding-top: 200px;
+}
+
+.LoadingContainertext {
+	font-family: 'Segoe UI', arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: black;
+	display: block;
+}
+
+.SyncingContainer {
+	background-color:#F0F0F0;
+	display: block;	
+	text-align: center;
+	padding-top: 200px;
+}
+
+.SyncingContainertext {
+	font-family: 'Segoe UI', arial, helvetica, sans-serif;
+	font-size: 16px;
+	color: black;
+	display: block;
+}
+
+.HighlightedReplyPanel {
+	background-color: #F0F0F0;
+}
+

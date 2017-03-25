@@ -1,0 +1,45 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+   xmlns:c="http://java.sun.com/jsp/jstl/core"
+   xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+   version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+        <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></link>
+  <link rel="stylesheet" href="/resources/demos/style.css"></link>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<title>Compound Interest</title>
+<script text = "javascript">
+
+</script>
+
+</head>
+<body>
+<!--  Written by: Ryan Sabatine  061-047-148 -->
+<div id="menuWrap">
+	<img id="menuLogo" src="images/trumptower2.png" alt="TrumpTower" />
+	<div id="menuLinkBook">
+		<a class="link" href="book.jspx" id="bookRoom">Book a Room</a>
+	</div>
+	<div id="menuLinkView">
+		<a class="link" href="booking.jspx" id="view">View Bookings</a>
+	</div>
+	<div id="menuLinkAccount">
+		<a class="menu link" href="clientlogin.jspx" id="login">Login</a><br /><br />
+		<a class="menu link" href="logout.jspx" id="logout">Logout</a>
+	</div>
+	<div id="menuMessage">
+		<p id="headerText">Welcome, Ryan<br /><br />You have 5 rooms booked.</p>
+	</div>
+	<hr style="margin-top: 200px"/>
+</div>
+</body>
+</html>
+</jsp:root>

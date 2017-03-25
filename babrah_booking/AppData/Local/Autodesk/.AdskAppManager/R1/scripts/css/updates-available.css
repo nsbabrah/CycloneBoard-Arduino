@@ -1,0 +1,82 @@
+html,body {
+	background: #FFF;
+	border: 0;
+	font-family: arial,sans-serif,helvetica;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	width: 330px;
+}
+.header {
+	background: #F7F7EF;
+	border: 1px solid #CCC;
+	color: #666;
+	height: 38px;
+	margin: 0;
+}
+.header .left {
+	float: left;
+	padding: 7px 0 0 10px;
+}
+.header .right {
+	float: right;
+}
+.header .title {
+	border-left: 1px solid #999;
+	display: inline-block;
+	font-size: 14px;
+	height: 19px;
+	margin-left: 7px;
+	padding-left: 10px;
+}
+.header .adsk-logo {
+	height: 19px;
+	margin-top: -4px;
+	vertical-align: middle;
+	width: 116px;
+}
+.notification {
+	color: #333;
+	font-size: 12px;
+	margin: 0;
+	padding: 10px 4px 8px 6px;
+}
+.notification .title {
+	float: left;
+	font-weight: bold;
+	width: 203px;
+}
+.notification .time {
+	float: right;
+	text-align: right;
+	width: 117px;
+}
+.middle .message {
+	background: url("../images/appicon_newbadge.png") no-repeat scroll 5px 9px transparent;
+	background-size: 24px 24px;
+	border-top: 1px solid #CCC;
+	color: #666;
+	font-size: 12px;
+	margin: 0 5px;
+	min-height: 40px;
+	padding: 12px 0 0 35px;
+}
+.middle .footer {
+	background: #F7F7EF;
+	border: 1px solid #CCC;
+	bottom: 0;
+	height: 52px;
+	position: absolute;
+	width: 328px;
+}
+.middle .links {
+	float: right;
+	padding: 12px 10px 0 0;
+}
+.middle .links a {
+	color: #0696D7;
+	cursor: pointer;
+	font-size: 12px;
+	outline: 0;
+	text-decoration: none;
+}

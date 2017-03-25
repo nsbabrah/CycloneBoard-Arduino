@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--  Written by: Ryan Sabatine  061-047-148 -->
+<head>
+<link rel="stylesheet" type="text/css" href="site.css" />
+<title>Search Results</title>
+</head>
+<body>
+	<jsp:directive.include file="hocorbamenu.jspx" />
+	<h1>Room Search Results</h1>
+	<div class="info message"><img src="images/info.png" alt="information" class="messageimg" />There are currently no Rooms available that match your search criteria.</div>
+	<form method="post" action="book.jspx">
+		<table>
+			<tr><th colspan="2">Conference Room Alpha</th></tr>
+			<tr><td>Capacity</td><td>500 persons</td></tr>
+			<tr><td>Cost</td><td>$100.00 per Hour</td></tr>
+			<tr><td>Room Code</td><td>A100</td></tr>
+			<tr><td><input type="hidden" value="A100" name="roomCode" /></td></tr>
+		</table>
+		<div>
+			<input type="submit" name="aBook" value="Book Room" class="link" />
+		</div>
+	</form>
+	<div><br /></div>
+	<form method="post" action="book.jspx">
+		<table>
+			<tr><th colspan="2">Conference Room Bravo</th></tr>
+			<tr><td>Capacity</td><td>250 persons</td></tr>
+			<tr><td>Cost</td><td>$80.00 per Hour</td></tr>
+			<tr><td>Room Code</td><td>B100</td></tr>
+			<tr><td><input type="hidden" value="B100" name="roomCode" /></td></tr>
+		</table>
+		<div>
+			<input type="submit" name="bBook" value="Book Room" class="link" />
+		</div>
+	</form>
+	<div><br /></div>
+	<form method="post" action="book.jspx">
+		<table>
+			<tr><th colspan="2">Conference Room Charlie</th></tr>
+			<tr><td>Capacity</td><td>100 persons</td></tr>
+			<tr><td>Cost</td><td>$50.00 per Hour</td></tr>
+			<tr><td>Room Code</td><td>C100</td></tr>
+			<tr><td><input type="hidden" value="C100" name="roomCode" /></td></tr>
+		</table>
+		<div>
+			<input type="submit" name="cBook" value="Book Room" class="link" />
+		</div>
+	</form>
+	<div><br /></div>
+	<form method="post" action="book.jspx">
+		<table>
+			<tr><th colspan="2">Conference Room Delta</th></tr>
+			<tr><td>Capacity</td><td>500 persons</td></tr>
+			<tr><td>Cost</td><td>$100.00 per Hour</td></tr>
+			<tr><td>Room Code</td><td>D100</td></tr>
+			<tr><td><input type="hidden" value="D100" name="roomCode" /></td></tr>
+		</table>
+		<div>
+			<input type="submit" name="dBook" value="Book Room" class="link" />
+		</div>
+	</form>
+	<div><br /></div>
+	<form method="post" action="book.jspx">
+		<table>
+			<tr><th colspan="2">Conference Room Echo</th></tr>
+			<tr><td>Capacity</td><td>100 persons</td></tr>
+			<tr><td>Cost</td><td>$50.00 per Hour</td></tr>
+			<tr><td>Room Code</td><td>E100</td></tr>
+			<tr><td><input type="hidden" value="E100" name="roomCode" /></td></tr>
+		</table>
+		<div>
+			<input type="submit" name="eBook" value="Book Room" class="link" />
+		</div>
+	</form>
+</body>
+</html>
+</jsp:root>
